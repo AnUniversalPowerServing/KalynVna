@@ -26,7 +26,7 @@ $(document).ready(function(){
 	  <div style="margin-top:5%;border-right:1px solid #c0c0c0;height:510px;">
 	    <div style="padding-left:15px;">
 	      <div align="center" class="fom-group">
-		    <h4 style="line-height:26px;color:orange;">
+		    <h4 style="line-height:26px;color:brown;">
 			  If you are Already a Member of KalyanaVeena.com, <br/>you can login here or else go for Signup.
 			</h4>
 		  </div>

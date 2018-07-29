@@ -25,6 +25,7 @@
 </head>
 <body>
 <?php include_once 'templates/api_header.php'; ?>
+
 <div align="center" style="width:100%;background-color:#9c27b0;color:#fff;">
   <div style="font-size:16px;padding:15px;letter-spacing:1px;line-height:26px;">
     Welcome to the No.1 Brahmin Matrimonial Service which is the largest, most trusted
@@ -215,5 +216,6 @@
   </div>
 </div>
 
+<?php include_once 'templates/api_bottom.php'; ?>
 </body>
 </html>
