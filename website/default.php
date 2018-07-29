@@ -10,29 +10,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
   <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-  <script src="js/api/brahim-core.js"></script>
   <script src="js/api/bootstrap-switch.js"></script>
   <link href="styles/bootstrap-switch.css" rel="stylesheet">
   <script type="text/javascript">
   $(document).ready(function(){
-	display_list_Raasi('reg_user_raasi');
-	display_list_gothram('reg_user_gothram');
-	display_list_shakha('reg_user_shakha');
+    kvHeaderMenu('kvHeaderMenu-Home');
   });
   </script>
 <style>
-body { overflow-x:hidden; }
-.pad0 { padding:0px; }
-.mtop5p { margin-top:5px; }
-.mtop10p { margin-top:10px; }
-.mtop15p { margin-top:15px; }
-.mtop20p { margin-top:20px; }
-.mtop25p { margin-top:25px; }
-.mbot5p { margin-bottom:5px; }
-.mbot10p { margin-bottom:10px; }
-.mbot15p { margin-bottom:15px; }
-.mbot20p { margin-bottom:20px; }
-.mbot25p { margin-bottom:25px; }
 @media only screen and (max-width:768px ) {
 #kvShortDesc { display:none; }
 }
@@ -227,100 +212,6 @@ body { overflow-x:hidden; }
 	  </div>
 	  <div class="col-sm-1"></div>
 	</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4" style="background-color:#ccc;">
-      <h3 style="color:#000;">Save Time and Money</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Personal Details</h3>
-	  <div class="form-group">
-		<label>Profile Id</label>
-		<div class="list-group">
-		  <div class="list-group-item">601234567</div>
-		</div>
-	  </div>
-	
-	  <div class="form-group">
-		<label>SurName</label>
-		<input type="text" class="form-control" placeholder="Enter your SurName"/>
-	  </div>
-      <div class="form-group">
-		<label>Name</label>
-		<input type="text" class="form-control" placeholder="Enter your Name"/>
-	  </div>
-	  <div class="form-group">
-		<label>Father Name</label>
-		<input type="text" class="form-control" placeholder="Enter your Father Name"/>
-	  </div>
-	  <div class="form-group">
-		<label>Gender</label>
-		<select class="form-control">
-		  <option value="">Select your Gender</option>
-		  <option value="Male">Male</option>
-		  <option value="Female">Female</option>
-		</select>
-	  </div>
-	  <div class="form-group">
-		<label>Shakha</label>
-		<select id="reg_user_shakha" class="form-control" onchange="display_list_upaShakha('reg_user_shakha','reg_user_upaShakha');">
-			<option value="">Select your Shakha</option>
-		</select>
-	  </div>
-	  <div class="form-group">
-		<label>UpaShakha</label>
-		<select id="reg_user_upaShakha" class="form-control">
-			<option value="">Select your UpaShakha</option>
-		</select>
-	  </div>
-	  <div class="form-group">
-		<label>Gothram</label>
-		<select id="reg_user_gothram" class="form-control">
-		  <option value="">Select your Gothram</option>
-		</select>
-	  </div>
-	  
-	  <div class="form-group">
-		<label>Raasi (Zodaic Sign)</label>
-		<select id="reg_user_raasi" class="form-control" onchange="javascript:display_list_Nakshatra('reg_user_raasi','reg_user_nakshatra');">
-			<option value="">Select your Raasi (Zodiac Sign)</option>
-			<option value="Aries (Mesha Raasi)">Aries (Mesha Raasi)</option>
-			<option value="Taurus (Vrushabha Raasi)">Taurus (Vrushabha Raasi)</option>
-			<option value="Gemini (Midhuna Raasi)">Gemini (Midhuna Raasi)</option>
-			<option value="Cancer (Karkataka Raasi)">Cancer (Karkataka Raasi)</option>
-			<option value="Leo (Simha Raasi)">Leo (Simha Raasi)</option>
-			<option value="Virgo (Kanya Raasi)">Virgo (Kanya Raasi)</option>
-			<option value="Libra (Thula Raasi)">Libra (Thula Raasi)</option>
-			<option value="Scorpio (Vruchika Raasi)">Scorpio (Vruchika Raasi)</option>
-			<option value="Saggitarius (Dhanur Raasi)">Saggitarius (Dhanur Raasi)</option>
-			<option value="Capricorn (Makara Raasi)">Capricorn (Makara Raasi)</option>
-			<option value="Aquarius (Khumbha Raasi)">Aquarius (Khumbha Raasi)</option>
-			<option value="Pisces (Meena Raasi)">Pisces (Meena Raasi)</option>
-		</select>
-	  </div>
-	  <div class="form-group">
-		<label>Star (Nakshatra)</label>
-		<select id="reg_user_nakshatra" class="form-control">
-			<option value="">Select your Star (Nakshatra)</option>
-		</select>
-	  </div>
-	  <div class="form-group">
-		<label>Mother Tongue</label>
-		<select class="form-control">
-			<option value="">Select your Mother Tongue</option>
-			<option value="">Telugu</option>
-			<option value="">Hindi</option>
-		</select>
-	  </div>
-    </div>
- 
   </div>
 </div>
 

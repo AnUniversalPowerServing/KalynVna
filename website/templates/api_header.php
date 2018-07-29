@@ -1,4 +1,22 @@
+<?php
+if(!isset($_SESSION["PROJECT_URL"])){ $_SESSION["PROJECT_URL"]="http://".$_SERVER["HTTP_HOST"]."/KalynVna/website/"; }
+if(!isset($_SESSION["PROJECT_MODE"])){ $_SESSION["PROJECT_MODE"]='DEBUG'; }
+?>
 <style>
+body { overflow-x:hidden; }
+.pad0 { padding:0px; }
+.mtop5p { margin-top:5px; }
+.mtop10p { margin-top:10px; }
+.mtop15p { margin-top:15px; }
+.mtop20p { margin-top:20px; }
+.mtop25p { margin-top:25px; }
+.mbot5p { margin-bottom:5px; }
+.mbot10p { margin-bottom:10px; }
+.mbot15p { margin-bottom:15px; }
+.mbot20p { margin-bottom:20px; }
+.mbot25p { margin-bottom:25px; }
+.mbot30p { margin-bottom:30px; }
+.mbot35p { margin-bottom:35px; }
 a { color:#fff; }
 .navbar { border-radius:0px;margin-bottom:0px; }
 .navbar-purple { background-color: #630062; border-color: #630062; }
@@ -50,6 +68,18 @@ body { overflow-x:hidden; }
 </nav>
 </div-->
 <div>
+<style>
+.navbar-nav>li.active>a { background-color:#fff;color:#000; }
+</style>
+<script type="text/javascript">
+function kvHeaderMenu(id){
+ var arry=["kvHeaderMenu-Home","kvHeaderMenu-howItWorks","kvHeaderMenu-browseMatrimony","kvHeaderMenu-signUp","kvHeaderMenu-login"];
+ for(var index=0;index<arry.length;index++){
+   if(id===arry[index]) { if(!$('#'+arry[index]).hasClass('active')) { $('#'+arry[index]).addClass('active'); } }
+   else { if($('#'+arry[index]).hasClass('active')) { $('#'+arry[index]).removeClass('active'); } }
+ }
+}
+</script>
 <nav class="navbar navbar-purple">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -64,12 +94,11 @@ body { overflow-x:hidden; }
     </div>
     <div id="kvHeaderMenu" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="#"><b>Home</b></a></li>
-		<li><a href="#"><b>How it works?</b></a></li>
-        <li><a href="#"><b>Browse Matrimony</b></a></li>
-        <li><a href="#"><b>Fill your Details</b></a></li> 
-		<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li id="kvHeaderMenu-Home" onclick="javascript:kvHeaderMenu(this.id);"><a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>"><b>Home</b></a></li>
+		<li id="kvHeaderMenu-howItWorks" onclick="javascript:kvHeaderMenu(this.id);"><a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>howItWorks"><b>How it works?</b></a></li>
+        <li id="kvHeaderMenu-browseMatrimony" onclick="javascript:kvHeaderMenu(this.id);"><a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>browseMatrimony"><b>Browse Matrimony</b></a></li>
+        <li id="kvHeaderMenu-signUp" onclick="javascript:kvHeaderMenu(this.id);"><a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>signUp"><span class="glyphicon glyphicon-user"></span> <b>SignUp</b></a></li> 
+		<li id="kvHeaderMenu-login" onclick="javascript:kvHeaderMenu(this.id);"><a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>login"><span class="glyphicon glyphicon-log-in"></span> <b>Login</b></a></li>
       </ul>
     </div>
   </div>
