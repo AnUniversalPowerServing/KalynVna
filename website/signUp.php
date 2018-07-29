@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/api/brahim-core.js"></script>
+  <script src="js/api/app-core.js"></script>
   <script src="js/api/bootstrap-switch.js"></script>
   <link href="styles/bootstrap-switch.css" rel="stylesheet">
 <script type="text/javascript">
