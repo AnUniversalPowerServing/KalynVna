@@ -1,12 +1,5 @@
 <!--
-signUp_bzc_birthDate
-signUp_bzc_birthTime
-signUp_bzc_birthPlace
-signUp_bzc_shakha
-signUp_bzc_upaShakha
-signUp_bzc_gothram
-signUp_bzc_raasi
-signUp_bzc_nakshatra
+
 -->
 <h4 style="color:#000;padding:8px;border-bottom:1px solid #c0c0c0;margin-bottom:25px;">
  2. Birth, Zodiac and Community Background
@@ -23,8 +16,28 @@ signUp_bzc_nakshatra
   </div>
 </div>
 <div class="form-group">
- <label>Place of Birth <span class="mandatoryField">*</span></label>
- <input type="text" id="signUp_bzc_birthPlace" class="form-control" placeholder="Enter your Place of Birth"/>
+ <label>Born in Country <span class="mandatoryField">*</span></label>
+ <select id="signUp_bzc_birthCountry" class="form-control">
+    <option value="">Select your Country</option>
+ </select>
+</div>
+<div class="form-group">
+ <label>Born in State<span class="mandatoryField">*</span></label>
+ <select id="signUp_bzc_birthState" class="form-control">
+    <option value="">Select your State</option>
+ </select>
+</div>
+<div class="form-group">
+ <label>Born in Location<span class="mandatoryField">*</span></label>
+ <select id="signUp_bzc_birthLocation" class="form-control">
+    <option value="">Select your Location</option>
+ </select>
+</div>
+<div class="form-group">
+ <label>Born in Locality<span class="mandatoryField">*</span></label>
+ <select id="signUp_bzc_birthLocality" class="form-control">
+    <option value="">Select your Locality</option>
+ </select>
 </div>
 <div class="form-group">
  <label>Shakha <span class="mandatoryField">*</span></label>

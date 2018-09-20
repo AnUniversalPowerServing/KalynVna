@@ -6,8 +6,9 @@ signUp_mentionProfile_motherTongue
 signUp_mentionProfile_status
 signUp_mentionProfile_hgtFeet
 signUp_mentionProfile_hgtInches
-signUp_mentionProfile_aboutMe
-signUp_mentionProfile_skinTone
+signUp_mentionProfile_highestDegree
+signUp_mentionProfile_occupation   
+signUp_mentionProfile_occupationType
 -->
 <script>
   $(function() {
@@ -90,12 +91,19 @@ function sentenceCase_SurName(str){
   </div>
 </div>
 <div class="form-group">
-  <label>About Me <span class="mandatoryField">*</span></label>
-  <textarea id="signUp_mentionProfile_aboutMe" class="form-control" placeholder="Say something about Me"></textarea>
+  <label>Highest Degree <span class="mandatoryField">*</span></label>
+  <input id="signUp_mentionProfile_highestDegree" type="text" class="form-control" placeholder="Enter your Highest Degree"/>
 </div>
 <div class="form-group">
-  <label>Your Skintone<span class="mandatoryField">*</span></label>
-  <select id="signUp_mentionProfile_skinTone" class="form-control">
-	<option value="">Choose your Color</option>
+  <label>Occupation <span class="mandatoryField">*</span></label>
+  <input id="signUp_mentionProfile_occupation" type="text" class="form-control" placeholder="Enter your Occupation"/>
+</div>
+<div class="form-group">
+  <label>Occupation Type <span class="mandatoryField">*</span></label>
+  <select id="signUp_mentionProfile_occupationType" class="form-control">
+	<option value="Private Company">Private Company</option>
+	<option value="Government / Public Sector">Government / Public Sector</option>
+	<option value="Defence / Civil Services">Defence / Civil Services</option>
+	<option value="Business / Self Employeed">Business / Self Employeed</option>
   </select>
 </div>

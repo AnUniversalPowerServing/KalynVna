@@ -21,6 +21,48 @@
 $(document).ready(function(){
  kvHeaderMenu('kvHeaderMenu-signUp');
 });
+
+signUp_mentionProfile_surName
+signUp_mentionProfile_name
+signUp_mentionProfile_gender
+signUp_mentionProfile_motherTongue
+signUp_mentionProfile_status
+signUp_mentionProfile_hgtFeet
+signUp_mentionProfile_hgtInches
+signUp_mentionProfile_highestDegree
+signUp_mentionProfile_occupation   
+signUp_mentionProfile_occupationType
+signUp_bzc_birthDate
+signUp_bzc_birthTime
+signUp_bzc_birthCountry
+signUp_bzc_birthState
+signUp_bzc_birthLocation
+signUp_bzc_birthLocality
+signUp_bzc_shakha
+signUp_bzc_upaShakha
+signUp_bzc_gothram
+signUp_bzc_raasi
+signUp_bzc_nakshatra
+signUp_contactI_address
+signUp_contactI_country
+signUp_contactI_state
+signUp_contactI_location
+signUp_contactI_locality
+signUp_contactI_mobile
+signUp_familyBkg_fatherName
+signUp_familyBkg_fatherOccpn
+signUp_familyBkg_motherName
+signUp_familyBkg_motherOccpn
+signUp_familyBkg_noOfBrothers
+signUp_familyBkg_noOfSisters
+signUp_prefSpouse_highestDegree
+signUp_prefSpouse_expectedOccpn
+signUp_prefSpouse_expectedOccpnType
+signUp_prefSpouse_expectedMTongue
+(Optional)
+signUp_uploadPic_picture1
+signUp_uploadPic_picture2
+signUp_uploadPic_picture3
 </script>
 <style>
 .mandatoryField { color:red;font-size:16px; }
@@ -38,24 +80,22 @@ $(document).ready(function(){
    <div class="row">
      <div class="col-sm-4">
        <?php include_once 'templates/signUp/01_mentionProfile.php'; ?>
-	   <?php include_once 'templates/signUp/04_contactInformation.php'; ?>
-	   <?php include_once 'templates/signUp/07_propertyInformation.php'; ?>
+	   <?php include_once 'templates/signUp/04_familyBackground.php'; ?>
 	 </div>
 	 <div class="col-sm-4">
        <?php include_once 'templates/signUp/02_birthZodiacCommunity.php'; ?>
 	   <?php include_once 'templates/signUp/05_preferenceOfSpouse.php'; ?>
 	 </div>
 	 <div class="col-sm-4">
-       <?php include_once 'templates/signUp/03_academicEducation.php'; ?>
-	   <?php include_once 'templates/signUp/06_occupation.php'; ?>
-	   <?php include_once 'templates/signUp/08_uploadYourPicture.php'; ?>
+	   <?php include_once 'templates/signUp/03_contactInformation.php'; ?>
+	   <?php include_once 'templates/signUp/06_uploadYourPicture.php'; ?>
 	 </div>
    </div>
    <div class="row">
-	<?php include_once 'templates/signUp/09_familyBackground.php'; ?>
+	
    </div>
    <div class="row">
-	<?php include_once 'templates/signUp/10_references.php'; ?> 
+	
    </div>
    <div class="row">
      <div align="center" class="col-xs-12 mbot35p">

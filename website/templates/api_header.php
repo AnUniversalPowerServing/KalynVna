@@ -73,7 +73,8 @@ body { overflow-x:hidden; }
 </style>
 <script type="text/javascript">
 function kvHeaderMenu(id){
- var arry=["kvHeaderMenu-Home","kvHeaderMenu-howItWorks","kvHeaderMenu-browseMatrimony","kvHeaderMenu-signUp","kvHeaderMenu-login"];
+ var arry=["kvHeaderMenu-Home","kvHeaderMenu-howItWorks","kvHeaderMenu-browseMatrimony",
+ "kvHeaderMenu-matchCalculator","kvHeaderMenu-signUp","kvHeaderMenu-login"];
  for(var index=0;index<arry.length;index++){
    if(id===arry[index]) { if(!$('#'+arry[index]).hasClass('active')) { $('#'+arry[index]).addClass('active'); } }
    else { if($('#'+arry[index]).hasClass('active')) { $('#'+arry[index]).removeClass('active'); } }
@@ -97,6 +98,7 @@ function kvHeaderMenu(id){
         <li id="kvHeaderMenu-Home" onclick="javascript:kvHeaderMenu(this.id);"><a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>"><b>Home</b></a></li>
 		<li id="kvHeaderMenu-howItWorks" onclick="javascript:kvHeaderMenu(this.id);"><a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>howItWorks"><b>How it works?</b></a></li>
         <li id="kvHeaderMenu-browseMatrimony" onclick="javascript:kvHeaderMenu(this.id);"><a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>browseMatrimony"><b>Browse Matrimony</b></a></li>
+		<li id="kvHeaderMenu-matchCalculator" onclick="javascript:kvHeaderMenu(this.id);"><a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>matchCalculator"><b>Match Calculator</b></a></li>
         <li id="kvHeaderMenu-signUp" onclick="javascript:kvHeaderMenu(this.id);"><a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>signUp"><span class="glyphicon glyphicon-user"></span> <b>SignUp</b></a></li> 
 		<li id="kvHeaderMenu-login" onclick="javascript:kvHeaderMenu(this.id);"><a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>login"><span class="glyphicon glyphicon-log-in"></span> <b>Login</b></a></li>
       </ul>

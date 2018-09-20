@@ -11,6 +11,175 @@ var RAASI_LIST=[];
 	RAASI_LIST[9]="Capricorn (Makara Raasi)";
 	RAASI_LIST[10]="Aquarius (Khumbha Raasi)";
 	RAASI_LIST[11]="Pisces (Meena Raasi)";
+// "Ravi (Sun)","Chandra (Moon)","Mangala/Kuja (Mars)","Budha (Mercury)","Guru (Jupiter)","Shukra (Venus)","Shani (Saturn)"
+
+/* VARNAKOOTAMI ::: START */
+var VARANAM=[];
+	VARANAM["Aries (Mesha Raasi)"]={"varna":"Kshattriya","element":"Fire"};
+	VARANAM["Taurus (Vrushabha Raasi)"]={"varna":"Shudra","element":"Earth"};
+	VARANAM["Gemini (Midhuna Raasi)"]={"varna":"Vaishya","element":"Air"};
+	VARANAM["Cancer (Karkataka Raasi)"]={"varna":"Brahmin","element":"Water"};
+	VARANAM["Leo (Simha Raasi)"]={"varna":"Kshattriya","element":"Fire"};
+	VARANAM["Virgo (Kanya Raasi)"]={"varna":"Shudra","element":"Earth"};
+	VARANAM["Libra (Thula Raasi)"]={"varna":"Vaishya","element":"Air"};
+	VARANAM["Scorpio (Vruchika Raasi)"]={"varna":"Brahmin","element":"Water"};
+	VARANAM["Saggitarius (Dhanur Raasi)"]={"varna":"Kshattriya","element":"Fire"};
+	VARANAM["Capricorn (Makara Raasi)"]={"varna":"Shudra","element":"Earth"};
+	VARANAM["Aquarius (Khumbha Raasi)"]={"varna":"Vaishya","element":"Air"};
+	VARANAM["Pisces (Meena Raasi)"]={"varna":"Brahmin","element":"Water"};
+/* VARNAKOOTAMI ::: END */
+	
+/* VASHYAKOOTAMI ::: START */
+var VASHYA_KOOTAMI=[];
+VASHYA_KOOTAMI["Ashwini Nakshatram 1st Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Ashwini Nakshatram 2nd Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Ashwini Nakshatram 3rd Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Ashwini Nakshatram 4th Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Bharani Nakshatram 1st Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Bharani Nakshatram 2nd Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Bharani Nakshatram 3rd Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Bharani Nakshatram 4th Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Kruthika Nakshatram 1st Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Kruthika Nakshatram 2nd Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Kruthika Nakshatram 3rd Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Kruthika Nakshatram 4th Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Rohini Nakshatram 1st Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Rohini Nakshatram 2nd Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Rohini Nakshatram 3rd Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Rohini Nakshatram 4th Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Mrugasira Nakshatram 1st Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Mrugasira Nakshatram 2nd Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Mrugasira Nakshatram 3rd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Mrugasira Nakshatram 4th Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Aarudhra Nakshatram 1st Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Aarudhra Nakshatram 2nd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Aarudhra Nakshatram 3rd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Aarudhra Nakshatram 4th Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Punarvasu Nakshatram 1st Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Punarvasu Nakshatram 2nd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Punarvasu Nakshatram 3rd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Punarvasu Nakshatram 4th Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Pushyami Nakshatram 1st Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Pushyami Nakshatram 2nd Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Pushyami Nakshatram 3rd Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Pushyami Nakshatram 4th Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Aslesha Nakshatram 1st Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Aslesha Nakshatram 2nd Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Aslesha Nakshatram 3rd Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Aslesha Nakshatram 4th Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Makha Nakshatram 1st Padam"]="Vanachara (wild)";
+VASHYA_KOOTAMI["Makha Nakshatram 2nd Padam"]="Vanachara (wild)";
+VASHYA_KOOTAMI["Makha Nakshatram 3rd Padam"]="Vanachara (wild)";
+VASHYA_KOOTAMI["Makha Nakshatram 4th Padam"]="Vanachara (wild)";
+VASHYA_KOOTAMI["Pubbha Nakshatram 1st Padam"]="Vanachara (wild)";
+VASHYA_KOOTAMI["Pubbha Nakshatram 2nd Padam"]="Vanachara (wild)";
+VASHYA_KOOTAMI["Pubbha Nakshatram 3rd Padam"]="Vanachara (wild)";
+VASHYA_KOOTAMI["Pubbha Nakshatram 4th Padam"]="Vanachara (wild)";
+VASHYA_KOOTAMI["Uthara Nakshatram 1st Padam"]="Vanachara (wild)";
+VASHYA_KOOTAMI["Uthara Nakshatram 2nd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Uthara Nakshatram 3rd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Uthara Nakshatram 4th Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Hastha Nakshatram 1st Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Hastha Nakshatram 2nd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Hastha Nakshatram 3rd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Hastha Nakshatram 4th Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Chitha Nakshatram 1st Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Chitha Nakshatram 2nd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Chitha Nakshatram 3rd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Chitha Nakshatram 4th Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Swathi Nakshatram 1st Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Swathi Nakshatram 2nd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Swathi Nakshatram 3rd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Swathi Nakshatram 4th Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Vishaka Nakshatram 1st Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Vishaka Nakshatram 2nd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Vishaka Nakshatram 3rd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Vishaka Nakshatram 4th Padam"]="Keeta (insect)";
+VASHYA_KOOTAMI["Anuradha Nakshatram 1st Padam"]="Keeta (insect)";
+VASHYA_KOOTAMI["Anuradha Nakshatram 2nd Padam"]="Keeta (insect)";
+VASHYA_KOOTAMI["Anuradha Nakshatram 3rd Padam"]="Keeta (insect)";
+VASHYA_KOOTAMI["Anuradha Nakshatram 4th Padam"]="Keeta (insect)";
+VASHYA_KOOTAMI["Jeshta Nakshatram 1st Padam"]="Keeta (insect)";
+VASHYA_KOOTAMI["Jeshta Nakshatram 2nd Padam"]="Keeta (insect)";
+VASHYA_KOOTAMI["Jeshta Nakshatram 3rd Padam"]="Keeta (insect)";
+VASHYA_KOOTAMI["Jeshta Nakshatram 4th Padam"]="Keeta (insect)";
+VASHYA_KOOTAMI["Moola Nakshatram 1st Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Moola Nakshatram 2nd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Moola Nakshatram 3rd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Moola Nakshatram 4th Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Purvashada Nakshatram 1st Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Purvashada Nakshatram 2nd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Purvashada Nakshatram 3rd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Purvashada Nakshatram 4th Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Utharashada Nakshatram 1st Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Utharashada Nakshatram 2nd Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Utharashada Nakshatram 3rd Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Utharashada Nakshatram 4th Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Shravana Nakshatram 1st Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Shravana Nakshatram 2nd Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Shravana Nakshatram 3rd Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Shravana Nakshatram 4th Padam"]="Chatushpada (Quadraped)";
+VASHYA_KOOTAMI["Dhanista Nakshatram 1st Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Dhanista Nakshatram 2nd Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Dhanista Nakshatram 3rd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Dhanista Nakshatram 4th Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Sathabisham Nakshatram 1st Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Sathabisham Nakshatram 2nd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Sathabisham Nakshatram 3rd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Sathabisham Nakshatram 4th Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Purvabhadhra Nakshatram 1st Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Purvabhadhra Nakshatram 2nd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Purvabhadhra Nakshatram 3rd Padam"]="Manava/Nara (biped)";
+VASHYA_KOOTAMI["Purvabhadhra Nakshatram 4th Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Utharabhadra Nakshatram 1st Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Utharabhadra Nakshatram 2nd Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Utharabhadra Nakshatram 3rd Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Utharabhadra Nakshatram 4th Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Revathi Nakshatram 1st Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Revathi Nakshatram 2nd Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Revathi Nakshatram 3rd Padam"]="Jalachara (Aquatic)";
+VASHYA_KOOTAMI["Revathi Nakshatram 4th Padam"]="Jalachara (Aquatic)";
+
+var VASHYA_BRIDE=[];
+VASHYA_BRIDE["Chatushpada (Quadraped)"]=[]; 
+VASHYA_BRIDE["Chatushpada (Quadraped)"]["Chatushpada (Quadraped)"]=2;
+VASHYA_BRIDE["Chatushpada (Quadraped)"]["Manava/Nara (biped)"]=1;
+VASHYA_BRIDE["Chatushpada (Quadraped)"]["Jalachara (Aquatic)"]=1;
+VASHYA_BRIDE["Chatushpada (Quadraped)"]["Vanachara (wild)"]=1.5;
+VASHYA_BRIDE["Chatushpada (Quadraped)"]["Keeta (insect)"]=1;
+VASHYA_BRIDE["Manava/Nara (biped)"]=[]; 
+VASHYA_BRIDE["Manava/Nara (biped)"]["Chatushpada (Quadraped)"]=1;
+VASHYA_BRIDE["Manava/Nara (biped)"]["Manava/Nara (biped)"]=2;
+VASHYA_BRIDE["Manava/Nara (biped)"]["Jalachara (Aquatic)"]=1.5;
+VASHYA_BRIDE["Manava/Nara (biped)"]["Vanachara (wild)"]=0;
+VASHYA_BRIDE["Manava/Nara (biped)"]["Keeta (insect)"]=1;
+VASHYA_BRIDE["Jalachara (Aquatic)"]=[]; 
+VASHYA_BRIDE["Jalachara (Aquatic)"]["Chatushpada (Quadraped)"]=1;
+VASHYA_BRIDE["Jalachara (Aquatic)"]["Manava/Nara (biped)"]=1.5;
+VASHYA_BRIDE["Jalachara (Aquatic)"]["Jalachara (Aquatic)"]=2;
+VASHYA_BRIDE["Jalachara (Aquatic)"]["Vanachara (wild)"]=1;
+VASHYA_BRIDE["Jalachara (Aquatic)"]["Keeta (insect)"]=1;
+VASHYA_BRIDE["Vanachara (wild)"]=[]; 
+VASHYA_BRIDE["Vanachara (wild)"]["Chatushpada (Quadraped)"]=0;
+VASHYA_BRIDE["Vanachara (wild)"]["Manava/Nara (biped)"]=0;
+VASHYA_BRIDE["Vanachara (wild)"]["Jalachara (Aquatic)"]=0;
+VASHYA_BRIDE["Vanachara (wild)"]["Vanachara (wild)"]=2;
+VASHYA_BRIDE["Vanachara (wild)"]["Keeta (insect)"]=0;
+VASHYA_BRIDE["Keeta (insect)"]=[]; 
+VASHYA_BRIDE["Keeta (insect)"]["Chatushpada (Quadraped)"]=1;
+VASHYA_BRIDE["Keeta (insect)"]["Manava/Nara (biped)"]=1;
+VASHYA_BRIDE["Keeta (insect)"]["Jalachara (Aquatic)"]=1;
+VASHYA_BRIDE["Keeta (insect)"]["Vanachara (wild)"]=0;
+VASHYA_BRIDE["Keeta (insect)"]["Keeta (insect)"]=2;
+
+var VASHYA_SCORE=[];
+VASHYA_SCORE[0]="Highly Incompatible";
+VASHYA_SCORE[1]="Incompatible";
+VASHYA_SCORE[1.5]="Compatible";
+VASHYA_SCORE[2]="Most Compatible";
+
+/* VASHYAKOOTAMI ::: END */
+
 var NAKSHATRAM_LIST=[];
 	NAKSHATRAM_LIST["Aries (Mesha Raasi)"]=["Ashwini Nakshatram 1st Padam","Ashwini Nakshatram 2nd Padam",
 											"Ashwini Nakshatram 3rd Padam","Ashwini Nakshatram 4th Padam",
@@ -72,6 +241,200 @@ var NAKSHATRAM_LIST=[];
 											 "Utharabhadra Nakshatram 4th Padam","Revathi Nakshatram 1st Padam",
 											 "Revathi Nakshatram 2nd Padam","Revathi Nakshatram 3rd Padam",
 											 "Revathi Nakshatram 4th Padam"];
+/* GRAHA MYTHRI ::: START */
+var RAASI_GRAHA_LIST=[];
+	RAASI_GRAHA_LIST["Aries (Mesha Raasi)"]="Mangala/Kuja (Mars)";
+	RAASI_GRAHA_LIST["Taurus (Vrushabha Raasi)"]="Shukra (Venus)";
+	RAASI_GRAHA_LIST["Gemini (Midhuna Raasi)"]="Budha (Mercury)";
+	RAASI_GRAHA_LIST["Cancer (Karkataka Raasi)"]="Chandra (Moon)";
+	RAASI_GRAHA_LIST["Leo (Simha Raasi)"]="Ravi (Sun)";
+	RAASI_GRAHA_LIST["Virgo (Kanya Raasi)"]="Budha (Mercury)";
+	RAASI_GRAHA_LIST["Libra (Thula Raasi)"]="Shukra (Venus)";
+	RAASI_GRAHA_LIST["Scorpio (Vruchika Raasi)"]="Mangala/Kuja (Mars)";
+	RAASI_GRAHA_LIST["Saggitarius (Dhanur Raasi)"]="Guru (Jupiter)";
+	RAASI_GRAHA_LIST["Capricorn (Makara Raasi)"]="Shani (Saturn)";
+	RAASI_GRAHA_LIST["Aquarius (Khumbha Raasi)"]="Shani (Saturn)";
+	RAASI_GRAHA_LIST["Pisces (Meena Raasi)"]="Guru (Jupiter)";
+	
+var GRAHA_MYTHRIKUTAMI_LIST=[];
+    GRAHA_MYTHRIKUTAMI_LIST["Ravi (Sun)"]=[{"graham":"Ravi (Sun)","points":5},
+										   {"graham":"Chandra (Moon)","points":5},
+										   {"graham":"Mangala/Kuja (Mars)","points":5},
+										   {"graham":"Budha (Mercury)","points":4},
+										   {"graham":"Guru (Jupiter)","points":5},
+										   {"graham":"Shukra (Venus)","points":0},
+										   {"graham":"Shani (Saturn)","points":0}];
+										   
+	GRAHA_MYTHRIKUTAMI_LIST["Chandra (Moon)"]=[{"graham":"Ravi (Sun)","points":5},
+										   {"graham":"Chandra (Moon)","points":5},
+										   {"graham":"Mangala/Kuja (Mars)","points":4},
+										   {"graham":"Budha (Mercury)","points":1},
+										   {"graham":"Guru (Jupiter)","points":4},
+										   {"graham":"Shukra (Venus)","points":0.5},
+										   {"graham":"Shani (Saturn)","points":0.5}];
+										   
+	GRAHA_MYTHRIKUTAMI_LIST["Mangala/Kuja (Mars)"]=[{"graham":"Ravi (Sun)","points":5},
+										   {"graham":"Chandra (Moon)","points":4},
+										   {"graham":"Mangala/Kuja (Mars)","points":5},
+										   {"graham":"Budha (Mercury)","points":0.5},
+										   {"graham":"Guru (Jupiter)","points":5},
+										   {"graham":"Shukra (Venus)","points":3},
+										   {"graham":"Shani (Saturn)","points":0.5}];
+										   
+	GRAHA_MYTHRIKUTAMI_LIST["Budha (Mercury)"]=[{"graham":"Ravi (Sun)","points":4},
+										   {"graham":"Chandra (Moon)","points":1},
+										   {"graham":"Mangala/Kuja (Mars)","points":0.5},
+										   {"graham":"Budha (Mercury)","points":5},
+										   {"graham":"Guru (Jupiter)","points":0.5},
+										   {"graham":"Shukra (Venus)","points":5},
+										   {"graham":"Shani (Saturn)","points":4}];
+										   
+	GRAHA_MYTHRIKUTAMI_LIST["Guru (Jupiter)"]=[{"graham":"Ravi (Sun)","points":5},
+										   {"graham":"Chandra (Moon)","points":4},
+										   {"graham":"Mangala/Kuja (Mars)","points":5},
+										   {"graham":"Budha (Mercury)","points":0.5},
+										   {"graham":"Guru (Jupiter)","points":5},
+										   {"graham":"Shukra (Venus)","points":0.5},
+										   {"graham":"Shani (Saturn)","points":3}];
+										   
+	GRAHA_MYTHRIKUTAMI_LIST["Shukra (Venus)"]=[{"graham":"Ravi (Sun)","points":0},
+										   {"graham":"Chandra (Moon)","points":0.5},
+										   {"graham":"Mangala/Kuja (Mars)","points":3},
+										   {"graham":"Budha (Mercury)","points":5},
+										   {"graham":"Guru (Jupiter)","points":0.5},
+										   {"graham":"Shukra (Venus)","points":5},
+										   {"graham":"Shani (Saturn)","points":5}];
+										   
+	GRAHA_MYTHRIKUTAMI_LIST["Shani (Saturn)"]=[{"graham":"Ravi (Sun)","points":0},
+										   {"graham":"Chandra (Moon)","points":0.5},
+										   {"graham":"Mangala/Kuja (Mars)","points":0.5},
+										   {"graham":"Budha (Mercury)","points":4},
+										   {"graham":"Guru (Jupiter)","points":3},
+										   {"graham":"Shukra (Venus)","points":5},
+										   {"graham":"Shani (Saturn)","points":5}];
+										   
+var GRAHAMYTRI_PHALAM=[{"phalam":"MahaVirodham (Great Enemy)","points":0.5},
+					   {"phalam":"Ubhaya","points":0},
+					   {"phalam":"Shetruthavam (Enemy)","points":1},
+					   {"phalam":"Tataswathya (Medium)","points":2},
+					   {"phalam":"UbhyaMitrata (Friends)","points":3},
+					   {"phalam":"AthiSneham (Close Friends)","points":4},
+					   {"phalam":"Samajathi (Equal)","points":5}];
+/* GRAHA MYTHRI ::: END */
+/* NADI STUFF ::: START */					   
+var NADI_LIST=[];
+NADI_LIST["Ashwini Nakshatram 1st Padam"]="ADI";
+NADI_LIST["Ashwini Nakshatram 2nd Padam"]="ADI";
+NADI_LIST["Ashwini Nakshatram 3rd Padam"]="ADI";
+NADI_LIST["Ashwini Nakshatram 4th Padam"]="ADI";
+NADI_LIST["Aarudhra Nakshatram 1st Padam"]="ADI";
+NADI_LIST["Aarudhra Nakshatram 2nd Padam"]="ADI";
+NADI_LIST["Aarudhra Nakshatram 3rd Padam"]="ADI";
+NADI_LIST["Aarudhra Nakshatram 4th Padam"]="ADI";
+NADI_LIST["Punarvasu Nakshatram 1st Padam"]="ADI";
+NADI_LIST["Punarvasu Nakshatram 2nd Padam"]="ADI";
+NADI_LIST["Punarvasu Nakshatram 3rd Padam"]="ADI";
+NADI_LIST["Punarvasu Nakshatram 4th Padam"]="ADI";
+NADI_LIST["Uthara Nakshatram 1st Padam"]="ADI";
+NADI_LIST["Uthara Nakshatram 2nd Padam"]="ADI";
+NADI_LIST["Uthara Nakshatram 3rd Padam"]="ADI";
+NADI_LIST["Uthara Nakshatram 4th Padam"]="ADI";
+NADI_LIST["Hastha Nakshatram 1st Padam"]="ADI";
+NADI_LIST["Hastha Nakshatram 2nd Padam"]="ADI";
+NADI_LIST["Hastha Nakshatram 3rd Padam"]="ADI";
+NADI_LIST["Hastha Nakshatram 4th Padam"]="ADI";
+NADI_LIST["Jeshta Nakshatram 1st Padam"]="ADI";
+NADI_LIST["Jeshta Nakshatram 2nd Padam"]="ADI";
+NADI_LIST["Jeshta Nakshatram 3rd Padam"]="ADI";
+NADI_LIST["Jeshta Nakshatram 4th Padam"]="ADI";
+NADI_LIST["Moola Nakshatram 1st Padam"]="ADI";
+NADI_LIST["Moola Nakshatram 2nd Padam"]="ADI";
+NADI_LIST["Moola Nakshatram 3rd Padam"]="ADI";
+NADI_LIST["Moola Nakshatram 4th Padam"]="ADI";
+NADI_LIST["Sathabisham Nakshatram 1st Padam"]="ADI";
+NADI_LIST["Sathabisham Nakshatram 2nd Padam"]="ADI";
+NADI_LIST["Sathabisham Nakshatram 3rd Padam"]="ADI";
+NADI_LIST["Sathabisham Nakshatram 4th Padam"]="ADI";
+NADI_LIST["Purvabhadhra Nakshatram 1st Padam"]="ADI";
+NADI_LIST["Purvabhadhra Nakshatram 2nd Padam"]="ADI";
+NADI_LIST["Purvabhadhra Nakshatram 3rd Padam"]="ADI";
+NADI_LIST["Purvabhadhra Nakshatram 4th Padam"]="ADI";
+
+NADI_LIST["Bharani Nakshatram 1st Padam"]="MADHYA";
+NADI_LIST["Bharani Nakshatram 2nd Padam"]="MADHYA";
+NADI_LIST["Bharani Nakshatram 3rd Padam"]="MADHYA";
+NADI_LIST["Bharani Nakshatram 4th Padam"]="MADHYA";
+NADI_LIST["Mrugasira Nakshatram 1st Padam"]="MADHYA";
+NADI_LIST["Mrugasira Nakshatram 2nd Padam"]="MADHYA";
+NADI_LIST["Mrugasira Nakshatram 3rd Padam"]="MADHYA";
+NADI_LIST["Mrugasira Nakshatram 4th Padam"]="MADHYA";
+NADI_LIST["Pushyami Nakshatram 1st Padam"]="MADHYA";
+NADI_LIST["Pushyami Nakshatram 2nd Padam"]="MADHYA";
+NADI_LIST["Pushyami Nakshatram 3rd Padam"]="MADHYA";
+NADI_LIST["Pushyami Nakshatram 4th Padam"]="MADHYA";
+NADI_LIST["Pubbha Nakshatram 1st Padam"]="MADHYA";
+NADI_LIST["Pubbha Nakshatram 2nd Padam"]="MADHYA";
+NADI_LIST["Pubbha Nakshatram 3rd Padam"]="MADHYA";
+NADI_LIST["Pubbha Nakshatram 4th Padam"]="MADHYA";
+NADI_LIST["Chitha Nakshatram 1st Padam"]="MADHYA";
+NADI_LIST["Chitha Nakshatram 2nd Padam"]="MADHYA";
+NADI_LIST["Chitha Nakshatram 3rd Padam"]="MADHYA";
+NADI_LIST["Chitha Nakshatram 4th Padam"]="MADHYA";
+NADI_LIST["Anuradha Nakshatram 1st Padam"]="MADHYA";
+NADI_LIST["Anuradha Nakshatram 2nd Padam"]="MADHYA";
+NADI_LIST["Anuradha Nakshatram 3rd Padam"]="MADHYA";
+NADI_LIST["Anuradha Nakshatram 4th Padam"]="MADHYA";
+NADI_LIST["Purvashada Nakshatram 1st Padam"]="MADHYA";
+NADI_LIST["Purvashada Nakshatram 2nd Padam"]="MADHYA";
+NADI_LIST["Purvashada Nakshatram 3rd Padam"]="MADHYA";
+NADI_LIST["Purvashada Nakshatram 4th Padam"]="MADHYA";
+NADI_LIST["Dhanista Nakshatram 1st Padam"]="MADHYA";
+NADI_LIST["Dhanista Nakshatram 2nd Padam"]="MADHYA";
+NADI_LIST["Dhanista Nakshatram 3rd Padam"]="MADHYA";
+NADI_LIST["Dhanista Nakshatram 4th Padam"]="MADHYA";
+NADI_LIST["Utharabhadra Nakshatram 1st Padam"]="MADHYA";
+NADI_LIST["Utharabhadra Nakshatram 2nd Padam"]="MADHYA";
+NADI_LIST["Utharabhadra Nakshatram 3rd Padam"]="MADHYA";
+NADI_LIST["Utharabhadra Nakshatram 4th Padam"]="MADHYA";
+
+NADI_LIST["Kruthika Nakshatram 1st Padam"]="ANTHA";
+NADI_LIST["Kruthika Nakshatram 2nd Padam"]="ANTHA";
+NADI_LIST["Kruthika Nakshatram 3rd Padam"]="ANTHA";
+NADI_LIST["Kruthika Nakshatram 4th Padam"]="ANTHA";
+NADI_LIST["Rohini Nakshatram 1st Padam"]="ANTHA";
+NADI_LIST["Rohini Nakshatram 2nd Padam"]="ANTHA";
+NADI_LIST["Rohini Nakshatram 3rd Padam"]="ANTHA";
+NADI_LIST["Rohini Nakshatram 4th Padam"]="ANTHA";
+NADI_LIST["Aslesha Nakshatram 1st Padam"]="ANTHA";
+NADI_LIST["Aslesha Nakshatram 2nd Padam"]="ANTHA";
+NADI_LIST["Aslesha Nakshatram 3rd Padam"]="ANTHA";
+NADI_LIST["Aslesha Nakshatram 4th Padam"]="ANTHA";
+NADI_LIST["Makha Nakshatram 1st Padam"]="ANTHA";
+NADI_LIST["Makha Nakshatram 2nd Padam"]="ANTHA";
+NADI_LIST["Makha Nakshatram 3rd Padam"]="ANTHA";
+NADI_LIST["Makha Nakshatram 4th Padam"]="ANTHA";
+NADI_LIST["Swathi Nakshatram 1st Padam"]="ANTHA";
+NADI_LIST["Swathi Nakshatram 2nd Padam"]="ANTHA";
+NADI_LIST["Swathi Nakshatram 3rd Padam"]="ANTHA";
+NADI_LIST["Swathi Nakshatram 4th Padam"]="ANTHA";
+NADI_LIST["Vishaka Nakshatram 1st Padam"]="ANTHA";
+NADI_LIST["Vishaka Nakshatram 2nd Padam"]="ANTHA";
+NADI_LIST["Vishaka Nakshatram 3rd Padam"]="ANTHA";
+NADI_LIST["Vishaka Nakshatram 4th Padam"]="ANTHA";
+NADI_LIST["Utharashada Nakshatram 1st Padam"]="ANTHA";
+NADI_LIST["Utharashada Nakshatram 2nd Padam"]="ANTHA";
+NADI_LIST["Utharashada Nakshatram 3rd Padam"]="ANTHA";
+NADI_LIST["Utharashada Nakshatram 4th Padam"]="ANTHA";
+NADI_LIST["Shravana Nakshatram 1st Padam"]="ANTHA";
+NADI_LIST["Shravana Nakshatram 2nd Padam"]="ANTHA";
+NADI_LIST["Shravana Nakshatram 3rd Padam"]="ANTHA";
+NADI_LIST["Shravana Nakshatram 4th Padam"]="ANTHA";
+NADI_LIST["Revathi Nakshatram 1st Padam"]="ANTHA";
+NADI_LIST["Revathi Nakshatram 2nd Padam"]="ANTHA";
+NADI_LIST["Revathi Nakshatram 3rd Padam"]="ANTHA";
+NADI_LIST["Revathi Nakshatram 4th Padam"]="ANTHA";
+/* NADI STUFF ::: END */
+					   
 var GOTRAS=["Agastya","Alambani","Angirasa","Atreya","Atri","Bhakdi","Bhardwaj","Bharadvajasa","Bhargava",
 "Chandilya","Charora","Chikitasa","Dalabhya","Darbhas","Dhananjaya","Dhanvantari","Galvasaya","Garga","Gargheyasa",
 "Gaubhilya","Gautam","Gautamasa","Harita","Haritasa","Hukman Bhal","Jamadagni","Jatukarna","Kalabodhana","Kalaboudha",
