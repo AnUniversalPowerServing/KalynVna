@@ -4,7 +4,7 @@
   <title>KalyanaVeena</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/api/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -12,16 +12,16 @@
   <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
   <script src="js/api/bootstrap-switch.js"></script>
   <script src="js/api/brahim-core.js"></script>
-  <link href="styles/bootstrap-switch.css" rel="stylesheet">
+  <link href="styles/api/bootstrap-switch.css" rel="stylesheet">
+<style>
+.pad5-10 { padding:5px 10px; }
+</style>
   <script type="text/javascript">
   $(document).ready(function(){
     kvHeaderMenu('kvHeaderMenu-matchCalculator');
 	display_list_Raasi("match_boy_raasi");
 	display_list_Raasi("match_girl_raasi");
   });
-
-
-
 
 function varnamCalculator(match_boy_raasi, match_girl_raasi){
   var varnaRanking =[];
@@ -76,7 +76,7 @@ if(boy_tarabhalam_index<girl_tarabhalam_index){
 }
        if(calculation1  && calculation2){ taraScore=3; }
   else if((!calculation1  && calculation2) || (calculation1  && !calculation2)){ taraScore=1.5; }
-  var tarabhalamResults={ "taraScore":taraScore, "total_points":"3" };
+  var tarabhalamResults={ "taraScore":taraScore, "total_points":3 };
   return tarabhalamResults;
 }
 
@@ -377,7 +377,7 @@ ganaNashatram["Uthara"]="Manusha";
 ganaNashatram["Hastha"]="Devata";
 ganaNashatram["Chitha"]="Rakshasa";
 ganaNashatram["Swathi"]="Devata";
-ganaNashatram["Vishaka"]="";
+ganaNashatram["Vishaka"]="Rakshasa";
 ganaNashatram["Anuradha"]="Devata";
 ganaNashatram["Jeshta"]="Rakshasa";
 ganaNashatram["Moola"]="Rakshasa";
@@ -625,10 +625,12 @@ function calculateBoyAndGirlMatch(){
   console.log(JSON.stringify(calculationResults));
   return calculationResults;
 }
+
 function matchCalculator(){
  var calculationResults = calculateBoyAndGirlMatch();
  displayMatchResults(calculationResults);
 }
+
 function displayMatchResults(calculationResults){
 var match_boy_raasi = calculationResults.zodaicInfo.match_boy_raasi;
 var match_boy_nakshatram = calculationResults.zodaicInfo.match_boy_nakshatram;
@@ -677,9 +679,62 @@ var girlNadi = calculationResults.nadiResults.girlNadi;
 var nadiPoints = calculationResults.nadiResults.nadiPoints;
 var nadiTotalPoints = calculationResults.nadiResults.total_points;
 
+var userScored=varnaPoints+vashyaKootamiPoints+taraPoints+yoniPoints+grahaMytriPoints+ganaPoints+bhakootBoyPoints+nadiPoints;
+var totalKhutamiScore=varnaTotalPoints+vashyaKootamiTotalPoints+taraTotalPoints+yoniTotalPoints+grahaMytriTotalPoints+ganaTotalPoints+bhakootBoyTotalPoints+nadiTotalPoints;
 
-var content='<div id="div_boyAndGirlVarna">';
-    content+='<div align="center"><h4><b>VARNA KHUTAMI</b></h4></div>';
+var content='<div class="container-fluid">';
+    content+='<div class="row">';
+	content+='<div align="center" class="col-xs-12">';
+	content+='<h5><b>KUNDALINI MATCHING</b></h5>';
+	content+='</div>';
+	if(userScored>=18) {
+	content+='<div align="center" class="col-xs-12">';
+	content+='<h5 style="color:#4caf50;"><b>Kundalini of Boy and Girl Matches.</b></h5>';
+	content+='</div>';
+	} else {
+	content+='<div align="center" class="col-xs-12">';
+	content+='<h5 style="color:#ff5722;"><b>Kundalini of Boy and Girl doesn\'t Match.</b></h5>';
+	content+='</div>';
+	}
+	content+='</div>';
+	content+='</div>';
+    content+='<div class="table-responsive">';    
+    content+='<table class="table">';
+    content+='<thead>';
+    content+='<tr><th>#</th><th>Horoscope</th><th>Score</th></tr>';
+    content+='</thead>';
+    content+='<tbody>';
+    content+='<tr><td>1</td><td>Varna Kutami</td><td>'+varnaPoints+'/'+varnaTotalPoints+'</td></tr>';
+	content+='<tr><td>2</td><td>Vashya Kutami</td><td>'+vashyaKootamiPoints+'/'+vashyaKootamiTotalPoints+'</td></tr>';
+	content+='<tr><td>3</td><td>Tarabhalam Kutami</td><td>'+taraPoints+'/'+taraTotalPoints+'</td></tr>';
+	content+='<tr><td>4</td><td>Yoni Kutami</td><td>'+yoniPoints+'/'+yoniTotalPoints+'</td></tr>';
+	content+='<tr><td>5</td><td>Graha Mythri</td><td>'+grahaMytriPoints+'/'+grahaMytriTotalPoints+'</td></tr>';
+	content+='<tr><td>6</td><td>Gana Kutami</td><td>'+ganaPoints+'/'+ganaTotalPoints+'</td></tr>';
+	content+='<tr><td>7</td><td>Bhakoot Kutami</td><td>'+bhakootBoyPoints+'/'+bhakootBoyTotalPoints+'</td></tr>';
+	content+='<tr><td>8</td><td>Nadi Kutami</td><td>'+nadiPoints+'/'+nadiTotalPoints+'</td></tr>';
+	if(userScored>=18) {
+	content+='<tr style="color:#4caf50;"><td></td><td><b>TOTAL</b></td><td><b>'+userScored+'/'+totalKhutamiScore+'</b></td></tr>';
+	} else {
+	content+='<tr style="color:#ff5722;"><td></td><td><b>TOTAL</b></td><td><b>'+userScored+'/'+totalKhutamiScore+'</b></td></tr>';   
+	}
+    content+='</tbody>';
+    content+='</table>';
+    content+='</div>';
+	content+='<div class="container-fluid">';
+    content+='<div class="row">';
+	content+='<div align="center" class="col-xs-12">';
+	content+='<h5><b>KUNDALINI MATCHING DESCRIPTION</b></h5>';
+	content+='</div>'; 
+	content+='<div class="container-fluid">';
+    content+='<div class="row">';
+	content+='<div class="col-xs-12">';
+	content+='<div class="list-group">';
+	//
+	content+='<div class="list-group-item" data-toggle="collapse" data-target="#div_boyAndGirlVarna"  style="padding:2px 15px;background-color:#f5f5f5;">';
+	content+='<h5><b>1. Varna Khutami</b><span class="glyphicon glyphicon-chevron-down pull-right"></span></h5>';
+	content+='</div>';
+	content+='<div id="div_boyAndGirlVarna" class="collapse">';
+	content+='<div class="list-group-item">';
     content+='<div class="table-responsive">';         
     content+='<table class="table">';
     content+='<tbody>';
@@ -704,9 +759,14 @@ var content='<div id="div_boyAndGirlVarna">';
 	content+='<div class="col-xs-12" align="right"><b>SCORE:</b><h4><b>'+varnaPoints+'/'+varnaTotalPoints+'</b></h4></div>';
 	content+='</div>';
 	content+='</div>';
-	content+='</div>'; //  
-	content+='<div id="div_boyAndGirlvashya">';
-    content+='<div align="center"><h4><b>VASHYA KHUTAMI</b></h4></div>';
+	content+='</div>';
+	content+='</div>';
+	//
+	content+='<div class="list-group-item" data-toggle="collapse" data-target="#div_boyAndGirlvashya" style="padding:2px 15px;background-color:#f5f5f5;">';
+	content+='<h5><b>2. Vashya Khutami</b><span class="glyphicon glyphicon-chevron-down pull-right"></span></h5>';
+	content+='</div>';
+	content+='<div id="div_boyAndGirlvashya" class="collapse">';
+	content+='<div class="list-group-item">';
     content+='<div class="table-responsive">';
     content+='<table class="table">';
     content+='<tbody>';
@@ -731,8 +791,13 @@ var content='<div id="div_boyAndGirlVarna">';
 	content+='</div>';
 	content+='</div>';
 	content+='</div>';
-	content+='<div id="div_boyAndGirltarabhalam">';
-    content+='<div align="center"><h4><b>TARABHALAM KHUTAMI</b></h4></div>';
+	content+='</div>';
+	//
+	content+='<div class="list-group-item" data-toggle="collapse" data-target="#div_boyAndGirltarabhalam" style="padding:2px 15px;background-color:#f5f5f5;">';
+	content+='<h5><b>3. Tarabhalam Khutami</b><span class="glyphicon glyphicon-chevron-down pull-right"></span></h5>';
+	content+='</div>';
+	content+='<div id="div_boyAndGirltarabhalam" class="collapse">';
+	content+='<div class="list-group-item">';
     content+='<div class="table-responsive">';      
     content+='<table class="table">';
     content+='<tbody>';
@@ -756,8 +821,13 @@ var content='<div id="div_boyAndGirlVarna">';
 	content+='</div>';
 	content+='</div>';
 	content+='</div>';
-	content+='<div id="div_boyAndGirlyoni">';
-    content+='<div align="center"><h4><b>YONI KHUTAMI</b></h4></div>';
+	content+='</div>';
+	//
+	content+='<div class="list-group-item" data-toggle="collapse" data-target="#div_boyAndGirlyoni" style="padding:2px 15px;background-color:#f5f5f5;">';
+	content+='<h5><b>4. Yoni Khutami</b><span class="glyphicon glyphicon-chevron-down pull-right"></span></h5>';
+	content+='</div>';
+	content+='<div id="div_boyAndGirlyoni" class="collapse">';
+	content+='<div class="list-group-item">';
     content+='<div class="table-responsive">';
     content+='<table class="table">';
     content+='<tbody>';
@@ -782,8 +852,13 @@ var content='<div id="div_boyAndGirlVarna">';
 	content+='</div>';
 	content+='</div>';
 	content+='</div>';
-	content+='<div id="div_boyAndGirlgrahamythri">';
-    content+='<div align="center"><h4><b>GRAHA MYTHRI</b></h4></div>';
+	content+='</div>';
+	//
+	content+='<div class="list-group-item" data-toggle="collapse" data-target="#div_boyAndGirlgrahamythri" style="padding:2px 15px;background-color:#f5f5f5;">';
+	content+='<h5><b>5. Graha Mythri</b><span class="glyphicon glyphicon-chevron-down pull-right"></span></h5>';
+	content+='</div>';
+	content+='<div id="div_boyAndGirlgrahamythri" class="collapse">';
+	content+='<div class="list-group-item">';
     content+='<div class="table-responsive">';        
     content+='<table class="table">';
     content+='<tbody>';
@@ -808,8 +883,13 @@ var content='<div id="div_boyAndGirlVarna">';
 	content+='</div>';
 	content+='</div>';
 	content+='</div>';
-	content+='<div id="div_boyAndGirlgana">';
-    content+='<div align="center"><h4><b>GANA KHUTAMI</b></h4></div>';
+	content+='</div>';
+	//
+	content+='<div class="list-group-item" data-toggle="collapse" data-target="#div_boyAndGirlgana" style="padding:2px 15px;background-color:#f5f5f5;">';
+	content+='<h5><b>6. Gana Khutami</b><span class="glyphicon glyphicon-chevron-down pull-right"></span></h5>';
+	content+='</div>';
+	content+='<div id="div_boyAndGirlgana" class="collapse">';
+    content+='<div  class="list-group-item">';
     content+='<div class="table-responsive">';
     content+='<table class="table">';
     content+='<tbody>';
@@ -834,8 +914,13 @@ var content='<div id="div_boyAndGirlVarna">';
 	content+='</div>';
 	content+='</div>';
 	content+='</div>';
-	content+='<div id="div_boyAndGirlBhakoot">';
-    content+='<div align="center"><h4><b>BHAKOOT KHUTAMI</b></h4></div>';
+	content+='</div>';
+	//
+	content+='<div class="list-group-item" data-toggle="collapse" data-target="#div_boyAndGirlBhakoot" style="padding:2px 15px;background-color:#f5f5f5;">';
+	content+='<h5><b>7. Bhakoot Khutami</b><span class="glyphicon glyphicon-chevron-down pull-right"></span></h5>';
+	content+='</div>';
+	content+='<div id="div_boyAndGirlBhakoot" class="collapse">';
+	content+='<div class="list-group-item">';
     content+='<div class="table-responsive">';
     content+='<table class="table">';
     content+='<tbody>';
@@ -859,8 +944,13 @@ var content='<div id="div_boyAndGirlVarna">';
 	content+='</div>';
 	content+='</div>';
 	content+='</div>';
-	content+='<div id="div_boyAndGirlNadi">';
-    content+='<div align="center"><h4><b>NADI KHUTAMI</b></h4></div>';
+	content+='</div>';
+	//
+    content+='<div class="list-group-item" data-toggle="collapse" data-target="#div_boyAndGirlNadi" style="padding:2px 15px;background-color:#f5f5f5;">';
+	content+='<h5><b>8. Nadi Khutami</b><span class="glyphicon glyphicon-chevron-down pull-right"></span></h5>';
+	content+='</div>';
+	content+='<div id="div_boyAndGirlNadi" class="collapse">';
+	content+='<div class="list-group-item">';
     content+='<div class="table-responsive">';       
     content+='<table class="table">';
     content+='<tbody>';
@@ -884,6 +974,14 @@ var content='<div id="div_boyAndGirlVarna">';
 	content+='</div>';
 	content+='</div>';
 	content+='</div>';
+	content+='</div>';
+	//
+	content+='</div>';
+	content+='</div>';
+	content+='</div>';
+	content+='</div>';
+	
+	
   document.getElementById("boyAndGirlMatchResults").innerHTML=content;  
 }
   </script>

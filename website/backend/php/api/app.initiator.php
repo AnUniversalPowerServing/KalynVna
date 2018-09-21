@@ -8,12 +8,11 @@
 	 Logger::configure('../../../backend/config/log-config.xml'); 
 	
  /* Database Credentials */
-$DB_MLHBASIC_SERVERNAME="localhost:3306";
-$DB_MLHBASIC_NAME="mlh_basic";
-$DB_MLHBASIC_USER="root";
-$DB_MLHBASIC_PASSWORD="";
-	 
-	 
+$DB_KV_SERVERNAME="localhost:3306";
+$DB_KV_NAME="kv";
+$DB_KV_USER="root";
+$DB_KV_PASSWORD="";
+ 	 
 // DB: myloc6lh_mlh
 // USER: myloc6lh_root
 // PASSWORD : myloc6lh_root
