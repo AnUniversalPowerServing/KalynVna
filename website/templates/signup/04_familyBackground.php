@@ -6,12 +6,12 @@ signUp_familyBkg_motherOccpn
 signUp_familyBkg_noOfBrothers
 signUp_familyBkg_noOfSisters
 -->
-<div class="col-sm-12">
-    <h4 style="color:#000;padding:8px;border-bottom:1px solid #c0c0c0;margin-bottom:25px;">
-	  4. Family Background
-    </h4>
-		
-    <div class="col-sm-12">
+<div class="panel panel-primary mtop10p">
+<div class="panel-heading"><b>4. Family Background</b></div>
+<div class="panel-body">
+  <div class="container-fluid">
+    <div class="row">
+	  <div class="col-xs-12">
 		<div align="center" class="form-group">
 		  <h5><b>FATHER DETAILS</b></h5>
 		</div>
@@ -23,23 +23,23 @@ signUp_familyBkg_noOfSisters
 		   <label>Occupation <span class="mandatoryField">*</span></label>
 		   <input id="signUp_familyBkg_fatherOccpn" type="text" class="form-control" placeholder="Enter your Occupation"/>
 	    </div>
-	</div>
-		
-	<div class="col-sm-12">
-	   <div align="center" class="form-group">
+	  </div>
+	
+	  <div class="col-xs-12">
+	    <div align="center" class="form-group">
 		 <h5><b>MOTHER DETAILS</b></h5>
-	   </div>
-	   <div class="form-group">
+	    </div>
+	    <div class="form-group">
 		   <label>Mother Name <span class="mandatoryField">*</span></label>
 		   <input id="signUp_familyBkg_motherName" type="text" class="form-control" placeholder="Enter your Mother Name"/>
-	   </div>
-	   <div class="form-group">
+	    </div>
+	    <div class="form-group">
 		   <label>Occupation <span class="mandatoryField">*</span></label>
 		   <input id="signUp_familyBkg_motherOccpn" type="text" class="form-control" placeholder="Enter your Occupation"/>
-	   </div>
-	</div>
-		
-	<div class="col-sm-12">
+	    </div>
+	  </div>
+	
+      <div class="col-xs-12">
 	   <div align="center" class="form-group">
 		  <h5><b>SIBLINGS DETAILS</b></h5>
 	   </div>
@@ -75,6 +75,14 @@ signUp_familyBkg_noOfSisters
 					<option value="10">10 Sisters</option>
 			</select>
 		</div>
+		
+		<div class="form-group">
+		  <button class="btn btn-primary pull-right"><b>Next</b></button>
+		</div>
+		
 	  </div>
-	</div>
-   
+	
+    </div>
+  </div>
+</div>
+</div>

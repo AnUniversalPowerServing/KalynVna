@@ -22,47 +22,47 @@ $(document).ready(function(){
  kvHeaderMenu('kvHeaderMenu-signUp');
 });
 
-signUp_mentionProfile_surName
-signUp_mentionProfile_name
-signUp_mentionProfile_gender
-signUp_mentionProfile_motherTongue
-signUp_mentionProfile_status
-signUp_mentionProfile_hgtFeet
-signUp_mentionProfile_hgtInches
-signUp_mentionProfile_highestDegree
-signUp_mentionProfile_occupation   
-signUp_mentionProfile_occupationType
-signUp_bzc_birthDate
-signUp_bzc_birthTime
-signUp_bzc_birthCountry
-signUp_bzc_birthState
-signUp_bzc_birthLocation
-signUp_bzc_birthLocality
-signUp_bzc_shakha
-signUp_bzc_upaShakha
-signUp_bzc_gothram
-signUp_bzc_raasi
-signUp_bzc_nakshatra
-signUp_contactI_address
-signUp_contactI_country
-signUp_contactI_state
-signUp_contactI_location
-signUp_contactI_locality
-signUp_contactI_mobile
-signUp_familyBkg_fatherName
-signUp_familyBkg_fatherOccpn
-signUp_familyBkg_motherName
-signUp_familyBkg_motherOccpn
-signUp_familyBkg_noOfBrothers
-signUp_familyBkg_noOfSisters
-signUp_prefSpouse_highestDegree
-signUp_prefSpouse_expectedOccpn
-signUp_prefSpouse_expectedOccpnType
-signUp_prefSpouse_expectedMTongue
+var signUp_mentionProfile_surName;
+var signUp_mentionProfile_name;
+var signUp_mentionProfile_gender;
+var signUp_mentionProfile_motherTongue;
+var signUp_mentionProfile_status;
+var signUp_mentionProfile_hgtFeet;
+var signUp_mentionProfile_hgtInches;
+var signUp_mentionProfile_highestDegree;
+var signUp_mentionProfile_occupation;
+var signUp_mentionProfile_occupationType;
+var signUp_bzc_birthDate;
+var signUp_bzc_birthTime;
+var signUp_bzc_birthCountry;
+var signUp_bzc_birthState;
+var signUp_bzc_birthLocation;
+var signUp_bzc_birthLocality;
+var signUp_bzc_shakha;
+var signUp_bzc_upaShakha;
+var signUp_bzc_gothram;
+var signUp_bzc_raasi;
+var signUp_bzc_nakshatra;
+var signUp_contactI_address;
+var signUp_contactI_country;
+var signUp_contactI_state;
+var signUp_contactI_location;
+var signUp_contactI_locality;
+var signUp_contactI_mobile;
+var signUp_familyBkg_fatherName;
+var signUp_familyBkg_fatherOccpn;
+var signUp_familyBkg_motherName;
+var signUp_familyBkg_motherOccpn;
+var signUp_familyBkg_noOfBrothers;
+var signUp_familyBkg_noOfSisters;
+var signUp_prefSpouse_highestDegree;
+var signUp_prefSpouse_expectedOccpn;
+var signUp_prefSpouse_expectedOccpnType;
+var signUp_prefSpouse_expectedMTongue;
 (Optional)
-signUp_uploadPic_picture1
-signUp_uploadPic_picture2
-signUp_uploadPic_picture3
+var signUp_uploadPic_picture1_url;
+var signUp_uploadPic_picture2_url;
+var signUp_uploadPic_picture3_url;
 </script>
 <style>
 .mandatoryField { color:red;font-size:16px; }
@@ -77,31 +77,74 @@ signUp_uploadPic_picture3
 		<p>Fill your Details, we provide Information about your Partner that matches your Zodiac Information</p>
 	  </div>
    </div>
-   <div class="row">
-     <div class="col-sm-4">
-       <?php include_once 'templates/signUp/01_mentionProfile.php'; ?>
-	   <?php include_once 'templates/signUp/04_familyBackground.php'; ?>
-	 </div>
-	 <div class="col-sm-4">
-       <?php include_once 'templates/signUp/02_birthZodiacCommunity.php'; ?>
-	   <?php include_once 'templates/signUp/05_preferenceOfSpouse.php'; ?>
-	 </div>
-	 <div class="col-sm-4">
-	   <?php include_once 'templates/signUp/03_contactInformation.php'; ?>
-	   <?php include_once 'templates/signUp/06_uploadYourPicture.php'; ?>
-	 </div>
+<style>
+/* Phones */
+@media only screen and (max-width:768px) { 
+#signup_header_btns { display:none; }
+}
+/* Tablets */
+@media only screen and (min-width:769px) and (max-width:992px) { 
+#signup_header_btns { display:none; }
+}
+/* Laptops */
+@media only screen and (min-width:993px) and (max-width:1200px) { 
+#signup_header_btns { display:block; }
+}
+/* Large-Screens */
+@media only screen and (min-width:1201px) { 
+#signup_header_btns { display:block; }
+}
+ul.nav-stacked>li.active>a { color:#fff; }
+ul.nav-stacked>li>a { color:#000; }
+ul.nav-stacked>li { background-color:#ccc; }
+</style>
+<script type="text/javascript">
+function sel_signup_menu(id){
+var arry_menu=["signup_menu_mentionprofile","signup_menu_birthAndCommunityBg","signup_menu_contactInf",
+"signup_menu_familyBackground","signup_menu_preferenceOfSpouse","signup_menu_uploadPicture","signup_menu_finish"];
+var arry_menu_content=["signup_content_mentionprofile","signup_content_birthAndCommunityBg","signup_content_contactInf",
+"signup_content_familyBackground","signup_content_preferenceOfSpouse","signup_content_uploadPicture","signup_content_finish"];
+for(var index=0;index<arry_menu.length;index++){
+  if(id===arry_menu[index]){
+     if(!$('#'+arry_menu[index]).hasClass('active')){ $('#'+arry_menu[index]).addClass('active'); }
+	 if($('#'+arry_menu_content[index]).hasClass('hide-block')){ $('#'+arry_menu_content[index]).removeClass('hide-block'); }
+  } else {
+     if($('#'+arry_menu[index]).hasClass('active')){  $('#'+arry_menu[index]).removeClass('active'); }
+	 if(!$('#'+arry_menu_content[index]).hasClass('hide-block')){ $('#'+arry_menu_content[index]).addClass('hide-block'); }
+  }
+}
+}
+$(document).ready(function(){
+sel_signup_menu("signup_menu_mentionprofile");
+});
+</script>
+<style>
+.hide-block { display:none; }
+</style>
+    <div class="row">
+	  <div class="col-xs-12 col-md-3 col-sm-4 col-lg-3">
+	    <ul class="nav nav-pills nav-stacked">
+		  <li id="signup_menu_mentionprofile" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>1. Mention Profile</b></a></li>
+		  <li id="signup_menu_birthAndCommunityBg" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>2. Birth and Community Background</b></a></li>
+		  <li id="signup_menu_contactInf" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>3. Contact Information</b></a></li>
+		  <li id="signup_menu_familyBackground" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>4. Family Background</b></a></li>
+		  <li id="signup_menu_preferenceOfSpouse" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>5. Preference Of Spouse</b></a></li>
+		  <li id="signup_menu_uploadPicture" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>6. Upload Picture</b></a></li>
+		  <li id="signup_menu_finish" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>7. Finish</b></a></li>
+		</ul>
+	  </div>
+	  <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6">
+	    <div id="signup_content_mentionprofile" class="hide-block"><?php include_once 'templates/signUp/01_mentionProfile.php'; ?></div>
+		<div id="signup_content_birthAndCommunityBg" class="hide-block"><?php include_once 'templates/signUp/02_birthZodiacCommunity.php'; ?></div>
+		<div id="signup_content_contactInf" class="hide-block"><?php include_once 'templates/signUp/03_contactInformation.php'; ?></div>
+		<div id="signup_content_familyBackground" class="hide-block"><?php include_once 'templates/signUp/04_familyBackground.php'; ?></div>
+		<div id="signup_content_preferenceOfSpouse" class="hide-block"><?php include_once 'templates/signUp/05_preferenceOfSpouse.php'; ?></div>
+		<div id="signup_content_uploadPicture" class="hide-block"><?php include_once 'templates/signUp/06_uploadYourPicture.php'; ?></div>
+		<div idd="signup_content_finish" class="hide-block"></div>
+	  </div>
+	</div>
    </div>
-   <div class="row">
-	
-   </div>
-   <div class="row">
-	
-   </div>
-   <div class="row">
-     <div align="center" class="col-xs-12 mbot35p">
-		<button class="btn btn-primary"><b>SignUp</b></button>
-	 </div>
-   </div>
+  
  </div>
 </body>
 </html>
