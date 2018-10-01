@@ -7,28 +7,6 @@
 function sentenceCase_SurName(str){
   document.getElementById("signUp_mentionProfile_surName").value=sentenceCase(str);
 }
-function signup_mentionProfile(){
- signUp_mentionProfile_surName=document.getElementById("signUp_mentionProfile_surName").value;
- signUp_mentionProfile_name=document.getElementById("signUp_mentionProfile_name").value;
- signUp_mentionProfile_gender=document.getElementById("signUp_mentionProfile_gender").value;
- signUp_mentionProfile_motherTongue=document.getElementById("signUp_mentionProfile_motherTongue").value;
- signUp_mentionProfile_status=document.getElementById("signUp_mentionProfile_status").value;
- signUp_mentionProfile_hgtFeet=document.getElementById("signUp_mentionProfile_hgtFeet").value;
- signUp_mentionProfile_hgtInches=document.getElementById("signUp_mentionProfile_hgtInches").value;
- signUp_mentionProfile_highestDegree=document.getElementById("signUp_mentionProfile_highestDegree").value;
- signUp_mentionProfile_occupation=document.getElementById("signUp_mentionProfile_occupation").value;
- signUp_mentionProfile_occupationType=document.getElementById("signUp_mentionProfile_occupationType").value;
- console.log("signUp_mentionProfile_surName: "+signUp_mentionProfile_surName);
- console.log("signUp_mentionProfile_name: "+signUp_mentionProfile_name);
- console.log("signUp_mentionProfile_gender: "+signUp_mentionProfile_gender);
- console.log("signUp_mentionProfile_motherTongue: "+signUp_mentionProfile_motherTongue);
- console.log("signUp_mentionProfile_status: "+signUp_mentionProfile_status);
- console.log("signUp_mentionProfile_hgtFeet: "+signUp_mentionProfile_hgtFeet);
- console.log("signUp_mentionProfile_hgtInches: "+signUp_mentionProfile_hgtInches);
- console.log("signUp_mentionProfile_highestDegree: "+signUp_mentionProfile_highestDegree);
- console.log("signUp_mentionProfile_occupation: "+signUp_mentionProfile_occupation);
- console.log("signUp_mentionProfile_occupationType: "+signUp_mentionProfile_occupationType);
-}
 </script>
 
 <div class="panel panel-primary mtop10p">
@@ -125,6 +103,7 @@ function signup_mentionProfile(){
 		  <div class="form-group">
 			<label>Occupation Type <span class="mandatoryField">*</span></label>
 			<select id="signUp_mentionProfile_occupationType" class="form-control">
+			    <option value="">Select Occupation Type</option>
 				<option value="Private Company">Private Company</option>
 				<option value="Government / Public Sector">Government / Public Sector</option>
 				<option value="Defence / Civil Services">Defence / Civil Services</option>
@@ -133,7 +112,7 @@ function signup_mentionProfile(){
 		  </div>
 		  
 		  <div class="form-group">
-		    <button class="btn btn-primary pull-right"><b>Next</b></button>
+		    <button class="btn btn-primary pull-right" onclick="javascript:signup_mentionProfile();"><b>Next</b></button>
 		  </div>
 		</div>
 	  </div>

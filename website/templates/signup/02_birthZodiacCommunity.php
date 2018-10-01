@@ -1,6 +1,4 @@
-<!--
 
--->
 <div class="panel panel-primary mtop10p">
   <div class="panel-heading"><b>2. Birth, Zodiac and Community Background</b></div>
   <div class="panel-body">
@@ -98,7 +96,7 @@
 			</div>
 			
 			<div class="form-group">
-			   <button class="btn btn-primary pull-right"><b>Next</b></button>
+			   <button class="btn btn-primary pull-right" onclick="javascript:signup_birthZodiacCommunity();"><b>Next</b></button>
 		    </div>
 		
 	     </div>
