@@ -11,7 +11,7 @@ signUp_familyBkg_noOfSisters
 <div class="panel-body">
   <div class="container-fluid">
     <div class="row">
-	  <div class="col-xs-12">
+	  <div class="col-xs-12 col-md-6">
 		<div align="center" class="form-group">
 		  <h5><b>FATHER DETAILS</b></h5>
 		</div>
@@ -24,8 +24,7 @@ signUp_familyBkg_noOfSisters
 		   <input id="signUp_familyBkg_fatherOccpn" type="text" class="form-control" placeholder="Enter your Occupation"/>
 	    </div>
 	  </div>
-	
-	  <div class="col-xs-12">
+	  <div class="col-xs-12 col-md-6">
 	    <div align="center" class="form-group">
 		 <h5><b>MOTHER DETAILS</b></h5>
 	    </div>
@@ -38,8 +37,9 @@ signUp_familyBkg_noOfSisters
 		   <input id="signUp_familyBkg_motherOccpn" type="text" class="form-control" placeholder="Enter your Occupation"/>
 	    </div>
 	  </div>
-	
-      <div class="col-xs-12">
+	</div>
+	<div class="row">
+      <div class="col-xs-12 col-md-6">
 	   <div align="center" class="form-group">
 		  <h5><b>SIBLINGS DETAILS</b></h5>
 	   </div>
@@ -75,14 +75,18 @@ signUp_familyBkg_noOfSisters
 					<option value="10">10 Sisters</option>
 			</select>
 		</div>
-		
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="col-xs-12 col-md-4"></div>
+      <div class="col-xs-12 col-md-4">
 		<div class="form-group">
-		  <button class="btn btn-primary pull-right"><b>Next</b></button>
+		  <button class="btn btn-primary form-control" onclick="javascript:signup_familyBackground();"><b>Next</b></button>
 		</div>
-		
+	  </div>
+	  <div class="col-xs-12 col-md-4"></div>
 	  </div>
 	
     </div>
   </div>
-</div>
 </div>

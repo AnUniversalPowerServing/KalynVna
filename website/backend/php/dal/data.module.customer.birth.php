@@ -5,7 +5,7 @@ class CustomerBirth {
   $sql="INSERT INTO customer_birth(account_Id, dob, birthCountry, birthState, birthLocation, birthLocality, shakha, ";
   $sql.="upashakha, gothram, raasi, nakshatram) ";
   $sql.="VALUES ('".$account_Id."','".$dob."','".$birthCountry."','".$birthState."','".$birthLocation."','";
-  $sql.=$birthLocality."','".$shakha."','".$upashakha."','".$gothram."','".$raasi.",'".$nakshatram."');";
+  $sql.=$birthLocality."','".$shakha."','".$upashakha."','".$gothram."','".$raasi."','".$nakshatram."');";
   return $sql;
  }
 }

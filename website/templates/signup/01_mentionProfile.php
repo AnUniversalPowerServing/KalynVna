@@ -1,9 +1,28 @@
 <script type="text/javascript">
-  $(function() {
-    var availableTags = ["ActionScript","AppleScript","Asp","BASIC","C","C++","Clojure","COBOL","ColdFusion","Erlang",
-			"Fortran","Groovy","Haskell","Java","JavaScript","Lisp","Perl","PHP","Python","Ruby","Scala","Scheme"];
-    $( "#signUp_mentionProfile_surName" ).autocomplete({ source: availableTags });
-  });
+function load_autocomplete_surName(id){
+ var surName = document.getElementById(id).value;
+ js_ajax('GET',PROJECT_URL+'backend/php/dac/controller.module.app.authentication.php',
+ { action:'GET_DATA_SURNAME', searchQuery:surName },
+ function(response){ console.log(response);response = response.split(','); 
+     $( "#"+id ).autocomplete({ source: response });
+ });
+}
+function load_autocomplete_highDegree(id){ 
+ var highDegree = document.getElementById(id).value;
+ js_ajax('GET',PROJECT_URL+'backend/php/dac/controller.module.app.authentication.php',
+ { action:'GET_DATA_HIGHESTDEGREE', searchQuery:highDegree },
+ function(response){ console.log(response);response = response.split(','); 
+     $( "#"+id ).autocomplete({ source: response });
+ });
+}
+function load_autocomplete_occupation(id){
+ var occupation = document.getElementById(id).value;
+ js_ajax('GET',PROJECT_URL+'backend/php/dac/controller.module.app.authentication.php',
+ { action:'GET_DATA_OCCUPATION', searchQuery:occupation },
+ function(response){ console.log(response);response = response.split(','); 
+     $( "#"+id ).autocomplete({ source: response });
+ });
+}
 function sentenceCase_SurName(str){
   document.getElementById("signUp_mentionProfile_surName").value=sentenceCase(str);
 }
@@ -14,18 +33,22 @@ function sentenceCase_SurName(str){
   <div class="panel-body">
     <div class="container-fluid">
       <div class="row">
-	    <div class="col-xs-12">
+	    <div class="col-xs-12 col-md-6">
 		  <div class="form-group ui-widget">
 			<label>SurName <span class="mandatoryField">*</span></label>
 			<input id="signUp_mentionProfile_surName" type="text" class="form-control" 
 			placeholder="Enter your SurName" onchange="sentenceCase_SurName(this.value)"/>
 		  </div>
-		  
+		</div>
+		<div class="col-xs-12 col-md-6">
 		  <div class="form-group">
 			<label>Name <span class="mandatoryField">*</span></label>
 			<input id="signUp_mentionProfile_name" type="text" class="form-control" placeholder="Enter your Name"/>
 		  </div>
-
+		</div> 
+	  </div>
+	  <div class="row">
+	    <div class="col-xs-12 col-md-6">
 		  <div class="form-group">
 			<label>Gender <span class="mandatoryField">*</span></label>
 			<select id="signUp_mentionProfile_gender" class="form-control">
@@ -34,7 +57,8 @@ function sentenceCase_SurName(str){
 				<option value="Female">Female</option>
 			</select>
 		  </div>
-		  
+		</div> 
+		<div class="col-xs-12 col-md-6">
 		  <div class="form-group">
 			<label>Mother Tongue <span class="mandatoryField">*</span></label>
 			<select id="signUp_mentionProfile_motherTongue" class="form-control">
@@ -43,7 +67,10 @@ function sentenceCase_SurName(str){
 				<option value="Hindi">Hindi</option>
 			</select>
 		   </div>
-		  
+		</div> 
+	  </div> 
+	  <div class="row">
+	    <div class="col-xs-12 col-md-6">
 		   <div class="form-group">
 			  <label>Status <span class="mandatoryField">*</span></label>
 			  <select id="signUp_mentionProfile_status" class="form-control">
@@ -53,7 +80,8 @@ function sentenceCase_SurName(str){
 				<option value="Widow">Widow</option>
 			  </select>
 		   </div>
-
+		</div>
+		<div class="col-xs-12 col-md-6">
 		   <div class="form-group">
 			  <label>Height <span class="mandatoryField">*</span></label>
 			  <div class="col-xs-12 pad0 mbot15p">
@@ -87,19 +115,15 @@ function sentenceCase_SurName(str){
 				</div>
 			  </div>
 		  </div>
-		  
-		  <div class="form-group">
-			 <label>Highest Degree <span class="mandatoryField">*</span></label>
-			 <input id="signUp_mentionProfile_highestDegree" type="text" class="form-control" 
-			 placeholder="Enter your Highest Degree"/>
-		  </div>	
-		  
+		</div>
+		</div>
+		<div class="row">
+		<div class="col-xs-12 col-md-6">
 		  <div class="form-group">
 			<label>Occupation <span class="mandatoryField">*</span></label>
 			<input id="signUp_mentionProfile_occupation" type="text" class="form-control" 
 			placeholder="Enter your Occupation"/>
 		  </div>
-		  
 		  <div class="form-group">
 			<label>Occupation Type <span class="mandatoryField">*</span></label>
 			<select id="signUp_mentionProfile_occupationType" class="form-control">
@@ -110,11 +134,23 @@ function sentenceCase_SurName(str){
 				<option value="Business / Self Employeed">Business / Self Employeed</option>
 			</select>
 		  </div>
-		  
+		</div>
+		<div class="col-xs-12 col-md-6">
 		  <div class="form-group">
-		    <button class="btn btn-primary pull-right" onclick="javascript:signup_mentionProfile();"><b>Next</b></button>
+			 <label>Highest Degree <span class="mandatoryField">*</span></label>
+			 <input id="signUp_mentionProfile_highestDegree" type="text" class="form-control" 
+			 placeholder="Enter your Highest Degree"/>
+		  </div>	
+		</div>
+	</div>
+	<div class="row">
+	    <div class="col-xs-12 col-md-4"></div>
+		<div class="col-xs-12 col-md-4"> 
+		  <div class="form-group">
+		    <button class="btn btn-primary form-control" onclick="javascript:signup_mentionProfile();"><b>Next</b></button>
 		  </div>
 		</div>
+		<div class="col-xs-12 col-md-4"></div>
 	  </div>
     </div>	
   </div>

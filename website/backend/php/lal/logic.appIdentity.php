@@ -21,7 +21,7 @@ function customer_account_id(){
  $num="CA";
  for($index=0;$index<13;$index++) { $num.=rand(1,9); }
  $appIdentity = new AppIdentity();
- if(intval($appIdentity->id_customer_account($id))>0){ customer_account_id(); }
+ if(intval($appIdentity->id_customer_account($num))>0){ $appIdentity->customer_account_id(); }
  return $num;
 }
 
