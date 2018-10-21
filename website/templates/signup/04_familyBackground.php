@@ -16,11 +16,11 @@ signUp_familyBkg_noOfSisters
 		  <h5><b>FATHER DETAILS</b></h5>
 		</div>
 		<div class="form-group">
-		  <label>Father Name <span class="mandatoryField">*</span></label>
+		  <label>Father Name</label>
 		  <input id="signUp_familyBkg_fatherName" type="text" class="form-control" placeholder="Enter your Father Name"/>
 		</div>
 		<div class="form-group">
-		   <label>Occupation <span class="mandatoryField">*</span></label>
+		   <label>Occupation</label>
 		   <input id="signUp_familyBkg_fatherOccpn" type="text" class="form-control" placeholder="Enter your Occupation"/>
 	    </div>
 	  </div>
@@ -29,11 +29,11 @@ signUp_familyBkg_noOfSisters
 		 <h5><b>MOTHER DETAILS</b></h5>
 	    </div>
 	    <div class="form-group">
-		   <label>Mother Name <span class="mandatoryField">*</span></label>
+		   <label>Mother Name</label>
 		   <input id="signUp_familyBkg_motherName" type="text" class="form-control" placeholder="Enter your Mother Name"/>
 	    </div>
 	    <div class="form-group">
-		   <label>Occupation <span class="mandatoryField">*</span></label>
+		   <label>Occupation</label>
 		   <input id="signUp_familyBkg_motherOccpn" type="text" class="form-control" placeholder="Enter your Occupation"/>
 	    </div>
 	  </div>
@@ -44,7 +44,7 @@ signUp_familyBkg_noOfSisters
 		  <h5><b>SIBLINGS DETAILS</b></h5>
 	   </div>
 	   <div class="form-group">
-		    <label>Number of Brothers <span class="mandatoryField">*</span></label>
+		    <label>Number of Brothers</label>
 		    <select id="signUp_familyBkg_noOfBrothers" class="form-control">
 					<option value="">Select Number of Brothers</option>
 					<option value="1">1 Brother</option>
@@ -60,7 +60,7 @@ signUp_familyBkg_noOfSisters
 		    </select>
 	   </div>
 	   <div class="form-group">
-			<label>Number of Sisters <span class="mandatoryField">*</span></label>
+			<label>Number of Sisters</label>
 			<select id="signUp_familyBkg_noOfSisters" class="form-control">
 					<option value="">Select Number of Sisters</option>
 					<option value="1">1 Sister</option>
@@ -80,8 +80,11 @@ signUp_familyBkg_noOfSisters
 	<div class="row">
 	  <div class="col-xs-12 col-md-4"></div>
       <div class="col-xs-12 col-md-4">
-		<div class="form-group">
-		  <button class="btn btn-primary form-control" onclick="javascript:signup_familyBackground();"><b>Next</b></button>
+		<div align="center" class="form-group">
+		 <div class="btn-group">
+		  <button class="btn btn-default" onclick="javascript:sel_signup_menu('signup_menu_contactInf');"><b>Back</b></button>
+		  <button class="btn btn-primary" onclick="javascript:signup_familyBackground();"><b>Next</b></button>
+		 </div>
 		</div>
 	  </div>
 	  <div class="col-xs-12 col-md-4"></div>

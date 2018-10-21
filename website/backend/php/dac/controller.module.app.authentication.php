@@ -69,6 +69,7 @@ if(isset($_GET["action"])){
 	$highDegree = $_GET["highDegree"];
 	$occupation = $_GET["occupation"];
 	$occType = $_GET["occType"];
+	$living_status = $_GET["living_status"];
 	/* Customer Birth */
     $dob = $_GET["dob"].':00';
 	$birthCountry = $_GET["birthCountry"];
@@ -99,16 +100,17 @@ if(isset($_GET["action"])){
 	$exp_occupation = $_GET["exp_occupation"];
 	$exp_occType = $_GET["exp_occType"];
 	$exp_motherTongue = $_GET["exp_motherTongue"];
+	$exp_living_status = $_GET["exp_living_status"];
 	$query1=$customerAccount->query_add_customerAccount($account_Id, $surName, $name, $gender, $motherTongue, $status, 
-								$ft_hgt, $inch_hgt, $highDegree, $occupation, $occType);
+								$ft_hgt, $inch_hgt, $highDegree, $occupation, $occType, $living_status);
 	$query2=$customerBirth->query_add_customerBirth($account_Id, $dob, $birthCountry, $birthState, $birthLocation, 
 								$birthLocality, $shakha, $upashakha, $gothram, $raasi, $nakshatram);
 	$query3=$customerContact->query_add_customerContact($account_Id, $address, $country, $state, $location, 
 								$minlocation, $mobile);
 	$query4=$customerFamily->query_add_customerFamily($account_Id, $fatherName, $fatherOccupation, $motherName,
 								 $motherOccupation, $NoOfBrothers, $NoOfSisters);
-	$query5=$customerPreferences->query_add_customerPreferences($account_Id, $exp_highDegree, $exp_occupation, $exp_occType,
-								 $exp_motherTongue);
+	$query5=$customerPreferences->query_add_customerPreferences($account_Id, $exp_highDegree, $exp_occupation, 
+									$exp_occType, $exp_motherTongue, $exp_living_status);
 	$database = new Database($DB_KV_SERVERNAME,$DB_KV_NAME,$DB_KV_USER,$DB_KV_PASSWORD);
 	
 	echo $query2.'<br/>';
@@ -119,16 +121,30 @@ if(isset($_GET["action"])){
 	echo $database->addupdateData($query5);
 	
  }
- else if($_GET["action"]==='VALIDATE_PHONENUMBER'){
+ else if($_GET["action"]==='SIGNIN_COUNT_AUTHENTICATION'){
    if(isset($_GET["phoneNumber"])){
      $phoneNumber = $_GET["phoneNumber"];
-	 $customerContact = new CustomerContact();
-	 $query = $customerContact->query_validate_mobileNumber($phoneNumber);
+	 $customerAccount = new CustomerAccount();
+	 $query = $customerAccount->query_count_validatePhoneNumber($phoneNumber);
 	 $database = new Database($DB_KV_SERVERNAME,$DB_KV_NAME,$DB_KV_USER,$DB_KV_PASSWORD);
-	 $jsonData=$database->getJSONData($query);
-	 $dejsonData=json_decode($jsonData);
+	 $jsonData = $database->getJSONData($query);
+     $dejsonData = json_decode($jsonData);
 	 echo $dejsonData[0]->{'count(*)'};
-   } else { echo 'MISSING_PHONENUMBER'; }
+   } else { echo 'Missing PhoneNumber'; }
+ }
+ else if($_GET["action"]==='SIGNIN_DATA_AUTHENTICATION'){
+   if(isset($_GET["phoneNumber"])){
+    $phoneNumber = $_GET["phoneNumber"];
+	$customerAccount = new CustomerAccount();
+	$query = $customerAccount->query_data_getCustomerProfiles($phoneNumber);
+	$database = new Database($DB_KV_SERVERNAME,$DB_KV_NAME,$DB_KV_USER,$DB_KV_PASSWORD);
+	echo $database->getJSONData($query);
+  } else { 
+     $content="Missing";
+	  if(isset($_GET["phoneNumber"])){ $content.=" phoneNumber,"; } 
+	  if(isset($_GET["limit_start"])){  $content.=" limit_start,"; } 
+	  if(isset($_GET["limit_end"])){  $content.=" limit_end,"; }
+   }
  }
  else { echo 'NO_ACTION_INPUT'; }
 } else { echo 'MISSING_ACTION_INPUT'; }

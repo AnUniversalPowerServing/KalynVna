@@ -36,5 +36,11 @@
   "W035": { "english":"Missing Expected Occupation Type." },
   "W036": { "english":"Missing Expected Mother Tongue." },
   "W037": { "english":"Missing your Address." },
-  "W038": { "english":"Mobile Number you entered is not registered. Please go for Signup." }
+  "W038": { "english":"Mobile Number you entered is not registered. Please go for Signup." },
+  "W039": { "english":"Mention Bride Living Status." },
+  "W040": { "english":"Mention Bridegroom Living Status." },
+  "W041": { "english":"Mention Expected Bride Living Status." },
+  "W042": { "english":"Mention Expected Bridegroom Living Status." },
+  "W043": { "english":"Please Enter valid PhoneNumber." },
+  "W044": { "english":"Please Enter valid OTPCode." }
 }

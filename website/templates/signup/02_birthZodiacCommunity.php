@@ -6,7 +6,7 @@
 	  <div class="row">
 	     <div class="col-xs-12 col-md-6">
 		    <div class="form-group">
-			  <label>Date and Time of Birth <span class="mandatoryField">*</span></label>
+			  <label>Date and Time of Birth&nbsp;<span class="font-red">*</span></label>
 			  <div class="col-xs-12 mbot10p pad0">
 				<div class="col-xs-6 pad0">
 				  <input type="date" id="signUp_bzc_birthDate" class="form-control"/>
@@ -19,7 +19,7 @@
 		 </div>
 		 <div class="col-xs-12 col-md-6">
 			<div class="form-group">
-			  <label>Born in Country <span class="mandatoryField">*</span></label>
+			  <label>Born in Country</label>
 			  <select id="signUp_bzc_birthCountry" class="form-control" 
 			  onchange="javascript:build_stateOption('signUp_bzc_birthCountry','signUp_bzc_birthState');">
 				<option value="">Select your Country</option>
@@ -30,7 +30,7 @@
 	  <div class="row">
 	     <div class="col-xs-12 col-md-6">
 		   <div class="form-group">
-			  <label>Shakha <span class="mandatoryField">*</span></label>
+			  <label>Shakha&nbsp;<span class="font-red">*</span></label>
 			  <select id="signUp_bzc_shakha" class="form-control" 
 				onchange="display_list_upaShakha('signUp_bzc_shakha','signUp_bzc_upaShakha');">
 				<option value="">Select your Shakha</option>
@@ -39,7 +39,7 @@
 		 </div>
 		 <div class="col-xs-12 col-md-6">
 		   <div class="form-group">
-			  <label>Born in State<span class="mandatoryField">*</span></label>
+			  <label>Born in State</label>
 			  <select id="signUp_bzc_birthState" class="form-control"
 			  onchange="javascript:build_locationOption('signUp_bzc_birthCountry','signUp_bzc_birthState','signUp_bzc_birthLocation');">
 				<option value="">Select your State</option>
@@ -50,7 +50,7 @@
 	  <div class="row">
 	     <div class="col-xs-12 col-md-6">
 		   <div class="form-group">
-			  <label>UpaShakha <span class="mandatoryField">*</span></label>
+			  <label>UpaShakha&nbsp;<span class="font-red">*</span></label>
 			  <select id="signUp_bzc_upaShakha" class="form-control">
 				<option value="">Select your UpaShakha</option>
 			  </select>
@@ -58,7 +58,7 @@
 		 </div>
 		 <div class="col-xs-12 col-md-6">
 		   <div class="form-group">
-			  <label>Born in Location<span class="mandatoryField">*</span></label>
+			  <label>Born in Location</label>
 			  <select id="signUp_bzc_birthLocation" class="form-control"
 			  onchange="javascript:build_minlocationOption('signUp_bzc_birthCountry','signUp_bzc_birthState','signUp_bzc_birthLocation','signUp_bzc_birthLocality');">>
 				<option value="">Select your Location</option>
@@ -69,7 +69,7 @@
 	  <div class="row">
 	     <div class="col-xs-12 col-md-6">
 		   <div class="form-group">
-			  <label>Gothram <span class="mandatoryField">*</span></label>
+			  <label>Gothram&nbsp;<span class="font-red">*</span></label>
 			  <select id="signUp_bzc_gothram" class="form-control">
 				<option value="">Select your Gothram</option>
 			  </select>
@@ -77,7 +77,7 @@
 		 </div>
 		 <div class="col-xs-12 col-md-6">
 		   <div class="form-group">
-			  <label>Born in Locality<span class="mandatoryField">*</span></label>
+			  <label>Born in Locality</label>
 			  <select id="signUp_bzc_birthLocality" class="form-control">
 				<option value="">Select your Locality</option>
 			  </select>
@@ -87,7 +87,7 @@
 	  <div class="row">
 	     <div class="col-xs-12 col-md-6">
 		    <div class="form-group">
-			  <label>Raasi (Zodaic Sign) <span class="mandatoryField">*</span></label>
+			  <label>Raasi (Zodaic Sign)&nbsp;<span class="font-red">*</span></label>
 			  <select id="signUp_bzc_raasi" class="form-control" 
 					onchange="javascript:display_list_Nakshatra('signUp_bzc_raasi','signUp_bzc_nakshatra');">
 				    <option value="">Select your Raasi (Zodiac Sign)</option>
@@ -108,7 +108,7 @@
 		 </div>
 		 <div class="col-xs-12 col-md-6">
 		    <div class="form-group">
-			  <label>Star (Nakshatra) <span class="mandatoryField">*</span></label>
+			  <label>Star (Nakshatra)&nbsp;<span class="font-red">*</span></label>
 			  <select id="signUp_bzc_nakshatra" class="form-control">
 				<option value="">Select your Star (Nakshatra)</option>
 			  </select>
@@ -118,8 +118,11 @@
 	  <div class="row">
 	    <div class="col-xs-12 col-md-4"></div>
 		<div class="col-xs-12 col-md-4">
-          <div class="form-group">
-			<button class="btn btn-primary form-control" onclick="javascript:signup_birthZodiacCommunity();"><b>Next</b></button>
+          <div align="center" class="form-group">
+		    <div class="btn-group">
+		    <button class="btn btn-default" onclick="javascript:sel_signup_menu('signup_menu_mentionprofile');"><b>Back</b></button>
+			<button class="btn btn-primary" onclick="javascript:signup_birthZodiacCommunity();"><b>Next</b></button>
+			</div>
 		  </div>
 	    </div>
 		<div class="col-xs-12 col-md-4"></div>

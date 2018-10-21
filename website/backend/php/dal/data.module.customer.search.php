@@ -47,9 +47,9 @@ class CustomerSearch {
    $query="SELECT customer_account.account_Id, ";
    $query.="customer_account.name, customer_account.gender, customer_account.motherTongue, ";
    $query.="customer_account.status, customer_account.ft_hgt, customer_account.inch_hgt, customer_account.highDegree, ";
-   $query.="customer_account.occupation, customer_account.occType, ";
+   $query.="customer_account.occupation, customer_account.occType, customer_account.living_status, ";
    $query.="customer_preferences.exp_highDegree, customer_preferences.exp_occupation, customer_preferences.exp_occType, ";
-   $query.="customer_preferences.exp_motherTongue ";
+   $query.="customer_preferences.exp_motherTongue, customer_preferences.exp_living_status ";
    $query.="FROM customer_account, customer_birth, customer_contact, customer_family, customer_preferences ";
    $query.="WHERE (customer_account.account_Id=customer_birth.account_Id AND ";
    $query.="customer_birth.account_Id=customer_contact.account_Id AND customer_contact.account_Id=customer_family.account_Id ";

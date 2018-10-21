@@ -35,14 +35,14 @@ function sentenceCase_SurName(str){
       <div class="row">
 	    <div class="col-xs-12 col-md-6">
 		  <div class="form-group ui-widget">
-			<label>SurName <span class="mandatoryField">*</span></label>
+			<label>SurName&nbsp;<span class="font-red">*</span></label>
 			<input id="signUp_mentionProfile_surName" type="text" class="form-control" 
 			placeholder="Enter your SurName" onchange="sentenceCase_SurName(this.value)"/>
 		  </div>
 		</div>
 		<div class="col-xs-12 col-md-6">
 		  <div class="form-group">
-			<label>Name <span class="mandatoryField">*</span></label>
+			<label>Name&nbsp;<span class="font-red">*</span></label>
 			<input id="signUp_mentionProfile_name" type="text" class="form-control" placeholder="Enter your Name"/>
 		  </div>
 		</div> 
@@ -50,7 +50,7 @@ function sentenceCase_SurName(str){
 	  <div class="row">
 	    <div class="col-xs-12 col-md-6">
 		  <div class="form-group">
-			<label>Gender <span class="mandatoryField">*</span></label>
+			<label>Gender&nbsp;<span class="font-red">*</span></label>
 			<select id="signUp_mentionProfile_gender" class="form-control">
 				<option value="">Select your Gender</option>
 				<option value="Male">Male</option>
@@ -60,11 +60,16 @@ function sentenceCase_SurName(str){
 		</div> 
 		<div class="col-xs-12 col-md-6">
 		  <div class="form-group">
-			<label>Mother Tongue <span class="mandatoryField">*</span></label>
+			<label>Mother Tongue&nbsp;<span class="font-red">*</span></label>
 			<select id="signUp_mentionProfile_motherTongue" class="form-control">
 				<option value="">Select your Mother Tongue</option>
 				<option value="Telugu">Telugu</option>
 				<option value="Hindi">Hindi</option>
+				<option value="Tamil">Tamil</option>
+				<option value="Kannada">Kannada</option>
+				<option value="Malayalam">Malayalam</option>
+				<option value="Marathi">Marathi</option>
+				<option value="Oriya">Oriya</option>
 			</select>
 		   </div>
 		</div> 
@@ -72,7 +77,7 @@ function sentenceCase_SurName(str){
 	  <div class="row">
 	    <div class="col-xs-12 col-md-6">
 		   <div class="form-group">
-			  <label>Status <span class="mandatoryField">*</span></label>
+			  <label>Status&nbsp;<span class="font-red">*</span></label>
 			  <select id="signUp_mentionProfile_status" class="form-control">
 				<option value="">Select your Status</option>
 				<option value="UnMarried">UnMarried</option>
@@ -83,7 +88,7 @@ function sentenceCase_SurName(str){
 		</div>
 		<div class="col-xs-12 col-md-6">
 		   <div class="form-group">
-			  <label>Height <span class="mandatoryField">*</span></label>
+			  <label>Height</label>
 			  <div class="col-xs-12 pad0 mbot15p">
 				<div class="col-xs-6 pad0">
 				  <select id="signUp_mentionProfile_hgtFeet" class="form-control">
@@ -120,34 +125,45 @@ function sentenceCase_SurName(str){
 		<div class="row">
 		<div class="col-xs-12 col-md-6">
 		  <div class="form-group">
-			<label>Occupation <span class="mandatoryField">*</span></label>
+			<label>Occupation&nbsp;<span class="font-red">*</span></label>
 			<input id="signUp_mentionProfile_occupation" type="text" class="form-control" 
 			placeholder="Enter your Occupation"/>
 		  </div>
 		  <div class="form-group">
-			<label>Occupation Type <span class="mandatoryField">*</span></label>
+			<label>Occupation Type&nbsp;<span class="font-red">*</span></label>
 			<select id="signUp_mentionProfile_occupationType" class="form-control">
 			    <option value="">Select Occupation Type</option>
 				<option value="Private Company">Private Company</option>
 				<option value="Government / Public Sector">Government / Public Sector</option>
 				<option value="Defence / Civil Services">Defence / Civil Services</option>
 				<option value="Business / Self Employeed">Business / Self Employeed</option>
+				<option value="None of the Above">None of the Above</option>
 			</select>
 		  </div>
 		</div>
 		<div class="col-xs-12 col-md-6">
 		  <div class="form-group">
-			 <label>Highest Degree <span class="mandatoryField">*</span></label>
+			 <label>Highest Degree&nbsp;<span class="font-red">*</span></label>
 			 <input id="signUp_mentionProfile_highestDegree" type="text" class="form-control" 
 			 placeholder="Enter your Highest Degree"/>
 		  </div>	
+		</div>
+		<div class="col-xs-12 col-md-6">
+		  <div class="form-group">
+			<label>Your Living Status&nbsp;<span class="font-red">*</span></label>
+			<select id="signUp_mentionProfile_livingstatus" class="form-control">
+				<option value="">Select Living Status</option>
+				<option value="Living in India">Living in India</option>
+				<option value="Living in Abroad">Living in Abroad</option>
+			</select>
+		  </div>
 		</div>
 	</div>
 	<div class="row">
 	    <div class="col-xs-12 col-md-4"></div>
 		<div class="col-xs-12 col-md-4"> 
-		  <div class="form-group">
-		    <button class="btn btn-primary form-control" onclick="javascript:signup_mentionProfile();"><b>Next</b></button>
+		  <div align="center" class="form-group">
+		    <button class="btn btn-primary" onclick="javascript:signup_mentionProfile();"><b>Next</b></button>
 		  </div>
 		</div>
 		<div class="col-xs-12 col-md-4"></div>

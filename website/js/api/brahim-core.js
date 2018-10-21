@@ -452,7 +452,7 @@ var UPASHAKHA=[];
 								  "Velanati Niyogi","Telaganya Niyogi","Dravida Niyogi","Karanalu",
 								  "SristiKaranalu / SistuKaranalu / SistaKaranalu","Kasalanati Niyogi","Pakanati Niyogi"];
 	UPASHAKHA["Vaidika Brahmins"]=["Vaishnava","Dravidulu","Madhvulu","Velanati Vaidikulu","Telaganyulu / Telaganadu Vaidikis",
-								   "Venginati Vaidikulu","Kasalnati Vaidikulu","Muraknati Vaidikulu"];
+								   "Venginati Vaidikulu","Kasalnati Vaidikulu","Muraknati Vaidikulu","Adisaivulu","Saivulu"];
 
 function display_list_Raasi(raasiElementId){
  var options='<option value="">Select your Raasi</option>';

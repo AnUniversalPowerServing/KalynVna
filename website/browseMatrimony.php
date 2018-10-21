@@ -144,6 +144,7 @@ var arry_gender=[];
 function browseData_contentDisplayer(response){
 response=JSON.parse(response);
 var content = '';
+var row_separator=0;
 for(var index=0;index<response.length;index++){
     var account_Id = response[index].account_Id;
     var name = response[index].name;
@@ -155,10 +156,16 @@ for(var index=0;index<response.length;index++){
     var highDegree = response[index].highDegree;
     var occupation = response[index].occupation;
     var occType = response[index].occType;
+	var living_status = response[index].living_status;
     var exp_highDegree = response[index].exp_highDegree;
     var exp_occupation = response[index].exp_occupation;
     var exp_occType = response[index].exp_occType;
     var exp_motherTongue = response[index].exp_motherTongue;
+	var exp_living_status = response[index].exp_living_status;
+	console.log("row_separator: "+row_separator);
+	if(row_separator===0){
+	 content+='<div class="row mtop15p">';
+	}
      content+='<div class="col-sm-4">';
      content+='<div class="list-group">';
 	 content+='<div class="list-group-item pad0">';
@@ -194,10 +201,11 @@ for(var index=0;index<response.length;index++){
 	 content+='<tbody>';
 	 content+='<tr><td><b>Gender</b></td><td>'+gender+'</td></tr>';
 	 content+='<tr><td><b>Mother Tongue</b></td><td>'+motherTongue+'</td></tr>';
-	 content+='<tr><td><b>Height</b></td><td>'+ft_hgt+' feets '+inch_hgt+' Inches</td></tr>';
+	 content+='<tr><td><b>Status</b></td><td>'+status+'</td></tr>';
 	 content+='<tr><td><b>Highest Degree</b></td><td>'+highDegree+'</td></tr>';
 	 content+='<tr><td><b>Occupation</b></td><td>'+occupation+'</td></tr>';
-	 content+='<tr><td><b>Occupation Type</b></td><td>'+exp_occType+'</td></tr>';
+	 content+='<tr><td><b>Occupation Type</b></td><td>'+occType+'</td></tr>';
+	 content+='<tr><td><b>Living Status</b></td><td>'+living_status+'</td></tr>';
 	 content+='</tbody>';
 	 content+='</table>';
 	 content+='</div>';
@@ -228,6 +236,7 @@ for(var index=0;index<response.length;index++){
 	 content+='<tr><td><b>Highest Degree</b></td><td>'+exp_highDegree+'</td></tr>';
 	 content+='<tr><td><b>Occupation</b></td><td>'+exp_occupation+'</td></tr>';
 	 content+='<tr><td><b>Occupation Type</b></td><td>'+exp_occType+'</td></tr>';
+	 content+='<tr><td><b>Living Status</b></td><td>'+exp_living_status+'</td></tr>';
 	 content+='</tbody>';
 	 content+='</table>';
 	 content+='</div>';
@@ -248,9 +257,14 @@ for(var index=0;index<response.length;index++){
 	 content+='</div>';
 	 content+='</div>';
 	 content+='</div>';	
+	 if(row_separator===2){
+	 content+='</div>';
+	 row_separator=0;
+	} else {
+	row_separator++;
+	}
 }
  
-
   return content;
 }
 </script>
@@ -329,7 +343,7 @@ body { font-size:14px; }
 	    <div class="row">
 		   <div id="browse_results" class="col-sm-4 mtop15p mbot15p"></div>
 		</div>
-	    <div id="browse_result_content0" class="row">
+	    <div id="browse_result_content0">
 		</div>
     </div>
   </div>

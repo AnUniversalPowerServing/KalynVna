@@ -73,12 +73,12 @@ ul.nav-stacked>li { background-color:#ccc; }
 		</ul>
 	  </div>
 	  <div class="col-xs-12 col-md-9 col-sm-8 col-lg-8">
-	    <div id="signup_content_mentionprofile" class="hide-block"><?php include_once 'templates/signUp/01_mentionProfile.php'; ?></div>
-		<div id="signup_content_birthAndCommunityBg" class="hide-block"><?php include_once 'templates/signUp/02_birthZodiacCommunity.php'; ?></div>
-		<div id="signup_content_contactInf" class="hide-block"><?php include_once 'templates/signUp/03_contactInformation.php'; ?></div>
-		<div id="signup_content_familyBackground" class="hide-block"><?php include_once 'templates/signUp/04_familyBackground.php'; ?></div>
-		<div id="signup_content_preferenceOfSpouse" class="hide-block"><?php include_once 'templates/signUp/05_preferenceOfSpouse.php'; ?></div>
-		<div id="signup_content_finish" class="hide-block"><?php include_once 'templates/signUp/06_finish.php'; ?></div>
+	    <div id="signup_content_mentionprofile" class="hide-block"><?php include_once 'templates/signup/01_mentionProfile.php'; ?></div>
+		<div id="signup_content_birthAndCommunityBg" class="hide-block"><?php include_once 'templates/signup/02_birthZodiacCommunity.php'; ?></div>
+		<div id="signup_content_contactInf" class="hide-block"><?php include_once 'templates/signup/03_contactInformation.php'; ?></div>
+		<div id="signup_content_familyBackground" class="hide-block"><?php include_once 'templates/signup/04_familyBackground.php'; ?></div>
+		<div id="signup_content_preferenceOfSpouse" class="hide-block"><?php include_once 'templates/signup/05_preferenceOfSpouse.php'; ?></div>
+		<div id="signup_content_finish" class="hide-block"><?php include_once 'templates/signup/06_finish.php'; ?></div>
 	  </div>
 	</div>
  </div>

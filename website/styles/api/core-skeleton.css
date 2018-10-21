@@ -19,7 +19,7 @@ body { padding-right: 0 !important }
 .padtop35 { padding-top:35px; }
 .grey-font { color:#aaa; }
 .grey-lgt-font { color:#777; }
-.red-font { color:red; }
+.font-red { color:red; }
 .lang_english,.lang_telugu { display:none; }
 .dnone{ display:none; } 
 .dblock { display:block; }

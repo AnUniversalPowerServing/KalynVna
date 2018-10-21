@@ -6,9 +6,5 @@ class CustomerContact {
   $sql.="','".$mobile."');";
   return $sql;
  }
- function query_validate_mobileNumber($phoneNumber){
-    $sql="SELECT count(*) FROM customer_contact WHERE mobile LIKE '%".$phoneNumber."%';";
-    return $sql;
-  }
 }
 ?>
