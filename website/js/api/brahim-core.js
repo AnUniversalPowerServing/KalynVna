@@ -257,69 +257,72 @@ var RAASI_GRAHA_LIST=[];
 	RAASI_GRAHA_LIST["Pisces (Meena Raasi)"]="Guru (Jupiter)";
 	
 var GRAHA_MYTHRIKUTAMI_LIST=[];
-    GRAHA_MYTHRIKUTAMI_LIST["Ravi (Sun)"]=[{"graham":"Ravi (Sun)","points":5},
-										   {"graham":"Chandra (Moon)","points":5},
-										   {"graham":"Mangala/Kuja (Mars)","points":5},
-										   {"graham":"Budha (Mercury)","points":4},
-										   {"graham":"Guru (Jupiter)","points":5},
-										   {"graham":"Shukra (Venus)","points":0},
-										   {"graham":"Shani (Saturn)","points":0}];
+    GRAHA_MYTHRIKUTAMI_LIST["Ravi (Sun)"]=[];
+	GRAHA_MYTHRIKUTAMI_LIST["Ravi (Sun)"]["Ravi (Sun)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Ravi (Sun)"]["Chandra (Moon)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Ravi (Sun)"]["Mangala/Kuja (Mars)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Ravi (Sun)"]["Budha (Mercury)"]=4;
+	GRAHA_MYTHRIKUTAMI_LIST["Ravi (Sun)"]["Guru (Jupiter)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Ravi (Sun)"]["Shukra (Venus)"]=0;
+	GRAHA_MYTHRIKUTAMI_LIST["Ravi (Sun)"]["Shani (Saturn)"]=0;
+	GRAHA_MYTHRIKUTAMI_LIST["Chandra (Moon)"]=[];
+	GRAHA_MYTHRIKUTAMI_LIST["Chandra (Moon)"]["Ravi (Sun)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Chandra (Moon)"]["Chandra (Moon)"]=5;
+    GRAHA_MYTHRIKUTAMI_LIST["Chandra (Moon)"]["Mangala/Kuja (Mars)"]=4;
+    GRAHA_MYTHRIKUTAMI_LIST["Chandra (Moon)"]["Budha (Mercury)"]=1;
+	GRAHA_MYTHRIKUTAMI_LIST["Chandra (Moon)"]["Guru (Jupiter)"]=4;
+	GRAHA_MYTHRIKUTAMI_LIST["Chandra (Moon)"]["Shukra (Venus)"]=0.5;
+	GRAHA_MYTHRIKUTAMI_LIST["Chandra (Moon)"]["Shani (Saturn)"]=0.5;
+	GRAHA_MYTHRIKUTAMI_LIST["Mangala/Kuja (Mars)"]=[];
+	GRAHA_MYTHRIKUTAMI_LIST["Mangala/Kuja (Mars)"]["Ravi (Sun)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Mangala/Kuja (Mars)"]["Chandra (Moon)"]=4;
+	GRAHA_MYTHRIKUTAMI_LIST["Mangala/Kuja (Mars)"]["Mangala/Kuja (Mars)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Mangala/Kuja (Mars)"]["Budha (Mercury)"]=0.5;
+	GRAHA_MYTHRIKUTAMI_LIST["Mangala/Kuja (Mars)"]["Guru (Jupiter)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Mangala/Kuja (Mars)"]["Shukra (Venus)"]=3;
+	GRAHA_MYTHRIKUTAMI_LIST["Mangala/Kuja (Mars)"]["Shani (Saturn)"]=0.5;
+	GRAHA_MYTHRIKUTAMI_LIST["Budha (Mercury)"]=[];
+	GRAHA_MYTHRIKUTAMI_LIST["Budha (Mercury)"]["Ravi (Sun)"]=4;
+	GRAHA_MYTHRIKUTAMI_LIST["Budha (Mercury)"]["Chandra (Moon)"]=1;
+	GRAHA_MYTHRIKUTAMI_LIST["Budha (Mercury)"]["Mangala/Kuja (Mars)"]=0.5;
+	GRAHA_MYTHRIKUTAMI_LIST["Budha (Mercury)"]["Budha (Mercury)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Budha (Mercury)"]["Guru (Jupiter)"]=0.5;
+	GRAHA_MYTHRIKUTAMI_LIST["Budha (Mercury)"]["Shukra (Venus)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Budha (Mercury)"]["Shani (Saturn)"]=4;
+	GRAHA_MYTHRIKUTAMI_LIST["Guru (Jupiter)"]=[];
+	GRAHA_MYTHRIKUTAMI_LIST["Guru (Jupiter)"]["Ravi (Sun)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Guru (Jupiter)"]["Chandra (Moon)"]=4;
+	GRAHA_MYTHRIKUTAMI_LIST["Guru (Jupiter)"]["Mangala/Kuja (Mars)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Guru (Jupiter)"]["Budha (Mercury)"]=0.5;
+	GRAHA_MYTHRIKUTAMI_LIST["Guru (Jupiter)"]["Guru (Jupiter)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Guru (Jupiter)"]["Shukra (Venus)"]=0.5;
+	GRAHA_MYTHRIKUTAMI_LIST["Guru (Jupiter)"]["Shani (Saturn)"]=3;
+	GRAHA_MYTHRIKUTAMI_LIST["Shukra (Venus)"]=[];
+	GRAHA_MYTHRIKUTAMI_LIST["Shukra (Venus)"]["Ravi (Sun)"]=0;
+	GRAHA_MYTHRIKUTAMI_LIST["Shukra (Venus)"]["Chandra (Moon)"]=0.5;
+	GRAHA_MYTHRIKUTAMI_LIST["Shukra (Venus)"]["Mangala/Kuja (Mars)"]=3;
+	GRAHA_MYTHRIKUTAMI_LIST["Shukra (Venus)"]["Budha (Mercury)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Shukra (Venus)"]["Guru (Jupiter)"]=0.5;
+	GRAHA_MYTHRIKUTAMI_LIST["Shukra (Venus)"]["Shukra (Venus)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Shukra (Venus)"]["Shani (Saturn)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Shani (Saturn)"]=[];
+	GRAHA_MYTHRIKUTAMI_LIST["Shani (Saturn)"]["Ravi (Sun)"]=0;
+	GRAHA_MYTHRIKUTAMI_LIST["Shani (Saturn)"]["Chandra (Moon)"]=0.5;
+	GRAHA_MYTHRIKUTAMI_LIST["Shani (Saturn)"]["Mangala/Kuja (Mars)"]=0.5;
+	GRAHA_MYTHRIKUTAMI_LIST["Shani (Saturn)"]["Budha (Mercury)"]=4;
+	GRAHA_MYTHRIKUTAMI_LIST["Shani (Saturn)"]["Guru (Jupiter)"]=3;
+	GRAHA_MYTHRIKUTAMI_LIST["Shani (Saturn)"]["Shukra (Venus)"]=5;
+	GRAHA_MYTHRIKUTAMI_LIST["Shani (Saturn)"]["Shani (Saturn)"]=5;
 										   
-	GRAHA_MYTHRIKUTAMI_LIST["Chandra (Moon)"]=[{"graham":"Ravi (Sun)","points":5},
-										   {"graham":"Chandra (Moon)","points":5},
-										   {"graham":"Mangala/Kuja (Mars)","points":4},
-										   {"graham":"Budha (Mercury)","points":1},
-										   {"graham":"Guru (Jupiter)","points":4},
-										   {"graham":"Shukra (Venus)","points":0.5},
-										   {"graham":"Shani (Saturn)","points":0.5}];
-										   
-	GRAHA_MYTHRIKUTAMI_LIST["Mangala/Kuja (Mars)"]=[{"graham":"Ravi (Sun)","points":5},
-										   {"graham":"Chandra (Moon)","points":4},
-										   {"graham":"Mangala/Kuja (Mars)","points":5},
-										   {"graham":"Budha (Mercury)","points":0.5},
-										   {"graham":"Guru (Jupiter)","points":5},
-										   {"graham":"Shukra (Venus)","points":3},
-										   {"graham":"Shani (Saturn)","points":0.5}];
-										   
-	GRAHA_MYTHRIKUTAMI_LIST["Budha (Mercury)"]=[{"graham":"Ravi (Sun)","points":4},
-										   {"graham":"Chandra (Moon)","points":1},
-										   {"graham":"Mangala/Kuja (Mars)","points":0.5},
-										   {"graham":"Budha (Mercury)","points":5},
-										   {"graham":"Guru (Jupiter)","points":0.5},
-										   {"graham":"Shukra (Venus)","points":5},
-										   {"graham":"Shani (Saturn)","points":4}];
-										   
-	GRAHA_MYTHRIKUTAMI_LIST["Guru (Jupiter)"]=[{"graham":"Ravi (Sun)","points":5},
-										   {"graham":"Chandra (Moon)","points":4},
-										   {"graham":"Mangala/Kuja (Mars)","points":5},
-										   {"graham":"Budha (Mercury)","points":0.5},
-										   {"graham":"Guru (Jupiter)","points":5},
-										   {"graham":"Shukra (Venus)","points":0.5},
-										   {"graham":"Shani (Saturn)","points":3}];
-										   
-	GRAHA_MYTHRIKUTAMI_LIST["Shukra (Venus)"]=[{"graham":"Ravi (Sun)","points":0},
-										   {"graham":"Chandra (Moon)","points":0.5},
-										   {"graham":"Mangala/Kuja (Mars)","points":3},
-										   {"graham":"Budha (Mercury)","points":5},
-										   {"graham":"Guru (Jupiter)","points":0.5},
-										   {"graham":"Shukra (Venus)","points":5},
-										   {"graham":"Shani (Saturn)","points":5}];
-										   
-	GRAHA_MYTHRIKUTAMI_LIST["Shani (Saturn)"]=[{"graham":"Ravi (Sun)","points":0},
-										   {"graham":"Chandra (Moon)","points":0.5},
-										   {"graham":"Mangala/Kuja (Mars)","points":0.5},
-										   {"graham":"Budha (Mercury)","points":4},
-										   {"graham":"Guru (Jupiter)","points":3},
-										   {"graham":"Shukra (Venus)","points":5},
-										   {"graham":"Shani (Saturn)","points":5}];
-										   
-var GRAHAMYTRI_PHALAM=[{"phalam":"MahaVirodham (Great Enemy)","points":0.5},
-					   {"phalam":"Ubhaya","points":0},
-					   {"phalam":"Shetruthavam (Enemy)","points":1},
-					   {"phalam":"Tataswathya (Medium)","points":2},
-					   {"phalam":"UbhyaMitrata (Friends)","points":3},
-					   {"phalam":"AthiSneham (Close Friends)","points":4},
-					   {"phalam":"Samajathi (Equal)","points":5}];
+var GRAHAMYTRI_PHALAM=[];
+    GRAHAMYTRI_PHALAM[0.5]="MahaVirodham (Great Enemy)";
+	GRAHAMYTRI_PHALAM[0]="Ubhaya";
+	GRAHAMYTRI_PHALAM[1]="Shetruthavam (Enemy)";
+	GRAHAMYTRI_PHALAM[2]="Tataswathya (Medium)";
+	GRAHAMYTRI_PHALAM[3]="UbhyaMitrata (Friends)";
+	GRAHAMYTRI_PHALAM[4]="AthiSneham (Close Friends)";
+	GRAHAMYTRI_PHALAM[5]="Samajathi (Equal)";
+	
 /* GRAHA MYTHRI ::: END */
 /* NADI STUFF ::: START */					   
 var NADI_LIST=[];

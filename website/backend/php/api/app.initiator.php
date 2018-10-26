@@ -13,7 +13,9 @@ $DB_KV_NAME="kv";
 $DB_KV_USER="root";
 $DB_KV_PASSWORD="";
  	 
-// DB: myloc6lh_mlh
-// USER: myloc6lh_root
-// PASSWORD : myloc6lh_root
-// SERVER : localhost:3306
+ /* Database Credentials */
+//$DB_KV_SERVERNAME="148.66.138.151";
+//$DB_KV_NAME="kalyanaveena";
+//$DB_KV_USER="kalyanaveena";
+//$DB_KV_PASSWORD="@ANUPanup123";
+

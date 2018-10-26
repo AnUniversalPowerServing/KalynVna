@@ -342,20 +342,10 @@ return yoniResults;
 function grahaKutamiCalculator(match_boy_raasi, match_girl_raasi){
   var graham_boy=RAASI_GRAHA_LIST[match_boy_raasi];
   var graham_girl=RAASI_GRAHA_LIST[match_girl_raasi];
-  var grahaMytri_points=0;
-  var grahaMytri_phalam="";
-  for(var index=0;index<GRAHA_MYTHRIKUTAMI_LIST[graham_girl].length;index++){
-    if(GRAHA_MYTHRIKUTAMI_LIST[graham_girl][index].graham===graham_boy){ 
-	  CAL_GRAHAMYTRI_POINTS=GRAHA_MYTHRIKUTAMI_LIST[graham_girl][index].points;
-	  for(var index=0;index<GRAHAMYTRI_PHALAM.length;index++){
-        if(GRAHAMYTRI_PHALAM[index].points===grahaMytri_points){
-	      grahaMytri_phalam=GRAHAMYTRI_PHALAM[index].phalam;
-		  break;
-	    }
-      }
-	  break;
-	}
-  }
+  console.log("graham_boy: "+graham_boy+" graham_girl: "+graham_girl);
+  var grahaMytri_points=GRAHA_MYTHRIKUTAMI_LIST[graham_girl][graham_boy];
+  var grahaMytri_phalam=GRAHAMYTRI_PHALAM[grahaMytri_points];
+  console.log("grahaMytri_phalam: "+grahaMytri_points);
   var grahaMytriResults={"boyGraham":graham_boy,"girlGraham":graham_girl,
 			"grahaMytripoints":grahaMytri_points,"total_points":5,"grahaMytriphalam":grahaMytri_phalam}
   return grahaMytriResults;

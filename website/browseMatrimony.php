@@ -95,7 +95,7 @@ var arry_gender=[];
 		  if(total_data==1){ content='<b>Your Search Results:</b>&nbsp;'+total_data+'&nbsp;profile.'; }
 		  else { content='<b>Your Search Results:</b>&nbsp;'+total_data+'&nbsp;profiles.'; }
 		   document.getElementById("browse_results").innerHTML=content;
-		   scroll_loadInitializer('browse_result_content',10,initailizeContentData,total_data);
+		   scroll_loadInitializer('browse_result_content',9,initailizeContentData,total_data);
 		} else {
 		   var content='<div align="center" class="col-sm-12">';
 		       content+='<span style="color:#ccc;">No Profile matches with your Search Results.</span>';

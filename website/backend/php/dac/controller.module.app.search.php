@@ -23,6 +23,7 @@ if(isset($_GET["action"])){
     if(isset($_GET["limit_start"]) && isset($_GET["limit_end"])){
 	$limit_start = $_GET["limit_start"];
 	$limit_end = $_GET["limit_end"];
+	$logger->info("limit_start: ".$limit_start."  limit_end: ".$limit_end);
     $gender = array(); if(isset($_GET["gender"])) { $gender = $_GET["gender"]; }
 	$motherTongue = array();  if(isset($_GET["motherTongue"])) { $motherTongue = $_GET["motherTongue"]; }
 	$status = array();  if(isset($_GET["status"])) { $status = $_GET["status"]; }

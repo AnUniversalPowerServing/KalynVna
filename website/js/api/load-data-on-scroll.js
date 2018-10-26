@@ -40,12 +40,7 @@ function scroll_loadInitializer(div_load_id,display_limit,contentData,total_data
   js_setHashMap(div_load_id+"_displayLimit",display_limit); // This Mentions limit of Data that to be displayed as Data.
   js_setHashMap(div_load_id+"_totalData",total_data); // Total Data exists in Length
   js_setHashMap(div_load_id+"_limitStart",0);
-  
-  // console.log(div_load_id+"_idCount :"+js_getHashMap(div_load_id+"_idCount"));
-  // console.log(div_load_id+"_displayLimit :"+js_getHashMap(div_load_id+"_displayLimit"));
-  // console.log(div_load_id+"_totalData :"+js_getHashMap(div_load_id+"_totalData"));
-  // console.log(div_load_id+"_limitStart :"+js_getHashMap(div_load_id+"_limitStart"));
-  
+
   scroll_loadData(div_load_id,contentData);
   $(window).scroll(function () {
     if($("#"+div_load_id+js_getHashMap(div_load_id+"_idCount")).offset()!==undefined) {
@@ -64,40 +59,22 @@ function scroll_loadInitializer(div_load_id,display_limit,contentData,total_data
 
 function scroll_loadData(div_load_id,contentData){
   var limit_start=js_getHashMap(div_load_id+"_limitStart");
-  var limit_end=limit_start+js_getHashMap(div_load_id+"_displayLimit");
+  var limit_end=js_getHashMap(div_load_id+"_displayLimit");
   var totalData=js_getHashMap(div_load_id+"_totalData");
- // console.log("limit_start: "+limit_start);
- // console.log("limit_end(Before): "+limit_end);
- // console.log("totalData: "+totalData);
-  if(limit_end>=totalData){ limit_end=totalData; }
- // console.log("limit_end(After): "+limit_end);
-    if(limit_start===0 && limit_end===0 && totalData===0) {
+  if(limit_start===0 && limit_end===0 && totalData===0) {
 	  var div_load_idCurCount=js_getHashMap(div_load_id+"_idCount");
 	  var div_view=div_load_id+div_load_idCurCount;
 	  contentData(div_view,'',0,0);
-	}
-    else if(limit_start===limit_end && limit_end===totalData) {
-	//   console.log("limit_start: "+limit_start+" limit_end: "+limit_end+" totalData: "+totalData);
-	//   console.log("FINISHED");
-       return;
-    }  
-    else {
-  
-      var div_load_idCurCount=js_getHashMap(div_load_id+"_idCount");
-      var div_load_idNxtCount=div_load_idCurCount+1;
-      
-	  
-	  var div_view=div_load_id+div_load_idCurCount;
-	  
-	  appendContent='<div id="'+div_load_id+div_load_idNxtCount+'"></div>';
-	//  console.log(div_view+" "+limit_start+" "+limit_end);
-	  contentData(div_view, appendContent,limit_start,limit_end);
-	  
-	  /* Settings */
-	  js_setHashMap(div_load_id+"_idCount",div_load_idNxtCount);
-	  js_setHashMap(div_load_id+"_limitStart",limit_end);
-	  
-	  
+  }
+  else if(limit_start<=totalData){
+    var div_load_idCurCount=js_getHashMap(div_load_id+"_idCount");
+    var div_load_idNxtCount=div_load_idCurCount+1;
+    var div_view=div_load_id+div_load_idCurCount;
+	appendContent='<div id="'+div_load_id+div_load_idNxtCount+'"></div>';
+	contentData(div_view, appendContent,limit_start,limit_end);
+	/* Settings */
+	js_setHashMap(div_load_id+"_idCount",div_load_idNxtCount);
+	js_setHashMap(div_load_id+"_limitStart",limit_start+limit_end);
   }
 }
 
