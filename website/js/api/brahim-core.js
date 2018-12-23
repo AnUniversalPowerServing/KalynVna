@@ -453,7 +453,8 @@ var SHAKHA=["Niyogi Brahmins","Vaidika Brahmins"];
 var UPASHAKHA=[];
 	UPASHAKHA["Niyogi Brahmins"]=["Aruvela Niyogi","Nandavarika Niyogi","Niyogi Pradamashakha","Karanakamma Niyogi",
 								  "Velanati Niyogi","Telaganya Niyogi","Dravida Niyogi","Karanalu",
-								  "SristiKaranalu / SistuKaranalu / SistaKaranalu","Kasalanati Niyogi","Pakanati Niyogi"];
+								  "SristiKaranalu / SistuKaranalu / SistaKaranalu","Kasalanati Niyogi","Pakanati Niyogi",
+								  "Golkonda Vyapari"];
 	UPASHAKHA["Vaidika Brahmins"]=["Vaishnava","Dravidulu","Madhvulu","Velanati Vaidikulu","Telaganyulu / Telaganadu Vaidikis",
 								   "Venginati Vaidikulu","Kasalnati Vaidikulu","Muraknati Vaidikulu","Adisaivulu","Saivulu"];
 

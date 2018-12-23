@@ -4,6 +4,10 @@ class IdentityQuery {
    $sql="SELECT count(*) FROM customer_account WHERE account_Id='".$id."';";
    return $sql;
  }
+ function query_id_customer_views($id){
+   $sql="SELECT count(*) FROM customer_views WHERE view_Id='".$id."';";
+   return $sql;
+ }
  function query_id_match_cart($id){
   $sql="SELECT count(*) FROM match_cart WHERE cart_Id='".$id."'";
   return $sql;

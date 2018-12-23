@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../lal/logic.appIdentity.php';
 
 if(isset($_GET["action"])){

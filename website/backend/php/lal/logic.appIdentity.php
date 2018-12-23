@@ -25,7 +25,22 @@ function customer_account_id(){
  return $num;
 }
 
-function id_match_cart(){
+function id_customer_views($id){
+ $appIdentity = new AppIdentity();
+ $identityQuery = new IdentityQuery();
+ $query = $identityQuery->query_id_customer_views($id);
+ return $appIdentity->execution($query);
+}
+function customer_views_id(){
+ $num="CV";
+ for($index=0;$index<13;$index++) { $num.=rand(1,9); }
+ $appIdentity = new AppIdentity();
+ if(intval($appIdentity->id_customer_views($num))>0){ $appIdentity->id_customer_views(); }
+ return $num;
+}
+
+
+function id_match_cart($id){
  $appIdentity = new AppIdentity();
  $identityQuery = new IdentityQuery();
  $query = $identityQuery->query_id_match_cart($id);
@@ -35,11 +50,11 @@ function match_cart_id(){
  $num="MCA";
  for($index=0;$index<12;$index++) { $num.=rand(1,9); }
  $appIdentity = new AppIdentity();
- if(intval($appIdentity->id_match_cart($id))>0){ match_cart_id(); }
+ if(intval($appIdentity->id_match_cart($num))>0){ match_cart_id(); }
  return $num;
 }
 
-function id_match_fav(){
+function id_match_fav($id){
  $appIdentity = new AppIdentity();
  $identityQuery = new IdentityQuery();
  $query = $identityQuery->query_id_match_fav($id);
@@ -49,11 +64,11 @@ function match_fav_id(){
  $num="MFI";
  for($index=0;$index<12;$index++) { $num.=rand(1,9); }
  $appIdentity = new AppIdentity();
- if(intval($appIdentity->id_match_fav($id))>0){ match_fav_id(); }
+ if(intval($appIdentity->id_match_fav($num))>0){ match_fav_id(); }
  return $num;
 }
 
-function id_match_list(){
+function id_match_list($id){
  $appIdentity = new AppIdentity();
  $identityQuery = new IdentityQuery();
  $query = $identityQuery->query_id_match_list($id);
@@ -63,7 +78,7 @@ function match_list_id(){
  $num="MLI";
  for($index=0;$index<12;$index++) { $num.=rand(1,9); }
  $appIdentity = new AppIdentity();
- if(intval($appIdentity->id_match_list($id))>0){ match_list_id(); }
+ if(intval($appIdentity->id_match_list($num))>0){ match_list_id(); }
  return $num;
 }
 }

@@ -15,6 +15,7 @@
 	  <div class="col-md-4">
         <div>Home</div>
 		<div>Find a Profile</div>
+		<div><a class="a-custom" href="<?php echo $_SESSION["PROJECT_URL"]; ?>admin/home">Admin Panel</a></div>
 	  </div>
 	  <div class="col-md-4">
 		<div>How It Works?</div>

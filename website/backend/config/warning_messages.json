@@ -42,5 +42,11 @@
   "W041": { "english":"Mention Expected Bride Living Status." },
   "W042": { "english":"Mention Expected Bridegroom Living Status." },
   "W043": { "english":"Please Enter valid PhoneNumber." },
-  "W044": { "english":"Please Enter valid OTPCode." }
+  "W044": { "english":"Please Enter valid OTPCode." },
+  "W045": { "english":"The Credentials of Administrator Account is invalid. Please try Valid Credentials." },
+  "W046": { "english":"Please Enter your Name." },
+  "W047": { "english":"Password and Confirm Password not matched." },
+  "W048": { "english":"Missing Password." },
+  "W049": { "english":"Missing Confirm Password." },
+  "W050": { "english":"Your Mobile Number already registered, please try to login." },
 }

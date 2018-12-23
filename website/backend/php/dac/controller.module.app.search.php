@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../api/app.initiator.php';
 require_once '../api/app.database.php';
 require_once '../dal/data.module.customer.search.php';
@@ -23,6 +24,11 @@ if(isset($_GET["action"])){
     if(isset($_GET["limit_start"]) && isset($_GET["limit_end"])){
 	$limit_start = $_GET["limit_start"];
 	$limit_end = $_GET["limit_end"];
+	/* */ 
+	$mob_code = ''; if(isset($_GET["mob_code"])){ $mob_code = $_GET["mob_code"]; }
+    $mobile = ''; if(isset($_GET["mobile"])){ $mobile = $_GET["mobile"]; }
+	$accountType = '';if(isset($_GET["accountType"])){ $accountType = $_GET["accountType"]; }
+	/* */
 	$logger->info("limit_start: ".$limit_start."  limit_end: ".$limit_end);
     $gender = array(); if(isset($_GET["gender"])) { $gender = $_GET["gender"]; }
 	$motherTongue = array();  if(isset($_GET["motherTongue"])) { $motherTongue = $_GET["motherTongue"]; }
@@ -30,7 +36,7 @@ if(isset($_GET["action"])){
 	$occupationType = array();  if(isset($_GET["occupationType"])) { $occupationType = $_GET["occupationType"]; }
 	$age = array();  if(isset($_GET["age"])) { $age = $_GET["age"]; }
     $customerSearch = new CustomerSearch();
-	$query = $customerSearch->query_data_browseprofile($gender,$motherTongue,$status,$occupationType,$age,$limit_start,$limit_end);
+	$query = $customerSearch->query_data_browseprofile($mob_code,$mobile,$accountType,$gender,$motherTongue,$status,$occupationType,$age,$limit_start,$limit_end);
 	$database = new Database($DB_KV_SERVERNAME,$DB_KV_NAME,$DB_KV_USER,$DB_KV_PASSWORD);
 	echo $database->getJSONData($query);
 	} else { 

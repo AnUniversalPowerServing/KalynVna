@@ -1,69 +1,49 @@
-#
 RewriteEngine on
-# RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt)$ [NC]
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
 
 #ErrorDocument 404 http://localhost/mylocalhook/
 
 DirectoryIndex default.php
 
-RewriteRule docs/([^/]+)$ document.php?1=$1 [NC,L]
-RewriteRule app/login login.php [NC,L]
-RewriteRule app/dashboard/user dashboard_user.php [NC,L]
-RewriteRule app/signup/([^/]+)$ signup.php?1=$1 [NC,L]
-RewriteRule app/howItWorks howItWorks.php [NC,L] 
-RewriteRule app/pricing  pricing.php [NC,L]
-RewriteRule app/matchCalculator matchCalculator.php [NC,L]
-RewriteRule app/browseMatrimony browseMatrimony.php [NC,L]
-RewriteRule app/user/([^/]+)$ app-user-profile.php?1=$1 [NC,L]
+# App
+RewriteRule app/howItWorks app-howItWorks.php [NC,L] 
+RewriteRule app/pricing  app-pricing.php [NC,L]
+RewriteRule app/signup app-signup.php?1=$1 [NC,L]
+RewriteRule app/matchCalculator app-matchCalculator.php [NC,L]
+RewriteRule app/browseMatrimony app-browseMatrimony.php [NC,L]
+RewriteRule app/user/([^/]+)$ app-userprofile.php?1=$1 [NC,L]
 
-RewriteRule app/search/([^/]+)$ app-search.php?searchKeyword=$1 [NC,L]
-RewriteRule app/search app-search.php [NC,L]
+# Customer Accounts
+RewriteRule customer/dashboard backend/users_customers/index.php [NC,L]
+RewriteRule customer/userprofile backend/users_customers/userprofile.php [NC,L]
 
-RewriteRule app/myprofile app-user-myprofile.php [NC,L]
-RewriteRule app/notifications app-notifications.php [NC,L]
-RewriteRule newsfeed/latest-news app-newsfeed.php [NC,L]
-RewriteRule newsfeed/news/([^/]+)/([^/]+)$ app-newsfeed-news.php?1=$1&2=$2 [NC,L]
-RewriteRule newsfeed/news/([^/]+)/([^/]+)/statistics app-newsfeed-statistics.php?1=$1&2=$2 [NC,L]
+RewriteRule customer/matchprofiles customer-matchprofiles.php [NC,L]
+RewriteRule customer/favourites customer-favourites.php [NC,L]
+RewriteRule customer/cart customer-cart.php [NC,L]
+RewriteRule customer/editprofile/([^/]+)$ customer-editprofile.php?1=$1 [NC,L]
 
-RewriteRule app/explore app-explore.php  [NC,L]
-RewriteRule app/hooks app-mylocalhook.php  [NC,L]
-RewriteRule app/myfriends app-user-friends-my.php  [NC,L]
-RewriteRule app/findfriends app-user-friends-find.php  [NC,L]
-
-RewriteRule app/write-newsfeed app-newsfeed-write.php  [NC,L]
-
-RewriteRule app/create-movement app-movement-create.php  [NC,L]
-RewriteRule app/movement/([^/]+)$ app-movement-view.php?1=$1  [NC,L]
-
-RewriteRule app/mycommunity app-community-my.php [NC,L]
-RewriteRule app/create-community app-community-create.php  [NC,L]
-RewriteRule app/findcommunity app-community-find.php  [NC,L]
-RewriteRule app/community/([^/]+)$ app-community-profile.php?1=$1  [NC,L]
-
-RewriteRule doc/hook-standard-premium doc_info_hook.php  [NC,L]
-
-#RewriteRule app/([^/]+)$ application.php?1=$1 [NC,L]
+# Admin Accounts
+RewriteRule admin/home administrator-default.php [NC,L]
+RewriteRule admin/dashboard administrator-dashboard.php [NC,L]
 
 RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt\.map\.ttf)$ [NC]
-#RewriteRule app/([^/]+)/([^/]+)$ application.php?1=$1&2=$2 [NC]
-
-RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt\.map\.ttf)$ [NC]
-#RewriteRule app/([^/]+)/([^/]+)/([^/]+)$ application.php?1=$1&2=$2&3=$3 [NC]
-
-RewriteRule community/([^/]+)$ page_community.php?1=$1 [NC,L]
-RewriteRule pagertest test_html.php [NC,L]
 
 RewriteRule ([^/]+)/styles/([^/]+)$ styles/$2 [NC,L]
 RewriteRule ([^/]+)/styles/([^/]+)/([^/]+)$ styles/$2/$3 [NC,L]
-RewriteRule ([^/]+)/js/api/([^/]+)$ js/api/$2 [NC,L]
-RewriteRule ([^/]+)/js/pages/([^/]+)$ js/pages/$2 [NC,L]
+
+RewriteRule ([^/]+)/datatables/js/([^/]+)$ backend/vendor/datatables/js/$2 [NC,L]
+RewriteRule ([^/]+)/bootstrap/js/([^/]+)$ backend/vendor/bootstrap/js/$2 [NC,L]
+RewriteRule ([^/]+)/dist/js/([^/]+)$ backend/dist/js/$2 [NC,L]
+
+RewriteRule ([^/]+)/js/([^/]+)$ js/$2 [NC,L]
+RewriteRule ([^/]+)/js/([^/]+)/([^/]+)$ js/$2/$3 [NC,L]
 RewriteRule ([^/]+)/js/([^/]+)/([^/]+)/([^/]+)$ js/$2/$3/$4 [NC,L]
+
+
 RewriteRule ([^/]+)/admin/([^/]+)$ admin/$2 [NC,L]
 RewriteRule ([^/]+)/admin/([^/]+)/([^/]+)$ admin/$2/$3 [NC,L]
 RewriteRule ([^/]+)/admin/([^/]+)/([^/]+)/([^/]+)$ admin/$2/$3/$4 [NC,L]
 RewriteRule ([^/]+)/images/([^/]+)$ images/$2 [NC,L]
 RewriteRule ([^/]+)/images/([^/]+)/([^/]+)$ images/$2/$3 [NC,L]
 RewriteRule ([^/]+)/fonts/([^/]+)$ fonts/$2 [NC,L]
+
 

@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
+include_once 'templates/api_params.php';
+if(!isset($_SESSION["ACCOUNT_TYPE"])){ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +15,8 @@
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
   <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
   <script src="js/api/bootstrap-switch.js"></script>
-  <link href="styles/bootstrap-switch.css" rel="stylesheet">
+  <link href="styles/api/bootstrap-switch.css" rel="stylesheet">
+  <?php include_once 'templates/api_js.php'; ?>
   <script type="text/javascript">
   $(document).ready(function(){
     kvHeaderMenu('kvHeaderMenu-Home');
@@ -27,7 +31,7 @@
 <body>
 <?php include_once 'templates/api_header.php'; ?>
 
-<div align="center" style="width:100%;background-color:#9c27b0;color:#fff;">
+<div align="center" style="width:100%;background-color:#e91e63;color:#fff;">
   <div style="font-size:16px;padding:15px;letter-spacing:1px;line-height:26px;">
     Welcome to the No.1 Brahmin Matrimonial Service which is the largest, most trusted
 	and Successful Matrimonial Platform
@@ -220,3 +224,8 @@
 <?php include_once 'templates/api_bottom.php'; ?>
 </body>
 </html>
+<?php } else {  
+       if($_SESSION["ACCOUNT_TYPE"]=='CUSTOMER'){  header("Location: ".$_SESSION["PROJECT_URL"].'customer/dashboard'); }
+  else if($_SESSION["ACCOUNT_TYPE"]=='ADMINISTRATOR'){ header("Location: ".$_SESSION["PROJECT_URL"].'admin/dashboard');  }
+}
+?>

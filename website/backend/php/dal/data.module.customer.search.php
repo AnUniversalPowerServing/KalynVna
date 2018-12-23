@@ -43,11 +43,16 @@ class CustomerSearch {
    }
    return $query;
  }
- function query_data_browseprofile($gender,$motherTongue,$status,$occupationType,$age,$limit_start,$limit_end){
-   $query="SELECT customer_account.account_Id, ";
+ function query_data_browseprofile($mob_code,$mobile,$accountType,$gender,$motherTongue,$status,$occupationType,$age,
+  $limit_start,$limit_end){
+   $query="SELECT customer_account.account_Id, customer_account.profile_pic, ";
    $query.="customer_account.name, customer_account.gender, customer_account.motherTongue, ";
    $query.="customer_account.status, customer_account.ft_hgt, customer_account.inch_hgt, customer_account.highDegree, ";
    $query.="customer_account.occupation, customer_account.occType, customer_account.living_status, ";
+   if(strlen($mob_code)>0 && strlen($mobile)>0 && $accountType=='CUSTOMER'){  
+   $query.="IF((SELECT count(*) FROM match_fav WHERE match_fav.mob_code='".$mob_code."' AND match_fav.mobile='".$mobile."' ";
+   $query.="AND match_fav.favProfile_Id=customer_account.account_Id)>0,'YES','NO') As favourites,";
+   }
    $query.="customer_preferences.exp_highDegree, customer_preferences.exp_occupation, customer_preferences.exp_occType, ";
    $query.="customer_preferences.exp_motherTongue, customer_preferences.exp_living_status ";
    $query.="FROM customer_account, customer_birth, customer_contact, customer_family, customer_preferences ";
