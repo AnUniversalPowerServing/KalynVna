@@ -40,7 +40,7 @@
 <body>
 
     <div id="wrapper">
-		<?php include_once 'panelheader.php'; ?>
+		<?php include_once 'templates/panelheader.php'; ?>
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">

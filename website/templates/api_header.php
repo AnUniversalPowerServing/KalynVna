@@ -1,4 +1,5 @@
 <style>
+.btn-lgtgrey { background-color:#eee;color:#000; }
 div.im-checkout { max-width: 100%;margin-bottom: 0px; }
 .curpoint { cursor:pointer; }
 .hide-block { display:none; }
@@ -171,6 +172,9 @@ function kvHeaderMenu(id){
 </div>
 <!-- Register Modal ::: Start -->
 <script type="text/javascript">
+$(document).ready(function(){
+ 
+});
 var SIGNUP_USER_OTPCODE;
 function signupForm(id){
  kvHeaderMenu(id);
@@ -272,6 +276,15 @@ function signup_newuser(){
 		  <div class="form-group">
 		    <label>Name</label>
 			<input id="signup_customer_name" type="text" class="form-control" placeholder="Enter your Name"/>
+		  </div>
+		  
+		  <div align="right" class="form-group">
+			<div class="checkbox">
+			    <b>Register By</b>&nbsp;&nbsp;
+				<input id="signup_customer_authReg" type="checkbox" data-toggle="toggle"
+				 data-on="Email" data-off="Mobile" data-width="100px" 
+				 data-onstyle="primary" data-offstyle="danger"/>
+			</div>
 		  </div>
 		  
 		  <div class="form-group">

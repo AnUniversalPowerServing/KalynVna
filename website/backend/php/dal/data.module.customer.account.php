@@ -1,17 +1,17 @@
 <?php
 class CustomerAccount {
   function query_add_customerBalance($mobile, $surName, $name, $balance, $accpwd){
-    $sql="INSERT INTO customer_balance(mob_code, mobile, surName, name, balance, acc_pwd) ";
+    $sql="INSERT INTO user_account(mob_code, mobile, surName, name, balance, acc_pwd) ";
 	$sql.="VALUES ('+91','".$mobile."','".$surName."','".$name."','".$balance."','".md5($accpwd)."')";
 	echo $sql;
 	return $sql;
   }
   function query_check_customerMobile($mobile){
-   $sql="SELECT count(*) FROM customer_balance WHERE mobile='".$mobile."';";
+   $sql="SELECT count(*) FROM user_account WHERE mobile='".$mobile."';";
    return $sql;
   }
   function query_update_customerBalance($new_mobile, $prev_mobile, $surName, $name, $balance){
-    $sql="UPDATE customer_balance SET";
+    $sql="UPDATE user_account SET";
 	if(strlen($surName)>0){ $sql.=" surName='".$surName."',"; }
 	if(strlen($new_mobile)>0){ $sql.=" mobile='".$new_mobile."',"; }
 	if(strlen($name)>0){ $sql.=" name='".$name."',"; }

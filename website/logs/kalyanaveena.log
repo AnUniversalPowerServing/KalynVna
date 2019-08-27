@@ -596,3 +596,29 @@ Sunday 23rd December 2018 06:44:51 PM [INFO] ::: [api.database.php]  Database co
 Sunday 23rd December 2018 06:44:51 PM [INFO] ::: [api.database.php]  Query(Status-Success) : UPDATE customer_balance SET surName='Nellutla', mobile='9160869337', name='L N Rao123' WHERE mobile='6300193369'; 
 Sunday 23rd December 2018 06:49:22 PM [INFO] ::: [api.database.php]  Database connected Successfully 
 Sunday 23rd December 2018 06:49:22 PM [INFO] ::: [api.database.php]  Query(Status-Success) : UPDATE customer_balance SET surName='Nellutla', mobile='6300193369', name='L N Rao123' WHERE mobile='9160869337'; 
+Monday 31st December 2018 11:32:04 AM [INFO] ::: [api.database.php]  Database connected Successfully 
+Monday 31st December 2018 11:32:08 AM [INFO] ::: [api.database.php]  Database connected Successfully 
+Tuesday 1st January 2019 01:48:58 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Tuesday 1st January 2019 01:48:58 PM [INFO] ::: [controller.module.app.search.php]  limit_start: 0  limit_end: 9 
+Tuesday 1st January 2019 01:48:59 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Tuesday 1st January 2019 01:50:04 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Tuesday 1st January 2019 01:54:18 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Tuesday 1st January 2019 01:54:50 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Tuesday 1st January 2019 01:54:50 PM [INFO] ::: [api.database.php]  Query(Status-Success) : INSERT INTO user_account(mob_code, mobile, surName, name, balance, acc_pwd) VALUES ('+91','9052344403','Kankipati','Adithya ','0','fcdd1627582a522313a117a297dea7ee') 
+Saturday 2nd March 2019 09:21:01 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Saturday 2nd March 2019 09:21:01 PM [INFO] ::: [controller.module.app.search.php]  limit_start: 0  limit_end: 9 
+Saturday 2nd March 2019 09:21:02 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Saturday 2nd March 2019 09:21:05 PM [INFO] ::: [controller.module.app.search.php]  limit_start: 9  limit_end: 9 
+Saturday 2nd March 2019 09:21:06 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Saturday 2nd March 2019 09:21:06 PM [INFO] ::: [controller.module.app.search.php]  limit_start: 18  limit_end: 9 
+Saturday 2nd March 2019 09:21:07 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Saturday 2nd March 2019 09:21:08 PM [INFO] ::: [controller.module.app.search.php]  limit_start: 27  limit_end: 9 
+Saturday 2nd March 2019 09:21:09 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Saturday 2nd March 2019 09:21:27 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Saturday 2nd March 2019 09:21:27 PM [INFO] ::: [controller.module.app.search.php]  limit_start: 0  limit_end: 9 
+Saturday 2nd March 2019 09:21:28 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Saturday 2nd March 2019 09:21:32 PM [INFO] ::: [controller.module.app.search.php]  limit_start: 9  limit_end: 9 
+Saturday 2nd March 2019 09:21:33 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Saturday 2nd March 2019 09:21:33 PM [INFO] ::: [controller.module.app.search.php]  limit_start: 18  limit_end: 9 
+Saturday 2nd March 2019 09:21:34 PM [INFO] ::: [api.database.php]  Database connected Successfully 
+Saturday 2nd March 2019 09:21:36 PM [INFO] ::: [api.database.php]  Database connected Successfully 
