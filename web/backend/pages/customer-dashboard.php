@@ -59,99 +59,148 @@
 
    <?php include_once 'templates/customer-header.php'; ?>
 <style>
+.mtop15p { margin-top:15px; }
 .mbot15p { margin-bottom:15px; }
+.pad0 { padding:0px; }
+.f24 { font-size:24px; }
+.list-group-item-blue { background-color:#03a9f4;color:#fff; }
+.list-group-item-darkYellow { background-color:#de8604;color:#fff; }
 </style>
    <div id="page-wrapper">
             <div class="row">
               <div class="col-lg-12">
-                <h4 class="page-header"><b>Dashboard</b></h4>
+                <h4 class="page-header"><b>Your Matrimony Profiles</b></h4>
               </div>
               <!-- /.col-lg-12 -->
             </div>
 			<div class="row">
 			  <div class="col-lg-6">
 			  <!-- -->
-			  <div class="row">
-			   
-			    <div class="col-lg-12">
-				  <h5 style="border-bottom:1px solid #eee;padding-bottom:10px;"><b>Your Profiles</b></h5>
-				</div><!--/.col-lg-6 -->
-				
-			    <div align="right" class="col-lg-12 mbot15p">
-				  <button class="btn btn-default"><b><i class="fa fa-plus-circle"></i>&nbsp;&nbsp;Create Profiles</b></button>
-				</div><!--/.col-lg-6 -->
-				
-			  </div>
-			  <div class="row">
-			    <div class="col-lg-6">
+				<div class="list-group">
+				<div class="list-group-item list-group-item-blue" data-toggle="collapse" data-target="#profileId01">
+				 <b>SurName MiddleName LastName (Your Relationship)</b>
+				 <i class="fa fa-angle-double-down pull-right"></i>
+				</div><!--/.list-group-item -->
+				<div id="profileId01" class="collapse">
+				<div class="list-group-item pad0">
+				 <div class="container-fluid mtop15p">
+				 <div class="row">
+				 <div class="col-lg-6">
 				 <!-- -->
-				 <div class="list-group">
-				   <div align="center" class="list-group-item" style="background-color:#02af09;color:#fff;">
-				     <i class="fa fa-3x fa-user"></i>
-				   </div><!--/list-group-item -->
-				   <div align="center" class="list-group-item">
-				    <span><b>SurName MiddleName LastName</b></span>
-				   </div><!--/list-group-item -->
-				   <div align="center" class="list-group-item">
-				    <span style="color:#02af09"><b>Relationship</b></span>
-				   </div><!--/list-group-item -->
-				 </div><!--/list-group -->
+				  <div class="panel panel-primary">
+                    <div class="panel-heading">
+                       <div class="row">
+                          <div class="col-xs-12 text-right">
+                            <div align="left"><b>Total Matching Profiles</b></div>
+							<div class="f24">26</div>
+                          </div>
+                       </div>
+                     </div>
+                  </div>
 				 <!-- -->
 				</div><!--/.col-lg-6 -->
 				
 				<div class="col-lg-6">
 				 <!-- -->
-				 <div class="list-group">
-				   <div align="center" class="list-group-item" style="background-color:#e40e07;color:#fff;">
-				     <i class="fa fa-3x fa-user"></i>
-				   </div><!--/list-group-item -->
-				   <div align="center" class="list-group-item">
-				    <span><b>SurName MiddleName LastName</b></span>
-				   </div><!--/list-group-item -->
-				   <div align="center" class="list-group-item">
-				    <span style="color:#e40e07"><b>Relationship</b></span>
-				   </div><!--/list-group-item -->
-				 </div><!--/list-group -->
+				 <div class="panel panel-green">
+                    <div class="panel-heading">
+                       <div class="row">
+                          <div class="col-xs-12 text-right">
+                            <div align="left"><b>Your Profile Viewed</b></div>
+							<div class="f24">26</div>
+                          </div>
+                       </div>
+                     </div>
+                  </div>
 				 <!-- -->
 				</div><!--/.col-lg-6 -->
 				
 				<div class="col-lg-6">
 				 <!-- -->
-				 <div class="list-group">
-				   <div align="center" class="list-group-item" style="background-color:#d27d04;color:#fff;">
-				     <i class="fa fa-3x fa-user"></i>
-				   </div><!--/list-group-item -->
-				   <div align="center" class="list-group-item">
-				    <span><b>SurName MiddleName LastName</b></span>
-				   </div><!--/list-group-item -->
-				   <div align="center" class="list-group-item">
-				    <span style="color:#d27d04"><b>Relationship</b></span>
-				   </div><!--/list-group-item -->
-				 </div><!--/list-group -->
+				 
 				 <!-- -->
 				</div><!--/.col-lg-6 -->
 				
 				<div class="col-lg-6">
 				 <!-- -->
-				 <div class="list-group">
-				   <div align="center" class="list-group-item" style="background-color:#024279;color:#fff;">
-				     <i class="fa fa-3x fa-user"></i>
-				   </div><!--/list-group-item -->
-				   <div align="center" class="list-group-item">
-				    <span><b>SurName MiddleName LastName</b></span>
-				   </div><!--/list-group-item -->
-				   <div align="center" class="list-group-item">
-				    <span style="color:#024279"><b>Relationship</b></span>
-				   </div><!--/list-group-item -->
-				 </div><!--/list-group -->
+				 
 				 <!-- -->
 				</div><!--/.col-lg-6 -->
 				
-			  </div>
+				 </div><!--/.row -->
+				 <div class="row">
+				   <div align="right" class="col-lg-12 mbot15p">
+				      <button class="btn btn-default">
+					    <b>View Profile Details</b>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i>
+					  </button>
+				   </div>
+				 </div>
+				 </div><!--/.container-fluid -->
+				</div><!--/.list-group-item -->
+				</div>
+				</div><!--/.list-group -->
 			  <!-- -->
 			  </div>
 			  <div class="col-lg-6">
+			  <!-- -->
+			  <div class="list-group">
+				<div class="list-group-item list-group-item-darkYellow" data-toggle="collapse" data-target="#profileId02">
+				 <b>SurName MiddleName LastName (Your Relationship)</b>
+				 <i class="fa fa-angle-double-down pull-right"></i>
+				</div><!--/.list-group-item -->
+				<div id="profileId02" class="collapse">
+				<div class="list-group-item pad0">
+				 <div class="container-fluid mtop15p">
+				 <div class="row">
+				 <div class="col-lg-6">
+				 <!-- -->
+				  <div class="panel panel-primary">
+                    <div class="panel-heading">
+                       <div class="row">
+                          <div class="col-xs-12 text-right">
+                            <div align="left"><b>Total Matching Profiles</b></div>
+							<div class="f24">26</div>
+                          </div>
+                       </div>
+                     </div>
+                  </div>
+				 <!-- -->
+				</div><!--/.col-lg-6 -->
+				
+				<div class="col-lg-6">
+				 <!-- -->
+				 <div class="panel panel-green">
+                    <div class="panel-heading">
+                       <div class="row">
+                          <div class="col-xs-12 text-right">
+                            <div align="left"><b>Your Profile Viewed</b></div>
+							<div class="f24">26</div>
+                          </div>
+                       </div>
+                     </div>
+                  </div>
+				 <!-- -->
+				</div><!--/.col-lg-6 -->
+				
+				<div class="col-lg-6">
+				 <!-- -->
+				 
+				 <!-- -->
+				</div><!--/.col-lg-6 -->
+				
+				<div class="col-lg-6">
+				 <!-- -->
+				 
+				 <!-- -->
+				</div><!--/.col-lg-6 -->
+				
+				 </div><!--/.row -->
+				 </div><!--/.container-fluid -->
+				</div><!--/.list-group-item -->
+				</div>
+				</div><!--/.list-group -->
 			  
+			  <!-- -->
 			  </div>
 			</div>
             <!-- /.row -->

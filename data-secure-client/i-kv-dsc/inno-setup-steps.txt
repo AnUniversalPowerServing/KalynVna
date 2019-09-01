@@ -1,0 +1,13 @@
+------------------
+Challenges
+------------------
+1) Set Environmental Variables
+
+Launch4j
+Basic:
+1) Output File (File with NAME.EXE)
+2) Jar File
+3) Icon (.ico) File
+Single Instance
+ Allow only a single instance of Application
+ Mutex Name and Window Title as Application Name

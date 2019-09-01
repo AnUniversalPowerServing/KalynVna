@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="434.0" style="-fx-background-color: #f7ccf7; -fx-border-color: #630062; -fx-border-width: 2px;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="anups.jfx.kv.dsc.app.Controller">
+   <children>
+      <Slider fx:id="appDataSwitch" layoutX="275.0" layoutY="119.0" onKeyReleased="#onSliderChanged" onMouseReleased="#onSliderChanged" prefHeight="14.0" prefWidth="25.0" style="-fx-color: #ccc;" />
+      <Label layoutX="247.0" layoutY="118.0" text="OFF">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="317.0" layoutY="118.0" text="ON">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="118.0" text="Application Data Secure System :" textFill="#610061">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="appDataStatus" layoutX="100.0" layoutY="150.0" text="Data Secured System is TURNED OFF" textFill="#e04d09">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="appDataInfo" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="167.0" prefHeight="68.0" prefWidth="402.0" text="You are not able to see the data and images of our Customers in the Kalyanaveena.com." textAlignment="CENTER" textFill="#e04d09" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="61.0" fitWidth="429.0" layoutX="2.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../img/footer.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="97.0" fitWidth="430.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../img/icon.png" />
+         </image>
+      </ImageView>
+      <ImageView id="kv_screen_close" fitHeight="29.0" fitWidth="25.0" layoutX="409.0" layoutY="1.0" onMouseClicked="#handleOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../img/close.png" />
+         </image>
+      </ImageView>
+      <ImageView id="kv_screen_minimize" fitHeight="29.0" fitWidth="25.0" layoutX="384.0" layoutY="1.0" onMouseClicked="#handleOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../img/minimize.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

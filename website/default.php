@@ -33,7 +33,7 @@ if(!isset($_SESSION["ACCOUNT_TYPE"])){ ?>
 
 <div align="center" style="width:100%;background-color:#e91e63;color:#fff;">
   <div style="font-size:16px;padding:15px;letter-spacing:1px;line-height:26px;">
-    Welcome to the No.1 Brahmin Matrimonial Service which is the largest, most trusted
+    Welcome to the No.1 Emerging Matrimonial Service which is the largest, most trusted
 	and Successful Matrimonial Platform
   </div>
 </div>
