@@ -1,0 +1,21 @@
+package kalynvna_tools.panchang.app;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+/**
+ *
+ */
+public class ApplicationStart {
+	
+  public WebDriver driver;
+	
+  public String URL, Node;
+	
+  protected ThreadLocal<RemoteWebDriver> threadDriver = null;
+    
+  public static void main( String[] args ){
+    System.out.println( "Hello World!" );
+  }
+    
+}

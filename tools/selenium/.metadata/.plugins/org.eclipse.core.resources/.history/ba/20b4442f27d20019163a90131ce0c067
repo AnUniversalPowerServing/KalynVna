@@ -1,0 +1,18 @@
+package kalynvna_tools.panchang.app;
+
+/**
+ *
+ */
+public class ApplicationStart {
+	
+  public WebDriver driver;
+	
+  public String URL, Node;
+	
+  protected ThreadLocal<RemoteWebDriver> threadDriver = null;
+    
+  public static void main( String[] args ){
+    System.out.println( "Hello World!" );
+  }
+    
+}
