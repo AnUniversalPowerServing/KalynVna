@@ -1,0 +1,89 @@
+package astrosage.app;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.opera.OperaDriver;
+
+public class AppFormBuilder {
+	
+  public static final String PROJECT_PATH = System.getProperty("user.dir");
+	
+  public static void main(String args[]) throws InterruptedException {
+	 System.setProperty("webdriver.opera.driver", PROJECT_PATH+"\\operadriver.exe");
+	 WebDriver  webdriver = new OperaDriver();
+	     webdriver.manage().window().maximize();
+	 
+	 webdriver.get("http://astrosage.com/kundli/");
+     System.out.println("Title: "+webdriver.getTitle());
+     
+     Thread.sleep(3000);
+     
+     /* Page # 1: */
+     WebElement formElement = webdriver.findElement(By.name("kundlibirthdetails")); // form Name
+     formElement.findElement(By.xpath("//input[@name='name']")).sendKeys("Srinivas");
+     
+     formElement.findElement(By.xpath("//label[@for='female']")).click();
+     
+     formElement.findElement(By.xpath("//input[@name='day']")).sendKeys("03");
+     
+     formElement.findElement(By.xpath("//input[@name='month']")).sendKeys("03");
+     
+     formElement.findElement(By.xpath("//input[@name='year']")).sendKeys("1991");
+     
+     formElement.findElement(By.xpath("//input[@name='hrs']")).sendKeys("22");
+     
+     formElement.findElement(By.xpath("//input[@name='min']")).sendKeys("50");
+     
+     formElement.findElement(By.xpath("//input[@name='sec']")).sendKeys("00");
+     //     
+     formElement.findElement(By.xpath("//input[@name='place']")).sendKeys("Hyderabad");
+     
+     formElement.findElement(By.xpath("//a[@id='aTag']")).click();
+     
+     formElement.findElement(By.xpath("//button[@value='Show Kundli']")).click();
+     
+     
+     Thread.sleep(3000);
+     /* Page # 2: */
+     WebElement tableElement = webdriver.findElement(By.className("ui-atlas-table")); // form Name
+     List<WebElement> allrows = tableElement.findElements(By.tagName("tr"));
+     int row_index=0;
+     for(WebElement row: allrows){
+       List<WebElement> Cells = row.findElements(By.tagName("td"));
+       for(WebElement Cell:Cells){ 
+    	   System.out.print(Cell.getText()+"  ");  }
+       System.out.println("");
+       if(row_index==1){
+    	   Cells.get(0).findElement(By.tagName("a")).click();
+           break;
+       }
+       row_index++;
+     }
+     
+    // Thread.sleep(10000);
+     
+     /* Page # 3: */
+     WebElement astroHomeElement = webdriver.findElement(By.xpath("//div[@id='main-content']"));
+    List<WebElement> webElementList = astroHomeElement.findElements(By.tagName("a"));
+    System.out.println("Size: "+webElementList.size());
+    // WebElement birthChartElement =	astroHomeElement.findElement(By.xpath("//*/a[@href='planetposition.asp']"));
+   //  List<WebElement> birthChartTitleElements = birthChartElement.findElements(By.xpath("//*/h6[@class='card-title']"));
+     
+   //  System.out.println("birthChartTitleElements: "+birthChartTitleElements.size());
+  
+    // String birthChartTitle = birthChartTitleElements.get(0).getText();
+     
+   //  System.out.println("BirthChartTitle: "+birthChartTitle);
+    // 
+   //  birthChartElement.click();
+     
+     // div [class="ui-atlas-table"]
+     
+    // WebElement selectElement = formElement.findElement(By.xpath("//input[@name='day']"));
+    // new Select(selectElement).selectByVisibleText("Mar");
+  }
+  
+}

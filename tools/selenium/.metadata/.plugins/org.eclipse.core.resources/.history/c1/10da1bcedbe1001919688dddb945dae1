@@ -1,0 +1,35 @@
+package makemytrip.flights;
+
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+public class Star1 {
+    public int numericKeyboardInput(){
+    	int input = 0;
+    	Scanner sc=new Scanner(System.in);
+    	try {
+    	 input = sc.nextInt();
+    	} catch(InputMismatchException e){
+    	   System.out.println("Your Mismatch Input.");
+    	   input = new Star1().numericKeyboardInput();
+    	}
+    	return input;
+    }
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter row size: ");
+		int row = sc.nextInt();
+		// int row = Integer.parseInt(sc.nextLine());  
+                
+          
+		System.out.println("Enter column size: ");
+		int column = Integer.parseInt(sc.nextLine());  
+		
+		System.out.println("row is: " + row);   
+        System.out.println("column is: " + column); 
+	
+        
+		sc.close();
+	}
+
+}

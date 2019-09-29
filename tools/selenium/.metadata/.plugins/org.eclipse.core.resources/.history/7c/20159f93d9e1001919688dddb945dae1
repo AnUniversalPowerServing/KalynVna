@@ -1,0 +1,12 @@
+package makemytrip.flights;
+
+public class Star1 {
+
+	public static void main(String[] args) {
+		System.out.println("enter row size");
+		System.out.println("enter column size");
+		// TODO Auto-generated method stub
+
+	}
+
+}
