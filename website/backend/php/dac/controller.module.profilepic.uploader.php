@@ -1,5 +1,7 @@
 <?php
 session_start();
+print_r($_POST);
+print_r($_FILES);
 $target_dir = "../../../uploads/";
 $user_Id=$_POST["AUTH_USER_ID"];
 if(!is_dir($target_dir.$user_Id)){ mkdir($target_dir.$user_Id); }

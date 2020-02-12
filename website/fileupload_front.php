@@ -16,6 +16,7 @@ function profilepictureUpload() {
   var form = $('#fileuploadForm')[0];
   var formData = new FormData(form);
       formData.append("AUTH_USER_ID","TESTUserId");
+	  // formData.append('uploadprofilepic1', $('input[type=file]')[0].files[0]); // On Failure Case
       console.log("data: "+JSON.stringify(formData));
   $.ajax({type: "POST", enctype: 'multipart/form-data', url: "backend/php/dac/controller.module.profilepic.uploader.php",
   data: formData, processData: false, contentType: false, cache: false, timeout: 600000, success: function (response) {  
