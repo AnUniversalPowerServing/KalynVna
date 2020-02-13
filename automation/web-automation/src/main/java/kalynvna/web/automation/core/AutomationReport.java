@@ -11,7 +11,7 @@ import kalynva.web.automation.core.pojos.TestCase;
 import kalynva.web.automation.core.pojos.TestSteps;
 
 public class AutomationReport extends ProjectBase {
- 
+  
 	public void buildReport(String testCaseTitle, TestCase testCase) {
 		AutomationReport automationReport = new AutomationReport();
 		StringBuilder sb = new StringBuilder();

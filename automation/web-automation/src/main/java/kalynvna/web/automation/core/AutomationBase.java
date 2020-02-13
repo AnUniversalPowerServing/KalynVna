@@ -23,7 +23,7 @@ import kalynva.web.automation.core.pojos.TestSteps;
  *
  */
 public abstract class AutomationBase extends ProjectBase {
-	
+	 
 	WebDriver driver;
 	
 	public AutomationBase() {
