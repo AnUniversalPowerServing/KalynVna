@@ -6,9 +6,15 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.opera.OperaDriver;
+
+import kalynva.web.automation.core.constants.ProjectBase;
+import kalynva.web.automation.core.pojos.TestCase;
+import kalynva.web.automation.core.pojos.TestSteps;
 
 
 
@@ -16,15 +22,7 @@ import org.openqa.selenium.opera.OperaDriver;
  * Hello world!
  *
  */
-public abstract class AutomationBase {
-	
-	public static final String PROJECT_URL=System.getProperty("user.dir");
-	
-	public static final String RESOURCE_FOLDER = "src/main/resources";
-	
-	public static final String OPERA_DRIVER = "server/opera/operadriver.exe";
-	
-	public static final Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+public abstract class AutomationBase extends ProjectBase {
 	
 	WebDriver driver;
 	
@@ -67,6 +65,21 @@ public abstract class AutomationBase {
         Thread.sleep(200); 
         
         robot.keyPress(KeyEvent.VK_ENTER);
+        
+        TestCase testCase = new TestCase();
+		testCase.setTestCase("Authentication");
+		testCase.setTestDesc("Login with Username and Password");
+		List<TestSteps> testStepsList = new ArrayList<TestSteps>();
+		TestSteps testStep1 = new TestSteps();
+		testStep1.setTestStep("Login Credentials");
+		testStep1.setTestDesc("Login Credential Description");
+		testStep1.setTestData("Username=root, Password=root");
+		testStep1.setStatus("Success");
+		testStep1.setComment("-");
+		testStepsList.add(testStep1);
+		testCase.setTestSteps(testStepsList);
+		AutomationReport automationReport = new AutomationReport();
+		automationReport.buildReport("authenticationLogin", testCase);
 	}
 	
     
