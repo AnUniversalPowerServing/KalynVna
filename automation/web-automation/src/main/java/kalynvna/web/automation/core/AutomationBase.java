@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
 import kalynva.web.automation.core.constants.ProjectBase;
-import kalynva.web.automation.core.pojos.TestCase;
+import kalynva.web.automation.core.pojos.AdvancedTestCase;
 import kalynva.web.automation.core.pojos.TestSteps;
 
 
@@ -66,7 +66,7 @@ public abstract class AutomationBase extends ProjectBase {
         
         robot.keyPress(KeyEvent.VK_ENTER);
         
-        TestCase testCase = new TestCase();
+        AdvancedTestCase testCase = new AdvancedTestCase();
 		testCase.setTestCase("Authentication");
 		testCase.setTestDesc("Login with Username and Password");
 		List<TestSteps> testStepsList = new ArrayList<TestSteps>();

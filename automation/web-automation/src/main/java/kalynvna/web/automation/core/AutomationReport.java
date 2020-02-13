@@ -7,12 +7,12 @@ import java.util.List;
 
 import kalynva.web.automation.core.constants.ProjectBase;
 import kalynva.web.automation.core.pojos.SimpleTestCase;
-import kalynva.web.automation.core.pojos.TestCase;
+import kalynva.web.automation.core.pojos.AdvancedTestCase;
 import kalynva.web.automation.core.pojos.TestSteps;
 
 public class AutomationReport extends ProjectBase {
   
-	public void buildReport(String testCaseTitle, TestCase testCase) {
+	public void buildReport(String testCaseTitle, AdvancedTestCase testCase) {
 		AutomationReport automationReport = new AutomationReport();
 		StringBuilder sb = new StringBuilder();
 		sb.append(automationReport.reportHeader());
@@ -51,7 +51,7 @@ public class AutomationReport extends ProjectBase {
 		return new StringBuilder("</body></html>").toString();
 	}
 	
-	public String buildTestCase(TestCase testCase) {
+	public String buildTestCase(AdvancedTestCase testCase) {
 		
 		
 	  StringBuilder sb = new StringBuilder("<div class=\"table-responsive\">");          
