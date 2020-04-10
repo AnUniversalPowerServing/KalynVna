@@ -299,11 +299,11 @@ It is a pictorial Representation of planetary position at a particular time and 
 </div><!--/.col-sm-8 -->
 <div class="col-sm-4">
 <div align="center" class="col-sm-12">
-<canvas id="chart-style-northIndia" width="325" height="325">Your Browser doesn't support</canvas>
+<canvas id="chart-style-northIndia" width="320" height="320">Your Browser doesn't support</canvas>
 <div><b>North Indian Style</b></div>
 </div><!--/.col-sm-6 -->
 <div align="center" class="col-sm-12">
-<canvas id="chart-style-southIndia" width="325" height="325">Your Browser doesn't support</canvas>
+<canvas id="chart-style-southIndia" width="320" height="460">Your Browser doesn't support</canvas>
 <div><b>South Indian Style</b></div>
 </div><!--/.col-sm-6 -->
 <!-- -->
