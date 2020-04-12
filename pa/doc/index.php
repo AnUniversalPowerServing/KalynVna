@@ -99,6 +99,58 @@ drawChart.fillText("11",300,50);
 drawChart.font="11px Arial";
 drawChart.fillText("12",235,20);
 }
+
+function buildIcon(id,data){
+ $('.'+id).each(function() {
+ var box12planet01 = this.getContext("2d");
+	 box12planet01.beginPath();
+	 box12planet01.arc(11, 15, 10, 0, 2 * Math.PI,false);
+	 box12planet01.fillStyle   = data.bgColor;
+	 box12planet01.fill();
+	 box12planet01.strokeStyle = data.borderColor;
+	 box12planet01.stroke();
+	 box12planet01.font = "bold 11px Arial";
+	 box12planet01.fillStyle   = data.fontColor;
+	 box12planet01.fillText(data.icon,4,18);
+ });
+}
+function buildSun(){
+ buildIcon('chart-style-sun',{ icon:"Su",borderColor:"#e43a05",bgColor:"#e43a05",fontColor:"white" });
+}
+
+function buildMoon(){
+ buildIcon('chart-style-moon',{ icon:"Mo",borderColor:"black",bgColor:"white",fontColor:"black" });
+}
+
+function buildMars(){
+ buildIcon('chart-style-mars',{ icon:"Ma",borderColor:"#c50345",bgColor:"#c50345",fontColor:"white" });
+}
+
+function buildMercury(){
+ buildIcon('chart-style-mercury',{ icon:"Me",borderColor:"green",bgColor:"green",fontColor:"white" });
+}
+
+function buildJupiter(){
+ buildIcon('chart-style-jupiter',{ icon:"Ju",borderColor:"black",bgColor:"yellow",fontColor:"black" });
+}
+
+function buildVenus(){
+ buildIcon('chart-style-venus',{ icon:"Ve",borderColor:"black",bgColor:"white",fontColor:"black" });
+}
+
+function buildSaturn(){
+ buildIcon('chart-style-saturn',{ icon:"Sa",borderColor:"black",bgColor:"black",fontColor:"white" });
+}
+
+function buildRahu(){
+ buildIcon('chart-style-rahu',{ icon:"Ra",borderColor:"#0e24a0",bgColor:"#0e24a0",fontColor:"white" });
+}
+
+function buildKetu(){
+ buildIcon('chart-style-ketu',{ icon:"Ke",borderColor:"#717070",bgColor:"#717070",fontColor:"white" });
+}
+
+
 var SIC_H_P_INDEX=[0,0,0,0,0,0,0,0,0,0,0,0,0];
 var SIC = { rec:  { x:1, y:1, w:317, h:351 },
 						 box:[{ from_x:79, from_y:1, to_x:79, to_y:351, desc:"" }, // X-axis
@@ -132,136 +184,150 @@ var SIC = { rec:  { x:1, y:1, w:317, h:351 },
 								{id:11,label:"11",x:36,y:99},
 								{id:12,label:"12",x:36,y:13}],
 						planets:{"12":[
-									   { x:41, y:50, label_x:35,label_y:53 }, // Ju
-									   { x:41, y:26, label_x:34,label_y:29 }, // Sun
+									   { x:41, y:50, label_x:34,label_y:53 }, // Ju
 									   { x:16, y:26, label_x:9,label_y:30 }, // Mo
-									   { x:65, y:26, label_x:58,label_y:29 }, // Ma
 									   { x:16, y:73, label_x:9,label_y:76 }, // Me
-									   { x:41, y:73, label_x:35,label_y:76 }, // Ke
 									   { x:66, y:73, label_x:60,label_y:76 }, // Ve
+									   { x:65, y:26, label_x:58,label_y:29 }, // Ma
 									   { x:16, y:50, label_x:9,label_y:53 }, // Sa
-									   { x:66, y:50, label_x:60,label_y:53 }], // Ra
-									   
-								  "1":[{ x:119, y:50, label_x:113,label_y:53 }, // Ju
-									   { x:119, y:26, label_x:112,label_y:29 }, // Sun
+									   { x:41, y:73, label_x:34,label_y:76 }, // Ke
+									   { x:66, y:50, label_x:59,label_y:53 },// Ra
+									   { x:41, y:26, label_x:34,label_y:29 } // Sun
+									 ], 
+								  "1":[{ x:119, y:50, label_x:112,label_y:53 }, // Ju
 									   { x:94, y:26, label_x:87,label_y:30 }, // Mo
-									   { x:143, y:26, label_x:136,label_y:29 }, // Ma
 									   { x:94, y:73, label_x:87,label_y:76 }, // Me
-									   { x:119, y:73, label_x:113,label_y:76 }, // Ke
 									   { x:144, y:73, label_x:138,label_y:76 }, // Ve
+									   { x:143, y:26, label_x:136,label_y:29 }, // Ma
 									   { x:94, y:50, label_x:87,label_y:53 }, // Sa
-									   { x:144, y:50, label_x:138,label_y:53 }], // Ra
-									   
-								  "2":[{ x:197, y:50, label_x:191,label_y:53 }, // Ju
-									   { x:197, y:26, label_x:190,label_y:29 }, // Sun
+									   { x:119, y:73, label_x:112,label_y:76 }, // Ke
+									   { x:144, y:50, label_x:137,label_y:53 }, // Ra
+									   { x:119, y:26, label_x:112,label_y:29 } // Sun 
+									  ], 
+								  "2":[{ x:197, y:50, label_x:190,label_y:53 }, // Ju
 									   { x:172, y:26, label_x:165,label_y:30 }, // Mo
-									   { x:221, y:26, label_x:214,label_y:29 }, // Ma
 									   { x:172, y:73, label_x:165,label_y:76 }, // Me
-									   { x:197, y:73, label_x:191,label_y:76 }, // Ke
 									   { x:222, y:73, label_x:216,label_y:76 }, // Ve
+									   { x:221, y:26, label_x:214,label_y:29 }, // Ma
 									   { x:172, y:50, label_x:165,label_y:53 }, // Sa
-									   { x:222, y:50, label_x:216,label_y:53 }], // Ra
-									   
+									   { x:197, y:73, label_x:190,label_y:76 }, // Ke
+									   { x:222, y:50, label_x:215,label_y:53 }, // Ra
+									   { x:197, y:26, label_x:190,label_y:29 } // Sun
+									  ], 
 								  "3":[
-									   { x:277, y:50, label_x:271,label_y:53 }, // Ju
-									   { x:277, y:26, label_x:270,label_y:29 }, // Sun
-									   { x:251, y:26, label_x:244,label_y:30 }, // Mo
-									   { x:302, y:26, label_x:295,label_y:29 }, // Ma
-									   { x:251, y:73, label_x:244,label_y:76 }, // Me
-									   { x:277, y:73, label_x:271,label_y:76 }, // Ke
-									   { x:304, y:73, label_x:298,label_y:76 }, // Ve
-									   { x:251, y:50, label_x:244,label_y:53 }, // Sa
-									   { x:303, y:50, label_x:297,label_y:53 }], // Ra
-									   
+									   { x:277, y:50, label_x:270,label_y:53 }, // Ju
+									    { x:251, y:26, label_x:244,label_y:30 }, // Mo
+										 { x:251, y:73, label_x:244,label_y:76 }, // Me
+										 { x:304, y:73, label_x:298,label_y:76 }, // Ve
+										 { x:302, y:26, label_x:295,label_y:29 }, // Ma
+										{ x:251, y:50, label_x:244,label_y:53 }, // Sa
+										{ x:277, y:73, label_x:270,label_y:76 }, // Ke
+										{ x:303, y:50, label_x:296,label_y:53 }, // Ra
+									   { x:277, y:26, label_x:270,label_y:29 } // Sun
+									  ], 
 								  "4":[
-									   { x:277, y:135, label_x:271,label_y:138 }, // Ju
-									   { x:277, y:112, label_x:270,label_y:115 }, // Sun
+									   { x:277, y:135, label_x:270,label_y:138 }, // Ju
 									   { x:251, y:113, label_x:244,label_y:116 }, // Mo
-									   { x:302, y:112, label_x:295,label_y:115 }, // Ma
 									   { x:251, y:159, label_x:244,label_y:162 }, // Me
-									   { x:277, y:158, label_x:271,label_y:161 }, // Ke
 									   { x:304, y:158, label_x:298,label_y:161 }, // Ve
+									   { x:302, y:112, label_x:295,label_y:115 }, // Ma
 									   { x:251, y:136, label_x:244,label_y:139 }, // Sa
-									   { x:303, y:135, label_x:297,label_y:138 }], // Ra
-									   
+									   { x:277, y:158, label_x:270,label_y:161 }, // Ke
+									   { x:303, y:135, label_x:296,label_y:138 }, // Ra
+									   { x:277, y:112, label_x:270,label_y:115 } // Sun
+									   ], 
 								  "5":[
-									   { x:277, y:223, label_x:271,label_y:226 }, // Ju
-									   { x:277, y:200, label_x:270,label_y:203 }, // Sun
+									   { x:277, y:223, label_x:270,label_y:226 }, // Ju
 									   { x:251, y:201, label_x:244,label_y:204 }, // Mo
-									   { x:302, y:200, label_x:295,label_y:203 }, // Ma
 									   { x:251, y:247, label_x:244,label_y:250 }, // Me
-									   { x:277, y:246, label_x:271,label_y:249 }, // Ke
 									   { x:304, y:246, label_x:298,label_y:249 }, // Ve
+									   { x:302, y:200, label_x:295,label_y:203 }, // Ma
 									   { x:251, y:224, label_x:244,label_y:227 }, // Sa
-									   { x:303, y:223, label_x:297,label_y:226 }], // Ra
-									   
+									   { x:277, y:246, label_x:270,label_y:249 }, // Ke
+									   { x:303, y:223, label_x:296,label_y:226 }, // Ra
+									   { x:277, y:200, label_x:270,label_y:203 } // Sun
+									 ], 
 								  "11":[
-									   { x:41, y:135, label_x:35,label_y:138 }, // Ju
-									   { x:41, y:112, label_x:34,label_y:115 }, // Sun
+									   { x:41, y:135, label_x:34,label_y:138 }, // Ju
 									   { x:16, y:113, label_x:9,label_y:116 }, // Mo
-									   { x:65, y:112, label_x:58,label_y:115 }, // Ma
 									   { x:16, y:159, label_x:9,label_y:162 }, // Me
-									   { x:41, y:158, label_x:35,label_y:161 }, // Ke
 									   { x:66, y:158, label_x:60,label_y:161 }, // Ve
+									   { x:65, y:112, label_x:58,label_y:115 }, // Ma
 									   { x:16, y:136, label_x:9,label_y:139 }, // Sa
-									   { x:66, y:135, label_x:60,label_y:138 }], // Ra
+									   { x:41, y:158, label_x:34,label_y:161 }, // Ke
+									   { x:66, y:135, label_x:59,label_y:138 }, // Ra
+									   { x:41, y:112, label_x:34,label_y:115 } // Sun
+									  
+									   ], 
 									   
 								  "10":[
-									   { x:41, y:223, label_x:35,label_y:226 }, // Ju
-									   { x:41, y:200, label_x:34,label_y:203 }, // Sun
+									   { x:41, y:223, label_x:34,label_y:226 }, // Ju
 									   { x:16, y:201, label_x:9,label_y:204 }, // Mo
-									   { x:65, y:200, label_x:58,label_y:203 }, // Ma
 									   { x:16, y:247, label_x:9,label_y:250 }, // Me
-									   { x:41, y:246, label_x:35,label_y:249 }, // Ke
 									   { x:66, y:246, label_x:60,label_y:249 }, // Ve
+									   { x:65, y:200, label_x:58,label_y:203 }, // Ma
 									   { x:16, y:224, label_x:9,label_y:227 }, // Sa
-									   { x:66, y:223, label_x:60,label_y:226 }], // Ra
-								  
-								  
+									   { x:41, y:246, label_x:34,label_y:249 }, // Ke
+									   { x:66, y:223, label_x:59,label_y:226 }, // Ra
+									   { x:41, y:200, label_x:34,label_y:203 } // Sun
+									  
+									   ], 
 								  
 								  "9":[
-									   { x:41, y:312, label_x:35,label_y:315 }, // Ju
-									   { x:41, y:288, label_x:34,label_y:291 }, // Sun
+									   { x:41, y:312, label_x:34,label_y:315 }, // Ju
 									   { x:16, y:288, label_x:9,label_y:292 }, // Mo
-									   { x:65, y:288, label_x:58,label_y:291 }, // Ma
 									   { x:16, y:335, label_x:9,label_y:338 }, // Me
-									   { x:41, y:335, label_x:35,label_y:338 }, // Ke
 									   { x:66, y:335, label_x:60,label_y:338 }, // Ve
+									   { x:65, y:288, label_x:58,label_y:291 }, // Ma
 									   { x:16, y:312, label_x:9,label_y:315 }, // Sa
-									   { x:66, y:312, label_x:60,label_y:315 }], // Ra
+									   { x:41, y:335, label_x:34,label_y:338 }, // Ke
+									    { x:66, y:312, label_x:59,label_y:315 }, // Ra
+									   { x:41, y:288, label_x:34,label_y:291 } // Sun
+									   
+									   ], 
 									   
 								  "8":[
-									   { x:119, y:312, label_x:113,label_y:315 }, // Ju
-									   { x:119, y:288, label_x:112,label_y:291 }, // Sun
+									   { x:119, y:312, label_x:112,label_y:315 }, // Ju
 									   { x:94, y:288, label_x:87,label_y:292 }, // Mo
-									   { x:143, y:288, label_x:136,label_y:291 }, // Ma
 									   { x:94, y:335, label_x:87,label_y:338 }, // Me
-									   { x:119, y:335, label_x:113,label_y:338 }, // Ke
 									   { x:144, y:335, label_x:138,label_y:338 }, // Ve
+									   { x:143, y:288, label_x:136,label_y:291 }, // Ma
 									   { x:94, y:312, label_x:87,label_y:315 }, // Sa
-									   { x:144, y:312, label_x:138,label_y:315 }], // Ra
+									   { x:119, y:335, label_x:112,label_y:338 }, // Ke
+									   { x:144, y:312, label_x:137,label_y:315 },  // Ra
+									   { x:119, y:288, label_x:112,label_y:291 } // Sun
+									   ],
 									   
 								  "7":[
-									   { x:197, y:312, label_x:191,label_y:315 }, // Ju
-									   { x:197, y:288, label_x:190,label_y:291 }, // Sun
+									   { x:197, y:312, label_x:190,label_y:315 }, // Ju
 									   { x:172, y:288, label_x:165,label_y:292 }, // Mo
-									   { x:221, y:288, label_x:214,label_y:291 }, // Ma
 									   { x:172, y:335, label_x:165,label_y:338 }, // Me
-									   { x:197, y:335, label_x:191,label_y:338 }, // Ke
 									   { x:222, y:335, label_x:216,label_y:338 }, // Ve
+									   { x:221, y:288, label_x:214,label_y:291 }, // Ma
 									   { x:172, y:312, label_x:165,label_y:315 }, // Sa
-									   { x:222, y:312, label_x:216,label_y:315 }], // Ra
+									   { x:197, y:335, label_x:190,label_y:338 }, // Ke
+									   { x:222, y:312, label_x:215,label_y:315 }, // Ra
+									   { x:197, y:288, label_x:190,label_y:291 } // Sun
+									   
+									   
+									   
+									   
+									   
+									   
+									   
+									   ], 
 									   
 								  "6":[
-									   { x:277, y:312, label_x:271,label_y:315 }, // Ju
-									   { x:277, y:288, label_x:270,label_y:291 }, // Sun
+									   { x:277, y:312, label_x:270,label_y:315 }, // Ju
 									   { x:251, y:288, label_x:244,label_y:292 }, // Mo
-									   { x:302, y:288, label_x:295,label_y:291 }, // Ma
-									   { x:251, y:335, label_x:244,label_y:338 }, // Me
-									   { x:277, y:335, label_x:271,label_y:338 }, // Ke
-									   { x:304, y:335, label_x:298,label_y:338 }, // Ve
+									    { x:251, y:335, label_x:244,label_y:338 }, // Me
+										{ x:304, y:335, label_x:298,label_y:338 }, // Ve
+										{ x:302, y:288, label_x:295,label_y:291 }, // Ma
 									   { x:251, y:312, label_x:244,label_y:315 }, // Sa
-									   { x:303, y:312, label_x:297,label_y:315 }], // Ra
+									   { x:277, y:335, label_x:270,label_y:338 }, // Ke
+									   { x:303, y:312, label_x:296,label_y:315 }, // Ra
+									   { x:277, y:288, label_x:270,label_y:291 } // Sun
+									   ], 
 									 
 								}
 					   };
@@ -324,22 +390,153 @@ function load_chartStyle_southIndia(id){
   for(var index=0;index<SIC.houses.length;index++){
 	drawChart.fillText(SIC.houses[index].label,SIC.houses[index].x,SIC.houses[index].y);
   }
-
-  setTimeout(function(){ planetplaceInHouse(chart,12,"Su","#e43a05","white"); }, 1000);
-  setTimeout(function(){ planetplaceInHouse(chart,12,"Ra","#0e24a0","white"); }, 2000);
-  setTimeout(function(){ planetplaceInHouse(chart,12,"Mo","white","black"); }, 3000);
-  setTimeout(function(){ planetplaceInHouse(chart,12,"Ve","white","black"); }, 4000);
-  setTimeout(function(){ planetplaceInHouse(chart,12,"Sa","black","white"); }, 5000);
-  setTimeout(function(){ planetplaceInHouse(chart,12,"Ke","#717070","white"); }, 6000);
-  setTimeout(function(){ planetplaceInHouse(chart,12,"Ma","#c50345","white"); }, 7000);
-  setTimeout(function(){ planetplaceInHouse(chart,12,"Me","green","white");  }, 8000);
-  setTimeout(function(){ planetplaceInHouse(chart,12,"Ju","yellow","black"); }, 9000);
-  setTimeout(function(){ planetplaceInHouse(chart,12,"Ve","white","black"); }, 10000);
+  
+  planetplaceInHouse(chart,1,"Su","#e43a05","white");
+  planetplaceInHouse(chart,1,"Ra","#0e24a0","white");
+  planetplaceInHouse(chart,1,"Mo","white","black");
+  planetplaceInHouse(chart,1,"Ve","white","black");
+  planetplaceInHouse(chart,1,"Sa","black","white");
+  planetplaceInHouse(chart,1,"Ke","#717070","white");
+  planetplaceInHouse(chart,1,"Ma","#c50345","white");
+  planetplaceInHouse(chart,1,"Me","green","white");
+  planetplaceInHouse(chart,1,"Ju","yellow","black");
+  
+  planetplaceInHouse(chart,2,"Su","#e43a05","white");
+  planetplaceInHouse(chart,2,"Ra","#0e24a0","white");
+  planetplaceInHouse(chart,2,"Mo","white","black");
+  planetplaceInHouse(chart,2,"Ve","white","black");
+  planetplaceInHouse(chart,2,"Sa","black","white");
+  planetplaceInHouse(chart,2,"Ke","#717070","white");
+  planetplaceInHouse(chart,2,"Ma","#c50345","white");
+  planetplaceInHouse(chart,2,"Me","green","white");
+  planetplaceInHouse(chart,2,"Ju","yellow","black");
+  
+  planetplaceInHouse(chart,3,"Su","#e43a05","white");
+  planetplaceInHouse(chart,3,"Ra","#0e24a0","white");
+  planetplaceInHouse(chart,3,"Mo","white","black");
+  planetplaceInHouse(chart,3,"Ve","white","black");
+  planetplaceInHouse(chart,3,"Sa","black","white");
+  planetplaceInHouse(chart,3,"Ke","#717070","white");
+  planetplaceInHouse(chart,3,"Ma","#c50345","white");
+  planetplaceInHouse(chart,3,"Me","green","white");
+  planetplaceInHouse(chart,3,"Ju","yellow","black");
+  
+  planetplaceInHouse(chart,4,"Su","#e43a05","white");
+  planetplaceInHouse(chart,4,"Ra","#0e24a0","white");
+  planetplaceInHouse(chart,4,"Mo","white","black");
+  planetplaceInHouse(chart,4,"Ve","white","black");
+  planetplaceInHouse(chart,4,"Sa","black","white");
+  planetplaceInHouse(chart,4,"Ke","#717070","white");
+  planetplaceInHouse(chart,4,"Ma","#c50345","white");
+  planetplaceInHouse(chart,4,"Me","green","white");
+  planetplaceInHouse(chart,4,"Ju","yellow","black");
+  
+  planetplaceInHouse(chart,5,"Su","#e43a05","white");
+  planetplaceInHouse(chart,5,"Ra","#0e24a0","white");
+  planetplaceInHouse(chart,5,"Mo","white","black");
+  planetplaceInHouse(chart,5,"Ve","white","black");
+  planetplaceInHouse(chart,5,"Sa","black","white");
+  planetplaceInHouse(chart,5,"Ke","#717070","white");
+  planetplaceInHouse(chart,5,"Ma","#c50345","white");
+  planetplaceInHouse(chart,5,"Me","green","white");
+  planetplaceInHouse(chart,5,"Ju","yellow","black");
+  
+  planetplaceInHouse(chart,6,"Su","#e43a05","white");
+  planetplaceInHouse(chart,6,"Ra","#0e24a0","white");
+  planetplaceInHouse(chart,6,"Mo","white","black");
+  planetplaceInHouse(chart,6,"Ve","white","black");
+  planetplaceInHouse(chart,6,"Sa","black","white");
+  planetplaceInHouse(chart,6,"Ke","#717070","white");
+  planetplaceInHouse(chart,6,"Ma","#c50345","white");
+  planetplaceInHouse(chart,6,"Me","green","white");
+  planetplaceInHouse(chart,6,"Ju","yellow","black");
+  
+  planetplaceInHouse(chart,7,"Su","#e43a05","white");
+  planetplaceInHouse(chart,7,"Ra","#0e24a0","white");
+  planetplaceInHouse(chart,7,"Mo","white","black");
+  planetplaceInHouse(chart,7,"Ve","white","black");
+  planetplaceInHouse(chart,7,"Sa","black","white");
+  planetplaceInHouse(chart,7,"Ke","#717070","white");
+  planetplaceInHouse(chart,7,"Ma","#c50345","white");
+  planetplaceInHouse(chart,7,"Me","green","white");
+  planetplaceInHouse(chart,7,"Ju","yellow","black");
+  
+  planetplaceInHouse(chart,8,"Su","#e43a05","white");
+  planetplaceInHouse(chart,8,"Ra","#0e24a0","white");
+  planetplaceInHouse(chart,8,"Mo","white","black");
+  planetplaceInHouse(chart,8,"Ve","white","black");
+  planetplaceInHouse(chart,8,"Sa","black","white");
+  planetplaceInHouse(chart,8,"Ke","#717070","white");
+  planetplaceInHouse(chart,8,"Ma","#c50345","white");
+  planetplaceInHouse(chart,8,"Me","green","white");
+  planetplaceInHouse(chart,8,"Ju","yellow","black");
+  
+  planetplaceInHouse(chart,9,"Su","#e43a05","white");
+  planetplaceInHouse(chart,9,"Ra","#0e24a0","white");
+  planetplaceInHouse(chart,9,"Mo","white","black");
+  planetplaceInHouse(chart,9,"Ve","white","black");
+  planetplaceInHouse(chart,9,"Sa","black","white");
+  planetplaceInHouse(chart,9,"Ke","#717070","white");
+  planetplaceInHouse(chart,9,"Ma","#c50345","white");
+  planetplaceInHouse(chart,9,"Me","green","white");
+  planetplaceInHouse(chart,9,"Ju","yellow","black");
+  
+  planetplaceInHouse(chart,10,"Su","#e43a05","white");
+  planetplaceInHouse(chart,10,"Ra","#0e24a0","white");
+  planetplaceInHouse(chart,10,"Mo","white","black");
+  planetplaceInHouse(chart,10,"Ve","white","black");
+  planetplaceInHouse(chart,10,"Sa","black","white");
+  planetplaceInHouse(chart,10,"Ke","#717070","white");
+  planetplaceInHouse(chart,10,"Ma","#c50345","white");
+  planetplaceInHouse(chart,10,"Me","green","white");
+  planetplaceInHouse(chart,10,"Ju","yellow","black");
+  
+  planetplaceInHouse(chart,11,"Su","#e43a05","white");
+  planetplaceInHouse(chart,11,"Ra","#0e24a0","white");
+  planetplaceInHouse(chart,11,"Mo","white","black");
+  planetplaceInHouse(chart,11,"Ve","white","black");
+  planetplaceInHouse(chart,11,"Sa","black","white");
+  planetplaceInHouse(chart,11,"Ke","#717070","white");
+  planetplaceInHouse(chart,11,"Ma","#c50345","white");
+  planetplaceInHouse(chart,11,"Me","green","white");
+  planetplaceInHouse(chart,11,"Ju","yellow","black");
+  
+  planetplaceInHouse(chart,12,"Su","#e43a05","white");
+  planetplaceInHouse(chart,12,"Ra","#0e24a0","white");
+  planetplaceInHouse(chart,12,"Mo","white","black");
+  planetplaceInHouse(chart,12,"Ve","white","black");
+  planetplaceInHouse(chart,12,"Sa","black","white");
+  planetplaceInHouse(chart,12,"Ke","#717070","white");
+  planetplaceInHouse(chart,12,"Ma","#c50345","white");
+  planetplaceInHouse(chart,12,"Me","green","white");
+  planetplaceInHouse(chart,12,"Ju","yellow","black");
+  
+  /*
+  setTimeout(function(){ planetplaceInHouse(chart,3,"Su","#e43a05","white"); }, 1000);
+  setTimeout(function(){ planetplaceInHouse(chart,3,"Ra","#0e24a0","white"); }, 2000);
+  setTimeout(function(){ planetplaceInHouse(chart,3,"Mo","white","black"); }, 3000);
+  setTimeout(function(){ planetplaceInHouse(chart,3,"Ve","white","black"); }, 4000);
+  setTimeout(function(){ planetplaceInHouse(chart,3,"Sa","black","white"); }, 5000);
+  setTimeout(function(){ planetplaceInHouse(chart,3,"Ke","#717070","white"); }, 6000);
+  setTimeout(function(){ planetplaceInHouse(chart,3,"Ma","#c50345","white"); }, 7000);
+  setTimeout(function(){ planetplaceInHouse(chart,3,"Me","green","white");  }, 8000);
+  setTimeout(function(){ planetplaceInHouse(chart,3,"Ju","yellow","black"); }, 9000);
+  setTimeout(function(){ planetplaceInHouse(chart,3,"Ve","white","black"); }, 10000);
+  */
   
   planetsIntro(chart);
 }
 
 $(document).ready(function(){
+buildSun();
+buildMoon();
+buildMars();
+buildMercury();
+buildJupiter();
+buildVenus();
+buildSaturn();
+buildRahu();
+buildKetu();
 load_chartStyle_northIndia("chart-style-northIndia");
 load_chartStyle_southIndia("chart-style-southIndia");
 });

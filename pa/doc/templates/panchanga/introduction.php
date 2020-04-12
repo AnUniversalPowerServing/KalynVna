@@ -70,6 +70,7 @@ Moon completes one revolution around the Earth
  <thead>
   <tr>
     <th>#</th>
+	<th>Icon</th>
     <th>Planets</th>
 	<th>Color</th>
 	<th>Duration of Planets Revolution around the Earth</th>
@@ -79,6 +80,7 @@ Moon completes one revolution around the Earth
  <tbody>
   <tr>
     <td>1</td>
+	<td><canvas class="chart-style-sun" width="30" height="30">Your Browser doesn't support</canvas></td>
     <td>Surya - Ravi - Sun</td>
 	<td>Red</td>
 	<td>23 Hours, 56 Minutes</td>
@@ -86,6 +88,7 @@ Moon completes one revolution around the Earth
   </tr>
   <tr>
     <td>2</td>
+	<td><canvas class="chart-style-moon" width="30" height="30">Your Browser doesn't support</canvas></td>
     <td>Soma - Chandra - Moon</td>
 	<td>White</td>
 	<td>27.32966 Days</td>
@@ -93,6 +96,7 @@ Moon completes one revolution around the Earth
   </tr>
   <tr>
     <td>3</td>
+	<td><canvas class="chart-style-mars" width="30" height="30">Your Browser doesn't support</canvas></td>
 	<td>Kuja - Mangala - Bhouma - Mars</td>
 	<td>Red</td>
 	<td>686.98 Days</td>
@@ -100,6 +104,7 @@ Moon completes one revolution around the Earth
   </tr>
   <tr>
     <td>4</td>
+	<td><canvas class="chart-style-mercury" width="30" height="30">Your Browser doesn't support</canvas></td>
 	<td>Budha - Soumya - Mercury</td>
 	<td>Green</td>
 	<td>87.969 Days</td>
@@ -107,6 +112,7 @@ Moon completes one revolution around the Earth
   </tr>
   <tr>
     <td>5</td>
+	<td><canvas class="chart-style-jupiter" width="30" height="30">Your Browser doesn't support</canvas></td>
 	<td>Guru - Brihaspathi - Jupiter</td>
 	<td>Yellow</td>
 	<td>4332.585 Days</td>
@@ -114,6 +120,7 @@ Moon completes one revolution around the Earth
   </tr>
   <tr>
     <td>6</td>
+	<td><canvas class="chart-style-venus" width="30" height="30">Your Browser doesn't support</canvas></td>
 	<td>Shukra - Bhargava - Venus</td>
 	<td>White</td>
 	<td>224.7 Days</td>
@@ -121,6 +128,7 @@ Moon completes one revolution around the Earth
   </tr>
   <tr>
     <td>7</td>
+	<td><canvas class="chart-style-saturn" width="30" height="30">Your Browser doesn't support</canvas></td>
 	<td>Shani - Manda - Sthira - Saturn</td>
 	<td>Black</td>
 	<td>10,759.22 Days</td>
@@ -134,6 +142,7 @@ Moon completes one revolution around the Earth
  <thead>
   <tr>
     <th>#</th>
+	<th>Icon</th>
     <th>Shadowly Planets</th>
 	<th>Color</th>
 	<th>Duration of Planets Revolution around the Earth</th>
@@ -143,6 +152,7 @@ Moon completes one revolution around the Earth
  <tbody>
   <tr>
     <td>1</td>
+	<td><canvas class="chart-style-rahu" width="30" height="30">Your Browser doesn't support</canvas></td>
 	<td>Rahu - Thama - Dragon's Head</td>
 	<td>Dark Blue</td>
 	<td>6793.394774 Days</td>
@@ -150,6 +160,7 @@ Moon completes one revolution around the Earth
   </tr>
   <tr>
     <td>2</td>
+	<td><canvas class="chart-style-ketu" width="30" height="30">Your Browser doesn't support</canvas></td>
 	<td>Kethu - Sikhi - Dragon' Tail</td>
 	<td>Gray</td>
 	<td>6793.394774 Days</td>
