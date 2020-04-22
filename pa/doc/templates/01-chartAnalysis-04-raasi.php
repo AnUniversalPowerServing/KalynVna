@@ -15,26 +15,140 @@ $(document).ready(function(){
         <!-- -->
 		<div class="container-fluid">
 		  <div class="row">
-		    <div class="col-xs-6">
+		    <div class="col-xs-12">
 			 <!-- -->
 			 <div class="form-group">
 			   <label>Choose a Format</label>
 			   <div class="checkbox">
-				 <label><input id="longitudeFormat_01" type="checkbox" data-toggle="toggle" data-width="50" data-size="mini" data-onstyle="success">
-				 1 <sup>0</sup> 1' 1'' (360<sup>0</sup> Format)</label>
+				 <label>
+				 <input id="longitudeFormat_01" type="checkbox" data-on="Input" data-off="Input" data-toggle="toggle" data-width="100" data-size="mini" data-onstyle="success">&emsp;
+				 <input id="longitudeFormat_01" type="checkbox" data-on="Output" data-off="Output" data-toggle="toggle" data-width="100" data-size="mini" data-onstyle="success">
+				 <b>1 <sup>0</sup> 1' 1''</b> (360<sup>0</sup> Format)</label>
 			   </div>
 			   <div class="checkbox">
-				 <label><input id="longitudeFormat_02" type="checkbox" data-toggle="toggle" data-width="50" data-size="mini" data-onstyle="success">
-				 1 <sup>0</sup> 1' 1'' in Ar (30<sup>0</sup> Format)</label>
+				 <label>
+				 <input id="longitudeFormat_02" type="checkbox" data-on="Input" data-off="Input" data-toggle="toggle" data-width="100" data-size="mini" data-onstyle="success">&emsp;
+				 <input id="longitudeFormat_02" type="checkbox" data-on="Output" data-off="Output" data-toggle="toggle" data-width="100" data-size="mini" data-onstyle="success">
+				 <b>1 <sup>0</sup> 1' 1'' in Ar</b> (30<sup>0</sup> Format)</label>
 			   </div>
 			   <div class="checkbox">
-				 <label><input id="longitudeFormat_03" type="checkbox" data-toggle="toggle" data-width="50" data-size="mini" data-onstyle="success">
-				 1 <sup>0</sup> Ar 1' 1''</label>
+				 <label>
+				 <input id="longitudeFormat_03" type="checkbox" data-on="Input" data-off="Input" data-toggle="toggle" data-width="100" data-size="mini" data-onstyle="success">&emsp;
+				 <input id="longitudeFormat_03" type="checkbox" data-on="Output" data-off="Output" data-toggle="toggle" data-width="100" data-size="mini" data-onstyle="success">
+				 <b>1 <sup>0</sup> Ar 1' 1''</b> (30<sup>0</sup> Format - On Sign Representation)</label>
 			   </div>
 			   <div class="checkbox">
-				 <label><input id="longitudeFormat_04" type="checkbox" data-toggle="toggle" data-width="50" data-size="mini" data-onstyle="success">
-				 1s 1 <sup>0</sup> 1' 1''</label>
+				 <label>
+				 <input id="longitudeFormat_04" type="checkbox" data-on="Input" data-off="Input" data-toggle="toggle" data-width="100" data-size="mini" data-onstyle="success">&emsp;
+				 <input id="longitudeFormat_04" type="checkbox" data-on="Output" data-off="Output" data-toggle="toggle" data-width="100" data-size="mini" data-onstyle="success">
+				 <b>1s 1 <sup>0</sup> 1' 1''</b> (30<sup>0</sup> Format - From 1st Sign)</label>
 			   </div>
+			 </div><!--/.form-group -->
+			 <!-- -->
+		    </div><!--/.col-xs-12 -->
+		  </div><!--/.row -->
+		  <div class="row">
+			<div class="col-xs-12">
+			 <!-- -->
+			 <div class="form-group">
+			   <label>Provide your Input</label>
+			   <!-- 360 degrees Format  ::: Start -->
+			   <div class="row mtop15p">
+			    <div class="col-xs-4"><div class="mtop15p"><b>360<sup>0</sup> Format:</b></div></div><!--/.col-xs-4 -->
+				<div class="col-xs-8">
+				  <!-- -->
+				  <div class="row">
+					<div class="col-xs-4"><b>Degree</b></div><!--/.col-xs-4 -->
+					<div class="col-xs-4"><b>Minutes</b></div><!--/.col-xs-4 -->
+					<div class="col-xs-4"><b>Seconds</b></div><!--/.col-xs-4 -->
+			      </div><!--/.row -->
+			      <div class="row">
+			        <div class="col-xs-4"><input type="text" class="form-control"/></div><!--/.col-xs-4 -->
+				    <div class="col-xs-4"><input type="text" class="form-control"/></div><!--/.col-xs-4 -->
+				    <div class="col-xs-4"><input type="text" class="form-control"/></div><!--/.col-xs-4 -->
+			      </div><!--/.row -->
+				  <!-- -->
+				</div><!--/.col-xs-8 -->
+			   </div><!--/.row -->
+			   <!-- 360 degrees Format  ::: End -->
+			   <!-- 30 degrees Format  ::: Start -->
+			   <div class="row mtop15p">
+			    <div class="col-xs-4"><div class="mtop15p"><b>30<sup>0</sup> Format:</b></div></div><!--/.col-xs-4 -->
+				<div class="col-xs-8">
+				  <!-- -->
+				  <div class="row">
+					<div class="col-xs-3"><b>Degree</b></div><!--/.col-xs-3 -->
+					<div class="col-xs-3"><b>Minutes</b></div><!--/.col-xs-3 -->
+					<div class="col-xs-3"><b>Seconds</b></div><!--/.col-xs-3 -->
+					<div class="col-xs-3"><b>Sign</b></div><!--/.col-xs-3 -->
+			      </div><!--/.row -->
+			      <div class="row">
+			        <div class="col-xs-3"><input type="text" class="form-control"/></div><!--/.col-xs-3 -->
+				    <div class="col-xs-3"><input type="text" class="form-control"/></div><!--/.col-xs-3 -->
+				    <div class="col-xs-3"><input type="text" class="form-control"/></div><!--/.col-xs-3 -->
+					<div class="col-xs-3">
+					  <select class="form-control">
+					   <option value="Ar">Ar</option>
+					  </select>
+					</div><!--/.col-xs-3 -->
+			      </div><!--/.row -->
+				  <!-- -->
+				</div><!--/.col-xs-8 -->
+			   </div><!--/.row -->
+			   <!-- 30 degrees Format  ::: End -->
+			   <!-- 30 degrees - On Sign Representation  ::: Start -->
+			   <div class="row mtop15p">
+			    <div class="col-xs-4"><div class="mtop15p"><b>30<sup>0</sup> Format - On Sign Representation</b></div></div><!--/.col-xs-4 -->
+				<div class="col-xs-8">
+				  <!-- -->
+				  <div class="row">
+					<div class="col-xs-3"><b>Degree</b></div><!--/.col-xs-3 -->
+					<div class="col-xs-3"><b>Sign</b></div><!--/.col-xs-3 -->
+					<div class="col-xs-3"><b>Minutes</b></div><!--/.col-xs-3 -->
+					<div class="col-xs-3"><b>Seconds</b></div><!--/.col-xs-3 -->
+			      </div><!--/.row -->
+			      <div class="row">
+			        <div class="col-xs-3"><input type="text" class="form-control"/></div><!--/.col-xs-3 -->
+					<div class="col-xs-3">
+					  <select class="form-control">
+					   <option value="Ar">Ar</option>
+					  </select>
+					</div><!--/.col-xs-3 -->
+				    <div class="col-xs-3"><input type="text" class="form-control"/></div><!--/.col-xs-3 -->
+				    <div class="col-xs-3"><input type="text" class="form-control"/></div><!--/.col-xs-3 -->
+			      </div><!--/.row -->
+				  <!-- -->
+				</div><!--/.col-xs-8 -->
+			   </div><!--/.row -->
+			   <!-- 30 degrees - On Sign Representation  ::: End -->
+			   <!-- 30 degrees - From 1st Sign Representation  ::: Start -->
+			   <div class="row mtop15p">
+			    <div class="col-xs-4"><div class="mtop15p"><b>30<sup>0</sup> Format - From 1st Sign Representation</b></div></div><!--/.col-xs-4 -->
+				<div class="col-xs-8">
+				  <!-- -->
+				  <div class="row">
+				    <div class="col-xs-3"><b>Sign</b></div><!--/.col-xs-3 -->	
+					<div class="col-xs-3"><b>Degree</b></div><!--/.col-xs-3 -->
+					<div class="col-xs-3"><b>Minutes</b></div><!--/.col-xs-3 -->
+					<div class="col-xs-3"><b>Seconds</b></div><!--/.col-xs-3 -->
+			      </div><!--/.row -->
+			      <div class="row">
+				    <div class="col-xs-3">
+					  <select class="form-control">
+					   <option value="1">1s</option>
+					  </select>
+					</div><!--/.col-xs-3 -->
+			        <div class="col-xs-3"><input type="text" class="form-control"/></div><!--/.col-xs-3 -->
+				    <div class="col-xs-3"><input type="text" class="form-control"/></div><!--/.col-xs-3 -->
+				    <div class="col-xs-3"><input type="text" class="form-control"/></div><!--/.col-xs-3 -->
+			      </div><!--/.row -->
+				  <!-- -->
+				</div><!--/.col-xs-8 -->
+			   </div><!--/.row -->
+			   <!-- 30 degrees - From 1st Sign Representation  ::: End -->
+			 </div><!--/.form-group -->
+			 <div class="form-group">
+			   <button class="btn btn-primary form-control"><b>Get Selected Output Formats</b></button>
 			 </div><!--/.form-group -->
 			 <!-- -->
 		    </div><!--/.col-xs-6 -->
@@ -217,7 +331,7 @@ $(document).ready(function(){
     <div class="row">
 	 <div align="center" class="col-xs-12"><b>Longitude / Sphuta Exercise</b></div>
 	 <div align="right" class="col-xs-12 mtop15p">
-	   <button class="btn btn-xs btn-primary" data-backdrop="static" data-toggle="modal" data-target="#checkLongitudeFormatCalculator">
+	   <button class="btn btn-sm btn-primary" data-backdrop="static" data-toggle="modal" data-target="#checkLongitudeFormatCalculator">
 		 <b>Check Longitude / Sphuta with Format Calculator</b>
 	   </button>
 	 </div>
