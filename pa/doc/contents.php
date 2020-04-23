@@ -12,6 +12,7 @@
   <script src="js/api/charts.js"></script>
 <style>
 /* Basic ::: Start */
+body { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
 .mtop5p { margin-top: 5px; }
 .mtop10p { margin-top: 10px; }
 .mtop15p { margin-top: 15px; }
@@ -29,25 +30,25 @@
 .font-mdm-grey { color:#666; }
 .font-lgt-grey { color:#ccc; }
 .bg-grey { background-color:#f5f5f5; }
-code { font-weight: bold;font-size: 11px; }
+code { font-weight: bold;font-size: 14px;padding:0px;background-color:#fff; }
 table>thead>tr { background-color:#eee;color:#000; }
 /* Basic ::: End */
 
 /* Content ::: Start */
 ol#contents li { color:#F44336; }
-ol#sub-contents li { color:#000;line-height:22px;cursor:pointer; }
+ol.sub-contents li { color:#000;line-height:22px;cursor:pointer; }
 .hgl-content { font-weight:bold;color:#2196f3; }
 /* Content ::: End */
 </style>
 <script type="text/javascript">
 $(document).ready(function(){
- loadPage('content-01-chartAnalysis-01-introduction');
+ loadPage('content-02-chartAnalysis-01-introduction');
 });
 function loadPage(id){
- $("[id^='content-']").css('color','#000');
- $("[id^='content-']").css('font-weight','400');
- $('ol#sub-contents li#'+id).css('color','#2196f3');
- $('ol#sub-contents li#'+id).css('font-weight','bold');
+ $("ol.sub-contents li").css('color','#000');
+ $("ol.sub-contents li").css('font-weight','400');
+ $('ol.sub-contents li#'+id).css('color','#2196f3');
+ $('ol.sub-contents li#'+id).css('font-weight','bold');
  id = id.replace("content-", "");
  $('#data').load("templates/"+id+".php");
 }
@@ -62,7 +63,7 @@ function loadPage(id){
 	 <?php include_once 'templates/00-contents.php'; ?>
 	 <!-- -->
     </div><!--/.col-sm-4 -->
-    <div id="data" class="col-sm-8">
+    <div id="data" class="col-sm-8" style="line-height:24px;">
       
     </div><!--/.col-sm-8 -->
   </div><!--/.row -->
