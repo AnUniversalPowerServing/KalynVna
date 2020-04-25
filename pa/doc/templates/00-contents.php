@@ -6,8 +6,9 @@
 		<div><h5><b>Panchangam</b></h5></div>
 		<div>
 		  <ol class="sub-contents">
-			<li id="content-01-panchangam-01-introduction" onclick="loadPage(this.id);">Introduction</li>
-			<li id="content-01-panchangam-02-thithi" onclick="loadPage(this.id);">Solar and lunar Calendar</li>
+			<li id="content-01-panchangam-01-introduction" onclick="javascript:loadPage(this.id);">Introduction</li>
+			<li id="content-01-panchangam-02-thithi" onclick="javascript:loadPage(this.id);">Solar and lunar Calendar</li>
+			<li id="content-01-panchangam-03-tropical-and-sidereal-zodiac" onclick="javascript:loadPage(this.id);">Tropical and Sidereal Zodiac</li>
 		   </ol>
 		</div>
 	  </li>
@@ -15,11 +16,11 @@
 		<div><h5><b>Chart Analysis</b></h5></div>
 		<div>
 		  <ol class="sub-contents">
-			<li id="content-02-chartAnalysis-01-introduction" onclick="loadPage(this.id);">Introduction</li>
-			<li id="content-02-chartAnalysis-02-planets" onclick="loadPage(this.id);">Planets (Grahas)</li>
-			<li id="content-02-chartAnalysis-03-subplanets" onclick="loadPage(this.id);">Sub-Planets (Upagrahas)</li>
-			<li id="content-02-chartAnalysis-04-raasi" onclick="loadPage(this.id);">Rasi : The Signs of the Zodiac</li>
-			<li id="content-02-chartAnalysis-05-nakshatras" onclick="loadPage(this.id);">Nakshatras : The Asterisms or Lunar Mansions</li>
+			<li id="content-02-chartAnalysis-01-introduction" onclick="javascript:loadPage(this.id);">Introduction</li>
+			<li id="content-02-chartAnalysis-02-planets" onclick="javascript:loadPage(this.id);">Planets (Grahas)</li>
+			<li id="content-02-chartAnalysis-03-subplanets" onclick="javascript:loadPage(this.id);">Sub-Planets (Upagrahas)</li>
+			<li id="content-02-chartAnalysis-04-raasi" onclick="javascript:loadPage(this.id);">Rasi : The Signs of the Zodiac</li>
+			<li id="content-02-chartAnalysis-05-nakshatras" onclick="javascript:loadPage(this.id);">Nakshatras : The Asterisms or Lunar Mansions</li>
 			<li>Special Lagnas</li>
 			<li>Divisional Charts</li>
 			<li>Houses</li>
@@ -38,6 +39,7 @@
 		<div><h5><b>Dasa Analysis</b></h5></div>
 		<div>
 		  <ol class="sub-contents">
+			<li id="content-03-dasaAnalysis-01-introduction" onclick="javascript:loadPage(this.id);">Introduction</li>
 			<li>Vimsottari Dasa</li>
 			<li>Ashtottari Dasa</li>
 			<li>Narayana Dasa</li>
@@ -83,6 +85,9 @@
 			<li>Ethical Behaviour of a Jyotishi</li>
 		   </ol>
 		</div>
+	   </li>
+	   <li id="content-07-references" onclick="javascript:loadPage(this.id);">
+		<div><h5><b>References</b></h5></div>
 	   </li>
 	</ol>
   </div><!--/.list-group-item -->

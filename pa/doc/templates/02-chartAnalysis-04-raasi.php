@@ -1,6 +1,270 @@
 <div class="row">
  <div align="center" class="col-xs-12"><h4><b>Raasi : The Signs of the Zodiac</b></h4></div><!--/.col-xs-12 -->
-</div>
+</div><!--/.row -->
+<div class="row">
+ <div class="col-xs-12">
+   Zodiac of 360º is divided into 12 equal parts of 30º.
+ </div><!--/.col-xs-12 -->
+</div><!--/.row -->
+<div class="row">
+ <div align="center" class="col-xs-12">
+   <h4><b>Characteristics of Raasi</b></h4>
+ </div><!--/.col-xs-12 -->
+</div><!--/.row -->
+<div class="row">
+ <div class="col-xs-6">
+   <div><h5><b>1. Zodiac (As Lord Vishnu’s body)</b></h5></div>
+   <div class="table-responsive">
+	<table class="table">
+	 <thead>
+      <tr><th>#</th><th>Raasi</th><th>Lord Vishnu's Body</th></tr>
+     </thead>
+	 <tbody>
+      <tr><td>1</td><td>Aries (Mesha Raasi)</td><td>Head</td></tr>
+	  <tr><td>2</td><td>Taurus (Vrushabha Raasi)</td><td>Face</td></tr>
+	  <tr><td>3</td><td>Gemini (Midhuna Raasi)</td><td>Arms</td></tr>
+	  <tr><td>4</td><td>Cancer (Karkataka Raasi)</td><td>Heart</td></tr>
+	  <tr><td>5</td><td>Leo (Simha Raasi)</td><td>Stomach</td></tr>
+	  <tr><td>6</td><td>Virgo (Kanya Raasi)</td><td>Hip</td></tr>
+	  <tr><td>7</td><td>Libra (Thula Raasi)</td><td>Space below Navel</td></tr>
+	  <tr><td>8</td><td>Scorpio (Vruchika Raasi)</td><td>Private Parts</td></tr>
+	  <tr><td>9</td><td>Saggitarius (Dhanur Raasi)</td><td>Thighs</td></tr>
+	  <tr><td>10</td><td>Capricorn (Makara Raasi)</td><td>Knees</td></tr>
+	  <tr><td>11</td><td>Aquarius (Khumbha Raasi)</td><td>Ankles</td></tr>
+	  <tr><td>12</td><td>Pisces (Meena Raasi)</td><td>Feet</td></tr>
+     </tbody>
+	</table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <div><h5><b>Raasi and Five Elements</b></h5></div>
+   <div class="table-responsive">
+	<table class="table">
+	 <thead>
+      <tr><th>Agni Raasis / Fiery Raasis</th><th>Bhoo Raasis / Earthy Raasis</th></tr>
+     </thead>
+	 <tbody>
+      <tr><td>Aries (Mesha Raasi)</td><td>Taurus (Vrushabha Raasi)</td></tr>
+	  <tr><td>Leo (Simha Raasi)</td><td>Virgo (Kanya Raasi)</td></tr>
+	  <tr><td>Saggitarius (Dhanur Raasi)</td><td>Capricorn (Makara Raasi)</td></tr>
+     </tbody>
+	</table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <div class="table-responsive">
+	<table class="table">
+	 <thead>
+      <tr><th>Vaayu Raasis / Airy Raasis</th><th>Jala Raasis / Watery Raasis</th></tr>
+     </thead>
+	 <tbody>
+      <tr><td>Gemini (Midhuna Raasi)</td><td>Cancer (Karkataka Raasi)</td></tr>
+	  <tr><td>Libra (Thula Raasi)</td><td>Scorpio (Vruchika Raasi)</td></tr>
+	  <tr><td>Aquarius (Khumbha Raasi)</td><td>Pisces (Meena Raasi)</td></tr>
+     </tbody>
+	</table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <div>The 5th element (Aakaasa / Ether) is present in every Raasi.</div>
+   <div>
+    <ul>
+	 <li><b>Agni Raasis / Fiery Raasis</b> show a normally angry, aggressive or determined person.</li>
+	 <li><b>Bhoo Raasis / Earthy Raasis:</b> show a balanced, logical and stable person.</li>
+	 <li><b>Vaayu Raasis / Airy Raasis:</b> show someone with unstable and wandering emotions.</li>
+	 <li><b>Jala Raasis / Watery Raasis:</b> show one with an imaginative and creative mind.</li>
+	</ul>
+   </div>
+   <!-- -->
+   <!-- Pitta, Vaata and Kapha ::: Start -->
+   <div><h5><b>Pitta, Vaata and Kapha</b></h5></div>
+   <div>
+    Ayurveda (India’s Vedic medical system) that recognizes human body and everything else in the universe as 
+	having 3 natures that are formed with the above 5 elements:
+	<ul>
+	 <li><b>Pitta (Bilious nature):</b> A combination of the elements of fire and water. It shows
+	 things that result in tranformation in a system. In a human body, for example, it may show digestion etc.</li>
+	 <li><b>Vaata (windy nature):</b> A combination of the elements of air and ether. It shows
+	 things that move in and out of a system. In a human body, for example, it may show breathing etc.</li>
+	 <li><b>Kapha (phlegmatic nature):</b> A combination of the elements of earth and water. It
+	 shows things that bind a system together. In a human body, for example, it may show
+	 bones, muscles, fat etc. It shows things that give a structure to a system.</li>
+	</ul>
+   </div>
+   <div class="table-responsive">
+	<table class="table">
+	  <thead>
+      <tr><th>Pitta Nature</th><th>Vaata Nature</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Aries (Mesha Raasi)</td><td>Taurus (Vrushabha Raasi)</td></tr>
+	  <tr><td>Leo (Simha Raasi)</td><td>Virgo (Kanya Raasi)</td></tr>
+	  <tr><td>Saggitarius (Dhanur Raasi)</td><td>Capricorn (Makara Raasi)</td></tr>
+    </tbody>
+	</table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <div class="table-responsive">
+	<table class="table">
+	 <thead>
+      <tr><th>Kapha Nature</th><th>Mixed Nature</th></tr>
+     </thead>
+	 <tbody>
+      <tr><td>Cancer (Karkataka Raasi)</td><td>Gemini (Midhuna Raasi)</td></tr>
+	  <tr><td>Scorpio (Vruchika Raasi)</td><td>Libra (Thula Raasi)</td></tr>
+	  <tr><td>Pisces (Meena Raasi)</td><td>Aquarius (Khumbha Raasi)</td></tr>
+     </tbody>
+	</table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <!-- Pitta, Vaata and Kapha ::: End -->
+   <!-- Sattwa, Rajas and Tamas ::: Start -->
+   <div><h5><b>Sattwa, Rajas and Tamas</b></h5></div>
+   <div>
+     In Hindu philosophy, everything in this universe is made up of trigunas(3 
+	 <code data-toggle="tooltip" title="Qualities">gunas</code>):
+	 <ul>
+	  <li><b>Saattwik (purity):</b> Quality that gives truthfulness and purity.</li>
+	  <li><b>Raajasik (energy):</b> Quality that makes one energetic and passionate.</li>
+	  <li><b>Taamasik (darkness):</b> Quality that makes one depraved.</li>
+	 <ul>
+   </div>
+   <div class="table-responsive">
+	<table class="table">
+	 <thead>
+      <tr><th>Saattwik signs</th><th>Raajasik signs</th><th>Taamasik signs</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Cancer (Karkataka Raasi)</td><td>Aries (Mesha Raasi)</td><td>Gemini (Midhuna Raasi)</td></tr>
+	  <tr><td>Leo (Simha Raasi)</td><td>Taurus (Vrushabha Raasi)</td><td>Virgo (Kanya Raasi)</td></tr>
+	  <tr><td>Saggitarius (Dhanur Raasi)</td><td>Libra (Thula Raasi)</td><td>Capricorn (Makara Raasi)</td></tr>
+	  <tr><td>Pisces (Meena Raasi)</td><td>Scorpio (Vruchika Raasi)</td><td>Aquarius (Khumbha Raasi)</td></tr>
+    </tbody>
+	</table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <!-- Sattwa, Rajas and Tamas ::: End -->
+   <!-- Raasis and Directions ::: Start -->
+   <div><h5><b>Raasis and Directions</b></h5></div>
+   <div class="table-responsive">
+	<table class="table">
+	 <thead>
+      <tr><th>East</th><th>West</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Aries (Mesha Raasi)</td><td>Gemini (Midhuna Raasi)</td></tr>
+	  <tr><td>Leo (Simha Raasi)</td><td>Libra (Thula Raasi)</td></tr>
+	  <tr><td>Saggitarius (Dhanur Raasi)</td><td>Aquarius (Khumbha Raasi)</td></tr>
+    </tbody>
+	</table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <div class="table-responsive">
+	<table class="table">
+	 <thead>
+      <tr><th>North</th><th>South</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Cancer (Karkataka Raasi)</td><td>Taurus (Vrushabha Raasi)</td></tr>
+	  <tr><td>Scorpio (Vruchika Raasi)</td><td>Virgo (Kanya Raasi)</td></tr>
+	  <tr><td>Pisces (Meena Raasi)</td><td>Capricorn (Makara Raasi)</td></tr>
+    </tbody>
+	</table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <!-- Raasis and Directions ::: End -->
+   <!-- -->
+ </div><!--/.col-xs-6 -->
+ <div class="col-xs-6">
+   <!-- Old and Even Raasis ::: Start -->
+   <div><h5><b>Old and Even Raasis</b></h5></div>
+   <div>
+    <ul>
+     <li>Male Raasi are also called as Odd Rasis / Vishama Rasis / Oja Rasis.</li>
+	 <li>Female Raasi are also called as Even Rasis / Sama Rasis / Yugma Rasis.</li>
+	 <li>Male and Female Raasis are used in some dasas and in the determination of the sex of children.</li>
+	</ul>
+	</div>
+	<div class="table-responsive">          
+	  <table class="table">
+		<thead>
+		  <tr><th>Male Raasis</th><th>Female Raasis</th></tr>
+		</thead>
+		<tbody>
+		  <tr><td>Aries (Mesha Raasi)</td><td>Taurus (Vrushabha Raasi)</td></tr>
+		  <tr><td>Gemini (Midhuna Raasi)</td><td>Cancer (Karkataka Raasi)</td></tr>
+		  <tr><td>Leo (Simha Raasi)</td><td>Virgo (Kanya Raasi)</td></tr>
+		  <tr><td>Libra (Thula Raasi)</td><td>Scorpio (Vruchika Raasi)</td></tr>
+		  <tr><td>Saggitarius (Dhanur Raasi)</td><td>Capricorn (Makara Raasi)</td></tr>
+		  <tr><td>Aquarius (Khumbha Raasi)</td><td>Pisces (Meena Raasi)</td></tr>
+		</tbody>
+	  </table><!--/.table -->
+    </div><!--/.table-responsive -->
+   <!-- Old and Even Raasis ::: Start -->
+   <!-- Odd-footed and Even-footed Raasis ::: Start -->
+   <div><h5><b>Odd-footed and Even-footed Raasis</b></h5></div>
+   <div>
+    <ul>
+     <li>Odd-footed Raasis are also called as Vishamapada Rasis / Ojapada Rasis.</li>
+	 <li>Even-footed Raasis are also called as Samapada Rasis / Yugmapada Rasis.</li>
+	 <li>This division is used in some dasas.</li>
+	</ul>
+   </div>
+   <div class="table-responsive">          
+	  <table class="table">
+		<thead>
+		  <tr><th>Odd-footed Raasis</th><th>Even-footed Raasis</th></tr>
+		</thead>
+		<tbody>
+		  <tr><td>Aries (Mesha Raasi)</td><td>Cancer (Karkataka Raasi)</td></tr>
+		  <tr><td>Taurus (Vrushabha Raasi)</td><td>Leo (Simha Raasi)</td></tr>
+		  <tr><td>Gemini (Midhuna Raasi)</td><td>Virgo (Kanya Raasi)</td></tr>
+		  <tr><td>Libra (Thula Raasi)</td><td>Capricorn (Makara Raasi)</td></tr>
+		  <tr><td>Scorpio (Vruchika Raasi)</td><td>Aquarius (Khumbha Raasi)</td></tr>
+		  <tr><td>Saggitarius (Dhanur Raasi)</td><td>Pisces (Meena Raasi)</td></tr>
+		</tbody>
+	  </table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <!-- Odd-footed and Even-footed Raasis ::: End -->
+   <!-- Movable, Fixed and Dual Raasis ::: Start -->
+   <div><h5><b>Movable, Fixed and Dual Raasis</b></h5></div>
+   <div>
+    <ul>
+	 <li><b>Movable Raasis (<i>Chara Raasis</i>):</b> They are ruled by Brahma, the Creator. Their nature is to move and to be dynamic.</li>
+	 <li><b>Fixed Raasis (<i>Sthira Raasis</i>:</b> They are ruled by Shiva, the Destroyer. Their nature is to be stable and constant.</li>
+	 <li><b>Dual Raasis (<i>Dwiswabhava Raasis</i>):</b> They are ruled by Vishnu, the Sustainer.3 They are stable sometimes and dynamic sometimes</li>
+	</ul>
+   </div>
+   <div class="table-responsive">
+	<table class="table">
+	 <thead>
+      <tr><th>Movable</th><th>Fixed</th><th>Dual</th></tr>
+     </thead>
+	 <tbody>
+      <tr><td>Aries (Mesha Raasi)</td><td>Taurus (Vrushabha Raasi)</td><td>Gemini (Midhuna Raasi)</td></tr>
+	  <tr><td>Cancer (Karkataka Raasi)</td><td>Leo (Simha Raasi)</td><td>Virgo (Kanya Raasi)</td></tr>
+	  <tr><td>Libra (Thula Raasi)</td><td>Scorpio (Vruchika Raasi)</td><td>Saggitarius (Dhanur Raasi)</td></tr>
+	  <tr><td>Capricorn (Makara Raasi)</td><td>Aquarius (Khumbha Raasi)</td><td>Pisces (Meena Raasi)</td></tr>
+     </tbody>
+	</table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <!-- Movable, Fixed and Dual Raasis ::: End -->
+   <!-- Raasis and Colors ::: Start -->
+   <div><h5><b>Raasis and Colors</b></h5></div>
+   <div class="table-responsive">
+    <table class="table">
+     <thead>
+      <tr><th>S.No.</th><th>Raasis</th><th>Color</th><th>Icon</th></tr>
+     </thead>
+	 <tbody>
+      <tr><td>1</td><td>Aries (Mesha Raasi)</td><td>Blood-red color</td><td></td></tr>
+	  <tr><td>2</td><td>Taurus (Vrushabha Raasi)</td><td>White</td><td></td></tr>
+	  <tr><td>3</td><td>Gemini (Midhuna Raasi)</td><td>Grass green</td><td></td></tr>
+	  <tr><td>4</td><td>Cancer (Karkataka Raasi)</td><td>Pale Red</td><td></td></tr>
+	  <tr><td>5</td><td>Leo (Simha Raasi)</td><td>White</td><td></td></tr>
+	  <tr><td>6</td><td>Virgo (Kanya Raasi)</td><td>Variegated</td><td></td></tr>
+	  <tr><td>7</td><td>Libra (Thula Raasi)</td><td>Black</td><td></td></tr>
+	  <tr><td>8</td><td>Scorpio (Vruchika Raasi)</td><td>Reddish brown</td><td></td></tr>
+	  <tr><td>9</td><td>Saggitarius (Dhanur Raasi)</td><td>husk-grass</td><td></td></tr>
+	  <tr><td>10</td><td>Capricorn (Makara Raasi)</td><td>Variegated</td><td></td></tr>
+	  <tr><td>11</td><td>Aquarius (Khumbha Raasi)</td><td>Brown color (that of a mongoose)</td><td></td></tr>
+	  <tr><td>12</td><td>Pisces (Meena Raasi)</td><td>color of Fish</td><td></td></tr>
+	  
+     </tbody>
+    </table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <!-- Raasis and Colors ::: End -->
+ </div><!--/.col-xs-6 -->
+</div><!--/.row -->
 <div class="row" style="line-height:23px;">
  <div class="col-xs-5">
   <div>
