@@ -19,7 +19,7 @@
 			<li id="content-02-chartAnalysis-01-introduction" onclick="javascript:loadPage(this.id);">Introduction</li>
 			<li id="content-02-chartAnalysis-02-planets" onclick="javascript:loadPage(this.id);">Planets (Grahas)</li>
 			<li id="content-02-chartAnalysis-03-subplanets" onclick="javascript:loadPage(this.id);">Sub-Planets (Upagrahas)</li>
-			<li id="content-02-chartAnalysis-04-raasi" onclick="javascript:loadPage(this.id);">Rasi : The Signs of the Zodiac</li>
+			<li id="content-02-chartAnalysis-04-raasi" onclick="javascript:loadPage(this.id);">Raasi : The Signs of the Zodiac</li>
 			<li id="content-02-chartAnalysis-05-nakshatras" onclick="javascript:loadPage(this.id);">Nakshatras : The Asterisms or Lunar Mansions</li>
 			<li>Special Lagnas</li>
 			<li>Divisional Charts</li>

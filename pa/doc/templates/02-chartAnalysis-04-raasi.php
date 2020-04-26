@@ -1,3 +1,8 @@
+<script type="text/javascript">
+$(document).ready(function(){
+document.title = 'Raasi : The Signs of the Zodiac';
+});
+</script>
 <div class="row">
  <div align="center" class="col-xs-12"><h4><b>Raasi : The Signs of the Zodiac</b></h4></div><!--/.col-xs-12 -->
 </div><!--/.row -->
@@ -6,6 +11,7 @@
    Zodiac of 360º is divided into 12 equal parts of 30º.
  </div><!--/.col-xs-12 -->
 </div><!--/.row -->
+<!-- Characteristics of Raasi ::: Start -->
 <div class="row">
  <div align="center" class="col-xs-12">
    <h4><b>Characteristics of Raasi</b></h4>
@@ -162,7 +168,50 @@
 	</table><!--/.table -->
    </div><!--/.table-responsive -->
    <!-- Raasis and Directions ::: End -->
-   <!-- -->
+   <!-- Varna or Class ::: Start -->
+   <div><h5><b>Varna or Class</b></h5></div>
+   <div>
+    In Hinduism, people are divided into 4 varnas or classes:
+	<ul>
+	 <li><b>Brahmanas (scholars):</b> They pursue knowledge and work as priests or ministers.</li>
+	 <li><b>Kshatriyas (warriors):</b> They are valiant and they become kings, army chiefs and soldiers.</li>
+	 <li><b>Vaisyas (traders):</b> They are the traders and suppliers of various services.</li>
+	 <li><b>Sudras (workers):</b> They execute various menial tasks.</li>
+	</ul>
+   </div>
+   <div class="table-responsive">          
+    <table class="table">
+     <thead>
+      <tr>
+        <th>Brahmana Raasis</th>
+        <th>Kshatriyas Raasis</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr><td>Cancer (Karkataka Raasi)</td><td>Aries (Mesha Raasi)</td></tr>
+	  <tr><td>Scorpio (Vruchika Raasi)</td><td>Leo (Simha Raasi)</td></tr>
+	  <tr><td>Pisces (Meena Raasi)</td><td>Saggitarius (Dhanur Raasi)</td></tr>
+      </tr>
+     </tbody>
+    </table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <div class="table-responsive">          
+    <table class="table">
+     <thead>
+      <tr>
+        <th>Vaisyas Raasis</th>
+        <th>Sudras Raasis</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr><td>Taurus (Vrushabha Raasi)</td><td>Gemini (Midhuna Raasi)</td></tr>
+	  <tr><td>Virgo (Kanya Raasi)</td><td>Libra (Thula Raasi)</td></tr>
+	  <tr><td>Capricorn (Makara Raasi)</td><td>Aquarius (Khumbha Raasi)</td></tr>
+      </tr>
+     </tbody>
+    </table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <!-- Varna or Class ::: End -->
  </div><!--/.col-xs-6 -->
  <div class="col-xs-6">
    <!-- Old and Even Raasis ::: Start -->
@@ -263,7 +312,171 @@
     </table><!--/.table -->
    </div><!--/.table-responsive -->
    <!-- Raasis and Colors ::: End -->
+   <!-- Divaa and Nishaa ::: Start -->
+   <div><h5><b>Divaa and Nishaa Raasis</b></h5></div>
+   <div>
+    <ul>
+	 <li><b>Divaa Raasis</b> are strong during Day-time and they are governed by Sun.</li>
+	 <li><b>Nishaa Raasis</b> are strong during Night-time and they are governed by Moon.</li>
+	</ul>
+   </div>
+   <div class="table-responsive">
+    <table class="table">
+     <thead>
+      <tr>
+        <th>Swamy Graha</th><th>Divaa Raasis</th><th>Nishaa Raasis</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr><td>Mars</td><td>Scorpio (Vruchika Raasi)</td><td>Aries (Mesha Raasi)</td></tr>
+	  <tr><td>Venus</td><td>Libra (Thula Raasi)</td><td>Taurus (Vrushabha Raasi)</td></tr>
+	  <tr><td>Mercury</td><td>Virgo (Kanya Raasi)</td><td>Gemini (Midhuna Raasi)</td></tr>
+	  <tr><td>Moon</td><td></td><td>Cancer (Karkataka Raasi)</td></tr>
+	  <tr><td>Sun</td><td>Leo (Simha Raasi)</td><td></td></tr>
+	  <tr><td>Saturn</td><td>Aquarius (Khumbha Raasi)</td><td>Capricorn (Makara Raasi)</td></tr>
+	  <tr><td>Jupiter</td><td>Pisces (Meena Raasi)</td><td>Saggitarius (Dhanur Raasi)</td></tr>
+     </tbody>
+    </table><!--.table -->
+   </div><!--/.table-responsive -->
+   <!-- Divaa and Nishaa ::: End -->
+   <!-- Rising of Raasis ::: Start -->
+   <div><h5><b>Rising of Raasis</b></h5></div>
+   <div>
+    <ul>
+	 <li><b>Seershodaya Rasis:</b> They are raised by their head. Planets in Seershodaya rasis give their results 
+	 in the first half of their dasas.</li>
+	  <li><b>Prishthodaya Rasis:</b> They are raised by their feet. Planets in Prishthodaya rasis give their results 
+	 in the second half of their dasas.</li>
+	</ul>
+   </div>
+   <div class="table-responsive">          
+   <table class="table">
+    <thead>
+      <tr>
+        <th>Seershodaya Rasis</th><th>Prishthodaya Rasis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Gemini (Midhuna Raasi)</td><td>Aries (Mesha Raasi)</td></tr>
+	  <tr><td>Leo (Simha Raasi)</td><td>Taurus (Vrushabha Raasi)</td></tr>
+	  <tr><td>Virgo (Kanya Raasi)</td><td>Cancer (Karkataka Raasi)</td></tr>
+	  <tr><td>Libra (Thula Raasi)</td><td>Saggitarius (Dhanur Raasi)</td></tr>
+	  <tr><td>Scorpio (Vruchika Raasi)</td><td>Capricorn (Makara Raasi)</td></tr>
+	  <tr><td>Aquarius (Khumbha Raasi)</td><td></td></tr>
+    </tbody>
+   </table><!--/.table -->
+   </div><!--/.table-responsive -->
+   <div>Pisces (Meena Raasi) rises with both its head and feet.</div>
+   <!-- Rising of Raasis ::: End -->
  </div><!--/.col-xs-6 -->
+</div><!--/.row -->
+<!-- Characteristics of Raasi ::: End -->
+<!-- -->
+<div class="row">
+ <div align="center"  class="col-xs-12">
+  <h4><b>Indications of Rasis</b></h4>
+ </div><!--/.col-xs-12 -->
+</div><!--/.row -->
+<div class="row">
+ <div class="col-xs-6">
+  <ol>
+    <li>
+	 <div><b>Aries (Mesha Raasi)</b></div>
+	 <div>
+	  Dynamic, enterprising, valiant, ruddy, head, forests, large forehead, hasty,
+	  impulsive, restless, thick eyebrows, leadership, overbearing, dry, lean, tall.
+	 </div>
+	</li>
+	<li>
+	  <div><b>Taurus (Vrushabha Raasi)</b></div>
+	  <div>
+	    Beautiful, face, stable, sluggish, loyal, meadows, plains, luxury halls,
+		dining halls, eating places, fine teeth, large eyes, luxurious, faithful, thick hair, stout.
+	  </div>
+	</li>
+	<li>
+	  <div><b>Gemini (Midhuna Raasi)</b></div>
+	  <div>
+	    Chest, garden, communication, journalism, schools, colleges, study rooms,
+		cables, telephone, newspapers, tall, well-built, prominent cheeks, thick hair, broad
+		chest, curious, learned, jovial.
+	  </div>
+	</li>
+	<li>
+	  <div><b>Cancer (Karkataka Raasi)</b></div>
+	  <div>
+	    Heart, breast, watery fields, rivers, canals, kitchen, food, attractive, small
+		build, emotional, deeply attached, mother-like, sensitive.
+	  </div>
+	</li>
+	<li>
+	  <div><b>Leo (Simha Raasi)</b></div>
+	  <div>
+		Stomach, digestion, navel, mountains, forests, caves, deserts, palaces, parks,
+		forts, boilers, steel factories, thin, dry, hot, royal, self-pride, insolent, domineering.
+	  </div>
+	</li>
+	<li>
+	  <div><b>Virgo (Kanya Raasi)</b></div>
+	  <div>
+	    Hip, appendix, lush gardens, fields, orchards, libraries, bookstores, farms,
+		intelligent, sharp, orator, nervous, physically weak, discretion, tactfulness.
+	  </div>
+	</li>
+  </ol>
+ </div><!--/.col-xs-6 -->
+ <div class="col-xs-6">
+  <ol start="7">
+    <li>
+	   <div><b>Libra (Thula Raasi)</b></div>
+	   <div>
+	    Groins, Businessmen, markets, trade centers, banks, hotels, amusement
+		parks, entertainment, toilets, cosmetics, balanced, wise, good talker.
+	  </div>
+	</li>
+	<li>
+	  <div><b>Scorpio (Vruchika Raasi)</b></div>
+	  <div>
+	    Private parts, holes, deep caves, mines, garrages, small build, dusky complexion, bright eyes, secretive, 
+		scheming, occult, best friend or a worst enemy, peevish, sensitive.
+	  </div>
+	</li>
+	<li>
+	  <div><b>Saggitarius (Dhanur Raasi)</b></div>
+	  <div>
+		Thighs, royal, attorneys, government offices, aircraft, falling, sparse hair, muscular, deep eyes, uproght, 
+		honest, genial, gambler.
+	  </div>
+	</li>
+	<li>
+	  <div><b>Capricorn (Makara Raasi)</b></div>
+	  <div>
+		Knees, marsh lands, watery places, alligators, beasts, bushes, slender buils, long neck, prominent teeth, witty, 
+		perfectionist, patient, organizer, cautious, secretive, pragmatic
+	  </div>
+	</li>
+	<li>
+	  <div><b>Aquarius (Khumbha Raasi)</b></div>
+	  <div>
+	    Ankles, charity, philosophy, tall, bony, small eyes, mountain spring, places with water, ill-formed teeth, 
+		coarse hair, hard-working, stoic, honest.
+	  </div>
+	</li>
+	<li>
+	  <div><b>Pisces (Meena Raasi)</b></div>
+	  <div>
+	    Feet, oceans, seas, prisons, hospitals, hermitages, short, plump, large eyes,
+		large eyebrows, lazy, emotional, timid, honest, irresolute, talkative, intuitive.
+	  </div>
+	</li>
+  </ol>
+ </div><!--/.col-xs-6 -->
+</div><!--/.row -->
+<!-- -->
+<div class="row">
+ <div align="center"  class="col-xs-12">
+  <h4><b>Positions of Rasis</b></h4>
+ </div><!--/.col-xs-12 -->
 </div><!--/.row -->
 <div class="row" style="line-height:23px;">
  <div class="col-xs-5">
