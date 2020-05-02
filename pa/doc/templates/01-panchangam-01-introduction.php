@@ -4,7 +4,7 @@ $(document).ready(function(){
 });
 </script>
 <div class="row">
- <div align="center" class="col-xs-12"><h4><b>Panchangam</b></h4></div><!--/.col-xs-12 -->
+ <div align="center" class="col-xs-12"><h2><b>Panchangam</b></h2></div><!--/.col-xs-12 -->
 </div><!--/.row -->
 <div class="row" style="line-height:23px;">
 <div class="col-sm-5">

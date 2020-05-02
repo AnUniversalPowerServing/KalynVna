@@ -1,5 +1,5 @@
 <div class="row">
-<div align="center" class="col-xs-12"><h4><b>Nakshatras</b></h4></div><!--/.col-xs-12 -->
+<div align="center" class="col-xs-12"><h2><b>5. Nakshatras</b></h2></div><!--/.col-xs-12 -->
 </div><!--/.row -->
 <div class="row" style="line-height:24px;">
 <div class="col-xs-6">

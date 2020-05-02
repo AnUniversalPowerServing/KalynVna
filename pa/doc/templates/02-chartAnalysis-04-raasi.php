@@ -4,7 +4,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
 });
 </script>
 <div class="row">
- <div align="center" class="col-xs-12"><h4><b>Raasi : The Signs of the Zodiac</b></h4></div><!--/.col-xs-12 -->
+ <div align="center" class="col-xs-12"><h2><b>4. Raasi : The Signs of the Zodiac</b></h2></div><!--/.col-xs-12 -->
 </div><!--/.row -->
 <div class="row">
  <div class="col-xs-12">
@@ -14,12 +14,12 @@ document.title = 'Raasi : The Signs of the Zodiac';
 <!-- Characteristics of Raasi ::: Start -->
 <div class="row">
  <div align="center" class="col-xs-12">
-   <h4><b>Characteristics of Raasi</b></h4>
+   <h3><b>Characteristics of Raasi</b></h3>
  </div><!--/.col-xs-12 -->
 </div><!--/.row -->
 <div class="row">
  <div class="col-xs-6">
-   <div><h5><b>1. Zodiac (As Lord Vishnu’s body)</b></h5></div>
+   <div><h4><b>1. Zodiac (As Lord Vishnu’s body)</b></h4></div>
    <div class="table-responsive">
 	<table class="table">
 	 <thead>
@@ -41,7 +41,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
      </tbody>
 	</table><!--/.table -->
    </div><!--/.table-responsive -->
-   <div><h5><b>Raasi and Five Elements</b></h5></div>
+   <div><h4><b>2. Raasi and Five Elements</b></h4></div>
    <div class="table-responsive">
 	<table class="table">
 	 <thead>
@@ -77,7 +77,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
    </div>
    <!-- -->
    <!-- Pitta, Vaata and Kapha ::: Start -->
-   <div><h5><b>Pitta, Vaata and Kapha</b></h5></div>
+   <div><h4><b>3. Pitta, Vaata and Kapha</b></h4></div>
    <div>
     Ayurveda (India’s Vedic medical system) that recognizes human body and everything else in the universe as 
 	having 3 natures that are formed with the above 5 elements:
@@ -117,7 +117,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
    </div><!--/.table-responsive -->
    <!-- Pitta, Vaata and Kapha ::: End -->
    <!-- Sattwa, Rajas and Tamas ::: Start -->
-   <div><h5><b>Sattwa, Rajas and Tamas</b></h5></div>
+   <div><h4><b>4. Sattwa, Rajas and Tamas</b></h4></div>
    <div>
      In Hindu philosophy, everything in this universe is made up of trigunas(3 
 	 <code data-toggle="tooltip" title="Qualities">gunas</code>):
@@ -142,7 +142,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
    </div><!--/.table-responsive -->
    <!-- Sattwa, Rajas and Tamas ::: End -->
    <!-- Raasis and Directions ::: Start -->
-   <div><h5><b>Raasis and Directions</b></h5></div>
+   <div><h4><b>5. Raasis and Directions</b></h4></div>
    <div class="table-responsive">
 	<table class="table">
 	 <thead>
@@ -169,7 +169,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
    </div><!--/.table-responsive -->
    <!-- Raasis and Directions ::: End -->
    <!-- Varna or Class ::: Start -->
-   <div><h5><b>Varna or Class</b></h5></div>
+   <div><h4><b>6. Varna or Class</b></h4></div>
    <div>
     In Hinduism, people are divided into 4 varnas or classes:
 	<ul>
@@ -215,7 +215,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
  </div><!--/.col-xs-6 -->
  <div class="col-xs-6">
    <!-- Old and Even Raasis ::: Start -->
-   <div><h5><b>Old and Even Raasis</b></h5></div>
+   <div><h4><b>7. Old and Even Raasis</b></h4></div>
    <div>
     <ul>
      <li>Male Raasi are also called as Odd Rasis / Vishama Rasis / Oja Rasis.</li>
@@ -240,7 +240,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
     </div><!--/.table-responsive -->
    <!-- Old and Even Raasis ::: Start -->
    <!-- Odd-footed and Even-footed Raasis ::: Start -->
-   <div><h5><b>Odd-footed and Even-footed Raasis</b></h5></div>
+   <div><h4><b>8. Odd-footed and Even-footed Raasis</b></h4></div>
    <div>
     <ul>
      <li>Odd-footed Raasis are also called as Vishamapada Rasis / Ojapada Rasis.</li>
@@ -265,7 +265,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
    </div><!--/.table-responsive -->
    <!-- Odd-footed and Even-footed Raasis ::: End -->
    <!-- Movable, Fixed and Dual Raasis ::: Start -->
-   <div><h5><b>Movable, Fixed and Dual Raasis</b></h5></div>
+   <div><h4><b>9. Movable, Fixed and Dual Raasis</b></h4></div>
    <div>
     <ul>
 	 <li><b>Movable Raasis (<i>Chara Raasis</i>):</b> They are ruled by Brahma, the Creator. Their nature is to move and to be dynamic.</li>
@@ -288,7 +288,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
    </div><!--/.table-responsive -->
    <!-- Movable, Fixed and Dual Raasis ::: End -->
    <!-- Raasis and Colors ::: Start -->
-   <div><h5><b>Raasis and Colors</b></h5></div>
+   <div><h4><b>10. Raasis and Colors</b></h4></div>
    <div class="table-responsive">
     <table class="table">
      <thead>
@@ -313,7 +313,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
    </div><!--/.table-responsive -->
    <!-- Raasis and Colors ::: End -->
    <!-- Divaa and Nishaa ::: Start -->
-   <div><h5><b>Divaa and Nishaa Raasis</b></h5></div>
+   <div><h4><b>11. Divaa and Nishaa Raasis</b></h4></div>
    <div>
     <ul>
 	 <li><b>Divaa Raasis</b> are strong during Day-time and they are governed by Sun.</li>
@@ -340,7 +340,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
    </div><!--/.table-responsive -->
    <!-- Divaa and Nishaa ::: End -->
    <!-- Rising of Raasis ::: Start -->
-   <div><h5><b>Rising of Raasis</b></h5></div>
+   <div><h4><b>12. Rising of Raasis</b></h4></div>
    <div>
     <ul>
 	 <li><b>Seershodaya Rasis:</b> They are raised by their head. Planets in Seershodaya rasis give their results 
@@ -374,7 +374,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
 <!-- -->
 <div class="row">
  <div align="center"  class="col-xs-12">
-  <h4><b>Indications of Rasis</b></h4>
+  <h3><b>Indications of Rasis</b></h3>
  </div><!--/.col-xs-12 -->
 </div><!--/.row -->
 <div class="row">
@@ -475,7 +475,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
 <!-- -->
 <div class="row">
  <div align="center"  class="col-xs-12">
-  <h4><b>Positions of Rasis</b></h4>
+  <h3><b>Positions of Rasis</b></h3>
  </div><!--/.col-xs-12 -->
 </div><!--/.row -->
 <div class="row" style="line-height:23px;">
@@ -708,7 +708,7 @@ document.title = 'Raasi : The Signs of the Zodiac';
 </div><!--/.row -->
 <div class="row">
  <div class="col-xs-6">
-   <div><h5><b>Bhavas (houses)</b></h5></div>
+   <div><h4><b>Bhavas (houses)</b></h4></div>
    <div>
 
    </div>
