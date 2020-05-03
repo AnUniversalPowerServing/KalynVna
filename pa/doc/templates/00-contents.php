@@ -94,7 +94,15 @@
 		   </ol>
 		</div>
 	   </li>
-	   <li id="content-08-references" onclick="javascript:loadPage(this.id);">
+	   <li>
+		<div><h5><b>Astrological Tables</b></h5></div>
+		<div>
+		   <ol class="sub-contents">
+			<li id="content-08-astrologicalTables-01-introduction" onclick="javascript:loadPage(this.id);">Introduction</li>
+		   </ol>
+		</div>
+	   </li>
+	   <li id="content-09-references" onclick="javascript:loadPage(this.id);">
 		<div><h5><b>References</b></h5></div>
 	   </li>
 	</ol>
