@@ -22,8 +22,8 @@
 			<li id="content-02-chartAnalysis-04-raasi" onclick="javascript:loadPage(this.id);">Raasi : The Signs of the Zodiac</li>
 			<li id="content-02-chartAnalysis-05-nakshatras" onclick="javascript:loadPage(this.id);">Nakshatras : The Asterisms or Lunar Mansions</li>
 			<li id="content-02-chartAnalysis-06-specialLagnas" onclick="javascript:loadPage(this.id);">Special Lagnas</li>
-			<li>Divisional Charts</li>
-			<li>Houses</li>
+			<li id="content-02-chartAnalysis-07-divisionalCharts" onclick="javascript:loadPage(this.id);">Divisional Charts</li>
+			<li id="content-02-chartAnalysis-08-houses" onclick="javascript:loadPage(this.id);">Houses</li>
 			<li>Karakas</li>
 			<li>Arudha Padas</li>
 			<li>Aspects and Argalas</li>
@@ -86,7 +86,15 @@
 		   </ol>
 		</div>
 	   </li>
-	   <li id="content-07-references" onclick="javascript:loadPage(this.id);">
+	   <li>
+		<div><h5><b>Kundalini Milan</b></h5></div>
+		<div>
+		   <ol class="sub-contents">
+			<li id="content-07-kundaliniMilan-01-rules" onclick="javascript:loadPage(this.id);">Rules for Flawless Kundalini Matching</li>
+		   </ol>
+		</div>
+	   </li>
+	   <li id="content-08-references" onclick="javascript:loadPage(this.id);">
 		<div><h5><b>References</b></h5></div>
 	   </li>
 	</ol>
