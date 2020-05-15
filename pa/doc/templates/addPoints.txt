@@ -1,0 +1,28 @@
+Reference Book:
+1) Horoscope Reading Made Easy and Self Learned By U. C. Mahajan
+
+Preparing of Horoscope required:
+1) Date and Time of Birth
+2) Longitide and Latitude of the Plce of Birth
+Using 1 and 2, calculate the position of Ascendant and Planets.
+--------------------
+Calculation of Ascendant
+-------------------------
+1) Convert Standard Time to Local Mean Time
+   For India, Standard Time is the Central Meridian Time which is fixed to 82 degrees 30 Minutes East longitude.
+   Earth is set to 360 degrees longitude and it takes 24 hours from Sunrise to Sunrise.
+   360/24=15 (15 minutes -sunrise difference exists on longitude change at same latitude).
+   1 degree = 15 minutes
+   -------------------------
+   Time Calculation:
+   -------------------------
+   Mumbai 72 deg 50 min E at 10:00 AM IST
+   Solution:
+   82 deg 30 min E - 72 deg 50 min = 9 deg 40 min = (9 X 4 )min (40 X 4) sec (Mulitply 4 to degree and 
+																		change deg-to-min and min-to-sec) 
+								  = 38 min 40 sec (difference)
+   Local Time = 10:00:00 - 00:38:40 = 09:21:20 AM
+								  
+   
+   
+   

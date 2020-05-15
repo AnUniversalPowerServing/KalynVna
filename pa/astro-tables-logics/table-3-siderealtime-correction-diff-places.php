@@ -1,0 +1,1 @@
+<?php$long = $_GET["long"];echo $long."<br/>";$diff = (82.30 - $long)*0.66;$cor_min = 0;$cor_sec = floor($diff);echo $diff." ".$cor_sec."<br/>";echo ($diff-$cor_sec)*100; // floor($diff) only integer?>
