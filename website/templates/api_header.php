@@ -1,15 +1,18 @@
 <style>
+.bg-purple-dark { background-color:#630062;color:#fff; }
 .btn-lgtgrey { background-color:#eee;color:#000; }
 div.im-checkout { max-width: 100%;margin-bottom: 0px; }
 .curpoint { cursor:pointer; }
 .hide-block { display:none; }
-body { overflow-x:hidden; }
+body { font-size:12px;overflow-x:hidden; }
 .pad0 { padding:0px; }
 .mtop5p { margin-top:5px; }
 .mtop10p { margin-top:10px; }
 .mtop15p { margin-top:15px; }
 .mtop20p { margin-top:20px; }
 .mtop25p { margin-top:25px; }
+.mtop45p { margin-top:45px; }
+.mbot0 { margin-bottom:0px; }
 .mbot5p { margin-bottom:5px; }
 .mbot10p { margin-bottom:10px; }
 .mbot15p { margin-bottom:15px; }
@@ -19,21 +22,21 @@ body { overflow-x:hidden; }
 .mbot35p { margin-bottom:35px; }
 a { color:#fff; }
 a.a-custom { text-decoration:none;color:#000; }
-.navbar-nav>li.active>a { background-color:#fff;color:#000; }
+.navbar-nav>li>a , .navbar-nav>li>a:focus{ background-color:#fff;color:#a965b5; }
+.navbar-nav>li>a:hover {  background-color:#fff;color:#333; }
+.navbar-nav>li.active>a,.navbar-nav>li.active>a:hover, .navbar-nav>li.active>a:focus { color:#630062;border-bottom:3px solid #630062; }
 .navbar { border-radius:0px;margin-bottom:0px; }
+.navbar-white { background-color: #fff; border-color: #fff; }
 .navbar-purple { background-color: #630062; border-color: #630062; }
 .navbar-purple .navbar-toggle { border-color: #fff; }
 .navbar-purple .navbar-toggle .icon-bar { background-color: #fff; }
 .navbar-brand,.navbar-brand:hover { height:45px;color:#fff; }
-@media (min-width: 768px) {
-// #kvHeaderMenu { margin-top:5px; }
-}
 body::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background-color: #F5F5F5; }         
 body::-webkit-scrollbar { width: 6px;background-color: #F5F5F5; }        
 body::-webkit-scrollbar-thumb { background-color: #000000; }
 body { overflow-x:hidden; }
-@font-face { font-family: "kvfont001";src: url("fonts/Acratica-demo-font.otf"); }
-@font-face { font-family: "kvfont002";src: url("fonts/Boogaloo-Regular.otf"); }
+@font-face { font-family: "kvfont001";src: url("fonts/acratica-font.otf"); }
+@font-face { font-family: "kvfont002";src: url("fonts/boogaloo-regular.otf"); }
 .slidecontainer { width: 100%; }
 .slider { -webkit-appearance: none;width: 100%;height: 15px;border-radius: 5px;background: #d3d3d3;
 		  outline: none;opacity: 0.7;-webkit-transition: .2s;transition: opacity .2s; }
@@ -62,7 +65,7 @@ function kvHeaderMenu(id){
 }
 </script>
 <div>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-white">
   <div class="container-fluid">
     <div class="navbar-header">
 	  <?php if(isset($_SESSION["ACCOUNT_TYPE"])) { ?>
@@ -72,9 +75,9 @@ function kvHeaderMenu(id){
         <span class="icon-bar"></span>
       <?php } ?>		
       </button>
-      <a class="navbar-brand" href="#"><!--img src="images/logo.png" style="width:180px;height:auto;"/-->
+      <a class="navbar-brand" style="margin-top:5px;" href="#"><!--img src="images/logo.png" style="width:180px;height:auto;"/-->
 	    <span style="font-family:kvfont001;font-size:24px;">
-		 <span style="color:#e91e63;">Kalyana</span><span style="color:#ff5722;">Veena</span><span style="color:#03a9f4;">.com</span>
+		 <span style="color:#630062;">Kalyana</span><span style="color:#630062;">Veena</span><span style="color:#630062;">.com</span>
 		</span>
 	  </a>
     </div>
@@ -102,12 +105,6 @@ function kvHeaderMenu(id){
 		  <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>">
 		     <i class="fa fa-home"></i>&nbsp;<b>Home</b>
 		  </a>
-		</li>
-		
-		<li id="kvHeaderMenu-howItWorks" onclick="javascript:kvHeaderMenu(this.id);">
-		   <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>app/howItWorks">
-		     <i class="fa fa-book"></i>&nbsp;<b>How it works?</b>
-		   </a>
 		</li>
 		<?php } ?>
 		<li id="kvHeaderMenu-browseMatrimony" onclick="javascript:kvHeaderMenu(this.id);">
@@ -148,14 +145,11 @@ function kvHeaderMenu(id){
 		     <i class="fa fa-usd"></i>&nbsp;<b>Pricing</b>
 		   </a>
 		</li> 
-		<li id="kvHeaderMenu-signUp" onclick="javascript:signupForm(this.id);">
+		<li id="kvHeaderMenu-signUp">
 		   <a href="#">
 		   <!--a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>app/signup"-->
-		      <span class="glyphicon glyphicon-user"></span> <b>SignUp</b>
+		      <span class="glyphicon glyphicon-user"></span> <b>SignUp / Login</b>
 		   </a>
-		</li> 
-		<li id="kvHeaderMenu-login" onclick="javascript:loginForm(this.id);">
-		  <a href="#"><span class="glyphicon glyphicon-log-in"></span> <b>Login</b></a>
 		</li>
 		<?php } ?>
 		<?php if(isset($_SESSION["ACCOUNT_TYPE"])) { ?>

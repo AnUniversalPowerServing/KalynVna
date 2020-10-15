@@ -23,6 +23,7 @@ if(!isset($_SESSION["ACCOUNT_TYPE"])){ ?>
   });
   </script>
 <style>
+body { background-color:#fafafa; }
 @media only screen and (max-width:768px ) {
 #kvShortDesc { display:none; }
 }
@@ -31,13 +32,12 @@ if(!isset($_SESSION["ACCOUNT_TYPE"])){ ?>
 <body>
 <?php include_once 'templates/api_header.php'; ?>
 
-<div align="center" style="width:100%;background-color:#e91e63;color:#fff;">
-  <div style="font-size:16px;padding:15px;letter-spacing:1px;line-height:26px;">
-    Welcome to the No.1 Emerging Matrimonial Service which is the largest, most trusted
-	and Successful Matrimonial Platform
+<div align="center" style="width:100%;background-color:#630062;color:#fff;"><!-- background-color:#eab15c;color:#333; -->
+  <div style="font-family: UniNeue,sans-serif,Helvetica,Arial;font-size:14px;padding:15px;letter-spacing:1px;line-height:26px;font-weight:700;">
+    Welcome to the World's No.1 : Highly Secured, most trusted and Successful Matrimonial Search Engine Platform
   </div>
 </div>
-<div class="container-fluid pad0">
+<div class="container-fluid">
   <div class="row">
 	<div class="col-sm-12" style="width:100%;height:600px;background-image: url('images/martimony-wallpaper.jpg');background-position:center;">
 	   <div class="col-sm-1"></div>
@@ -196,6 +196,24 @@ if(!isset($_SESSION["ACCOUNT_TYPE"])){ ?>
 	   </div>
 	</div>
   </div>
+  <div class="row">
+    <div align="center" style="padding:6px;"><h3><b>This Trusted Platform is Simple, Fast and Secure</b></h3></div>
+  </div>
+  <div class="row">
+   <div class="col-sm-7" style="padding-left:15px;">
+	 <div class="row">
+	   <div class="col-sm-12">
+	     <div><h4 style="padding:10px;">
+		 	  <b>World's First Highly Secure and Safe Matrimony Search Engine Platform</b></h4>
+		 </div>
+
+	   </div><!--/.col-sm-6 -->
+	    
+		
+	  </div><!--/.row -->
+	 <div></div>
+   </div><!--/.col-sm-7 -->
+  </div><!--/.row -->
   <div class="row"  style="background-color:#ff9800;">
 	<div class="col-sm-7">
 	  <div class="col-sm-12 mtop15p mbot15p">

@@ -10,7 +10,7 @@
  /* Database Credentials */
 if($_SESSION["PROJECT_MODE"]=='DEBUG'){
  $DB_KV_SERVERNAME="localhost:3306";
- $DB_KV_NAME="kv";
+ $DB_KV_NAME="kv_users";
  $DB_KV_USER="root";
  $DB_KV_PASSWORD="";
 }

@@ -8,7 +8,7 @@ var options = {
     "amount": "150000",
     "name": "KalyanaVeena.com",
     "description": "Purchase Description",
-    "image": "http://kalyanaveena.com/images/logo.png",
+    "image": "http://localhost/KalynVna/website/images/logo-square.png",
     "handler": function (response){
       if(response.razorpay_payment_id.length>0){
 	    PROFILE_BALANCE_POINTS=PROFILE_BALANCE_POINTS+10;
@@ -16,11 +16,11 @@ var options = {
 	  }
     },
     "prefill": {
-        "name": "Gaurav Kumar",
-        "email": "test@test.com"
+        "name": "",
+        "email": ""
     },
     "notes": {
-        "address": "Hello World"
+        "address": ""
     },
     "theme": {
         "color": "#F37254"

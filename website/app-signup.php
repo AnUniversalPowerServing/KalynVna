@@ -84,6 +84,12 @@ ul.nav-stacked>li { background-color:#ccc; }
 	  </div>
 	</div>
  </div>
+ 
+		<?php include_once 'templates/signup/02_birthZodiacCommunity.php'; ?>
+		<?php include_once 'templates/signup/03_contactInformation.php'; ?>
+		<?php include_once 'templates/signup/04_familyBackground.php'; ?>
+		<?php include_once 'templates/signup/05_preferenceOfSpouse.php'; ?>
+		<?php include_once 'templates/signup/06_finish.php'; ?></div>
 </body>
 </html>
 <?php } else { header("Location: ".$_SESSION["PROJECT_URL"]); } ?>

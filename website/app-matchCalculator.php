@@ -17,6 +17,7 @@ include_once 'templates/api_params.php';
   <script src="js/api/brahim-core.js"></script>
   <link href="styles/api/bootstrap-switch.css" rel="stylesheet">
 <style>
+body { background-color:#fafafa; }
 .pad5-10 { padding:5px 10px; }
 </style>
   <script type="text/javascript">

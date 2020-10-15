@@ -7,7 +7,6 @@ include_once 'templates/api_params.php';
   <title>Kalyana Veena</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <?php include_once 'templates/api_params.php'; ?>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/api/core-skeleton.css">
@@ -17,6 +16,9 @@ include_once 'templates/api_params.php';
   <?php include_once 'templates/api_js.php'; ?>
 <style>
 body { background-color:#fafafa; }
+.f12 { font-size:12px; }
+.dropdown>.btn { text-align:left; }
+.mtop8p { margin-top:8px; }
 </style>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -162,11 +164,11 @@ for(var index=0;index<response.length;index++){
     var inch_hgt = response[index].inch_hgt;
     var highDegree = response[index].highDegree;
     var occupation = response[index].occupation;
-    var occType = response[index].occType;
+    var occupationType = response[index].occupationType;
 	var living_status = response[index].living_status;
     var exp_highDegree = response[index].exp_highDegree;
     var exp_occupation = response[index].exp_occupation;
-    var exp_occType = response[index].exp_occType;
+    var exp_occupationType = response[index].exp_occupationType;
     var exp_motherTongue = response[index].exp_motherTongue;
 	var exp_living_status = response[index].exp_living_status;
 	console.log("row_separator: "+row_separator);
@@ -176,7 +178,7 @@ for(var index=0;index<response.length;index++){
      content+='<div class="col-sm-4">';
      content+='<div id="viewprofile'+account_Id+'" class="list-group">';
 	 content+='<div class="list-group-item pad0">';
-	 content+='<div class="container-fluid mtop15p">';
+	 content+='<div class="container-fluid">';
 	 // If Admin 
 	 if(ACCOUNT_TYPE.length>0 && ACCOUNT_TYPE==='ADMINISTRATOR'){
 	 content+='<div class="row">';
@@ -203,17 +205,29 @@ for(var index=0;index<response.length;index++){
 	 }
 	 // If Admin 
 	 content+='<div class="row">';
-	 content+='<div align="center" class="col-sm-12">';
-	 content+='<img src="'+profile_pic+'" class="profile_pic_img"/>';
+	 content+='<div align="center" class="col-sm-6">';
+	 content+='<img src="'+profile_pic+'" class="profile_pic_img mtop45p"/>';
+	 content+='</div>';
+	 content+='<div  align="center" class="col-sm-6 pad0">';
+	 
+	 content+='<div class="list-group mbot10p">';
+	 content+='<div class="list-group-item bg-purple-dark" style="border:0px;padding:5px;border-top-left-radius:0px;"><b>SCAN AND VIEW</b></div>';
+	 content+='<div class="list-group-item pad0" style="border:0px;background-color:#f8dbfd;border-top-left-radius:0px;border-bottom-right-radius:0px;">';
+	 
+	 content+='<div style="padding:5px;"><b>User Media Gallery at</b></div>';
+	 content+='<img src="qrcode/'+account_Id+'" style="margin-top:-2px;"/>';
+	 content+='<div style="padding:5px;"><b>Kalyanaveena.com <br/>MOBILE APP</b></div>';
+	 content+='</div>';
 	 
 	 content+='</div>';
 	 content+='</div>';
-	 content+='<div class="row">';
-	 content+='<div align="center" class="col-sm-12 mtop15p">';
-	 content+='<h5><b>'+name+'</b></h5>';
+	 
 	 content+='</div>';
 	 content+='</div>';
+	 
 	 content+='</div>';
+	 content+='<div align="center" class="list-group-item">';
+	 content+='<b>'+name.toUpperCase()+'</b>'; 
 	 content+='</div>';
 	 content+='<div class="list-group-item pad0">';
 	 content+='<div class="container-fluid mtop15p">';
@@ -233,7 +247,7 @@ for(var index=0;index<response.length;index++){
 	 content+='<tr><td><b>Status</b></td><td>'+status+'</td></tr>';
 	 content+='<tr><td><b>Highest Degree</b></td><td>'+highDegree+'</td></tr>';
 	 content+='<tr><td><b>Occupation</b></td><td>'+occupation+'</td></tr>';
-	 content+='<tr><td><b>Occupation Type</b></td><td>'+occType+'</td></tr>';
+	 content+='<tr><td><b>Occupation Type</b></td><td>'+occupationType+'</td></tr>';
 	 content+='<tr><td><b>Living Status</b></td><td>'+living_status+'</td></tr>';
 	 content+='</tbody>';
 	 content+='</table>';
@@ -264,7 +278,7 @@ for(var index=0;index<response.length;index++){
 	 content+='<tr><td><b>Mother Tongue</b></td><td>'+exp_motherTongue+'</td></tr>';
 	 content+='<tr><td><b>Highest Degree</b></td><td>'+exp_highDegree+'</td></tr>';
 	 content+='<tr><td><b>Occupation</b></td><td>'+exp_occupation+'</td></tr>';
-	 content+='<tr><td><b>Occupation Type</b></td><td>'+exp_occType+'</td></tr>';
+	 content+='<tr><td><b>Occupation Type</b></td><td>'+exp_occupationType+'</td></tr>';
 	 content+='<tr><td><b>Living Status</b></td><td>'+exp_living_status+'</td></tr>';
 	 content+='</tbody>';
 	 content+='</table>';
@@ -374,16 +388,37 @@ body { font-size:14px; }
 			</div>
 		</div>
 		<div class="list-group-item" data-toggle="collapse" data-target="#filter_occupationType">
-		  Occupation Type&nbsp;
-		  <i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>
+		  Occupation&nbsp; <i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>
 		</div>
 		<div id="filter_occupationType" class="collapse">
 			<div class="list-group-item">
-				<div><input id="browseMatrimony_occupationType_privateCompany" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Private Company</div>
-				<div><input id="browseMatrimony_occupationType_govt" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Government / Public Sector</div>
-				<div><input id="browseMatrimony_occupationType_defence" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Defence / Civil Services</div>
-				<div><input id="browseMatrimony_occupationType_biz" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Business / Self Employeed</div>
-			</div>
+			  <div class="form-group">
+			    <label>Occupation Type</label>
+			    <div class="dropdown">
+				  <button align="left" class="btn btn-default form-control dropdown-toggle" type="button" data-toggle="dropdown"><span class="f12">Select Occupation Type</span>&nbsp;
+				  <span class="caret pull-right mtop8p"></span></button>
+				  <ul class="dropdown-menu">
+					<li><a href="#"><input id="browseMatrimony_occupationType_privateCompany" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Private Company</a></li>
+					<li><a href="#"><input id="browseMatrimony_occupationType_govt" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Government / Public Sector</a></li>
+					<li><a href="#"><input id="browseMatrimony_occupationType_defence" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Defence / Civil Services</a></li>
+					<li><a href="#"><input id="browseMatrimony_occupationType_biz" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Business / Self Employeed</a></li>
+				  </ul>
+				</div>
+			  </div><!--/.form-group -->
+			  <div class="form-group">
+			    <label>Profession</label>
+			    <div class="dropdown">
+				  <button align="left" class="btn btn-default form-control dropdown-toggle" type="button" data-toggle="dropdown"><span class="f12">Select Profession</span>&nbsp;
+				  <span class="caret pull-right mtop8p"></span></button>
+				  <ul class="dropdown-menu">
+					<li><a href="#"><input id="browseMatrimony_occupationType_privateCompany" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Private Company</a></li>
+					<li><a href="#"><input id="browseMatrimony_occupationType_govt" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Government / Public Sector</a></li>
+					<li><a href="#"><input id="browseMatrimony_occupationType_defence" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Defence / Civil Services</a></li>
+					<li><a href="#"><input id="browseMatrimony_occupationType_biz" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Business / Self Employeed</a></li>
+				  </ul>
+				</div>
+			  </div><!--/.form-group -->
+			</div><!--/.list-group-item -->
 		</div>
 		<div class="list-group-item" data-toggle="collapse" data-target="#filter_motherTongue">
 		  Mother Tongue&nbsp;

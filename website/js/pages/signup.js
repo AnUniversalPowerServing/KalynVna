@@ -22,7 +22,8 @@ var signup_authentication_form4;
 var signup_authentication_form5;
 
 function sel_signup_menu(id){
-// sel_signup_menuTab(id);
+ sel_signup_menuTab(id);
+/*
  if(id==='signup_menu_mentionprofile'){  sel_signup_menuTab(id); }
  else if(id==='signup_menu_birthAndCommunityBg'){
    if(signup_authentication_form1==='COMPLETED'){ sel_signup_menuTab(id); }
@@ -39,6 +40,7 @@ function sel_signup_menu(id){
  else if(id==='signup_menu_finish'){
   if(signup_authentication_form5==='COMPLETED'){ sel_signup_menuTab(id); }
  } 
+ */
 }
 
 function sel_signup_menuTab(id){

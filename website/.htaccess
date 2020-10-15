@@ -4,6 +4,9 @@ RewriteEngine on
 
 DirectoryIndex default.php
 
+#Other Support
+RewriteRule qrcode/([^/]+)$ backend/php/dac/controller.display.qrcode.php?qrContent=$1 [NC,L]
+
 # App
 RewriteRule app/howItWorks app-howItWorks.php [NC,L] 
 RewriteRule app/pricing  app-pricing.php [NC,L]
