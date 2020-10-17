@@ -55,7 +55,8 @@ body { overflow-x:hidden; }
 var CURRENT_TAB_ID;
 function kvHeaderMenu(id){
  if(id!=='kvHeaderMenu-login'){ CURRENT_TAB_ID=id; }
- var arry=["kvHeaderMenu-customer-myDashboard","kvHeaderMenu-admin-mydashboard","kvHeaderMenu-Home","kvHeaderMenu-howItWorks",
+ var arry=["kvHeaderMenu-customer-myDashboard","kvHeaderMenu-customer-createNewProfile","kvHeaderMenu-admin-mydashboard",
+		   "kvHeaderMenu-Home","kvHeaderMenu-howItWorks",
 "kvHeaderMenu-browseMatrimony","kvHeaderMenu-matchCalculator","kvHeaderMenu-mymatchprofiles","kvHeaderMenu-myfavourites",
 "kvHeaderMenu-mycart","kvHeaderMenu-pricing","kvHeaderMenu-signUp","kvHeaderMenu-login","kvHeaderMenu-logout"];
  for(var index=0;index<arry.length;index++){
@@ -64,6 +65,7 @@ function kvHeaderMenu(id){
  }
 }
 </script>
+<?php $_SESSION["ACCOUNT_TYPE"]=''; ?>
 <div>
 <nav class="navbar navbar-white">
   <div class="container-fluid">
@@ -83,15 +85,20 @@ function kvHeaderMenu(id){
     </div>
     <div id="kvHeaderMenu" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-	    <?php if(isset($_SESSION["ACCOUNT_TYPE"])) { ?>
-		<?php if($_SESSION["ACCOUNT_TYPE"]=='CUSTOMER') { ?>
+	    <?php// if(isset($_SESSION["ACCOUNT_TYPE"])) { ?>
+		<?php // if($_SESSION["ACCOUNT_TYPE"]=='CUSTOMER') { ?>
 	    <!-- Customer Account -->
 		<li id="kvHeaderMenu-customer-myDashboard" onclick="javascript:kvHeaderMenu(this.id);">
 		  <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>customer/dashboard">
 			<i class="fa fa-tachometer"></i>&nbsp;<b>My Dashboard</b>
 		  </a>
 		</li>
-		<?php } ?>
+		<li id="kvHeaderMenu-customer-createNewProfile" onclick="javascript:kvHeaderMenu(this.id);">
+		  <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>customer/create-new-profile">
+			<i class="fa fa-tachometer"></i>&nbsp;<b>Create New Profile</b>
+		  </a>
+		</li>
+		<?php// } ?>
         <?php if($_SESSION["ACCOUNT_TYPE"]=='ADMINISTRATOR') { ?>
 		<!-- Administrator Account -->
 		<li id="kvHeaderMenu-admin-mydashboard">
@@ -100,13 +107,13 @@ function kvHeaderMenu(id){
 		  </a>
 		</li>
 		<?php } ?>
-        <?php } else { ?>
+        <?php//  } else { ?>
         <li id="kvHeaderMenu-Home" onclick="javascript:kvHeaderMenu(this.id);">
 		  <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>">
 		     <i class="fa fa-home"></i>&nbsp;<b>Home</b>
 		  </a>
 		</li>
-		<?php } ?>
+		<?php // } ?>
 		<li id="kvHeaderMenu-browseMatrimony" onclick="javascript:kvHeaderMenu(this.id);">
 		   <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>app/browseMatrimony">
 		      <i class="fa fa-mouse-pointer"></i>&nbsp;<b>Browse Matrimony</b>

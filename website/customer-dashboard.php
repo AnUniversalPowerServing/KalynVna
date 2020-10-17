@@ -1,7 +1,7 @@
 <?php session_start(); 
 
 include_once 'templates/api_params.php';
-if(isset($_SESSION["ACCOUNT_TYPE"])){ 
+// if(isset($_SESSION["ACCOUNT_TYPE"])){ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,10 +20,11 @@ if(isset($_SESSION["ACCOUNT_TYPE"])){
 <script type="text/javascript">
 $(document).ready(function(){
  kvHeaderMenu('kvHeaderMenu-customer-myDashboard');
- var phoneNumber = '<?php echo $_SESSION["CUSTOMERACCOUNT_MOBILE"] ?>';
+ var phoneNumber = '<?php if(isset($_SESSION["CUSTOMERACCOUNT_MOBILE"])) { echo $_SESSION["CUSTOMERACCOUNT_MOBILE"]; } ?>';
  js_ajax('GET',PROJECT_URL+'backend/php/dac/controller.module.app.authentication.php',
  { action: 'SIGNIN_DATA_AUTHENTICATION', phoneNumber: phoneNumber },function(response){
    console.log(response);
+   /*
    response=JSON.parse(response);
    for(var index=0;index<response.length;index++){
    var account_Id = response[index].account_Id;
@@ -50,9 +51,9 @@ $(document).ready(function(){
 	   content+='</tr>';
 	   content+='</tbody>';
 	   content+='</table>';
-	   content+='</div>';
+	   content+='</div>'; 
    }
-   document.getElementById("customer-dashboard-table").innerHTML=content;
+   document.getElementById("customer-dashboard-table").innerHTML=content; */
  });
 });
 </script>
@@ -103,5 +104,5 @@ $(document).ready(function(){
 </div>
 </body>
 </html>
-<?php } else { header("Location:".$_SESSION["PROJECT_URL"]); } ?>
+<?php // } else { header("Location:".$_SESSION["PROJECT_URL"]); } ?>
   

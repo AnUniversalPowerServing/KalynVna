@@ -16,8 +16,10 @@ RewriteRule app/browseMatrimony app-browseMatrimony.php [NC,L]
 RewriteRule app/user/([^/]+)$ app-userprofile.php?1=$1 [NC,L]
 
 # Customer Accounts
-RewriteRule customer/dashboard backend/users_customers/index.php [NC,L]
 RewriteRule customer/myprofile backend/users_customers/myprofile.php [NC,L]
+
+RewriteRule customer/dashboard customer-dashboard.php [NC,L]
+RewriteRule customer/create-new-profile customer-profile-create.php [NC,L]
 
 RewriteRule customer/matchprofiles customer-matchprofiles.php [NC,L]
 RewriteRule customer/favourites customer-favourites.php [NC,L]
