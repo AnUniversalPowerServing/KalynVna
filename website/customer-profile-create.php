@@ -65,15 +65,14 @@ $(document).ready(function(){
 <div class="col-sm-3">
  <div><h5 style="border-bottom:2px solid #000;padding-bottom:10px;"><b>Your Other Profiles</b></h5></div>
  <!-- -->
-<div class="list-group">
-<div class="list-group-item pad0" style="cursor:pointer;">
+<div class="list-group" style="cursor:pointer;">
+<div class="list-group-item pad0">
 
  <div style="margin-top:4px;">
    <span style="text-transform:uppercase;letter-spacing:0.5px;font-weight:bold;background-color:#630062;padding:5px;color:#fff;font-size:10px;">
    Not Published</span>
  </div>
  
- <!-- -->
  <div class="container-fluid mbot15p">
   <div class="row">
    <div class="col-sm-12">
@@ -81,13 +80,28 @@ $(document).ready(function(){
 	<div><h5><b>SurName FirstName LastName</b></h5></div>
 	<div style="color:#777;">&nbsp;Profile created for you</div>
 	<!-- -->
-	<div class="progress mtop15p" style="height:15px;margin-bottom:0px;background-color:#a965b5;">
-	  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" 
-		style="width:10%;line-height:15px;font-size:10px;font-weight:bold;background-color:#630062;color:#fff;">
-	   70% Completed
-	  </div>
-	</div>
-	<!-- -->
+   </div><!--/.col-sm-12 -->
+  </div><!--/.row -->
+ </div><!--/.container-fluid -->
+	
+ 
+</div><!--/.list-group-item -->
+<div class="list-group-item pad0">
+ <!-- -->
+ <div class="container-fluid mbot15p">
+  <div class="row">
+   <div class="col-sm-12">
+    <!-- -->
+	<div class="row mtop15p">
+	 <div class="col-sm-7">
+	  <div class="progress" style="height:5px;margin-top:5px;margin-bottom:0px;background-color:#a965b5;">
+	   <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" 
+		style="width:70%;line-height:15px;font-size:10px;font-weight:bold;background-color:#630062;color:#000;">
+	   </div><!--/.progress-bar -->
+      </div><!--/.progress -->
+	 </div><!--/.col-sm-6 -->
+	 <div class="col-sm-5"><b>70% Completed</b></div>
+	</div><!--/.row -->
 	<!-- -->
    </div><!--/.col-sm-12 -->
   </div><!--/.row -->

@@ -55,10 +55,10 @@ body { overflow-x:hidden; }
 var CURRENT_TAB_ID;
 function kvHeaderMenu(id){
  if(id!=='kvHeaderMenu-login'){ CURRENT_TAB_ID=id; }
- var arry=["kvHeaderMenu-customer-myDashboard","kvHeaderMenu-customer-createNewProfile","kvHeaderMenu-admin-mydashboard",
-		   "kvHeaderMenu-Home","kvHeaderMenu-howItWorks",
-"kvHeaderMenu-browseMatrimony","kvHeaderMenu-matchCalculator","kvHeaderMenu-mymatchprofiles","kvHeaderMenu-myfavourites",
-"kvHeaderMenu-mycart","kvHeaderMenu-pricing","kvHeaderMenu-signUp","kvHeaderMenu-login","kvHeaderMenu-logout"];
+ var arry=["kvHeaderMenu-customer-myDashboard","kvHeaderMenu-customer-createNewProfile","kvHeaderMenu-customer-myMatchProfiles",
+		   "kvHeaderMenu-admin-mydashboard", "kvHeaderMenu-Home","kvHeaderMenu-howItWorks",
+		   "kvHeaderMenu-browseMatrimony","kvHeaderMenu-matchCalculator","kvHeaderMenu-mymatchprofiles","kvHeaderMenu-myfavourites",
+		   "kvHeaderMenu-mycart","kvHeaderMenu-pricing","kvHeaderMenu-signUp","kvHeaderMenu-login","kvHeaderMenu-logout"];
  for(var index=0;index<arry.length;index++){
    if(id===arry[index]) { if(!$('#'+arry[index]).hasClass('active')) { $('#'+arry[index]).addClass('active'); } }
    else { if($('#'+arry[index]).hasClass('active')) { $('#'+arry[index]).removeClass('active'); } }
@@ -96,6 +96,11 @@ function kvHeaderMenu(id){
 		<li id="kvHeaderMenu-customer-createNewProfile" onclick="javascript:kvHeaderMenu(this.id);">
 		  <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>customer/create-new-profile">
 			<i class="fa fa-tachometer"></i>&nbsp;<b>Create New Profile</b>
+		  </a>
+		</li>
+		<li id="kvHeaderMenu-customer-myMatchProfiles" onclick="javascript:kvHeaderMenu(this.id);">
+		  <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>customer/my-match-profiles">
+			<i class="fa fa-tachometer"></i>&nbsp;<b>My Match profiles</b>
 		  </a>
 		</li>
 		<?php// } ?>
