@@ -10,7 +10,7 @@ RewriteRule qrcode/([^/]+)$ backend/php/dac/controller.display.qrcode.php?qrCont
 # App
 RewriteRule app/howItWorks app-howItWorks.php [NC,L] 
 RewriteRule app/pricing  app-pricing.php [NC,L]
-RewriteRule app/signup app-signup.php?1=$1 [NC,L]
+RewriteRule app/signup app-signup.php [NC,L]
 RewriteRule app/matchCalculator app-matchCalculator.php [NC,L]
 RewriteRule app/browseMatrimony app-browseMatrimony.php [NC,L]
 RewriteRule app/user/([^/]+)$ app-userprofile.php?1=$1 [NC,L]

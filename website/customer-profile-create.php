@@ -77,8 +77,10 @@ $(document).ready(function(){
   <div class="row">
    <div class="col-sm-12">
     <!-- -->
-	<div><h5><b>SurName FirstName LastName</b></h5></div>
-	<div style="color:#777;">&nbsp;Profile created for you</div>
+	<div class="mtop15p"><h5><b>SurName FirstName LastName</b></h5></div>
+	<div style="color:#777;"><span class="label label-default" style="padding:5px;letter-spacing:0.8px;">Your Profile</span></div>
+	<div class="mtop15p" align="right" style="color:#777;">&nbsp;Profile created on 06 October 2020, 12:30 PM</div>
+	
 	<!-- -->
    </div><!--/.col-sm-12 -->
   </div><!--/.row -->

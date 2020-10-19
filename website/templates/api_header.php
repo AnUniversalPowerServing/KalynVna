@@ -88,6 +88,11 @@ function kvHeaderMenu(id){
 	    <?php// if(isset($_SESSION["ACCOUNT_TYPE"])) { ?>
 		<?php // if($_SESSION["ACCOUNT_TYPE"]=='CUSTOMER') { ?>
 	    <!-- Customer Account -->
+		<li id="kvHeaderMenu-Home" onclick="javascript:kvHeaderMenu(this.id);">
+		  <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>">
+		     <i class="fa fa-home"></i>&nbsp;<b>Home</b>
+		  </a>
+		</li>
 		<li id="kvHeaderMenu-customer-myDashboard" onclick="javascript:kvHeaderMenu(this.id);">
 		  <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>customer/dashboard">
 			<i class="fa fa-tachometer"></i>&nbsp;<b>My Dashboard</b>
@@ -103,22 +108,6 @@ function kvHeaderMenu(id){
 			<i class="fa fa-tachometer"></i>&nbsp;<b>My Match profiles</b>
 		  </a>
 		</li>
-		<?php// } ?>
-        <?php if($_SESSION["ACCOUNT_TYPE"]=='ADMINISTRATOR') { ?>
-		<!-- Administrator Account -->
-		<li id="kvHeaderMenu-admin-mydashboard">
-		  <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>admin/dashboard">
-		      <b><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp;Administrator Dashboard</b>
-		  </a>
-		</li>
-		<?php } ?>
-        <?php//  } else { ?>
-        <li id="kvHeaderMenu-Home" onclick="javascript:kvHeaderMenu(this.id);">
-		  <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>">
-		     <i class="fa fa-home"></i>&nbsp;<b>Home</b>
-		  </a>
-		</li>
-		<?php // } ?>
 		<li id="kvHeaderMenu-browseMatrimony" onclick="javascript:kvHeaderMenu(this.id);">
 		   <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>app/browseMatrimony">
 		      <i class="fa fa-mouse-pointer"></i>&nbsp;<b>Browse Matrimony</b>
@@ -130,6 +119,22 @@ function kvHeaderMenu(id){
 		      <i class="fa fa-search"></i>&nbsp;<b>Match Calculator</b>
 		   </a>
 		</li>
+		<li id="kvHeaderMenu-signUp">
+		   <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>app/signup">
+		      <span class="glyphicon glyphicon-user"></span> <b>SignUp / Login</b>
+		   </a>
+		</li>
+		<?php// } ?>
+        <?php if($_SESSION["ACCOUNT_TYPE"]=='ADMINISTRATOR') { ?>
+		<!-- Administrator Account -->
+		<li id="kvHeaderMenu-admin-mydashboard">
+		  <a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>admin/dashboard">
+		      <b><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp;Administrator Dashboard</b>
+		  </a>
+		</li>
+		<?php } ?>
+        <?php//  } else { ?>
+        
 		<?php if(isset($_SESSION["ACCOUNT_TYPE"])) { ?>
 		<?php if($_SESSION["ACCOUNT_TYPE"]=='CUSTOMER') { ?>
 		<li id="kvHeaderMenu-mymatchprofiles" onclick="javascript:kvHeaderMenu(this.id);">
@@ -157,12 +162,7 @@ function kvHeaderMenu(id){
 		     <i class="fa fa-usd"></i>&nbsp;<b>Pricing</b>
 		   </a>
 		</li> 
-		<li id="kvHeaderMenu-signUp">
-		   <a href="#">
-		   <!--a href="<?php if(isset($_SESSION["PROJECT_URL"])){ echo $_SESSION["PROJECT_URL"]; } ?>app/signup"-->
-		      <span class="glyphicon glyphicon-user"></span> <b>SignUp / Login</b>
-		   </a>
-		</li>
+		
 		<?php } ?>
 		<?php if(isset($_SESSION["ACCOUNT_TYPE"])) { ?>
 		<li id="kvHeaderMenu-logout" onclick="javascript:logoutAuthentication();">

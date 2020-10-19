@@ -1,13 +1,12 @@
 <?php session_start(); 
 include_once 'templates/api_params.php';
-if(!isset($_SESSION["ACCOUNT_TYPE"])){ ?>
+// if(!isset($_SESSION["ACCOUNT_TYPE"])){ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>KalyanaVeena</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <?php include_once 'templates/api_params.php'; ?>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
@@ -21,75 +20,62 @@ if(!isset($_SESSION["ACCOUNT_TYPE"])){ ?>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="<?php echo $_SESSION["PROJECT_URL"]; ?>js/api/brahim-core.js"></script>
   <script src="<?php echo $_SESSION["PROJECT_URL"]; ?>js/api/app-core.js"></script>
-  <script src="<?php echo $_SESSION["PROJECT_URL"]; ?>js/api/bootstrap-switch.js"></script>
-  <script src="<?php echo $_SESSION["PROJECT_URL"]; ?>js/pages/signup.js"></script>
+  <script src="<?php echo $_SESSION["PROJECT_URL"]; ?>js/api/bootstrap-advanced.js"></script>
   <script src="<?php echo $_SESSION["PROJECT_URL"]; ?>js/api/core-skeleton.js"></script>
-  
+  <script src="<?php echo $_SESSION["PROJECT_URL"]; ?>js/common/endpoints.auth.user.js"></script>
+  <script src="<?php echo $_SESSION["PROJECT_URL"]; ?>js/common/session.js"></script>
+  <script src="<?php echo $_SESSION["PROJECT_URL"]; ?>js/common/validations.js"></script>
+  <script src="<?php echo $_SESSION["PROJECT_URL"]; ?>js/auth/user-accounts-reg.js"></script>
+  <script src="<?php echo $_SESSION["PROJECT_URL"]; ?>js/auth/user-accounts-login.js"></script>
+  <script src="<?php echo $_SESSION["PROJECT_URL"]; ?>js/auth/user-accounts-retrieve-withOTP.js"></script>
+  <script src="<?php echo $_SESSION["PROJECT_URL"]; ?>js/auth/user-accounts-retrieve-withSQ.js"></script>
 <style>
+body { background-color:purple;color:#fff; }
+.mtop15p { margin-top:15px; }
+.mtop65p { margin-top:65px; }
+.mbot35p { margin-bottom:35px; }
+/* Page Related CSS ::: Start */
+.step-badges { height:40px;cursor:pointer;margin-top:15px; }
+.step-badges>div>span.badge { font-size:30px;background-color:#fff;color:purple; }
+.step-badges>div>span.badge.active { font-size:30px;background-color:#fff5c4;color:purple; }
 .hide-block { display:none; }
-.mandatoryField { color:red;font-size:16px; }
-/* Phones */
-@media only screen and (max-width:768px) { 
-#signup_header_btns { display:none; }
-}
-/* Tablets */
-@media only screen and (min-width:769px) and (max-width:992px) { 
-#signup_header_btns { display:none; }
-}
-/* Laptops */
-@media only screen and (min-width:993px) and (max-width:1200px) { 
-#signup_header_btns { display:block; }
-}
-/* Large-Screens */
-@media only screen and (min-width:1201px) { 
-#signup_header_btns { display:block; }
-}
-ul.nav-stacked>li.active>a { color:#fff; }
-ul.nav-stacked>li>a { color:#000; }
-ul.nav-stacked>li { background-color:#ccc; }
+/* Page Related CSS ::: End */
 </style>
-<script type="text/javascript">
-
-</script>
 </head>
 <body>
  <?php include_once 'templates/api_header.php'; ?>
  <?php include_once 'templates/api_js.php'; ?>
- <div class="container-fluid">
-   <div class="row">
-	  <div align="center" class="col-sm-12">
-		<h3><b>Sign Up</b></h3>
-		<p>Fill your Details, we provide Information about your Partner that matches your Zodiac Information</p>
-	  </div>
-   </div>
-    <div class="row">
-	  <div class="col-xs-12 col-md-3 col-sm-4 col-lg-3 mtop15p">
-	    <ul class="nav nav-pills nav-stacked">
-		  <li id="signup_menu_mentionprofile" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>1. Mention Profile</b></a></li>
-		  <li id="signup_menu_birthAndCommunityBg" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>2. Birth and Community Background</b></a></li>
-		  <li id="signup_menu_contactInf" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>3. Contact Information</b></a></li>
-		  <li id="signup_menu_familyBackground" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>4. Family Background</b></a></li>
-		  <li id="signup_menu_preferenceOfSpouse" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>5. Preference Of Spouse</b></a></li>
-		  <!--li id="signup_menu_uploadPicture" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>6. Upload Picture</b></a></li-->
-		  <li id="signup_menu_finish" onclick="javascript:sel_signup_menu(this.id);"><a href="#"><b>6. Finish</b></a></li>
-		</ul>
-	  </div>
-	  <div class="col-xs-12 col-md-9 col-sm-8 col-lg-8">
-	    <div id="signup_content_mentionprofile" class="hide-block"><?php include_once 'templates/signup/01_mentionProfile.php'; ?></div>
-		<div id="signup_content_birthAndCommunityBg" class="hide-block"><?php include_once 'templates/signup/02_birthZodiacCommunity.php'; ?></div>
-		<div id="signup_content_contactInf" class="hide-block"><?php include_once 'templates/signup/03_contactInformation.php'; ?></div>
-		<div id="signup_content_familyBackground" class="hide-block"><?php include_once 'templates/signup/04_familyBackground.php'; ?></div>
-		<div id="signup_content_preferenceOfSpouse" class="hide-block"><?php include_once 'templates/signup/05_preferenceOfSpouse.php'; ?></div>
-		<div id="signup_content_finish" class="hide-block"><?php include_once 'templates/signup/06_finish.php'; ?></div>
-	  </div>
-	</div>
- </div>
- 
-		<?php include_once 'templates/signup/02_birthZodiacCommunity.php'; ?>
-		<?php include_once 'templates/signup/03_contactInformation.php'; ?>
-		<?php include_once 'templates/signup/04_familyBackground.php'; ?>
-		<?php include_once 'templates/signup/05_preferenceOfSpouse.php'; ?>
-		<?php include_once 'templates/signup/06_finish.php'; ?></div>
+
+<div class="container-fluid mtop65p">
+<div class="row">
+<div class="col-xs-12 col-md-2 col-sm-12"></div>
+<div class="col-xs-12 col-md-4 col-sm-6">
+ <?php include_once 'templates/auth/user-account-reg.php'; ?>
+</div><!--/.col-xs-12 col-md-4 col-sm-4 -->
+<div class="col-xs-12 col-md-4 col-sm-6">
+ <!-- -->
+ <div align="center"><h4 class="mbot35p"><b>Login to your Account</b></h4></div>
+ <?php include_once 'templates/auth/user-account-login.php'; ?>
+ <?php include_once 'templates/auth/user-account-retreive-withOtp.php'; ?>
+ <?php include_once 'templates/auth/user-account-retreive-withSQ.php'; ?>
+
+ <div id="auth-login-access-userAccountForm" align="right" class="form-group hide-block curpoint"
+   onclick="javascript:showHide_auth_accountAccessForm(this.id);">
+	<b><u>Login to your Account</u></b>
+ </div><!--/.form-group -->
+ <div id="auth-login-access-retrievePwdWithMobileForm" align="right" class="form-group hide-block curpoint"
+   onclick="javascript:showHide_auth_accountAccessForm(this.id);">
+    <b><u>Remember Mobile Number, but Forgot Password?</u></b>
+ </div><!--/.form-group -->
+ <div id="auth-login-access-retrieveAccountWithoutInfoForm" align="right" class="form-group hide-block curpoint"
+   onclick="javascript:showHide_auth_accountAccessForm(this.id);">
+    <b><u>Forgot Password and Mobile Number changed?</u></b>
+ </div><!--/.form-group -->
+ <!-- -->
+</div><!--/.col-xs-12 col-md-4 col-sm-4 -->
+<div class="col-xs-12 col-md-2 col-sm-12"></div>
+</div><!--/.row -->
+</div><!--/.container-fluid -->
 </body>
 </html>
-<?php } else { header("Location: ".$_SESSION["PROJECT_URL"]); } ?>
+<?php // } else { header("Location: ".$_SESSION["PROJECT_URL"]); } ?>
