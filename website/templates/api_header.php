@@ -31,10 +31,10 @@ a.a-custom { text-decoration:none;color:#000; }
 .navbar-purple .navbar-toggle { border-color: #fff; }
 .navbar-purple .navbar-toggle .icon-bar { background-color: #fff; }
 .navbar-brand,.navbar-brand:hover { height:45px;color:#fff; }
-body::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background-color: #F5F5F5; }         
-body::-webkit-scrollbar { width: 6px;background-color: #F5F5F5; }        
-body::-webkit-scrollbar-thumb { background-color: #000000; }
-body { overflow-x:hidden; }
+body::-webkit-scrollbar-track, .scroll::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background-color: #F5F5F5; }         
+body::-webkit-scrollbar, .scroll::-webkit-scrollbar { width: 6px;background-color: #F5F5F5; }        
+body::-webkit-scrollbar-thumb, .scroll::-webkit-scrollbar-thumb { background-color: #000000; }
+body, .scroll { overflow-x:hidden; }
 @font-face { font-family: "kvfont001";src: url("fonts/acratica-font.otf"); }
 @font-face { font-family: "kvfont002";src: url("fonts/boogaloo-regular.otf"); }
 .slidecontainer { width: 100%; }

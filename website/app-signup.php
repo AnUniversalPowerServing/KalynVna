@@ -41,6 +41,11 @@ body { background-color:purple;color:#fff; }
 .hide-block { display:none; }
 /* Page Related CSS ::: End */
 </style>
+<script type="text/javascript">
+$(document).ready(function(){
+ kvHeaderMenu('kvHeaderMenu-signUp');
+});
+</script>
 </head>
 <body>
  <?php include_once 'templates/api_header.php'; ?>

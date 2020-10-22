@@ -69,13 +69,21 @@ $(document).ready(function(){
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header" style="background-color:#630062;color:#fff;">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <button type="button" class="close" data-dismiss="modal" style="color:#fff;">&times;</button>
         <h4 class="modal-title"><b>Choose your Profiles to Filter by Match Making Horoscope</b></h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body scroll" style="background-color:#fafafa;max-height:300px;overflow-y:scroll;">
         <!-- -->
 		<div class="container-fluid">
-		 <div class="row">
+		 <div align="right" class="row">
+		   <div class="col-sm-12">
+		    <div class="btn-group">
+			  <button class="btn btn-primary"><b>Select All Profiles</b></button>
+			  <button class="btn btn-default"><b>DeSelect All Profiles</b></button>
+			</div><!--/.button-group -->
+		   </div><!--/.col-sm-12 -->
+		 </div>
+		 <div class="row mtop15p">
 		   <div class="col-sm-6">
 		   <!-- -->
 		    <div class="list-group">
@@ -83,7 +91,7 @@ $(document).ready(function(){
 			 <!-- -->
 			  <div class="container-fluid mbot15p">
 				<div class="row">
-				  <div class="col-sm-2"><input type="checkbox" style="width:25px;height:25px;margin-top:15px;"/></div>
+				  <div class="col-sm-2"><input type="checkbox" style="width:25px;height:25px;margin-top:15px;" checked/></div>
 				  <div class="col-sm-10">
 				  <!-- -->
 					<div><h5 style="line-height:22px;"><b>SurName FirstName LastName</b></h5></div>
@@ -104,7 +112,7 @@ $(document).ready(function(){
 			  <!-- -->
 			  <div class="container-fluid mbot15p">
 				<div class="row">
-				  <div class="col-sm-2"><input type="checkbox" style="width:25px;height:25px;margin-top:15px;"/></div>
+				  <div class="col-sm-2"><input type="checkbox" style="width:25px;height:25px;margin-top:15px;" checked/></div>
 				  <div class="col-sm-10">
 				  <!-- -->
 					<div><h5 style="line-height:22px;"><b>SurName FirstName LastName</b></h5></div>
@@ -119,6 +127,7 @@ $(document).ready(function(){
 		   <!-- -->
 		   </div><!--/.col-sm-6 -->
 		 </div><!--/.row -->
+		 
 		 <div class="row">
 		  <div align="center" class="col-sm-12">
 		   <button class="btn btn-default"><b>Search Matches</b></button>

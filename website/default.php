@@ -1,7 +1,7 @@
 <?php 
 session_start(); 
 include_once 'templates/api_params.php';
-if(!isset($_SESSION["ACCOUNT_TYPE"])){ ?>
+// if(!isset($_SESSION["ACCOUNT_TYPE"])){ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -196,22 +196,47 @@ body { background-color:#fafafa; }
 	   </div>
 	</div>
   </div>
-  <div class="row">
-    <div align="center" style="padding:6px;"><h3><b>This Trusted Platform is Simple, Fast and Secure</b></h3></div>
+  <div align="center" class="row">
+    <div style="padding:6px;"><h3 style="line-height:38px;"><b>This Trusted Platform is Simple, Fast and Secure</b><br/>
+	<b>World's First Highly Secure and Safe Matrimony Search Engine Platform Features</b></h3></div>
   </div>
   <div class="row">
-   <div class="col-sm-7" style="padding-left:15px;">
-	 <div class="row">
-	   <div class="col-sm-12">
-	     <div><h4 style="padding:10px;">
-		 	  <b>World's First Highly Secure and Safe Matrimony Search Engine Platform</b></h4>
-		 </div>
-
-	   </div><!--/.col-sm-6 -->
-	    
-		
-	  </div><!--/.row -->
-	 <div></div>
+   <div class="col-sm-6" style="padding-left:15px;">
+	  <div class="list-group">
+		  <div class="list-group-item">
+		    <div><h4 style="color:green;"><b>Your Profile Pictures and Photos - <i class="fa fa-check-circle"></i> Stays Confidential</b></h4></div>
+			<div align="justify" style="font-size:14px;">When you keep your Profile Pictures and Photos on Internet at Other Matrimonial Sites, 
+			there will be a chance of misusing them by Cyber Attackers - Preventing them and Keeping your data secure is our Primary Duty. </div>
+		  </div><!--/.list-group-item -->
+		 </div><!--/.list-group -->
+	
+	  <div class="list-group">
+		  <div class="list-group-item">
+		    <div><h4 style="color:green;"><b>Registration and Profiles Access - <i class="fa fa-check-circle"></i> 90% Free</b></h4></div>
+			<div align="justify" style="font-size:14px;">
+			
+			</div>
+		  </div><!--/.list-group-item -->
+		 </div><!--/.list-group -->
+		 
+	   <div class="list-group">
+		  <div class="list-group-item">
+		    <div><h4 style="color:green;"><b>Finding Suitable Partner - <i class="fa fa-check-circle"></i> 100% Match Making within 24 Weeks</b></h4></div>
+			<div align="justify" style="font-size:14px;">
+			
+			</div>
+		  </div><!--/.list-group-item -->
+		 </div><!--/.list-group -->
+		 
+		<div class="list-group">
+		  <div class="list-group-item">
+		    <div><h4 style="color:green;"><b>Select your Partner - <i class="fa fa-check-circle"></i> Our Representative gohead with MatchTalks</b></h4></div>
+			<div align="justify" style="font-size:14px;">
+			
+			</div>
+		  </div><!--/.list-group-item -->
+		 </div><!--/.list-group -->
+		 
    </div><!--/.col-sm-7 -->
   </div><!--/.row -->
   <div class="row"  style="background-color:#ff9800;">
@@ -242,8 +267,8 @@ body { background-color:#fafafa; }
 <?php include_once 'templates/api_bottom.php'; ?>
 </body>
 </html>
-<?php } else {  
-       if($_SESSION["ACCOUNT_TYPE"]=='CUSTOMER'){  header("Location: ".$_SESSION["PROJECT_URL"].'customer/dashboard'); }
-  else if($_SESSION["ACCOUNT_TYPE"]=='ADMINISTRATOR'){ header("Location: ".$_SESSION["PROJECT_URL"].'admin/dashboard');  }
-}
+<?php//  } else {  
+     //  if($_SESSION["ACCOUNT_TYPE"]=='CUSTOMER'){  header("Location: ".$_SESSION["PROJECT_URL"].'customer/dashboard'); }
+  // else if($_SESSION["ACCOUNT_TYPE"]=='ADMINISTRATOR'){ header("Location: ".$_SESSION["PROJECT_URL"].'admin/dashboard');  }
+ // }
 ?>
