@@ -8,7 +8,7 @@ class ViewProfiles {
  unPublishedProfile(response){
   return('<div class="list-group" style="cursor:pointer;">'
   
-		+'<div class="list-group-item pad0">'
+		+'<div class="list-group-item pad0" style="background-color:#fff8f8;border:1px solid #f44336;">'
 		
 		+'<div style="margin-top:4px;">'
 		+'<span style="text-transform:uppercase;letter-spacing:0.5px;font-weight:bold;background-color:#f44336;;padding:5px;color:#fff;font-size:10px;">'
@@ -24,7 +24,7 @@ class ViewProfiles {
 		
 		+'<div align="right" class="mtop15p">'
 		+'<div style="color:#777;">&nbsp;Profile created on 06 October 2020, 12:30 PM</div>'
-		+'<div style="color:#777;">&nbsp;Profile deactivates on 06 October 2020, 12:30 PM</div>'
+		+'<div style="color:#777;">&nbsp;Waiting to publish ...</div>'
 		+'</div>'
 		
 		+'</div>'
@@ -33,18 +33,18 @@ class ViewProfiles {
 		
 		+'</div>'
 		
-		+'<div class="list-group-item pad0">'
+		+'<div class="list-group-item pad0" style="background-color:#ffebe9;border:1px solid #f44336;">'
 		
-		+'<div class="container-fluid mbot15p">'
+		+'<div class="container-fluid mbot10p">'
 		+'<div class="row">'
 		+'<div class="col-sm-12">'
 		
-		+'<div class="row mtop15p">'
+		+'<div class="row mtop10p">'
 		+'<div class="col-sm-7">'
 		
-		+'<div class="progress" style="height:5px;margin-top:5px;margin-bottom:0px;background-color:#a965b5;">'
+		+'<div class="progress" style="height:5px;margin-top:5px;margin-bottom:0px;background-color:#ccc;">'
 		+'<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"'
-		+'style="width:70%;line-height:15px;font-size:10px;font-weight:bold;background-color:#630062;color:#000;">'
+		+'style="width:70%;line-height:15px;font-size:10px;font-weight:bold;background-color:#777;color:#000;">'
 		
 		+'</div>'
 		+'</div>'
@@ -65,7 +65,7 @@ class ViewProfiles {
  publishedProfile(response){
   return('<div class="list-group" style="cursor:pointer;">'
   
-		+'<div class="list-group-item pad0">'
+		+'<div class="list-group-item pad0" style="background-color:#f4fff4;border:1px solid #009688;">'
 		
 		+'<div style="margin-top:4px;">'
 		+'<span style="text-transform:uppercase;letter-spacing:0.5px;font-weight:bold;background-color:#21a726;padding:5px;color:#fff;font-size:10px;">'
@@ -76,11 +76,11 @@ class ViewProfiles {
 		+'<div class="row">'
 		+'<div class="col-sm-12">'
 		
-		+'<div><h5><b>SurName FirstName LastName</b></h5></div>'
+		+'<div><h5 style="color:#000;"><b>SurName FirstName LastName</b></h5></div>'
 		+'<div style="color:#777;"><span style="padding:5px;letter-spacing:0.5px;"><i>Your Profile</i></span></div>'
 		
 		+'<div align="right" class="mtop15p">'
-		+'<div style="color:#777;">&nbsp;Profile created on 06 October 2020, 12:30 PM</div>'
+		+'<div style="color:#777;">&nbsp;Profile published on 06 October 2020, 12:30 PM</div>'
 		+'<div style="color:#777;">&nbsp;Profile deactivates on 06 October 2020, 12:30 PM</div>'
 		+'</div>'
 		
@@ -88,22 +88,22 @@ class ViewProfiles {
 		+'</div>'
 		+'</div>'
 		+'</div>'
-		+'<div class="list-group-item pad0">'
+		+'<div class="list-group-item pad0" style="background-color:#d6ffd7;border:1px solid #009688;">'
 		
-		+'<div class="container-fluid mtop5p mbot10p">'
+		+'<div class="container-fluid mtop5p mbot8p">'
 		+'<div class="row">'
-		+'<div class="col-sm-2">'
-		+'<i class="fa fa-2x fa-thumbs-up" aria-hidden="true"></i>'
+		+'<div align="center" class="col-sm-2">'
+		+'<i class="fa fa-2x fa-thumbs-up" style="color:#777;" aria-hidden="true"></i>'
 		+'</div>'
-		+'<div class="col-sm-2"><span style="font-size:18px;">0</span></div>'
-		+'<div class="col-sm-2">'
-		+'<i class="fa fa-2x fa-balance-scale" aria-hidden="true"></i>'
+		+'<div align="center" class="col-sm-2"><span style="color:#777;font-size:18px;">0</span></div>'
+		+'<div align="center" class="col-sm-2">'
+		+'<i class="fa fa-2x fa-balance-scale" style="color:#777;" aria-hidden="true"></i>'
 		+'</div>'
-		+'<div class="col-sm-2"><span style="font-size:18px;">0</span></div>'
-		+'<div class="col-sm-2">'
-		+'<i class="fa fa-2x fa-area-chart" aria-hidden="true"></i>'
+		+'<div align="center" class="col-sm-2"><span style="color:#777;font-size:18px;">0</span></div>'
+		+'<div align="center" class="col-sm-2">'
+		+'<i class="fa fa-2x fa-area-chart" style="color:#777;" aria-hidden="true"></i>'
 		+'</div>'
-		+'<div class="col-sm-2"><span style="font-size:18px;">0</span></div>'
+		+'<div align="center" class="col-sm-2"><span style="color:#777;font-size:18px;">0</span></div>'
 		+'</div>'
 		+'</div>'
 		
@@ -269,7 +269,6 @@ class ViewProfiles {
 	  content+='</div>';	
   return content;
  }
- 
 }
 
 class Dashboard {
@@ -280,14 +279,16 @@ class Dashboard {
 		   '</div>'+
 		   '<div class="row mtop15p">'+
 		   '<div class="col-md-3 col-xs-12">'+dashboard.menu()+'</div>'+
-		   '<div class="col-md-9 col-xs-12">'+dashboard.content()+'</div>'+
+		   '<div class="col-md-9 col-xs-12">'+
+		   '<div id="">'+dashboard.summaryContent()+'</div>'+
+		   '</div>'+
 		   '</div>'+
 		   '</div>');
  }
  menu(){
    return ('<style>'+
-		   '.nav-pills>li>a { background-color:#eee;color:#000; }'+
-		   '.nav-pills>li>a:hover { background-color:#a97dce;color:#fff;font-weight:bold; }'+
+		   '.nav-pills>li>a { border:1px solid #630062;color:#630062;background-color:#fff; }'+
+		   '.nav-pills>li>a:hover { background-color:#e91e63;border:1px solid #e91e63;color:#fff;font-weight:bold; }'+
 		   '</style>'+
 		   '<ul class="nav nav-pills nav-stacked">'+
 		   '<li class="active"><a href="#"><b>Summary</b></a></li>'+
@@ -296,8 +297,7 @@ class Dashboard {
 		   '<li><a href="#"><b>People watched you</b></a></li>'+
 		   '</ul>'); 
  }
- 
- content(){
+ summaryContent(){
    return ('<div>'+
 		   '<div class="row">'+
 		   '<div class="col-md-3 col-xs-12">'+dashboard.summary_display_creditBal()+'</div>'+
@@ -313,17 +313,16 @@ class Dashboard {
 		   '</div>'+
 		   '</div>');
  }
- 
  summary_display_creditBal(){
    return ('<div>'+
 		   '<div class="list-group">'+
-		   '<div class="list-group-item">'+
+		   '<div class="list-group-item" style="background-color:#f6fbc4;border:1px solid #bbce05;">'+
 		   '<div>'+'<b>Your Balance</b>'+'</div>'+
 		   '<div align="right">'+'<h4><b>1000 <span class="fs12">bucks</span></b></h4>'+'</div>'+
 		   '</div>'+
 		   '</div>'+
 		   '<div class="list-group">'+
-		   '<div class="list-group-item">'+
+		   '<div class="list-group-item" style="background-color:#ffebaf;border:1px solid #ff9800;">'+
 		   '<div>'+'<b>You can view complete details of profile you interested. But, to get Contact Details of it - You need Bucks</b>'+'</div>'+
 		   '<div align="right"><button class="btn btn-default btn-xs"><b>Buy Bucks Now</b></button></div>'+
 		   '</div>'+
@@ -331,7 +330,6 @@ class Dashboard {
 		   '</div>'
 		   ); 
  }
- 
  summary_display_horoscopeMatches(){
    return ('<div class="list-group">'+
 		   '<div class="list-group-item">'+
@@ -340,11 +338,10 @@ class Dashboard {
 		   '</div>'+
 		   '</div>'); 
  }
- 
  summary_display_statistics_today(){
    return ('<div class="list-group">'+
-		   '<div class="list-group-item">'+'<b>Your Today\'s Statistics</b>'+'</div>'+
-		   '<div class="list-group-item pad0">'+
+		   '<div class="list-group-item" style="background-color:#ebceef;border:1px solid #673ab7;">'+'<b>Your Today\'s Statistics</b>'+'</div>'+
+		   '<div class="list-group-item pad0" style="background-color:#f8e6fb;border:1px solid #673ab7;">'+
 		   '<div>'+
 		   '<table class="table mbot0">'+
 		   '<tbody>'+
@@ -374,11 +371,11 @@ class Dashboard {
 		   '</div>'+
 		   '</div>');  
  }
- 
  summary_display_statistics_overall(){
    return ('<div class="list-group">'+
-		   '<div class="list-group-item">'+'<b>Overall Statistics</b>'+'</div>'+
-		   '<div class="list-group-item pad0">'+
+		   '<div class="list-group-item" style="background-color:#b4e5fb;border: 1px solid #2196F3;">'+'<b>Overall Statistics</b>'+'</div>'+
+		   '<div class="list-group-item pad0" style="border: 1px solid #2196F3;background-color:#edf6fb;">'+
+    
 		   '<div>'+
 		   '<table class="table mbot0">'+
 		   '<tbody>'+
@@ -410,7 +407,6 @@ class Dashboard {
 		   '</div>');  
  } 
 }
-
 
 var commons = new Commons();
 var viewProfiles = new ViewProfiles();

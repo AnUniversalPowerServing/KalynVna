@@ -16,6 +16,7 @@ include_once 'templates/api_params.php';
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="<?php echo $_SESSION["PROJECT_URL"];?>js/api/load-data-on-scroll.js"></script>
+  <script src="<?php echo $_SESSION["PROJECT_URL"];?>js/api/screen-display.js"></script>
   <?php include_once 'templates/api_js.php'; ?>
 <style>
 body { background-color:#fafafa; }
@@ -23,6 +24,9 @@ body { background-color:#fafafa; }
 <script type="text/javascript">
 $(document).ready(function(){
  kvHeaderMenu('kvHeaderMenu-customer-createNewProfile');
+ var content = viewProfiles.publishedProfile('');
+	 content+=viewProfiles.unPublishedProfile('');
+ document.getElementById("userOtherprofiles").innerHTML = content;
 });
 </script>
 </head>
@@ -65,54 +69,8 @@ $(document).ready(function(){
 <div class="col-sm-3">
  <div><h5 style="border-bottom:2px solid #000;padding-bottom:10px;"><b>Your Other Profiles</b></h5></div>
  <!-- -->
-<div class="list-group" style="cursor:pointer;">
-<div class="list-group-item pad0">
-
- <div style="margin-top:4px;">
-   <span style="text-transform:uppercase;letter-spacing:0.5px;font-weight:bold;background-color:#630062;padding:5px;color:#fff;font-size:10px;">
-   Not Published</span>
- </div>
- 
- <div class="container-fluid mbot15p">
-  <div class="row">
-   <div class="col-sm-12">
-    <!-- -->
-	<div class="mtop15p"><h5><b>SurName FirstName LastName</b></h5></div>
-	<div style="color:#777;"><span class="label label-default" style="padding:5px;letter-spacing:0.8px;">Your Profile</span></div>
-	<div class="mtop15p" align="right" style="color:#777;">&nbsp;Profile created on 06 October 2020, 12:30 PM</div>
-	
-	<!-- -->
-   </div><!--/.col-sm-12 -->
-  </div><!--/.row -->
- </div><!--/.container-fluid -->
-	
- 
-</div><!--/.list-group-item -->
-<div class="list-group-item pad0">
+ <div id="userOtherprofiles"></div>
  <!-- -->
- <div class="container-fluid mbot15p">
-  <div class="row">
-   <div class="col-sm-12">
-    <!-- -->
-	<div class="row mtop15p">
-	 <div class="col-sm-7">
-	  <div class="progress" style="height:5px;margin-top:5px;margin-bottom:0px;background-color:#a965b5;">
-	   <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" 
-		style="width:70%;line-height:15px;font-size:10px;font-weight:bold;background-color:#630062;color:#000;">
-	   </div><!--/.progress-bar -->
-      </div><!--/.progress -->
-	 </div><!--/.col-sm-6 -->
-	 <div class="col-sm-5"><b>70% Completed</b></div>
-	</div><!--/.row -->
-	<!-- -->
-   </div><!--/.col-sm-12 -->
-  </div><!--/.row -->
- </div><!--/.container-fluid -->
- <!-- --> 
-
-</div><!--/.list-group-item -->
-</div><!--/.list-group -->
-<!-- -->
 </div><!--/.col-sm-3 -->
 </div><!--/.row -->
 </div><!--/.container-fluid -->
