@@ -2,10 +2,10 @@
 class CustomerSearch {
  function query_count_browseprofile($gender,$motherTongue,$status,$occupationType,$age){
    $query="SELECT count(*) ";
-   $query.="FROM profile_brahmin_account, profile_brahmin_birth, profile_brahmin_contact, profile_brahmin_family, profile_brahmin_preferences ";
+   $query.="FROM profile_brahmin_account, profile_brahmin_birth, profile_brahmin_contact, profile_brahmin_family, profile_brahmin_preferences, profile_brahmin_gallery ";
    $query.="WHERE (profile_brahmin_account.account_Id=profile_brahmin_birth.account_Id AND ";
-   $query.="profile_brahmin_birth.account_Id=profile_brahmin_contact.account_Id AND profile_brahmin_contact.account_Id=profile_brahmin_family.account_Id ";
-   $query.="AND profile_brahmin_family.account_Id=profile_brahmin_preferences.account_Id) ";
+   $query.="profile_brahmin_account.account_Id=profile_brahmin_contact.account_Id AND profile_brahmin_account.account_Id=profile_brahmin_family.account_Id ";
+   $query.="AND profile_brahmin_account.account_Id=profile_brahmin_preferences.account_Id AND profile_brahmin_account.account_Id = profile_brahmin_gallery.account_Id) ";
    if(count($status)>0){  
       $query.="AND (";
 	  for($index=0;$index<count($status);$index++){
@@ -52,7 +52,7 @@ class CustomerSearch {
  }
  function query_data_browseprofile($mob_code,$mobile,$accountType,$gender,$motherTongue,$status,$occupationType,$age,
   $limit_start,$limit_end){
-   $query="SELECT profile_brahmin_account.account_Id, profile_brahmin_account.profile_pic, ";
+   $query="SELECT profile_brahmin_account.account_Id, profile_brahmin_gallery.logo, ";
    $query.="profile_brahmin_account.name, profile_brahmin_account.gender, profile_brahmin_account.motherTongue, ";
    $query.="profile_brahmin_account.status, profile_brahmin_account.ft_hgt, profile_brahmin_account.inch_hgt, profile_brahmin_account.highDegree, ";
    $query.="profile_brahmin_account.occupation, profile_brahmin_account.occupationType, profile_brahmin_account.living_status, ";
@@ -62,10 +62,10 @@ class CustomerSearch {
    }
    $query.="profile_brahmin_preferences.exp_highDegree, profile_brahmin_preferences.exp_occupation, profile_brahmin_preferences.exp_occupationType, ";
    $query.="profile_brahmin_preferences.exp_motherTongue, profile_brahmin_preferences.exp_living_status ";
-   $query.="FROM profile_brahmin_account, profile_brahmin_birth, profile_brahmin_contact, profile_brahmin_family, profile_brahmin_preferences ";
+   $query.="FROM profile_brahmin_account, profile_brahmin_birth, profile_brahmin_contact, profile_brahmin_family, profile_brahmin_preferences, profile_brahmin_gallery ";
    $query.="WHERE (profile_brahmin_account.account_Id=profile_brahmin_birth.account_Id AND ";
-   $query.="profile_brahmin_birth.account_Id=profile_brahmin_contact.account_Id AND profile_brahmin_contact.account_Id=profile_brahmin_family.account_Id ";
-   $query.="AND profile_brahmin_family.account_Id=profile_brahmin_preferences.account_Id) ";
+   $query.="profile_brahmin_account.account_Id=profile_brahmin_contact.account_Id AND profile_brahmin_account.account_Id=profile_brahmin_family.account_Id ";
+   $query.="AND profile_brahmin_account.account_Id=profile_brahmin_preferences.account_Id AND profile_brahmin_account.account_Id=profile_brahmin_gallery.account_Id) ";
    if(count($status)>0){  
       $query.="AND (";
 	  for($index=0;$index<count($status);$index++){

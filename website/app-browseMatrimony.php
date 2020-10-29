@@ -13,6 +13,7 @@ include_once 'templates/api_params.php';
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="<?php echo $_SESSION["PROJECT_URL"];?>js/api/load-data-on-scroll.js"></script>
+  <script src="<?php echo $_SESSION["PROJECT_URL"];?>js/api/screen-display.js"></script>
   <?php include_once 'templates/api_js.php'; ?>
 <style>
 body { background-color:#fafafa; }
@@ -153,153 +154,11 @@ response=JSON.parse(response);
 var content = '';
 var row_separator=0;
 for(var index=0;index<response.length;index++){
-    var account_Id = response[index].account_Id;
-    var name = response[index].name;
-	var profile_pic = response[index].profile_pic;
-    var gender = response[index].gender;
-    var motherTongue = response[index].motherTongue;
-    var status = response[index].status;
-	var favourites = response[index].favourites;
-    var ft_hgt = response[index].ft_hgt;
-    var inch_hgt = response[index].inch_hgt;
-    var highDegree = response[index].highDegree;
-    var occupation = response[index].occupation;
-    var occupationType = response[index].occupationType;
-	var living_status = response[index].living_status;
-    var exp_highDegree = response[index].exp_highDegree;
-    var exp_occupation = response[index].exp_occupation;
-    var exp_occupationType = response[index].exp_occupationType;
-    var exp_motherTongue = response[index].exp_motherTongue;
-	var exp_living_status = response[index].exp_living_status;
 	console.log("row_separator: "+row_separator);
 	if(row_separator===0){
 	 content+='<div class="row mtop15p">';
 	}
-     content+='<div class="col-sm-4">';
-     content+='<div id="viewprofile'+account_Id+'" class="list-group">';
-	 content+='<div class="list-group-item pad0">';
-	 content+='<div class="container-fluid">';
-	 // If Admin 
-	 if(ACCOUNT_TYPE.length>0 && ACCOUNT_TYPE==='ADMINISTRATOR'){
-	 content+='<div class="row">';
-	 content+='<div align="right" class="col-sm-12" style="color:#aaa;">';
-	 content+='<i class="fa fa-edit" aria-hidden="true" ';
-	 content+='onclick="javascript:urlTransfer(\''+PROJECT_URL+'customer/editprofile/'+account_Id+'\')"></i></a>&nbsp;';
-	 content+='<i class="fa fa-close" aria-hidden="true" onclick="javascript:deleteAprofile(\''+account_Id+'\');"></i>';
-	 content+='</div>';
-	 content+='</div>';
-	 } 
-	 else if(ACCOUNT_TYPE.length>0 && ACCOUNT_TYPE==='CUSTOMER'){
-	 content+='<div class="row">';
-	 content+='<div align="right" class="col-sm-12" style="color:#aaa;">';
-	 if(favourites==undefined || favourites==='NO'){
-	 content+='<i id="browseMatrimony-fav-'+account_Id+'" class="fa fa-star-o" aria-hidden="true" ';
-	 content+='onclick="javascript:userBrowseMatrimonyFav(\''+account_Id+'\');"></i>&nbsp;';
-	 }
-	 else {
-	 content+='<i id="browseMatrimony-fav-'+account_Id+'" class="fa fa-star" aria-hidden="true" ';
-	 content+='style="color:#ff9800;" onclick="javascript:userBrowseMatrimonyFav(\''+account_Id+'\');"></i>&nbsp;';
-	 }
-	 content+='</div>';
-	 content+='</div>';
-	 }
-	 // If Admin 
-	 content+='<div class="row">';
-	 content+='<div align="center" class="col-sm-6">';
-	 content+='<img src="'+profile_pic+'" class="profile_pic_img mtop45p"/>';
-	 content+='</div>';
-	 content+='<div  align="center" class="col-sm-6 pad0">';
-	 
-	 content+='<div class="list-group mbot10p">';
-	 content+='<div class="list-group-item bg-purple-dark" style="border:0px;padding:5px;border-top-left-radius:0px;"><b>SCAN AND VIEW</b></div>';
-	 content+='<div class="list-group-item pad0" style="border:0px;background-color:#f8dbfd;border-top-left-radius:0px;border-bottom-right-radius:0px;">';
-	 
-	 content+='<div style="padding:5px;"><b>User Media Gallery at</b></div>';
-	 content+='<img src="qrcode/'+account_Id+'" style="margin-top:-2px;"/>';
-	 content+='<div style="padding:5px;"><b>Kalyanaveena.com <br/>MOBILE APP</b></div>';
-	 content+='</div>';
-	 
-	 content+='</div>';
-	 content+='</div>';
-	 
-	 content+='</div>';
-	 content+='</div>';
-	 
-	 content+='</div>';
-	 content+='<div align="center" class="list-group-item">';
-	 content+='<b>'+name.toUpperCase()+'</b>'; 
-	 content+='</div>';
-	 content+='<div class="list-group-item pad0">';
-	 content+='<div class="container-fluid mtop15p">';
-	 content+='<div class="row">';
-	 content+='<div align="center" class="col-sm-12">';
-	 content+='<div class="table-responsive">';
-	 content+='<table class="table">';
-	 content+='<thead style="background-color:#e7e7e7;">';
-	 content+='<tr>';
-	 content+='<th>General</th>';
-	 content+='<th>Details</th>';
-	 content+='</tr>';
-	 content+='</thead>';
-	 content+='<tbody>';
-	 content+='<tr><td><b>Gender</b></td><td>'+gender+'</td></tr>';
-	 content+='<tr><td><b>Mother Tongue</b></td><td>'+motherTongue+'</td></tr>';
-	 content+='<tr><td><b>Status</b></td><td>'+status+'</td></tr>';
-	 content+='<tr><td><b>Highest Degree</b></td><td>'+highDegree+'</td></tr>';
-	 content+='<tr><td><b>Occupation</b></td><td>'+occupation+'</td></tr>';
-	 content+='<tr><td><b>Occupation Type</b></td><td>'+occupationType+'</td></tr>';
-	 content+='<tr><td><b>Living Status</b></td><td>'+living_status+'</td></tr>';
-	 content+='</tbody>';
-	 content+='</table>';
-	 content+='</div>';
-     content+='</div>';
-	 content+='</div>';
-	 content+='</div>';
-	 content+='</div>';
-	 content+='<div align="center" class="list-group-item pad0" style="background-color:#e7e7e7;">';
-	 content+='<h5><b>';
-	 if(gender==='Male'){
-	 content+='HE';
-	 } else {
-	 content+='SHE';
-	 }
-	 content+=' IS LOOKING FOR</b></h5>';
-	 content+='</div>';
-	 content+='<div align="center" class="list-group-item pad0">';
-	 content+='<div class="container-fluid mtop15p">';
-	 content+='<div class="row">';
-	 content+='<div align="center" class="col-sm-12">';
-	 content+='<div class="table-responsive">';        
-	 content+='<table class="table">';
-	 content+='<thead style="background-color:#e7e7e7;">';
-	 content+='<tr><th>General</th><th>Details</th></tr>';
-	 content+='</thead>';
-	 content+='<tbody>';
-	 content+='<tr><td><b>Mother Tongue</b></td><td>'+exp_motherTongue+'</td></tr>';
-	 content+='<tr><td><b>Highest Degree</b></td><td>'+exp_highDegree+'</td></tr>';
-	 content+='<tr><td><b>Occupation</b></td><td>'+exp_occupation+'</td></tr>';
-	 content+='<tr><td><b>Occupation Type</b></td><td>'+exp_occupationType+'</td></tr>';
-	 content+='<tr><td><b>Living Status</b></td><td>'+exp_living_status+'</td></tr>';
-	 content+='</tbody>';
-	 content+='</table>';
-	 content+='</div>';
-     content+='</div>';
-	 content+='</div>';
-	 content+='</div>';
-	 content+='</div>';
-	 content+='<div align="center" class="list-group-item pad0">';
-	 content+='<div class="container-fluid pad0">';
-	 content+='<div class="row">';
-	 content+='<div class="col-sm-12">';
-	 content+='<a href="'+PROJECT_URL+'app/user/'+account_Id+'">';
-	 content+='<button class="btn btn-primary form-control"><b>View Profile</b></button>';
-	 content+='</a>';
-	 content+='</div>';
-	 content+='</div>';
-	 content+='</div>';
-	 content+='</div>';
-	 content+='</div>';
-	 content+='</div>';	
+     content+=viewProfiles.simpleProfile(response[index]);
 	 if(row_separator===2){
 	 content+='</div>';
 	 row_separator=0;

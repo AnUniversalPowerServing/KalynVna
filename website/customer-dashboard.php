@@ -16,10 +16,16 @@ include_once 'templates/api_params.php';
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="<?php echo $_SESSION["PROJECT_URL"];?>js/api/load-data-on-scroll.js"></script>
+  <script src="<?php echo $_SESSION["PROJECT_URL"];?>js/api/screen-display.js"></script>
   <?php include_once 'templates/api_js.php'; ?>
+<style>
+body { background-color: #fafafa; }
+</style>
 <script type="text/javascript">
 $(document).ready(function(){
  kvHeaderMenu('kvHeaderMenu-customer-myDashboard');
+ document.getElementById("dashboard").innerHTML = dashboard.display();
+ 
  var phoneNumber = '<?php if(isset($_SESSION["CUSTOMERACCOUNT_MOBILE"])) { echo $_SESSION["CUSTOMERACCOUNT_MOBILE"]; } ?>';
  js_ajax('GET',PROJECT_URL+'backend/php/dac/controller.module.app.authentication.php',
  { action: 'SIGNIN_DATA_AUTHENTICATION', phoneNumber: phoneNumber },function(response){
@@ -61,47 +67,8 @@ $(document).ready(function(){
 <body>
 
 <?php include_once 'templates/api_header.php'; ?>
-<div class="container-fluid mtop15p">
- <!-- row#1 -->
- <div class="row">
-  <div class="col-md-6 col-xs-12">
-  <!-- -->
-  <div class="col-md-6 col-xs-12">
-    <div class="list-group">
-	  <div align="center" class="list-group-item" style="background-color:#e91e63;color:#fff;"><b>Your Profiles</b></div>
-	  <div align="center" class="list-group-item">
-	   <h4><b><?php if(isset($_SESSION["CUSTOMERACCOUNT_PROFILES"])){ echo $_SESSION["CUSTOMERACCOUNT_PROFILES"]; } ?></b></h4>
-	  </div>
-	</div>
-  </div>
-  <!-- -->
-  <div class="col-md-6 col-xs-12">
-    <div class="list-group">
-	  <div align="center" class="list-group-item" style="background-color:#e91e63;color:#fff;"><b>Your Credits</b></div>
-	  <div align="center" class="list-group-item">
-	   <h4><b><?php if(isset($_SESSION["CUSTOMERACCOUNT_BALANCE"])){ echo $_SESSION["CUSTOMERACCOUNT_BALANCE"]; } ?></b></h4>
-	  </div>
-	</div>
-  </div>
-  <!-- -->
-  <div class="col-md-6 col-xs-12">
-   <button class="btn btn-primary form-control"><b>Buy Credits</b></button>
-  </div>
-  </div>
-  <div class="col-md-6 col-xs-12">
-    <div><h5><b>My Profiles</b></h5><hr/></div>
-	<div id="customer-dashboard-table">
-	
-	</div>
-  </div>
-  <!-- -->
-   
- </div>
- <!-- row#2 -->
- <div class="row">
-   
- </div>
-</div>
+<div id="dashboard"></div>
+
 </body>
 </html>
 <?php // } else { header("Location:".$_SESSION["PROJECT_URL"]); } ?>
