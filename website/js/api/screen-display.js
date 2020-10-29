@@ -15,11 +15,11 @@ class ViewProfiles {
 		+'Not Published</span>'
 		+'</div>'
 		
-		+'<div class="container-fluid mbot15p">'
+		+'<div class="container-fluid mtop10p mbot15p">'
 		+'<div class="row">'
 		+'<div class="col-sm-12">'
 		
-		+'<div><h5><b>SurName FirstName LastName</b></h5></div>'
+		+'<div><h5 style="font-weight:700;font-size:1.20rem;letter-spacing:0.8px;">SurName FirstName LastName</h5></div>'
 		+'<div style="color:#777;"><span style="padding:5px;letter-spacing:0.5px;"><i>Your Profile</i></span></div>'
 		
 		+'<div align="right" class="mtop15p">'
@@ -31,33 +31,34 @@ class ViewProfiles {
 		+'</div>'
 		+'</div>'
 		
-		+'</div>'
+		// +'<div><hr style="margin-top:5px;margin-bottom:5px;border:1px solid #ccc;"/></div>'
+		// +'</div>'
 		
-		+'<div class="list-group-item pad0" style="background-color:#ffebe9;border:1px solid #f44336;">'
+		// +'<div class="list-group-item pad0" style="background-color:#ffebe9;border:1px solid #f44336;">'
 		
-		+'<div class="container-fluid mbot10p">'
-		+'<div class="row">'
-		+'<div class="col-sm-12">'
+		// +'<div class="container-fluid mbot10p">'
+		// +'<div class="row">'
+		// +'<div class="col-sm-12">'
 		
-		+'<div class="row mtop10p">'
-		+'<div class="col-sm-7">'
+		// +'<div class="row">'
+		// +'<div class="col-sm-7">'
 		
-		+'<div class="progress" style="height:5px;margin-top:5px;margin-bottom:0px;background-color:#ccc;">'
-		+'<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"'
-		+'style="width:70%;line-height:15px;font-size:10px;font-weight:bold;background-color:#777;color:#000;">'
+		// +'<div class="progress" style="height:5px;margin-top:5px;margin-bottom:0px;background-color:#ccc;">'
+		// +'<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"'
+		// +'style="width:70%;line-height:15px;font-size:10px;font-weight:bold;background-color:#777;color:#000;">'
 		
-		+'</div>'
-		+'</div>'
+		// +'</div>'
+		// +'</div>'
 		
-		+'</div>'
+		// +'</div>'
 		
-		+'<div class="col-sm-5"><b>70% Completed</b></div>'
+		// +'<div class="col-sm-5"><b>70% Completed</b></div>'
 		
-		+'</div>'
+		// +'</div>'
 		
-		+'</div>'
-		+'</div>'
-		+'</div>'
+		// +'</div>'
+		// +'</div>'
+		// +'</div>'
 		
 		+'</div>'
 		+'</div>');
@@ -72,11 +73,11 @@ class ViewProfiles {
 		+'Published</span>'
 		+'</div>'
 		
-		+'<div class="container-fluid mbot15p">'
+		+'<div class="container-fluid mtop10p mbot15p">'
 		+'<div class="row">'
 		+'<div class="col-sm-12">'
 		
-		+'<div><h5 style="color:#000;"><b>SurName FirstName LastName</b></h5></div>'
+		+'<div><h5 style="font-weight:700;font-size:1.20rem;letter-spacing:0.8px;">SurName FirstName LastName</h5></div>'
 		+'<div style="color:#777;"><span style="padding:5px;letter-spacing:0.5px;"><i>Your Profile</i></span></div>'
 		
 		+'<div align="right" class="mtop15p">'
@@ -87,27 +88,28 @@ class ViewProfiles {
 		+'</div>'
 		+'</div>'
 		+'</div>'
-		+'</div>'
-		+'<div class="list-group-item pad0" style="background-color:#d6ffd7;border:1px solid #009688;">'
+		// +'<div><hr style="margin-top:5px;margin-bottom:5px;border:1px solid #ccc;"/></div>'
+	    +'</div>'
+		// +'<div class="list-group-item pad0" style="background-color:#d6ffd7;border:1px solid #009688;">'
 		
-		+'<div class="container-fluid mtop5p mbot8p">'
-		+'<div class="row">'
-		+'<div align="center" class="col-sm-2">'
-		+'<i class="fa fa-2x fa-thumbs-up" style="color:#777;" aria-hidden="true"></i>'
-		+'</div>'
-		+'<div align="center" class="col-sm-2"><span style="color:#777;font-size:18px;">0</span></div>'
-		+'<div align="center" class="col-sm-2">'
-		+'<i class="fa fa-2x fa-balance-scale" style="color:#777;" aria-hidden="true"></i>'
-		+'</div>'
-		+'<div align="center" class="col-sm-2"><span style="color:#777;font-size:18px;">0</span></div>'
-		+'<div align="center" class="col-sm-2">'
-		+'<i class="fa fa-2x fa-area-chart" style="color:#777;" aria-hidden="true"></i>'
-		+'</div>'
-		+'<div align="center" class="col-sm-2"><span style="color:#777;font-size:18px;">0</span></div>'
-		+'</div>'
-		+'</div>'
+		// +'<div class="container-fluid mtop5p" style="margin-bottom:3px;">'
+		// +'<div class="row">'
+		// +'<div align="center" class="col-sm-2">'
+		// +'<i class="fa fa-thumbs-up" style="font-size:20px;color:#777;" aria-hidden="true"></i>'
+		// +'</div>'
+		// +'<div align="center" class="col-sm-2"><span style="color:#777;font-size:18px;">0</span></div>'
+		// +'<div align="center" class="col-sm-2">'
+		// +'<i class="fa fa-balance-scale" style="font-size:20px;color:#777;" aria-hidden="true"></i>'
+		// +'</div>'
+		// +'<div align="center" class="col-sm-2"><span style="color:#777;font-size:18px;">0</span></div>'
+		// +'<div align="center" class="col-sm-2">'
+		// +'<i class="fa fa-area-chart" style="font-size:20px;color:#777;" aria-hidden="true"></i>'
+		// +'</div>'
+		// +'<div align="center" class="col-sm-2"><span style="color:#777;font-size:18px;">0</span></div>'
+		// +'</div>'
+		// +'</div>'
 		
-		+'</div>'
+		// +'</div>'
 		
 		+'</div>');
  }
