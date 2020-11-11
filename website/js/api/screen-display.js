@@ -453,7 +453,7 @@ class CustomerSeekingForm { // HomePage
 		content+='</div>';
 		content+='</div>';
 		content+='</div>';
-		content+='<div class="col-xs-12 mtop10p pad0">';
+		content+='<div class="col-xs-12 pad0">';
 		content+='<div class="col-xs-4 mtop5p"><b>Age</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
@@ -466,7 +466,7 @@ class CustomerSeekingForm { // HomePage
 		content+='</div>';
 		content+='</div>';
 		content+='</div>';
-		content+='<div class="col-xs-12 mtop10p pad0">';
+		content+='<div class="col-xs-12 pad0">';
 		content+='<div class="col-xs-4 mtop5p"><b>Martial Status</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
@@ -493,7 +493,7 @@ class CustomerSeekingForm { // HomePage
 		content+='</div>';
 		content+='</div>';
 		content+='</div>';
-		content+='<div class="col-xs-12 mtop10p pad0">';
+		content+='<div class="col-xs-12 pad0">';
 		content+='<div class="col-xs-4 mtop5p"><b>State</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
@@ -504,7 +504,7 @@ class CustomerSeekingForm { // HomePage
 		content+='</div>';
 		content+='</div>';
 		content+='</div>';
-		content+='<div align="center" class="col-xs-12 mtop10p pad0">';
+		content+='<div align="center" class="col-xs-12 pad0">';
 		content+='<b>LIVELIHOOD</b>';
 		content+='</div>'; 
 		
@@ -522,7 +522,7 @@ class CustomerSeekingForm { // HomePage
 		content+='</div>';
 		content+='</div>';
 		
-		content+='<div class="col-xs-12 mtop10p pad0">';
+		content+='<div class="col-xs-12 pad0">';
 		content+='<div class="col-xs-4 mtop5p"><b>Profession</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
@@ -536,7 +536,7 @@ class CustomerSeekingForm { // HomePage
 		content+='</div>';
 		content+='</div>';
 		
-		content+='<div class="col-xs-12 mtop10p pad0">';
+		content+='<div class="col-xs-12 pad0">';
 		content+='<div class="col-xs-12">';
 		content+='<button class="btn btn-success mbot15p form-control" onclick="javascript:customerSeekingForm.findMatch();"><b>Find Matches</b></button>';
 		content+='</div>';
