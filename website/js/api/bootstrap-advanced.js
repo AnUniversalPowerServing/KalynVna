@@ -5,12 +5,14 @@ var JSONURL_MESSAGES_WARNING = "";
 /*****************************************************************************************************************************/
 /************************************ bootstrap-advanced-inputvalidations ****************************************************/
 /*****************************************************************************************************************************/
-
 function bootstrap_formField_trigger(perform,field_Ids){
+  bootstrap_formField_trigger(perform,field_Ids,undefined);
+}
+function bootstrap_formField_trigger(perform,field_Ids,css){
  if(perform.toLowerCase()==='remove'){
      if(Array.isArray(field_Ids)){
-       for(var index=0;index<field_Ids.length;index++){ bootstrap_formField_hglRemove(field_Ids[index]); }
-     } else { bootstrap_formField_hglRemove(field_Ids); }
+       for(var index=0;index<field_Ids.length;index++){ bootstrap_formField_hglRemove(field_Ids[index],css); }
+     } else { bootstrap_formField_hglRemove(field_Ids,css); }
  } else {
      if(Array.isArray(field_Ids)){
        for(var index=0;index<field_Ids.length;index++){ bootstrap_formField_addToField(perform,field_Ids[index]); }
@@ -50,10 +52,11 @@ function bootstrap_formField_addToField(hglApply,field_Id){
     $('#'+field_Id).wrap('<div class="'+msg[hglApply].field+' has-feedback"></div>');
    }
    if(inputgroup.children('span').hasClass('input-group-addon')){
-	inputgroup.children('span').addClass('input-group-addon-'+hglApply);
+	  inputgroup.children('span').addClass('input-group-addon-'+hglApply);
    }// input-group-addon
    if(inputgroup.children('div.input-group-btn')){
-	inputgroup.children('div.input-group-btn').children('button').addClass('input-group-addon-'+hglApply);
+    inputgroup.children('div.input-group-btn').children('button').removeAttr('class');
+    inputgroup.children('div.input-group-btn').children('button').attr('class','btn input-group-addon-'+hglApply);
    }
  } else {
     formgroup.addClass(msg[hglApply].field+' has-feedback');
@@ -72,7 +75,7 @@ function bootstrap_formField_addToField(hglApply,field_Id){
  }
 }
 
-function bootstrap_formField_hglRemove(field_Id){
+function bootstrap_formField_hglRemove(field_Id, css){
  var tagName = document.getElementById(field_Id).tagName;
  var inputgroup = $('#'+field_Id).closest('div.input-group'); // Getting closest input-group
  var formgroup = $('#'+field_Id).closest('div.form-group'); // Getting closest form-group
@@ -97,27 +100,35 @@ function bootstrap_formField_hglRemove(field_Id){
    if($('#'+field_Id).parent().is('div[class="has-warning has-feedback"]')){ $('#'+field_Id).unwrap(); }
    if($('#'+field_Id).parent().is('div[class="has-error has-feedback"]')){ $('#'+field_Id).unwrap(); }
    
-   if(inputgroup.children('span').hasClass('input-group-addon')){
+  if(inputgroup.children('span').hasClass('input-group-addon')){
+
 	if(inputgroup.children('span').hasClass('input-group-addon-success')){ 
-	  inputgroup.children('span').removeClass('input-group-addon-success'); 
+    inputgroup.children('span').removeClass('input-group-addon-success'); 
+    if(css!==undefined){inputgroup.children('span').addClass(css); }
 	}
 	if(inputgroup.children('span').hasClass('input-group-addon-warning')){ 
-	  inputgroup.children('span').removeClass('input-group-addon-warning'); 
+    inputgroup.children('span').removeClass('input-group-addon-warning'); 
+    if(css!==undefined){inputgroup.children('span').addClass(css); }
 	}
 	if(inputgroup.children('span').hasClass('input-group-addon-error')){ 
-	  inputgroup.children('span').removeClass('input-group-addon-error'); 
+    inputgroup.children('span').removeClass('input-group-addon-error'); 
+    if(css!==undefined){inputgroup.children('span').addClass(css); }
 	}
    }// input-group-addon
    if(inputgroup.children('div.input-group-btn')){
      if(inputgroup.children('div.input-group-btn').children('button').hasClass('input-group-addon-success')){
-		inputgroup.children('div.input-group-btn').children('button').removeClass('input-group-addon-success');
-	 }
-	 if(inputgroup.children('div.input-group-btn').children('button').hasClass('input-group-addon-warning')){
-		inputgroup.children('div.input-group-btn').children('button').removeClass('input-group-addon-warning');
-	 }
-	 if(inputgroup.children('div.input-group-btn').children('button').hasClass('input-group-addon-error')){
-		inputgroup.children('div.input-group-btn').children('button').removeClass('input-group-addon-error');
-	 }
+       console.log(css);
+      inputgroup.children('div.input-group-btn').children('button').removeClass('input-group-addon-success');
+      if(css!==undefined){inputgroup.children('div.input-group-btn').children('button').addClass(css); }
+	   }
+	   if(inputgroup.children('div.input-group-btn').children('button').hasClass('input-group-addon-warning')){
+      inputgroup.children('div.input-group-btn').children('button').removeClass('input-group-addon-warning');
+      if(css!==undefined){inputgroup.children('div.input-group-btn').children('button').addClass(css); }
+	   }
+	   if(inputgroup.children('div.input-group-btn').children('button').hasClass('input-group-addon-error')){
+      inputgroup.children('div.input-group-btn').children('button').removeClass('input-group-addon-error');
+      if(css!==undefined){inputgroup.children('div.input-group-btn').children('button').addClass(css); }
+	   }
    }
    if(tagName.toLowerCase()!=='button'){
        if(inputgroup.children('span').hasClass("glyphicon glyphicon-ok form-control-feedback")){

@@ -1,3 +1,12 @@
+/** Global Variables */
+var infoMenu_gender = ["Male","Female"];
+var infoMenu_age=["21-25","26-30","31-35","36-40","41-45"];
+var infoMenu_martialStatus = ["UnMarried","Divorced","Widow"];
+var infoMenu_profession = ["Accountant","Teacher","Physician","Engineer","Laborer","Technician","Lawyer","Veterinary Physician","Psychologist","Pharmacist",
+						   "Dietitian","Midwife","Surveyor","Mechanic","Electrician","Architect","Software Engineer","Butcher","Surgeon","Radiographer",
+						   "Health Professional","Actor","Consultant","Dentist","Designer","Judge","Secretary","Police"];
+var infoMenu_occupationType = ["Private Company","Government / Public Sector","Defence / Civil Services","Business / Self Employeed"];
+ 
 class Commons {
   pageHeadingTitle(title){
 	return ('<div><h5 style="border-bottom:2px solid #000;padding-bottom:10px;"><b>'+title+'</b></h5></div>');
@@ -410,6 +419,140 @@ class Dashboard {
  } 
 }
 
+class CustomerSeekingForm { // HomePage
+  findMatch(){
+	var gender = $('#customerSeekingForm_gender').val();
+	var age = $('#customerSeekingForm_age').val();
+	var martialStatus = $('#customerSeekingForm_martialStatus').val();
+	var country = $('#customerSeekingForm_country').val();
+	var state = $('#customerSeekingForm_state').val();
+	var occupationType = $('#customerSeekingForm_occupationType').val();
+	var profession = $('#customerSeekingForm_profession').val();
+	
+	bootstrap_formField_trigger('error',["customerSeekingForm_gender","customerSeekingForm_age","customerSeekingForm_martialStatus",
+	"customerSeekingForm_country","customerSeekingForm_state","customerSeekingForm_occupationType","customerSeekingForm_profession"]);
+  }
+  display(){
+	var content='<div class="list-group">';
+		content+='<div class="list-group-item pad0" style="color:#000;">';
+		content+='<div class="container-fluid">';
+		content+='<div align="left" class="col-xs-12 mtop10p" style="border-bottom:1px solid #ccc;padding:5px;">';
+		content+='<h4>You are seeking for</h4>';
+		content+='</div>';
+		content+='<div align="center" class="col-xs-12 mtop10p pad0"><b>PROFILE</b></div>';
+		content+='<div class="col-xs-12 mtop10p pad0">';
+		content+='<div class="col-xs-4 mtop5p"><b>Gender</b></div>';
+		content+='<div class="col-xs-8">';
+		content+='<div class="form-group">';
+		content+='<select id="customerSeekingForm_gender" class="form-control">';
+		content+='<option value="">You are looking for</option>';
+		for(var index=0;index<infoMenu_gender.length;index++){
+		 content+='<option value="'+infoMenu_gender[index]+'">'+infoMenu_gender[index]+'</option>';
+		}
+		content+='</select>';
+		content+='</div>';
+		content+='</div>';
+		content+='</div>';
+		content+='<div class="col-xs-12 mtop10p pad0">';
+		content+='<div class="col-xs-4 mtop5p"><b>Age</b></div>';
+		content+='<div class="col-xs-8">';
+		content+='<div class="form-group">';
+		content+='<select id="customerSeekingForm_age" class="form-control">';
+		content+='<option value="">You are looking for</option>';
+		for(var index=0;index<infoMenu_age.length;index++){
+		 content+='<option value="'+infoMenu_age[index]+'">'+infoMenu_age[index]+'</option>';
+		}
+		content+='</select>';
+		content+='</div>';
+		content+='</div>';
+		content+='</div>';
+		content+='<div class="col-xs-12 mtop10p pad0">';
+		content+='<div class="col-xs-4 mtop5p"><b>Martial Status</b></div>';
+		content+='<div class="col-xs-8">';
+		content+='<div class="form-group">';
+		content+='<select id="customerSeekingForm_martialStatus" class="form-control">';
+		content+='<option value="">You are looking for</option>';
+		for(var index=0;index<infoMenu_martialStatus.length;index++){
+		 content+='<option value="'+infoMenu_martialStatus[index]+'">'+infoMenu_martialStatus[index]+'</option>';
+		}
+		content+='</select>';
+		content+='</div>'; 
+		content+='</div>';
+		content+='</div>';
+		content+='<div align="center" class="col-xs-12 mtop10p pad0">';
+		content+='<b>CURRENT RESIDENCE</b>';
+		content+='</div>';
+		content+='<div class="col-xs-12 mtop10p pad0">';
+		content+='<div class="col-xs-4 mtop5p"><b>Country</b></div>';
+		content+='<div class="col-xs-8">';
+		content+='<div class="form-group">';
+		content+='<select id="customerSeekingForm_country" class="form-control">';
+		content+='<option value="">You are looking for</option>';
+		content+='<option value="India">India</option>';
+		content+='</select>';
+		content+='</div>';
+		content+='</div>';
+		content+='</div>';
+		content+='<div class="col-xs-12 mtop10p pad0">';
+		content+='<div class="col-xs-4 mtop5p"><b>State</b></div>';
+		content+='<div class="col-xs-8">';
+		content+='<div class="form-group">';
+		content+='<select id="customerSeekingForm_state" class="form-control">';
+		content+='<option value="">You are looking for</option>';
+		content+='<option value="Telangana">Telangana</option>';
+		content+='</select>';
+		content+='</div>';
+		content+='</div>';
+		content+='</div>';
+		content+='<div align="center" class="col-xs-12 mtop10p pad0">';
+		content+='<b>LIVELIHOOD</b>';
+		content+='</div>'; 
+		
+		content+='<div class="col-xs-12 mtop10p pad0">';
+		content+='<div class="col-xs-4 mtop5p"><b>Occupation Type</b></div>';
+		content+='<div class="col-xs-8">';
+		content+='<div class="form-group">';
+		content+='<select id="customerSeekingForm_occupationType" class="form-control">';
+		content+='<option value="">You are looking for</option>';
+		for(var index=0;index<infoMenu_occupationType.length;index++){
+		 content+='<option value="'+infoMenu_occupationType[index]+'">'+infoMenu_occupationType[index]+'</option>';
+		}
+		content+='</select>';
+		content+='</div>';
+		content+='</div>';
+		content+='</div>';
+		
+		content+='<div class="col-xs-12 mtop10p pad0">';
+		content+='<div class="col-xs-4 mtop5p"><b>Profession</b></div>';
+		content+='<div class="col-xs-8">';
+		content+='<div class="form-group">';
+		content+='<select id="customerSeekingForm_profession" class="form-control">';
+		content+='<option value="">You are looking for</option>';
+		for(var index=0;index<infoMenu_profession.length;index++){
+		 content+='<option value="'+infoMenu_profession[index]+'">'+infoMenu_profession[index]+'</option>';
+		}
+		content+='</select>';
+		content+='</div>';
+		content+='</div>';
+		content+='</div>';
+		
+		content+='<div class="col-xs-12 mtop10p pad0">';
+		content+='<div class="col-xs-12">';
+		content+='<button class="btn btn-success mbot15p form-control" onclick="javascript:customerSeekingForm.findMatch();"><b>Find Matches</b></button>';
+		content+='</div>';
+		content+='</div>';
+		content+='<div align="center" class="col-xs-12">';
+		content+='</div>';
+		content+='</div>';
+		content+='</div>';
+		content+='</div>';
+	return content;    
+  }
+	
+}
+
+
 var commons = new Commons();
 var viewProfiles = new ViewProfiles();
 var dashboard = new Dashboard();
+var customerSeekingForm = new CustomerSeekingForm();

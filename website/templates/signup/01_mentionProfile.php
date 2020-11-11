@@ -28,8 +28,8 @@ function sentenceCase_SurName(str){
 }
 </script>
 
-<div class="panel panel-primary mtop10p">
-  <div class="panel-heading">
+<div class="list-group">
+  <div class="list-group-item" style="background-color:#ebceef;border:1px solid #673ab7;">
   <div class="row">
    <div class="col-sm-6"><b>1. Mention Profile</b></div>
    <div class="col-sm-6">
@@ -47,8 +47,8 @@ function sentenceCase_SurName(str){
 	<!-- -->
    </div><!--/.col-sm-6 -->
   </div><!--/.row -->
-  </div><!--/.panel-heading -->
-  <div class="panel-body">
+  </div><!--/.list-group-item -->
+  <div class="list-group-item" style="background-color:#f8e6fb;border:1px solid #673ab7;">
     <div class="container-fluid">
 	  <div class="row">
 	    <div class="col-xs-12 col-md-6">
@@ -198,5 +198,5 @@ function sentenceCase_SurName(str){
 		<div class="col-xs-12 col-md-4"></div>
 	  </div>
     </div>	
-  </div>
-</div>
+  </div><!--/.list-group-item -->
+</div><!--/.list-group -->

@@ -15,11 +15,15 @@ include_once 'templates/api_params.php';
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
   <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
   <script src="js/api/bootstrap-switch.js"></script>
+  <script src="js/api/bootstrap-advanced.js"></script>
+  <script src="js/api/screen-display.js"></script>
   <link href="styles/api/bootstrap-switch.css" rel="stylesheet">
+  <link href="styles/api/bootstrap-advanced.css" rel="stylesheet">
   <?php include_once 'templates/api_js.php'; ?>
   <script type="text/javascript">
   $(document).ready(function(){
     kvHeaderMenu('kvHeaderMenu-Home');
+	document.getElementById("customerSeekingForm").innerHTML=customerSeekingForm.display();
   });
   </script>
 <style>
@@ -66,133 +70,8 @@ body { background-color:#fafafa; }
 		  </div-->
 	   </div>
 	   <div class="col-sm-1"></div>
-	   <div class="col-sm-4" style="margin-top:25px;">
-			<div class="list-group">
-				<div class="list-group-item pad0" style="color:#000;">
-					<div class="container-fluid">
-						<div align="left" class="col-xs-12 mtop10p" style="border-bottom:1px solid #ccc;padding:5px;">
-						  <h4>You are seeking for</h4>
-						</div>
-						<div align="center" class="col-xs-12 mtop10p pad0">
-						   <b>PROFILE</b>
-						</div>
-						<div class="col-xs-12 mtop10p pad0">
-						   <div class="col-xs-5 mtop5p"><b>Gender</b></div>
-						   <div class="col-xs-7">
-						      <select class="form-control">
-								<option value="">You are looking for</option>
-								<option value="Male">Male</option>
-								<option value="Female">Female</option>
-							  </select>
-						   </div>
-						</div>
-						<div class="col-xs-12 mtop10p pad0">
-						   <div class="col-xs-5 mtop5p"><b>Age</b></div>
-						   <div class="col-xs-7">
-						      <select class="form-control">
-								<option value="">You are looking for</option>
-								<option value="21-25">21-25</option>
-								<option value="26-30">26-30</option>
-								<option value="31-35">21-25</option>
-								<option value="36-40">36-40</option>
-								<option value="41-45">41-45</option>
-							  </select>
-						   </div>
-						</div>
-						<div class="col-xs-12 mtop10p pad0">
-						   <div class="col-xs-5 mtop5p"><b>Martial Status</b></div>
-						   <div class="col-xs-7">
-						      <select class="form-control">
-								<option value="">You are looking for</option>
-								<option value="UnMarried">UnMarried</option>
-								<option value="Divorced">Divorced</option>
-								<option value="Widow">Widow</option>
-							  </select>
-						   </div>
-						</div>
-						<div align="center" class="col-xs-12 mtop10p pad0">
-						   <b>CURRENT RESIDENCE</b>
-						</div>
-						<div class="col-xs-12 mtop10p pad0">
-						   <div class="col-xs-5 mtop5p"><b>Country</b></div>
-						   <div class="col-xs-7">
-						      <select class="form-control">
-								<option value="">You are looking for</option>
-								<option value="India">India</option>
-							  </select>
-						   </div>
-						</div>
-						<div class="col-xs-12 mtop10p pad0">
-						   <div class="col-xs-5 mtop5p"><b>State</b></div>
-						   <div class="col-xs-7">
-						      <select class="form-control">
-								<option value="">You are looking for</option>
-								<option value="Telangana">Telangana</option>
-							  </select>
-						   </div>
-						</div>
-						<div align="center" class="col-xs-12 mtop10p pad0">
-						   <b>LIVELIHOOD</b>
-						</div>
-						<div class="col-xs-12 mtop10p pad0">
-						   <div class="col-xs-5 mtop5p"><b>Profession</b></div>
-						   <div class="col-xs-7">
-						      <select class="form-control">
-								<option value="">You are looking for</option>
-								<option value="Accountant">Accountant</option>
-								<option value="Teacher">Teacher</option>
-								<option value="Physician">Physician</option>
-								<option value="Engineer">Engineer</option>
-								<option value="Laborer">Laborer</option>
-								<option value="Technician">Technician</option>
-								<option value="Lawyer">Lawyer</option>
-								<option value="Veterinary Physician">Veterinary Physician</option>
-								<option value="Psychologist">Psychologist</option>
-								<option value="Pharmacist">Pharmacist</option>
-								<option value="Dietitian">Dietitian</option>
-								<option value="Midwife">Midwife</option>
-								<option value="Surveyor">Surveyor</option>
-								<option value="Mechanic">Mechanic</option>
-								<option value="Electrician">Electrician</option>
-								<option value="Architect">Architect</option>
-								<option value="Software Engineer">Software Engineer</option>
-								<option value="Butcher">Butcher</option>
-								<option value="Surgeon">Surgeon</option>
-								<option value="Radiographer">Radiographer</option>
-								<option value="Health Professional">Health Professional</option>
-								<option value="Actor">Actor</option>
-								<option value="Consultant">Consultant</option>
-								<option value="Dentist">Dentist</option>
-								<option value="Designer">Designer</option>
-								<option value="Judge">Judge</option>
-								<option value="Secretary">Secretary</option>
-								<option value="Police">Police</option>
-							  </select>
-						   </div>
-						</div>
-						<div class="col-xs-12 mtop10p pad0">
-						   <div class="col-xs-5 mtop5p"><b>Occupation Type</b></div>
-						   <div class="col-xs-7">
-						      <select class="form-control">
-								<option value="">You are looking for</option>
-								<option value="Private Company">Private Company</option>
-								<option value="Government / Public Sector">Government / Public Sector</option>
-								<option value="Defence / Civil Services">Defence / Civil Services</option>
-								<option value="Business / Self Employeed">Business / Self Employeed</option>
-							  </select>
-						   </div>
-						</div>
-						<div class="col-xs-12 mtop10p pad0">
-						  <div class="col-xs-12">
-						   <button class="btn btn-success mbot15p form-control"><b>Find Matches</b></button>
-						  </div>
-						</div>
-						<div align="center" class="col-xs-12">
-						
-						</div>
-					</div>
-				</div>
-			</div>
+	   <div id= "customerSeekingForm" class="col-sm-4" style="margin-top:25px;">
+		
 	   </div>
 	</div>
   </div>

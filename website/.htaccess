@@ -8,6 +8,7 @@ DirectoryIndex default.php
 RewriteRule qrcode/([^/]+)$ backend/php/dac/controller.display.qrcode.php?qrContent=$1 [NC,L]
 
 # App
+
 RewriteRule app/howItWorks app-howItWorks.php [NC,L] 
 RewriteRule app/pricing  app-pricing.php [NC,L]
 RewriteRule app/signup app-signup.php [NC,L]
