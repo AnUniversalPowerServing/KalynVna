@@ -9,6 +9,10 @@ body::-webkit-scrollbar { width: 6px;background-color: #F5F5F5; }
 body::-webkit-scrollbar-thumb { background-color: #000000; }
 body { overflow-x:hidden; }
 .hlLetterString { background-color:yellow;color:#000;}
+.mbot65p { margin-bottom:65px; }
+.mbot165p { margin-bottom:165px; }
+.mbot500p { margin-bottom:500px; }
+.bg-purple { background-color:#630062;color:#fff; }
 </style>
 <script type="text/javascript">
 /* Highlight Letter on Search */

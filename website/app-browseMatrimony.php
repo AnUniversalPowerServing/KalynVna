@@ -24,7 +24,16 @@ body { background-color:#fafafa; }
 <script type="text/javascript">
 $(document).ready(function(){
  kvHeaderMenu('kvHeaderMenu-browseMatrimony');
- load_data_profile();
+// load_data_profile();
+ // Session Storage 
+ var filterData = {};
+ if(sessionStorage.getItem("PAGE_BROWSEMATRIMONY").length>0){
+  filterData = JSON.parse(sessionStorage.getItem("PAGE_BROWSEMATRIMONY"));
+  console.log(filterData);
+ }
+ document.getElementById("browseMatrimony_filterSearch").innerHTML = filterSearch.displayBrowseMatrimonyFilter(filterData);
+ 
+ 
 });
 var browseMatrimony_male;
 var browseMatrimony_female;
@@ -207,89 +216,14 @@ body { font-size:14px; }
 <body>
 <?php include_once 'templates/api_header.php'; ?>
  
-<div class="container-fluid">
+<div class="container-fluid mbot500p">
   <div class="row">
-    <div class="col-sm-3">
-      <h5 style="border-bottom:2px solid #000;padding-bottom:10px;"><b>Filter Search</b></h5>
-      <div class="list-group">
-	    <div class="list-group-item" data-toggle="collapse" data-target="#filter_gender">
-		  Gender&nbsp;
-		  <i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>
-		</div>
-		<div id="filter_gender" class="collapse">
-			<div class="list-group-item">
-			   <div><input id="browseMatrimony_male" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Male</div>
-			   <div><input id="browseMatrimony_female" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Female</div>
-			</div>
-		</div>
-		<div class="list-group-item" data-toggle="collapse" data-target="#filter_ageGroup">
-		  Age Group&nbsp;
-		  <i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>
-		</div>
-		<div id="filter_ageGroup" class="collapse">
-			<div class="list-group-item"> 
-			   <div><input id="browseMatrimony_age_21_25" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;21-25</div>
-			   <div><input id="browseMatrimony_age_26_30" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;26-30</div>
-			   <div><input id="browseMatrimony_age_31_35" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;31-35</div>
-			   <div><input id="browseMatrimony_age_36_40" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;36-40</div>
-			   <div><input id="browseMatrimony_age_41_45" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;41-45</div>
-			</div>
-		</div>
-		<div class="list-group-item" data-toggle="collapse" data-target="#filter_martialStatus">
-		  Martial Status&nbsp;
-		  <i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>
-		</div>
-		<div id="filter_martialStatus" class="collapse">
-			<div class="list-group-item">
-			   <div><input id="browseMatrimony_status_unMarried" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;UnMarried</div>
-			   <div><input id="browseMatrimony_status_divorced" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Divorced</div>
-			   <div><input id="browseMatrimony_status_widow" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Widow</div>
-			</div>
-		</div>
-		<div class="list-group-item" data-toggle="collapse" data-target="#filter_occupationType">
-		  Occupation&nbsp; <i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>
-		</div>
-		<div id="filter_occupationType" class="collapse">
-			<div class="list-group-item">
-			  <div class="form-group">
-			    <label>Occupation Type</label>
-			    <div class="dropdown">
-				  <button align="left" class="btn btn-default form-control dropdown-toggle" type="button" data-toggle="dropdown"><span class="f12">Select Occupation Type</span>&nbsp;
-				  <span class="caret pull-right mtop8p"></span></button>
-				  <ul class="dropdown-menu">
-					<li><a href="#"><input id="browseMatrimony_occupationType_privateCompany" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Private Company</a></li>
-					<li><a href="#"><input id="browseMatrimony_occupationType_govt" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Government / Public Sector</a></li>
-					<li><a href="#"><input id="browseMatrimony_occupationType_defence" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Defence / Civil Services</a></li>
-					<li><a href="#"><input id="browseMatrimony_occupationType_biz" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Business / Self Employeed</a></li>
-				  </ul>
-				</div>
-			  </div><!--/.form-group -->
-			  <div class="form-group">
-			    <label>Profession</label>
-			    <div class="dropdown">
-				  <button align="left" class="btn btn-default form-control dropdown-toggle" type="button" data-toggle="dropdown"><span class="f12">Select Profession</span>&nbsp;
-				  <span class="caret pull-right mtop8p"></span></button>
-				  <ul class="dropdown-menu">
-					<li><a href="#"><input id="browseMatrimony_occupationType_privateCompany" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Private Company</a></li>
-					<li><a href="#"><input id="browseMatrimony_occupationType_govt" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Government / Public Sector</a></li>
-					<li><a href="#"><input id="browseMatrimony_occupationType_defence" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Defence / Civil Services</a></li>
-					<li><a href="#"><input id="browseMatrimony_occupationType_biz" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Business / Self Employeed</a></li>
-				  </ul>
-				</div>
-			  </div><!--/.form-group -->
-			</div><!--/.list-group-item -->
-		</div>
-		<div class="list-group-item" data-toggle="collapse" data-target="#filter_motherTongue">
-		  Mother Tongue&nbsp;
-		  <i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>
-		</div>
-		<div id="filter_motherTongue" class="collapse">
-			<div class="list-group-item">
-			   <div><input id="browseMatrimony_motherTongue_telugu" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Telugu</div>
-			   <div><input id="browseMatrimony_motherTongue_hindi" type="checkbox" onclick="javascript:load_data_profile();"/>&nbsp;Hindi</div>
-			</div>
-		</div>
-	  </div>
+    <div id="browseMatrimony_filterSearch" class="col-sm-3">
+      
+	  
+	  
+	  
+	  
     </div>
     <div class="col-sm-9">
       <div class="container-fluid mtop15p">
