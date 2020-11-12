@@ -8,6 +8,14 @@ var infoMenu_profession = ["Accountant","Teacher","Physician","Engineer","Labore
 var infoMenu_occupationType = ["Private Company","Government / Public Sector","Defence / Civil Services","Business / Self Employeed"];
 var infoMenu_motherTongue = ["Hindi","Bengali","Marathi","Telugu","Tamil","Gujarati","Urdu","Kannada","Odia","Malayalam","Punjabi","Assamese","Maithili"];
 
+function bootstrap_formField_alert(type, div_Id, message){
+  var alertMessage = 'success'; if(type==='error'){ alertMessage = 'danger'; }
+  var content='<div class="alert alert-'+alertMessage+' alert-dismissible" style="margin-bottom:0px;">';
+      content+='<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>Alert!</strong><br/> '+message+'</div>';
+	  content+='</div>';
+  document.getElementById(div_Id).innerHTML=content;
+}
+
 function toSentenceCase(val){
  return val.charAt(0).toUpperCase() + val.substr(1).toLowerCase();	
 }
@@ -149,6 +157,46 @@ var content='<select id="'+id+'" class="form-control" onClick="javascript:'+onCh
  content+='<option value="">'+defaultMessage+'</option>';
  for(var index=0;index<infoMenu_martialStatus.length;index++){
   content+='<option value="'+infoMenu_martialStatus[index]+'">'+infoMenu_martialStatus[index]+'</option>';
+ }
+ content+='</select>';
+ return content;
+}
+
+function display_selOpt_gender(id, onChange, defaultMessage){
+ var content='<select id="'+id+'" class="form-control" onClick="javascript:'+onChange+';">';
+ content+='<option value="">'+defaultMessage+'</option>';
+ for(var index=0;index<infoMenu_gender.length;index++){
+  content+='<option value="'+infoMenu_gender[index]+'">'+infoMenu_gender[index]+'</option>';
+ }
+ content+='</select>';
+ return content;
+}
+
+function display_selOpt_ageDiff(id, onChange, defaultMessage){
+ var content='<select id="'+id+'" class="form-control" onClick="javascript:'+onChange+';">';
+ content+='<option value="">'+defaultMessage+'</option>';
+ for(var index=0;index<infoMenu_ageDiff.length;index++){
+  content+='<option value="'+infoMenu_ageDiff[index]+'">'+infoMenu_ageDiff[index]+'</option>';
+ }
+ content+='</select>';
+ return content;
+}
+
+function display_selOpt_occupationType(id, onChange, defaultMessage){
+ var content='<select id="'+id+'" class="form-control" onClick="javascript:'+onChange+'">';
+ content+='<option value="">'+defaultMessage+'</option>';
+ for(var index=0;index<infoMenu_occupationType.length;index++){
+ content+='<option value="'+infoMenu_occupationType[index]+'">'+infoMenu_occupationType[index]+'</option>';
+ }
+ content+='</select>';
+ return content;
+}
+
+function display_selOpt_profession(id, onChange, defaultMessage){
+ var content='<select id="'+id+'" class="form-control" onClick="javascript:'+onChange+';">';
+ content+='<option value="">'+defaultMessage+'</option>';
+ for(var index=0;index<infoMenu_profession.length;index++){
+  content+='<option value="'+infoMenu_profession[index]+'">'+infoMenu_profession[index]+'</option>';
  }
  content+='</select>';
  return content;
@@ -675,58 +723,58 @@ class Dashboard {
 }
 
 class CustomerSeekingForm { // HomePage
-  isValidGender = false; isValidAgeDiff = false; isValidMartialStatus = false; isValidCountry = false;
-  isValidState = false; isValidOccupationType = false; isValidProfession = false; isValidMotherTongue = false;
+  isValidGender = false; isValidAgeDiff = false; isValidMartialStatus = false; 
+  isValidOccupationType = false; isValidProfession = false; isValidMotherTongue = false;
 
   onChangeGender(){
 	this.isValidGender = validateGender('customerSeekingForm_gender');
+	customerSeekingForm.resetForm();
   }
   
   onChangeAgeDiff(){
-	this.isValidAgeDiff = validateAgeDiff('customerSeekingForm_age');
+	this.isValidAgeDiff = validateAgeDiff('customerSeekingForm_ageDiff');
+	customerSeekingForm.resetForm();
   }
   
   onChangeMartialStatus(){
 	this.isValidMartialStatus = validateMartialStatus('customerSeekingForm_martialStatus');
-  }
-  
-  onChangeCountry(){
-	this.isValidCountry = validateCountry('customerSeekingForm_country');
-  }
-  
-  onChangeState(){
-	this.isValidState = validateState('customerSeekingForm_state');
+	customerSeekingForm.resetForm();
   }
   
   onChangeOccupationType(){
-	this.isValidOccupationType= validateState('customerSeekingForm_occupationType'); 
+	this.isValidOccupationType= validateState('customerSeekingForm_occupationType');
+	customerSeekingForm.resetForm();
   }
   
   onChangeProfession(){
-	this.isValidProfession = validateState('customerSeekingForm_profession');  
+	this.isValidProfession = validateState('customerSeekingForm_profession');
+	customerSeekingForm.resetForm();
   }
   
   onChangeMotherTongue(){
 	this.isValidMotherTongue = validateMotherTongue('customerSeekingForm_motherTongue');
+	customerSeekingForm.resetForm();
   }
   
+  resetForm(){
+	document.getElementById("customerSeekingForm_alert").innerHTML='';
+	bootstrap_formField_trigger('remove',["customerSeekingForm_gender","customerSeekingForm_ageDiff","customerSeekingForm_martialStatus",
+	"customerSeekingForm_occupationType","customerSeekingForm_profession","customerSeekingForm_motherTongue"]);  
+  }
   
   findMatch(){
 	var gender = $('#customerSeekingForm_gender').val();
-	var ageDiff = $('#customerSeekingForm_age').val();
+	var ageDiff = $('#customerSeekingForm_ageDiff').val();
 	var martialStatus = $('#customerSeekingForm_martialStatus').val();
-	var country = $('#customerSeekingForm_country').val();
-	var state = $('#customerSeekingForm_state').val();
 	var occupationType = $('#customerSeekingForm_occupationType').val();
 	var profession = $('#customerSeekingForm_profession').val();
 	var motherTongue = $('#customerSeekingForm_motherTongue').val();
 	
-	if(this.isValidGender && this.isValidAgeDiff && this.isValidMartialStatus && this.isValidCountry && this.isValidState
-	  && this.isValidOccupationType && this.isValidProfession && this.isValidMotherTongue){
+	if(this.isValidGender || this.isValidAgeDiff || this.isValidMartialStatus
+	  || this.isValidOccupationType || this.isValidProfession || this.isValidMotherTongue){
 		// Call to BrowseMatrimony Page
 		var filterData = { gender: gender, ageDiff:ageDiff, martialStatus:martialStatus, 
-						 country:country, state:state, occupationType:occupationType,
-						 profession:profession, motherTongue:motherTongue };
+						   occupationType:occupationType, profession:profession, motherTongue:motherTongue };
 		sessionStorage.setItem("PAGE_BROWSEMATRIMONY", JSON.stringify(filterData));
 		window.location.href=PROJECT_URL+'app/browseMatrimony';
 	
@@ -734,18 +782,17 @@ class CustomerSeekingForm { // HomePage
 		var errorMsg='Missing';
 		var display_errors=[];
 		if(!this.isValidGender){ errorMsg+=' Gender,';display_errors[display_errors.length] = "customerSeekingForm_gender";  }
-		if(!this.isValidAgeDiff){ errorMsg+=' Age,';display_errors[display_errors.length] = "customerSeekingForm_age";  }
+		if(!this.isValidAgeDiff){ errorMsg+=' Age,';display_errors[display_errors.length] = "customerSeekingForm_ageDiff";  }
 		if(!this.isValidMartialStatus){ errorMsg+=' Martial Status,';display_errors[display_errors.length] = "customerSeekingForm_martialStatus";  }
-		if(!this.isValidCountry){ errorMsg+=' Country,';display_errors[display_errors.length] = "customerSeekingForm_country";  }
-		if(!this.isValidState){ errorMsg+=' State,';display_errors[display_errors.length] = "customerSeekingForm_state";  }
 		if(!this.isValidOccupationType){ errorMsg+=' Occupation Type,';display_errors[display_errors.length] = "customerSeekingForm_occupationType";  }
 		if(!this.isValidProfession){ errorMsg+=' Profession,';display_errors[display_errors.length] = "customerSeekingForm_profession";  }
 		if(!this.isValidMotherTongue){ errorMsg+=' MotherTongue,';display_errors[display_errors.length] = "customerSeekingForm_motherTongue";  }
 		errorMsg = errorMsg.substring(0, errorMsg.length-2);
 		bootstrap_formField_trigger('error',display_errors);
+		bootstrap_formField_alert('error', 'customerSeekingForm_alert', 'Select atleast one Field');
 	}
-	
   }
+  
   display(){
 	var content='<div class="list-group">';
 		content+='<div class="list-group-item pad0" style="color:#000;">';
@@ -753,17 +800,13 @@ class CustomerSeekingForm { // HomePage
 		content+='<div align="left" class="col-xs-12 mtop10p" style="border-bottom:1px solid #ccc;padding:5px;">';
 		content+='<h4>You are seeking for</h4>';
 		content+='</div>';
+		content+='<div id="customerSeekingForm_alert" class="col-xs-12 mtop10p"></div>'; // Alert Message
 		content+='<div align="center" class="col-xs-12 mtop10p pad0"><b>PROFILE</b></div>';
 		content+='<div class="col-xs-12 mtop10p pad0">';
 		content+='<div class="col-xs-4 mtop5p"><b>Gender</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
-		content+='<select id="customerSeekingForm_gender" class="form-control" onClick="javascript:customerSeekingForm.onChangeGender();">';
-		content+='<option value="">You are looking for</option>';
-		for(var index=0;index<infoMenu_gender.length;index++){
-		 content+='<option value="'+infoMenu_gender[index]+'">'+infoMenu_gender[index]+'</option>';
-		}
-		content+='</select>';
+		content+=display_selOpt_gender('customerSeekingForm_gender', 'customerSeekingForm.onChangeGender()', 'You are looking for');
 		content+='</div>';
 		content+='</div>';
 		content+='</div>';
@@ -771,12 +814,7 @@ class CustomerSeekingForm { // HomePage
 		content+='<div class="col-xs-4 mtop5p"><b>Age</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
-		content+='<select id="customerSeekingForm_age" class="form-control" onClick="javascript:customerSeekingForm.onChangeAgeDiff();">';
-		content+='<option value="">You are looking for</option>';
-		for(var index=0;index<infoMenu_ageDiff.length;index++){
-		 content+='<option value="'+infoMenu_ageDiff[index]+'">'+infoMenu_ageDiff[index]+'</option>';
-		}
-		content+='</select>';
+		content+=display_selOpt_ageDiff('customerSeekingForm_ageDiff', 'customerSeekingForm.onChangeAgeDiff()', 'You are looking for');
 		content+='</div>';
 		content+='</div>';
 		content+='</div>';
@@ -784,7 +822,7 @@ class CustomerSeekingForm { // HomePage
 		content+='<div class="col-xs-4 mtop5p"><b>Martial Status</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
-		content+=display_selOpt_martialStatus('customerSeekingForm_martialStatus', 'customerSeekingForm.onChangeProfession()', 'You are looking for');
+		content+=display_selOpt_martialStatus('customerSeekingForm_martialStatus', 'customerSeekingForm.onChangeMartialStatus()', 'You are looking for');
 		content+='</div>'; 
 		content+='</div>';
 		content+='</div>';
@@ -806,12 +844,7 @@ class CustomerSeekingForm { // HomePage
 		content+='<div class="col-xs-4 mtop5p"><b>Occupation Type</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
-		content+='<select id="customerSeekingForm_occupationType" class="form-control" onClick="javascript:customerSeekingForm.onChangeOccupationType();">';
-		content+='<option value="">You are looking for</option>';
-		for(var index=0;index<infoMenu_occupationType.length;index++){
-		 content+='<option value="'+infoMenu_occupationType[index]+'">'+infoMenu_occupationType[index]+'</option>';
-		}
-		content+='</select>';
+		content+=display_selOpt_occupationType('customerSeekingForm_occupationType', 'customerSeekingForm.onChangeOccupationType()', 'You are looking for');
 		content+='</div>';
 		content+='</div>';
 		content+='</div>';
@@ -819,12 +852,7 @@ class CustomerSeekingForm { // HomePage
 		content+='<div class="col-xs-4 mtop5p"><b>Profession</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
-		content+='<select id="customerSeekingForm_profession" class="form-control" onClick="javascript:customerSeekingForm.onChangeProfession();">';
-		content+='<option value="">You are looking for</option>';
-		for(var index=0;index<infoMenu_profession.length;index++){
-		 content+='<option value="'+infoMenu_profession[index]+'">'+infoMenu_profession[index]+'</option>';
-		}
-		content+='</select>';
+		content+=display_selOpt_profession('customerSeekingForm_profession', 'customerSeekingForm.onChangeProfession()', 'You are looking for');
 		content+='</div>';
 		content+='</div>';
 		content+='</div>';
@@ -843,10 +871,6 @@ class CustomerSeekingForm { // HomePage
   }
 	
 }
-
-
-
-
 
 class FilterSearch { // All Filters of Application 
   displayBrowseMatrimonyFilter(filterData){ // BrowseMatrimony
