@@ -245,6 +245,14 @@ function display_checkedDropDown_occupationType(prefix_Id, filterData, onChecked
 	 content+='</span>&nbsp;';
 	 content+='<span class="caret pull-right mtop8p"></span></button>';
 	 content+='<ul class="dropdown-menu">';
+	 
+	 content+='<li><a href="#">';
+	 content+='<div class="btn-group pull-right">';
+	 content+='<button class="btn btn-default btn-xs"><b>Select All</b></button>';
+	 content+='<button class="btn btn-default btn-xs"><b>DeSelect All</b></button>';
+	 content+='</div>';
+	 content+='</a></li>';
+	  
 	 for(var index=0;index<infoMenu_occupationType.length;index++){
 	   var occupationType = infoMenu_occupationType[index];
 	   content+='<li><a href="#">';
@@ -269,6 +277,14 @@ function display_checkedDropDown_profession(prefix_Id, filterData, onChecked){
 	 content+='</span>&nbsp;';
 	 content+='<span class="caret pull-right mtop8p"></span></button>';
 	 content+='<ul class="dropdown-menu">';
+	 
+	 content+='<li><a href="#">';
+	 content+='<div class="btn-group pull-right">';
+	 content+='<button class="btn btn-default btn-xs"><b>Select All</b></button>';
+	 content+='<button class="btn btn-default btn-xs"><b>DeSelect All</b></button>';
+	 content+='</div>';
+	 content+='</a></li>';
+	 
 	 for(var index=0;index<infoMenu_profession.length;index++){
 	  var profession = infoMenu_profession[index];
 	  content+='<li><a href="#">';
@@ -937,7 +953,16 @@ class BrowseMatrimony { // All Filters of Application
 	   if(filterData.gender.length>0){ content+='in'; }
 	   content+='">';
 	   content+='<div class="list-group-item">';
+	   
+	   content+='<div class="btn-group pull-right">';
+	   content+='<button class="btn btn-default btn-xs"><b>Select All</b></button>';
+	   content+='<button class="btn btn-default btn-xs"><b>DeSelect All</b></button>';
+	   content+='</div>';
+	   
+	   content+='<div class="mtop15p">';
 	   content+=display_checkedList_gender('browseMatrimony_gender_', filterData, 'browseMatrimony.onCheckedGender(this.id)');
+	   content+='</div>';
+	   
 	   content+='</div>';
 	   content+='</div>';
 	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_ageGroup">';
@@ -947,7 +972,16 @@ class BrowseMatrimony { // All Filters of Application
 	   if(filterData.ageDiff.length>0){ content+='in'; }
 	   content+='">';
 	   content+='<div class="list-group-item">';
+	   
+	   content+='<div class="btn-group pull-right">';
+	   content+='<button class="btn btn-default btn-xs"><b>Select All</b></button>';
+	   content+='<button class="btn btn-default btn-xs"><b>DeSelect All</b></button>';
+	   content+='</div>';
+	   
+	   content+='<div class="mtop15p">';
 	   content+=display_checkedList_ageDiff('browseMatrimony_ageDiff_', filterData, 'browseMatrimony.onCheckedAgeDiff(this.id)');
+	   content+='</div>';
+	   
 	   content+='</div>';
 	   content+='</div>';
 	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_martialStatus">';
@@ -957,7 +991,16 @@ class BrowseMatrimony { // All Filters of Application
 	   if(filterData.martialStatus.length>0){ content+='in'; }
 	   content+='">';
 	   content+='<div class="list-group-item">';
+	   
+	   content+='<div class="btn-group pull-right">';
+	   content+='<button class="btn btn-default btn-xs"><b>Select All</b></button>';
+	   content+='<button class="btn btn-default btn-xs"><b>DeSelect All</b></button>';
+	   content+='</div>';
+	   
+	   content+='<div class="mtop15p">';
 	   content+=display_checkedList_martialStatus('browseMatrimony_martialStatus_', filterData, 'browseMatrimony.onCheckedMartialStatus(this.id)');
+	   content+='</div>';
+	   
 	   content+='</div>';
 	   content+='</div>';
 	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_occupationType">';
@@ -967,8 +1010,10 @@ class BrowseMatrimony { // All Filters of Application
 	   if(filterData.occupationType.length>0 || filterData.profession.length>0){ content+='in'; }
 	   content+='">';
 	   content+='<div class="list-group-item">';
+	   
 	   content+=display_checkedDropDown_occupationType('browseMatrimony_occupationType_', filterData, 'browseMatrimony.onCheckedOccupationType(this.id)');
 	   content+=display_checkedDropDown_profession('browseMatrimony_profession_',filterData, 'browseMatrimony.onCheckedProfession(this.id)');
+	   
 	   content+='</div>';
 	   content+='</div>';
 	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_motherTongue">';
