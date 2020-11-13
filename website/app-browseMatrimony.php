@@ -31,7 +31,7 @@ $(document).ready(function(){
   filterData = JSON.parse(sessionStorage.getItem("PAGE_BROWSEMATRIMONY"));
   console.log(filterData);
  }
- document.getElementById("browseMatrimony_filterSearch").innerHTML = filterSearch.displayBrowseMatrimonyFilter(filterData);
+ browseMatrimony.display('browseMatrimony_filterSearch', filterData);
  
  
 });

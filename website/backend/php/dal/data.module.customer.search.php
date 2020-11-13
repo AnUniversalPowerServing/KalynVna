@@ -41,8 +41,11 @@ class CustomerSearch {
    if(count($age)>0){
     $query.="AND (";
     for($index=0;$index<count($age);$index++){
-     $query.="(SELECT ROUND((DATEDIFF(CURRENT_DATE, STR_TO_DATE(date(profile_brahmin_birth.dob), '%Y-%m-%d'))/365),0)>=".$age[$index]["from"].") ";
-     $query.="AND (SELECT ROUND((DATEDIFF(CURRENT_DATE, STR_TO_DATE(date(profile_brahmin_birth.dob), '%Y-%m-%d'))/365),0)<=".$age[$index]["to"].") ";
+	 $ageSplit = explode("-",$age[$index]);
+	 $from = $ageSplit[0];
+	 $to = $ageSplit[1];
+     $query.="(SELECT ROUND((DATEDIFF(CURRENT_DATE, STR_TO_DATE(date(profile_brahmin_birth.dob), '%Y-%m-%d'))/365),0)>=".$from.") ";
+     $query.="AND (SELECT ROUND((DATEDIFF(CURRENT_DATE, STR_TO_DATE(date(profile_brahmin_birth.dob), '%Y-%m-%d'))/365),0)<=".$to.") ";
      $query.=" OR";
     }
     $query=chop($query,'OR');
@@ -101,8 +104,11 @@ class CustomerSearch {
    if(count($age)>0){
     $query.="AND (";
     for($index=0;$index<count($age);$index++){
-     $query.="(SELECT ROUND((DATEDIFF(CURRENT_DATE, STR_TO_DATE(date(profile_brahmin_birth.dob), '%Y-%m-%d'))/365),0)>=".$age[$index]["from"].") ";
-     $query.="AND (SELECT ROUND((DATEDIFF(CURRENT_DATE, STR_TO_DATE(date(profile_brahmin_birth.dob), '%Y-%m-%d'))/365),0)<=".$age[$index]["to"].") ";
+	 $ageSplit = explode("-",$age[$index]);
+	 $from = $ageSplit[0];
+	 $to = $ageSplit[1];
+     $query.="(SELECT ROUND((DATEDIFF(CURRENT_DATE, STR_TO_DATE(date(profile_brahmin_birth.dob), '%Y-%m-%d'))/365),0)>=".$from.") ";
+     $query.="AND (SELECT ROUND((DATEDIFF(CURRENT_DATE, STR_TO_DATE(date(profile_brahmin_birth.dob), '%Y-%m-%d'))/365),0)<=".$to.") ";
      $query.=" OR";
     }
     $query=chop($query,'OR');

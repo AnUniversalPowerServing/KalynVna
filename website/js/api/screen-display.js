@@ -202,45 +202,45 @@ function display_selOpt_profession(id, onChange, defaultMessage){
  return content;
 }
 
-function display_checkedList_gender(prefix_Id, filterData){
+function display_checkedList_gender(prefix_Id, filterData, onChecked){
  var content='';
  for(var index=0;index<infoMenu_gender.length;index++){
   var gender = infoMenu_gender[index];
-  content+='<div><input id="browseMatrimonyFilter_gender_'+toCamelCase(gender)+'" type="checkbox" ';
-  if(filterData.gender === gender){ content+='checked '; }
-  content+='onclick="javascript:load_data_profile();"/>&nbsp;'+gender+'</div>';
+  content+='<div><input id="browseMatrimonyFilter_gender_'+toCamelCase(gender)+'" type="checkbox" value="'+gender+'" ';
+  if(filterData.gender.includes(gender)){ content+='checked '; }
+  content+='onclick="javascript:'+onChecked+'"/>&nbsp;'+gender+'</div>'; // onclick="javascript:load_data_profile();"
  }
  return content;
 }
 
-function display_checkedList_ageDiff(prefix_Id, filterData){
+function display_checkedList_ageDiff(prefix_Id, filterData, onChecked){
  var content='';
  for(var index=0;index<infoMenu_ageDiff.length;index++){
   var ageDiff = infoMenu_ageDiff[index];
-  content+='<div><input id="browseMatrimony_age_'+ageDiff.replace("-", "_")+'" type="checkbox" ';
-  if(filterData.ageDiff === ageDiff){ content+='checked '; }
-  content+='onclick="javascript:load_data_profile();"/>&nbsp;'+ageDiff+'</div>';
+  content+='<div><input id="browseMatrimony_age_'+ageDiff.replace("-", "_")+'" type="checkbox" value="'+ageDiff+'" ';
+  if(filterData.ageDiff.includes(ageDiff)){ content+='checked '; }
+  content+='onclick="javascript:'+onChecked+';"/>&nbsp;'+ageDiff+'</div>';
  }
  return content;
 }	   
 
-function display_checkedList_martialStatus(prefix_Id, filterData){
+function display_checkedList_martialStatus(prefix_Id, filterData, onChecked){
  var content='';
  for(var index=0;index<infoMenu_martialStatus.length;index++){
   var martialStatus = infoMenu_martialStatus[index];
-  content+='<div><input id="browseMatrimony_status_'+toCamelCase(martialStatus)+'" type="checkbox" ';
-  if(filterData.martialStatus === martialStatus){ content+='checked '; }
-	content+='onclick="javascript:load_data_profile();"/>&nbsp;'+martialStatus+'</div>';
+  content+='<div><input id="browseMatrimony_status_'+toCamelCase(martialStatus)+'" type="checkbox" value="'+martialStatus+'" ';
+  if(filterData.martialStatus.includes(martialStatus)){ content+='checked '; }
+	content+='onclick="javascript:'+onChecked+';"/>&nbsp;'+martialStatus+'</div>';
   }
  return content;
 }
 
-function display_dropDown_occupationType(prefix_Id, filterData){
+function display_checkedDropDown_occupationType(prefix_Id, filterData, onChecked){
  var content='<div class="form-group">';
 	 content+='<label>Occupation Type</label>';
 	 content+='<div class="dropdown">';
 	 content+='<button align="left" class="btn btn-default form-control dropdown-toggle" type="button" data-toggle="dropdown"><span class="f12">';
-	 if(filterData.occupationType!==undefined && filterData.occupationType.length>0){ content+=filterData.occupationType; } 
+	 if(filterData.occupationType.length>0){ content+=filterData.occupationType[0]; } 
 	 else { content+='Select Profession'; }
 	 content+='</span>&nbsp;';
 	 content+='<span class="caret pull-right mtop8p"></span></button>';
@@ -248,9 +248,9 @@ function display_dropDown_occupationType(prefix_Id, filterData){
 	 for(var index=0;index<infoMenu_occupationType.length;index++){
 	   var occupationType = infoMenu_occupationType[index];
 	   content+='<li><a href="#">';
-	   content+='<div><input id="browseMatrimony_occupationType_'+toCamelCase(occupationType)+'" type="checkbox" ';
-	   if(filterData.occupationType === occupationType){ content+='checked '; }
-	   content+='onclick="javascript:load_data_profile();"/>&nbsp;'+occupationType+'</div>';
+	   content+='<div><input id="browseMatrimony_occupationType_'+toCamelCase(occupationType)+'" type="checkbox" value="'+occupationType+'" ';
+	   if(filterData.occupationType.includes(occupationType)){ content+='checked '; }
+	   content+='onclick="javascript:'+onChecked+';"/>&nbsp;'+occupationType+'</div>';
 	   content+='</a></li>';
 	 }
 	 content+='</ul>';
@@ -259,12 +259,12 @@ function display_dropDown_occupationType(prefix_Id, filterData){
   return content;
 }
 
-function display_dropDown_profession(prefix_Id, filterData){
+function display_checkedDropDown_profession(prefix_Id, filterData, onChecked){
  var content='<div class="form-group">';
 	 content+='<label>Profession</label>';
 	 content+='<div class="dropdown">';
 	 content+='<button align="left" class="btn btn-default form-control dropdown-toggle" type="button" data-toggle="dropdown"><span class="f12">';
-	 if(filterData.profession!==undefined && filterData.profession.length>0){  content+=filterData.profession; }
+	 if(filterData.profession.length>0){  content+=filterData.profession; }
 	 else { content+='Select Profession'; }
 	 content+='</span>&nbsp;';
 	 content+='<span class="caret pull-right mtop8p"></span></button>';
@@ -272,9 +272,9 @@ function display_dropDown_profession(prefix_Id, filterData){
 	 for(var index=0;index<infoMenu_profession.length;index++){
 	  var profession = infoMenu_profession[index];
 	  content+='<li><a href="#">';
-	  content+='<div><input id="browseMatrimony_profession_'+toCamelCase(profession)+'" type="checkbox" ';
-	  if(filterData.profession === profession){ content+='checked '; }
-	  content+='onclick="javascript:load_data_profile();"/>&nbsp;'+profession+'</div>';
+	  content+='<div><input id="browseMatrimony_profession_'+toCamelCase(profession)+'" type="checkbox" value="'+profession+'" ';
+	  if(filterData.profession.includes(profession)){ content+='checked '; }
+	  content+='onclick="javascript:'+onChecked+';"/>&nbsp;'+profession+'</div>';
 	  content+='</a></li>';
 	 }
 	 content+='</ul>';
@@ -283,12 +283,12 @@ function display_dropDown_profession(prefix_Id, filterData){
   return content;
 }
 
-function display_dropDown_motherTongue(prefix_Id, filterData){
+function display_checkedDropDown_motherTongue(prefix_Id, filterData, onChecked){
  var content='<div class="form-group">';
 	 content+='<label>Mother Tongue</label>';
 	 content+='<div class="dropdown">';
 	 content+='<button align="left" class="btn btn-default form-control dropdown-toggle" type="button" data-toggle="dropdown"><span class="f12">';
-	 if(filterData.motherTongue!==undefined && filterData.motherTongue.length>0){  content+=filterData.motherTongue; }
+	 if(filterData.motherTongue.length>0){  content+=filterData.motherTongue; }
 	 else { content+='Select Mother Tongue'; }
 	 content+='</span>&nbsp;';
 	 content+='<span class="caret pull-right mtop8p"></span></button>';
@@ -296,9 +296,9 @@ function display_dropDown_motherTongue(prefix_Id, filterData){
 	 for(var index=0;index<infoMenu_motherTongue.length;index++){
 	  var motherTongue = infoMenu_motherTongue[index];
 	  content+='<li><a href="#">';
-	  content+='<div><input id="browseMatrimony_profession_'+toCamelCase(motherTongue)+'" type="checkbox" ';
-	  if(filterData.motherTongue === motherTongue){ content+='checked '; }
-	  content+='onclick="javascript:load_data_profile();"/>&nbsp;'+motherTongue+'</div>';
+	  content+='<div><input id="browseMatrimony_profession_'+toCamelCase(motherTongue)+'" type="checkbox" value="'+motherTongue+'" ';
+	  if(filterData.motherTongue.includes(motherTongue)){ content+='checked '; }
+	  content+='onclick="javascript:'+onChecked+';"/>&nbsp;'+motherTongue+'</div>';
 	  content+='</a></li>';
 	 }
 	 content+='</ul>';
@@ -773,8 +773,8 @@ class CustomerSeekingForm { // HomePage
 	if(this.isValidGender || this.isValidAgeDiff || this.isValidMartialStatus
 	  || this.isValidOccupationType || this.isValidProfession || this.isValidMotherTongue){
 		// Call to BrowseMatrimony Page
-		var filterData = { gender: gender, ageDiff:ageDiff, martialStatus:martialStatus, 
-						   occupationType:occupationType, profession:profession, motherTongue:motherTongue };
+		var filterData = { gender: [gender], ageDiff:[ageDiff], martialStatus:[martialStatus], 
+						   occupationType:[occupationType], profession:[profession], motherTongue:[motherTongue] };
 		sessionStorage.setItem("PAGE_BROWSEMATRIMONY", JSON.stringify(filterData));
 		window.location.href=PROJECT_URL+'app/browseMatrimony';
 	
@@ -872,68 +872,183 @@ class CustomerSeekingForm { // HomePage
 	
 }
 
-class FilterSearch { // All Filters of Application 
-  displayBrowseMatrimonyFilter(filterData){ // BrowseMatrimony
+class BrowseMatrimony { // All Filters of Application 
+  gender=[];ageDiff=[];martialStatus=[];occupationType=[];profession=[];motherTongue=[];
+
+  checkAndPushIntoArray(element_Id, paramArray){
+  // Gets value from HTMLElement, checks whether it exists before and pushes into Array if it not exists
+	var param_Id = document.getElementById(element_Id);
+	var isExists = paramArray.includes(param_Id.value);
+	if(param_Id.checked){ // add
+	  if(!isExists){ paramArray.push(param_Id.value); } 
+	} else { // remove
+		if(isExists){ paramArray.splice(paramArray.indexOf(param_Id.value), 1); }
+	}
+  }
+  
+  onCheckedGender(id){
+	browseMatrimony.checkAndPushIntoArray(id, this.gender);
+	browseMatrimony.profileloader_display();
+  }
+  
+  onCheckedAgeDiff(id){
+	browseMatrimony.checkAndPushIntoArray(id, this.ageDiff);
+	browseMatrimony.profileloader_display();
+  }
+  
+  onCheckedMartialStatus(id){
+	browseMatrimony.checkAndPushIntoArray(id, this.martialStatus);
+	browseMatrimony.profileloader_display();
+  }
+  
+  onCheckedOccupationType(id){
+	browseMatrimony.checkAndPushIntoArray(id, this.occupationType);
+	browseMatrimony.profileloader_display();
+  }
+  
+  onCheckedProfession(id){
+	browseMatrimony.checkAndPushIntoArray(id, this.profession);
+	browseMatrimony.profileloader_display();
+  }
+  
+  onCheckedMotherTongue(id){
+	browseMatrimony.checkAndPushIntoArray(id, this.motherTongue);
+	browseMatrimony.profileloader_display();
+  }
+  
+  display(id,filterData){
+	this.gender = filterData.gender;
+	this.ageDiff = filterData.ageDiff;
+	this.martialStatus = filterData.martialStatus;
+	this.motherTongue = filterData.motherTongue;
+	this.occupationType = filterData.occupationType;
+	this.profession = filterData.profession;
+	document.getElementById(id).innerHTML = browseMatrimony.displayFilter(filterData);
+	browseMatrimony.profileloader_display();
+  }
+  
+  displayFilter(filterData){ // BrowseMatrimony
    var content='<div><h5 style="border-bottom:2px solid #000;padding-bottom:10px;"><b>Filter Search</b></h5></div>';
 	   content+='<div class="list-group">';
 	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_gender">';
 	   content+='<b>Gender</b>&nbsp;<i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>';
 	   content+='</div>';
 	   content+='<div id="filter_gender" class="collapse ';
-	   if(filterData.gender !== undefined && filterData.gender.length>0){ content+='in'; }
+	   if(filterData.gender.length>0){ content+='in'; }
 	   content+='">';
 	   content+='<div class="list-group-item">';
-	   content+=display_checkedList_gender('browseMatrimony_motherTongue_', filterData);
+	   content+=display_checkedList_gender('browseMatrimony_gender_', filterData, 'browseMatrimony.onCheckedGender(this.id)');
 	   content+='</div>';
 	   content+='</div>';
 	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_ageGroup">';
 	   content+='<b>Age Group</b>&nbsp;<i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>';
 	   content+='</div>';
 	   content+='<div id="filter_ageGroup" class="collapse ';
-	   if(filterData.ageDiff !== undefined && filterData.ageDiff.length>0){ content+='in'; }
+	   if(filterData.ageDiff.length>0){ content+='in'; }
 	   content+='">';
 	   content+='<div class="list-group-item">';
-	   content+=display_checkedList_ageDiff('browseMatrimony_motherTongue_', filterData);
+	   content+=display_checkedList_ageDiff('browseMatrimony_ageDiff_', filterData, 'browseMatrimony.onCheckedAgeDiff(this.id)');
 	   content+='</div>';
-	   content+='</div>'; // 
+	   content+='</div>';
 	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_martialStatus">';
 	   content+='<b>Martial Status</b>&nbsp;<i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>';
 	   content+='</div>';
 	   content+='<div id="filter_martialStatus" class="collapse ';
-	   if(filterData.martialStatus !== undefined && filterData.martialStatus.length>0){ content+='in'; }
+	   if(filterData.martialStatus.length>0){ content+='in'; }
 	   content+='">';
 	   content+='<div class="list-group-item">';
-	   content+=display_checkedList_martialStatus('browseMatrimony_motherTongue_', filterData);
+	   content+=display_checkedList_martialStatus('browseMatrimony_martialStatus_', filterData, 'browseMatrimony.onCheckedMartialStatus(this.id)');
 	   content+='</div>';
 	   content+='</div>';
 	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_occupationType">';
 	   content+='<b>Occupation</b>&nbsp; <i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>';
 	   content+='</div>';
 	   content+='<div id="filter_occupationType" class="collapse ';
-	   if(filterData.occupationType !== undefined && filterData.occupationType.length>0){ content+='in'; }
+	   if(filterData.occupationType.length>0 || filterData.profession.length>0){ content+='in'; }
 	   content+='">';
 	   content+='<div class="list-group-item">';
-	   content+=display_dropDown_occupationType('browseMatrimony_motherTongue_', filterData);
-	   content+=display_dropDown_profession('browseMatrimony_motherTongue_',filterData);
+	   content+=display_checkedDropDown_occupationType('browseMatrimony_occupationType_', filterData, 'browseMatrimony.onCheckedOccupationType(this.id)');
+	   content+=display_checkedDropDown_profession('browseMatrimony_profession_',filterData, 'browseMatrimony.onCheckedProfession(this.id)');
 	   content+='</div>';
 	   content+='</div>';
 	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_motherTongue">';
 	   content+='<b>Mother Tongue</b>&nbsp;<i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>';
 	   content+='</div>';
 	   content+='<div id="filter_motherTongue" class="collapse ';
-	   if(filterData.motherTongue !== undefined && filterData.motherTongue.length>0){ content+='in'; }
+	   if(filterData.motherTongue.length>0){ content+='in'; }
 	   content+='">';
 	   content+='<div class="list-group-item">';
-	   content+=display_dropDown_motherTongue('browseMatrimony_motherTongue_',filterData);
+	   content+=display_checkedDropDown_motherTongue('browseMatrimony_motherTongue_',filterData, 'browseMatrimony.onCheckedMotherTongue(this.id)');
 	   content+='</div>';
 	   content+='</div>';
 	   content+='</div>';
 	return content;
   }
+  
+  profileloader_display(){
+	js_ajax('GET',PROJECT_URL+'backend/php/dac/controller.module.app.search.php',
+       { action:'GET_COUNT_BROWSEMATRIMONYPROFILES', gender:this.gender, motherTongue:this.motherTongue, 
+	     status:this.martialStatus, occupationType:this.occupationType, profession:this.profession, age:this.ageDiff }, 
+	   function(total_data){ 
+	     console.log(total_data);
+		 total_data = JSON.parse(total_data);
+		 if(total_data>0){
+		  var content='';
+		  if(total_data==1){ content='<b>Your Search Results:</b>&nbsp;'+total_data+'&nbsp;profile.'; }
+		  else { content='<b>Your Search Results:</b>&nbsp;'+total_data+'&nbsp;profiles.'; }
+		   document.getElementById("browse_results").innerHTML=content;
+		   // scroll_loadInitializer('browse_result_content',9,browseMatrimony.profileloader_data,total_data);
+		 } else {
+		   var content='<div align="center" class="col-sm-12">';
+		       content+='<span style="color:#ccc;">No Profile matches with your Search Results.</span>';
+			   content+='</div>';
+		   document.getElementById("browse_results").innerHTML='';
+		   document.getElementById("browse_result_content0").innerHTML=content;
+		 }
+		 
+	   });
+  }
+  
+  profileloader_data(div_view, appendContent,limit_start,limit_end){ 
+var arry_gender=[];
+ if(browseMatrimony_male){ arry_gender[arry_gender.length]='Male'; }
+ if(browseMatrimony_female){ arry_gender[arry_gender.length]='Female'; }
+ var arry_age=[];
+ if(browseMatrimony_age_21_25){ arry_age[arry_age.length]={"from":21,"to":25}; }
+ if(browseMatrimony_age_26_30){ arry_age[arry_age.length]={"from":26,"to":30}; }
+ if(browseMatrimony_age_31_35){ arry_age[arry_age.length]={"from":31,"to":35}; }
+ if(browseMatrimony_age_36_40){ arry_age[arry_age.length]={"from":35,"to":40}; }
+ if(browseMatrimony_age_41_45){ arry_age[arry_age.length]={"from":40,"to":45}; }
+ var arry_status=[]; 
+ if(browseMatrimony_status_unMarried){ arry_status[arry_status.length]='UnMarried'; } 
+ if(browseMatrimony_status_divorced){ arry_status[arry_status.length]='Divorced'; }
+ if(browseMatrimony_status_widow){ arry_status[arry_status.length]='Widow'; }
+ var arry_occupationType=[];
+ if(browseMatrimony_occupationType_privateCompany){ arry_occupationType[arry_occupationType.length]='Private Company'; }
+ if(browseMatrimony_occupationType_govt){ arry_occupationType[arry_occupationType.length]='Government / Public Sector';}
+ if(browseMatrimony_occupationType_defence){ arry_occupationType[arry_occupationType.length]='Defence / Civil Services';}
+ if(browseMatrimony_occupationType_biz){arry_occupationType[arry_occupationType.length]='Business / Self Employeed';  }
+ var arry_motherTongue=[];
+ if(browseMatrimony_motherTongue_telugu){ arry_motherTongue[arry_motherTongue.length]='Telugu'; }
+ if(browseMatrimony_motherTongue_hindi){ arry_motherTongue[arry_motherTongue.length]='Hindi'; }
+ console.log('arry_gender: '+JSON.stringify(arry_gender));
+ console.log('arry_motherTongue: '+JSON.stringify(arry_motherTongue));
+ console.log('arry_occupationType: '+JSON.stringify(arry_occupationType));
+ console.log('arry_age: '+JSON.stringify(arry_age));
+  js_ajax('GET',PROJECT_URL+'backend/php/dac/controller.module.app.search.php',
+  { action:'GET_DATA_BROWSEMATRIMONYPROFILES', gender:arry_gender, motherTongue:arry_motherTongue, status:arry_status, 
+    occupationType:arry_occupationType, age:arry_age, mob_code:CUSTOMERACCOUNT_MOBCODE, mobile:CUSTOMERACCOUNT_MOBILE,
+	accountType:'CUSTOMER', limit_start:limit_start, limit_end:limit_end }, function(response){
+   console.log(response); 
+   var content=browseData_contentDisplayer(response);
+	   content+=appendContent;
+   document.getElementById(div_view).innerHTML=content;
+  });
+}
 }
 
 var commons = new Commons();
 var viewProfiles = new ViewProfiles();
 var dashboard = new Dashboard();
 var customerSeekingForm = new CustomerSeekingForm();
-var filterSearch = new FilterSearch();
+var browseMatrimony = new BrowseMatrimony();
