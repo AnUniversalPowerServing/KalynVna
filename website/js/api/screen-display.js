@@ -1,330 +1,3 @@
-/** Global Variables */
-var infoMenu_gender = ["Male","Female"];
-var infoMenu_ageDiff=["21-25","26-30","31-35","36-40","41-45"];
-var infoMenu_martialStatus = ["UnMarried","Divorced","Widow"];
-var infoMenu_profession = ["Accountant","Teacher","Physician","Engineer","Laborer","Technician","Lawyer","Veterinary Physician","Psychologist","Pharmacist",
-						   "Dietitian","Midwife","Surveyor","Mechanic","Electrician","Architect","Software Engineer","Butcher","Surgeon","Radiographer",
-						   "Health Professional","Actor","Consultant","Dentist","Designer","Judge","Secretary","Police"];
-var infoMenu_occupationType = ["Private Company","Government / Public Sector","Defence / Civil Services","Business / Self Employeed"];
-var infoMenu_motherTongue = ["Hindi","Bengali","Marathi","Telugu","Tamil","Gujarati","Urdu","Kannada","Odia","Malayalam","Punjabi","Assamese","Maithili"];
-
-function bootstrap_formField_alert(type, div_Id, message){
-  var alertMessage = 'success'; if(type==='error'){ alertMessage = 'danger'; }
-  var content='<div class="alert alert-'+alertMessage+' alert-dismissible" style="margin-bottom:0px;">';
-      content+='<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>Alert!</strong><br/> '+message+'</div>';
-	  content+='</div>';
-  document.getElementById(div_Id).innerHTML=content;
-}
-
-function toSentenceCase(val){
- return val.charAt(0).toUpperCase() + val.substr(1).toLowerCase();	
-}
-
-function toCamelCase(val){
- return val.charAt(0).toUpperCase() + val.substr(1);	
-}
-
-function validateGender(id){
- var gender = $('#'+id).val();
- var isValid = false;
- if(gender.length>0){
-	bootstrap_formField_trigger('success',id);
-	isValid = true;
- } else {
-	 bootstrap_formField_trigger('error',id);
- }
- return isValid;
-}	
-
-function validateAgeDiff(id){
- var ageDiff = $('#'+id).val();
- var isValid = false;
- if(ageDiff.length>0){
-	bootstrap_formField_trigger('success',id);
-	isValid = true;
- } else {
-	 bootstrap_formField_trigger('error',id);
- }
- return isValid;
-}
-
-function validateMartialStatus(id){
- var martialStatus = $('#'+id).val();
- var isValid = false;
- if(martialStatus.length>0){
-	bootstrap_formField_trigger('success',id);
-	isValid = true;
- } else {
-	 bootstrap_formField_trigger('error',id);
- }
- return isValid;
-}
-
-function validateMartialStatus(id){
- var martialStatus = $('#'+id).val();
- var isValid = false;
- if(martialStatus.length>0){
-	bootstrap_formField_trigger('success',id);
-	isValid = true;
- } else {
-	 bootstrap_formField_trigger('error',id);
- }
- return isValid;
-}
-
-function validateCountry(id){
- var country = $('#'+id).val();
- var isValid = false;
- if(country.length>0){
-	bootstrap_formField_trigger('success',id);
-	isValid = true;
- } else {
-	 bootstrap_formField_trigger('error',id);
- }
- return isValid;
-}
-
-function validateState(id){
- var state = $('#'+id).val();
- var isValid = false;
- if(state.length>0){
-	bootstrap_formField_trigger('success',id);
-	isValid = true;
- } else {
-	 bootstrap_formField_trigger('error',id);
- }
- return isValid;
-}
-
-function validateOccupationType(id){
- var occupationType = $('#'+id).val();
- var isValid = false;
- if(occupationType.length>0){
-	bootstrap_formField_trigger('success',id);
-	isValid = true;
- } else {
-	 bootstrap_formField_trigger('error',id);
- }
- return isValid;
-}
-
-function validateProfession(id){
- var profession = $('#'+id).val();
- var isValid = false;
- if(profession.length>0){
-	bootstrap_formField_trigger('success',id);
-	isValid = true;
- } else {
-	 bootstrap_formField_trigger('error',id);
- }
- return isValid;
-}
-
-function validateMotherTongue(id){
- var motherTongue = $('#'+id).val();
- var isValid = false;
- if(motherTongue.length>0){
-	bootstrap_formField_trigger('success',id);
-	isValid = true;
- } else {
-	 bootstrap_formField_trigger('error',id);
- }
- return isValid;
-}
-
-function display_selOpt_occupationType(id, onChange, defaultMessage){
- var content='<select id="'+id+'" class="form-control" onClick="javascript:'+onChange+';">';
-	 content+='<option value="">'+defaultMessage+'</option>';
-	 for(var index=0;index<infoMenu_occupationType.length;index++){
-	  content+='<option value="'+infoMenu_occupationType[index]+'">'+infoMenu_occupationType[index]+'</option>';
-	 }
-	content+='</select>';
- return content;
-}		
-
-function display_selOpt_motherTongue(id, onChange, defaultMessage){
- var content='<select id="'+id+'" class="form-control" onchange="javascript:'+onChange+'">';
- content+='<option value="">'+defaultMessage+'</option>';
- for(var index=0;index<infoMenu_motherTongue.length;index++){
-  content+='<option value="'+infoMenu_motherTongue[index]+'">'+infoMenu_motherTongue[index]+'</option>';
- }
- content+='</select>';
- return content;
-}
-
-function display_selOpt_martialStatus(id, onChange, defaultMessage){
-var content='<select id="'+id+'" class="form-control" onClick="javascript:'+onChange+'">';
- content+='<option value="">'+defaultMessage+'</option>';
- for(var index=0;index<infoMenu_martialStatus.length;index++){
-  content+='<option value="'+infoMenu_martialStatus[index]+'">'+infoMenu_martialStatus[index]+'</option>';
- }
- content+='</select>';
- return content;
-}
-
-function display_selOpt_gender(id, onChange, defaultMessage){
- var content='<select id="'+id+'" class="form-control" onClick="javascript:'+onChange+';">';
- content+='<option value="">'+defaultMessage+'</option>';
- for(var index=0;index<infoMenu_gender.length;index++){
-  content+='<option value="'+infoMenu_gender[index]+'">'+infoMenu_gender[index]+'</option>';
- }
- content+='</select>';
- return content;
-}
-
-function display_selOpt_ageDiff(id, onChange, defaultMessage){
- var content='<select id="'+id+'" class="form-control" onClick="javascript:'+onChange+';">';
- content+='<option value="">'+defaultMessage+'</option>';
- for(var index=0;index<infoMenu_ageDiff.length;index++){
-  content+='<option value="'+infoMenu_ageDiff[index]+'">'+infoMenu_ageDiff[index]+'</option>';
- }
- content+='</select>';
- return content;
-}
-
-function display_selOpt_occupationType(id, onChange, defaultMessage){
- var content='<select id="'+id+'" class="form-control" onClick="javascript:'+onChange+'">';
- content+='<option value="">'+defaultMessage+'</option>';
- for(var index=0;index<infoMenu_occupationType.length;index++){
- content+='<option value="'+infoMenu_occupationType[index]+'">'+infoMenu_occupationType[index]+'</option>';
- }
- content+='</select>';
- return content;
-}
-
-function display_selOpt_profession(id, onChange, defaultMessage){
- var content='<select id="'+id+'" class="form-control" onClick="javascript:'+onChange+';">';
- content+='<option value="">'+defaultMessage+'</option>';
- for(var index=0;index<infoMenu_profession.length;index++){
-  content+='<option value="'+infoMenu_profession[index]+'">'+infoMenu_profession[index]+'</option>';
- }
- content+='</select>';
- return content;
-}
-
-function display_checkedList_gender(prefix_Id, filterData, onChecked){
- var content='';
- for(var index=0;index<infoMenu_gender.length;index++){
-  var gender = infoMenu_gender[index];
-  content+='<div><input id="browseMatrimonyFilter_gender_'+toCamelCase(gender)+'" type="checkbox" value="'+gender+'" ';
-  if(filterData.gender.includes(gender)){ content+='checked '; }
-  content+='onclick="javascript:'+onChecked+'"/>&nbsp;'+gender+'</div>'; // onclick="javascript:load_data_profile();"
- }
- return content;
-}
-
-function display_checkedList_ageDiff(prefix_Id, filterData, onChecked){
- var content='';
- for(var index=0;index<infoMenu_ageDiff.length;index++){
-  var ageDiff = infoMenu_ageDiff[index];
-  content+='<div><input id="browseMatrimony_age_'+ageDiff.replace("-", "_")+'" type="checkbox" value="'+ageDiff+'" ';
-  if(filterData.ageDiff.includes(ageDiff)){ content+='checked '; }
-  content+='onclick="javascript:'+onChecked+';"/>&nbsp;'+ageDiff+'</div>';
- }
- return content;
-}	   
-
-function display_checkedList_martialStatus(prefix_Id, filterData, onChecked){
- var content='';
- for(var index=0;index<infoMenu_martialStatus.length;index++){
-  var martialStatus = infoMenu_martialStatus[index];
-  content+='<div><input id="browseMatrimony_status_'+toCamelCase(martialStatus)+'" type="checkbox" value="'+martialStatus+'" ';
-  if(filterData.martialStatus.includes(martialStatus)){ content+='checked '; }
-	content+='onclick="javascript:'+onChecked+';"/>&nbsp;'+martialStatus+'</div>';
-  }
- return content;
-}
-
-function display_checkedDropDown_occupationType(prefix_Id, filterData, onChecked){
- var content='<div class="form-group">';
-	 content+='<label>Occupation Type</label>';
-	 content+='<div class="dropdown">';
-	 content+='<button align="left" class="btn btn-default form-control dropdown-toggle" type="button" data-toggle="dropdown"><span class="f12">';
-	 if(filterData.occupationType.length>0){ content+=filterData.occupationType[0]; } 
-	 else { content+='Select Profession'; }
-	 content+='</span>&nbsp;';
-	 content+='<span class="caret pull-right mtop8p"></span></button>';
-	 content+='<ul class="dropdown-menu">';
-	 
-	 content+='<li><a href="#">';
-	 content+='<div class="btn-group pull-right">';
-	 content+='<button class="btn btn-default btn-xs"><b>Select All</b></button>';
-	 content+='<button class="btn btn-default btn-xs"><b>DeSelect All</b></button>';
-	 content+='</div>';
-	 content+='</a></li>';
-	  
-	 for(var index=0;index<infoMenu_occupationType.length;index++){
-	   var occupationType = infoMenu_occupationType[index];
-	   content+='<li><a href="#">';
-	   content+='<div><input id="browseMatrimony_occupationType_'+toCamelCase(occupationType)+'" type="checkbox" value="'+occupationType+'" ';
-	   if(filterData.occupationType.includes(occupationType)){ content+='checked '; }
-	   content+='onclick="javascript:'+onChecked+';"/>&nbsp;'+occupationType+'</div>';
-	   content+='</a></li>';
-	 }
-	 content+='</ul>';
-	 content+='</div>';
-	 content+='</div>';
-  return content;
-}
-
-function display_checkedDropDown_profession(prefix_Id, filterData, onChecked){
- var content='<div class="form-group">';
-	 content+='<label>Profession</label>';
-	 content+='<div class="dropdown">';
-	 content+='<button align="left" class="btn btn-default form-control dropdown-toggle" type="button" data-toggle="dropdown"><span class="f12">';
-	 if(filterData.profession.length>0){  content+=filterData.profession; }
-	 else { content+='Select Profession'; }
-	 content+='</span>&nbsp;';
-	 content+='<span class="caret pull-right mtop8p"></span></button>';
-	 content+='<ul class="dropdown-menu">';
-	 
-	 content+='<li><a href="#">';
-	 content+='<div class="btn-group pull-right">';
-	 content+='<button class="btn btn-default btn-xs"><b>Select All</b></button>';
-	 content+='<button class="btn btn-default btn-xs"><b>DeSelect All</b></button>';
-	 content+='</div>';
-	 content+='</a></li>';
-	 
-	 for(var index=0;index<infoMenu_profession.length;index++){
-	  var profession = infoMenu_profession[index];
-	  content+='<li><a href="#">';
-	  content+='<div><input id="browseMatrimony_profession_'+toCamelCase(profession)+'" type="checkbox" value="'+profession+'" ';
-	  if(filterData.profession.includes(profession)){ content+='checked '; }
-	  content+='onclick="javascript:'+onChecked+';"/>&nbsp;'+profession+'</div>';
-	  content+='</a></li>';
-	 }
-	 content+='</ul>';
-	 content+='</div>';
-	 content+='</div>';
-  return content;
-}
-
-function display_checkedDropDown_motherTongue(prefix_Id, filterData, onChecked){
- var content='<div class="form-group">';
-	 content+='<label>Mother Tongue</label>';
-	 content+='<div class="dropdown">';
-	 content+='<button align="left" class="btn btn-default form-control dropdown-toggle" type="button" data-toggle="dropdown"><span class="f12">';
-	 if(filterData.motherTongue.length>0){  content+=filterData.motherTongue; }
-	 else { content+='Select Mother Tongue'; }
-	 content+='</span>&nbsp;';
-	 content+='<span class="caret pull-right mtop8p"></span></button>';
-	 content+='<ul class="dropdown-menu">';
-	 for(var index=0;index<infoMenu_motherTongue.length;index++){
-	  var motherTongue = infoMenu_motherTongue[index];
-	  content+='<li><a href="#">';
-	  content+='<div><input id="browseMatrimony_profession_'+toCamelCase(motherTongue)+'" type="checkbox" value="'+motherTongue+'" ';
-	  if(filterData.motherTongue.includes(motherTongue)){ content+='checked '; }
-	  content+='onclick="javascript:'+onChecked+';"/>&nbsp;'+motherTongue+'</div>';
-	  content+='</a></li>';
-	 }
-	 content+='</ul>';
-	 content+='</div>';
-	 content+='</div>';
- return content;
-}
-
-
-
 
 class Commons {
   pageHeadingTitle(title){
@@ -810,6 +483,19 @@ class CustomerSeekingForm { // HomePage
   }
   
   display(){
+    var gender_info = { id: 'customerSeekingForm_gender', menu:infoMenu_gender, 
+					   onChange:'customerSeekingForm.onChangeGender()',  defaultMessage: 'You are looking for' };
+    var ageDiff_info = { id: 'customerSeekingForm_ageDiff', menu:infoMenu_ageDiff, 
+					   onChange:'customerSeekingForm.onChangeAgeDiff()',  defaultMessage: 'You are looking for' };
+    var martialStatus_info = { id: 'customerSeekingForm_martialStatus', menu:infoMenu_martialStatus, 
+					   onChange:'customerSeekingForm.onChangeMartialStatus()',  defaultMessage: 'You are looking for' };
+	var motherTongue_info = { id: 'customerSeekingForm_motherTongue', menu:infoMenu_motherTongue, 
+					   onChange:'customerSeekingForm.onChangeMotherTongue()',  defaultMessage: 'You are looking for' };
+	var occupationType_info = { id: 'customerSeekingForm_occupationType', menu:infoMenu_occupationType, 
+					   onChange:'customerSeekingForm.onChangeOccupationType()',  defaultMessage: 'You are looking for' };
+	var profession_info = { id: 'customerSeekingForm_profession', menu:infoMenu_profession, 
+					   onChange:'customerSeekingForm.onChangeProfession()',  defaultMessage: 'You are looking for' };
+					   
 	var content='<div class="list-group">';
 		content+='<div class="list-group-item pad0" style="color:#000;">';
 		content+='<div class="container-fluid">';
@@ -822,7 +508,7 @@ class CustomerSeekingForm { // HomePage
 		content+='<div class="col-xs-4 mtop5p"><b>Gender</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
-		content+=display_selOpt_gender('customerSeekingForm_gender', 'customerSeekingForm.onChangeGender()', 'You are looking for');
+		content+=display_selOpt_menu(gender_info);
 		content+='</div>';
 		content+='</div>';
 		content+='</div>';
@@ -830,7 +516,7 @@ class CustomerSeekingForm { // HomePage
 		content+='<div class="col-xs-4 mtop5p"><b>Age</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
-		content+=display_selOpt_ageDiff('customerSeekingForm_ageDiff', 'customerSeekingForm.onChangeAgeDiff()', 'You are looking for');
+		content+=display_selOpt_menu(ageDiff_info);
 		content+='</div>';
 		content+='</div>';
 		content+='</div>';
@@ -838,7 +524,7 @@ class CustomerSeekingForm { // HomePage
 		content+='<div class="col-xs-4 mtop5p"><b>Martial Status</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
-		content+=display_selOpt_martialStatus('customerSeekingForm_martialStatus', 'customerSeekingForm.onChangeMartialStatus()', 'You are looking for');
+		content+=display_selOpt_menu(martialStatus_info);
 		content+='</div>'; 
 		content+='</div>';
 		content+='</div>';
@@ -847,7 +533,7 @@ class CustomerSeekingForm { // HomePage
 		content+='<div class="col-xs-4 mtop5p"><b>Mother Tongue</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
-		content+=display_selOpt_motherTongue('customerSeekingForm_motherTongue', 'customerSeekingForm.onChangeMotherTongue()','You are looking for');
+		content+=display_selOpt_menu(motherTongue_info);
 		content+='</div>';
 		content+='</div>';
 		content+='</div>';
@@ -860,7 +546,7 @@ class CustomerSeekingForm { // HomePage
 		content+='<div class="col-xs-4 mtop5p"><b>Occupation Type</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
-		content+=display_selOpt_occupationType('customerSeekingForm_occupationType', 'customerSeekingForm.onChangeOccupationType()', 'You are looking for');
+		content+=display_selOpt_menu(occupationType_info);
 		content+='</div>';
 		content+='</div>';
 		content+='</div>';
@@ -868,7 +554,7 @@ class CustomerSeekingForm { // HomePage
 		content+='<div class="col-xs-4 mtop5p"><b>Profession</b></div>';
 		content+='<div class="col-xs-8">';
 		content+='<div class="form-group">';
-		content+=display_selOpt_profession('customerSeekingForm_profession', 'customerSeekingForm.onChangeProfession()', 'You are looking for');
+		content+=display_selOpt_menu(profession_info);
 		content+='</div>';
 		content+='</div>';
 		content+='</div>';
@@ -890,7 +576,12 @@ class CustomerSeekingForm { // HomePage
 
 class BrowseMatrimony { // All Filters of Application 
   gender=[];ageDiff=[];martialStatus=[];occupationType=[];profession=[];motherTongue=[];
-
+  // basicDisplayList = ["gender","ageDiff","martialStatus","occupationType","profession","motherTongue"];
+  basicDisplayList = [];
+  
+  setBasicDisplayList(displayList){
+	this.basicDisplayList = displayList;
+  }
   checkAndPushIntoArray(element_Id, paramArray){
   // Gets value from HTMLElement, checks whether it exists before and pushes into Array if it not exists
 	var param_Id = document.getElementById(element_Id);
@@ -932,101 +623,141 @@ class BrowseMatrimony { // All Filters of Application
 	browseMatrimony.profileloader_display();
   }
   
+  customerSeekingForm(id){
+	document.getElementById(id).innerHTML = browseMatrimony.displayFilter({});  
+  }
+  
   display(id,filterData){
+	if(filterData!==undefined){
 	this.gender = filterData.gender;
 	this.ageDiff = filterData.ageDiff;
 	this.martialStatus = filterData.martialStatus;
 	this.motherTongue = filterData.motherTongue;
 	this.occupationType = filterData.occupationType;
 	this.profession = filterData.profession;
-	document.getElementById(id).innerHTML = browseMatrimony.displayFilter(filterData);
+	}
+	var content='<div><h5 style="border-bottom:2px solid #000;padding-bottom:10px;"><b>Filter Search</b></h5></div>';
+		content+=browseMatrimony.displayFilter(filterData);
+	document.getElementById(id).innerHTML = content;
 	browseMatrimony.profileloader_display();
   }
   
   displayFilter(filterData){ // BrowseMatrimony
-   var content='<div><h5 style="border-bottom:2px solid #000;padding-bottom:10px;"><b>Filter Search</b></h5></div>';
-	   content+='<div class="list-group">';
-	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_gender">';
-	   content+='<b>Gender</b>&nbsp;<i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>';
-	   content+='</div>';
-	   content+='<div id="filter_gender" class="collapse ';
-	   if(filterData.gender.length>0){ content+='in'; }
-	   content+='">';
+   var info_gender = { prefix_Id :'browseMatrimony_gender_', menu:infoMenu_gender, defaultMessage:'Select Gender', 
+					   filterData:filterData, filterWith:'gender', onChecked: 'browseMatrimony.onCheckedGender(this.id)' };
+   var info_ageDiff = { prefix_Id :'browseMatrimony_ageDiff_', menu:infoMenu_ageDiff, defaultMessage:'Select Age Difference', 
+					    filterData:filterData, filterWith:'gender', onChecked: 'browseMatrimony.onCheckedAgeDiff(this.id)' };	
+   var info_martialStatus = { prefix_Id :'browseMatrimony_martialStatus_', menu:infoMenu_martialStatus, defaultMessage:'Select Martial Status',
+							  filterData:filterData, filterWith:'martialStatus', onChecked: 'browseMatrimony.onCheckedMartialStatus(this.id)' };			
+   var info_occupationType = { prefix_Id :'browseMatrimony_occupationType_', menu:infoMenu_occupationType, defaultMessage:'Select Occupation Type',
+							   filterData:filterData, filterWith:'occupationType', onChecked: 'browseMatrimony.onCheckedOccupationType(this.id)' };		
+   var info_profession = { prefix_Id :'browseMatrimony_profession_', menu:infoMenu_profession, defaultMessage:'Select Profession', 
+						   filterData:filterData, filterWith:'profession', onChecked: 'browseMatrimony.onCheckedProfession(this.id)' };
+   var info_motherTongue = { prefix_Id :'browseMatrimony_motherTongue_', menu:infoMenu_motherTongue, 
+						   filterData:filterData, filterWith:'motherTongue', onChecked: 'browseMatrimony.onCheckedMotherTongue(this.id)',
+						   defaultMessage:'Select Mother Tongue' };
+   var display_profileTitle =  (this.basicDisplayList.length===0 || (this.basicDisplayList.length>0 &&  
+								this.basicDisplayList.includes("gender") && this.basicDisplayList.includes("ageDiff") && 
+								this.basicDisplayList.includes("martialStatus") && this.basicDisplayList.includes("motherTongue")));
+								
+   var display_gender = (this.basicDisplayList.length===0 || (this.basicDisplayList.length>0 && this.basicDisplayList.includes("gender")));	
+   var display_ageDiff = (this.basicDisplayList.length===0 || (this.basicDisplayList.length>0 && this.basicDisplayList.includes("ageDiff")));
+   var display_martialStatus = (this.basicDisplayList.length===0 || (this.basicDisplayList.length>0 && this.basicDisplayList.includes("martialStatus")));
+   var display_motherTongue = (this.basicDisplayList.length===0 || (this.basicDisplayList.length>0 && this.basicDisplayList.includes("motherTongue")));
+   
+   var display_livelihoodTitle = (this.basicDisplayList.length===0 || (this.basicDisplayList.length>0 && 
+								  this.basicDisplayList.includes("occupationType") && this.basicDisplayList.includes("profession")));
+  
+   var display_occupationType = (this.basicDisplayList.length===0 || (this.basicDisplayList.length>0 && this.basicDisplayList.includes("occupationType")));
+   var display_profession = (this.basicDisplayList.length===0 || (this.basicDisplayList.length>0 && this.basicDisplayList.includes("profession")));
+   
+   var content='<div class="list-group">';
+
 	   content+='<div class="list-group-item">';
 	   
-	   content+='<div class="btn-group pull-right">';
-	   content+='<button class="btn btn-default btn-xs"><b>Select All</b></button>';
-	   content+='<button class="btn btn-default btn-xs"><b>DeSelect All</b></button>';
-	   content+='</div>';
+	   if(display_profileTitle){
+	   content+='<div align="center" class="mtop15p"><b>PROFILE</b></div>';
+	   }
 	   
 	   content+='<div class="mtop15p">';
-	   content+=display_checkedList_gender('browseMatrimony_gender_', filterData, 'browseMatrimony.onCheckedGender(this.id)');
-	   content+='</div>';
 	   
+	   if(display_gender){
+	   content+='<div class="form-group">';
+	   content+='<label>Gender</label>';
+	   content+=display_checkedDropDown_menu(info_gender);
 	   content+='</div>';
 	   content+='</div>';
-	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_ageGroup">';
-	   content+='<b>Age Group</b>&nbsp;<i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>';
-	   content+='</div>';
-	   content+='<div id="filter_ageGroup" class="collapse ';
-	   if(filterData.ageDiff.length>0){ content+='in'; }
-	   content+='">';
-	   content+='<div class="list-group-item">';
+	   }
 	   
-	   content+='<div class="btn-group pull-right">';
-	   content+='<button class="btn btn-default btn-xs"><b>Select All</b></button>';
-	   content+='<button class="btn btn-default btn-xs"><b>DeSelect All</b></button>';
+	   if(display_ageDiff){
+	   content+='<div class="mtop15p">';
+	   content+='<div class="form-group">';
+	   content+='<label>Age Difference</label>';
+	   content+=display_checkedDropDown_menu(info_ageDiff);
 	   content+='</div>';
+	   content+='</div>';   
+	   }
+	   
+	   if(display_martialStatus){
+	   content+='<div class="mtop15p">';
+	   content+='<div class="form-group">';
+	   content+='<label>Martial Status</label>';
+	   content+=display_checkedDropDown_menu(info_martialStatus);
+	   content+='</div>';
+	   content+='</div>';   
+	   }
+	   
+	   if(display_motherTongue){
+	   content+='<div class="mtop15p">';
+	   content+='<div class="form-group">';
+	   content+='<label>Mother Tongue</label>';
+	   content+=display_checkedDropDown_menu(info_motherTongue);
+	   content+='</div>';
+	   content+='</div>'; 
+	   }
+	   
+	   if(display_livelihoodTitle){
+	   content+='<div align="center" class="mtop15p"><b>LIVELIHOOD</b></div>';
+	   }
+	   
+	   if(display_occupationType){
+	   content+='<div class="mtop15p">';
+	   content+='<div class="form-group">';
+	   content+='<label>Occupation Type</label>';
+	   content+=display_checkedDropDown_menu(info_occupationType);
+	   content+='</div>';
+	   content+='</div>';  
+	   }
+	   
+	   if(display_profession){
+	   content+='<div class="mtop15p">';
+	   content+='<div class="form-group">';
+	   content+='<label>Profession</label>';
+	   content+=display_checkedDropDown_menu(info_profession);
+	   content+='</div>';
+	   content+='</div>';   
+	   }
 	   
 	   content+='<div class="mtop15p">';
-	   content+=display_checkedList_ageDiff('browseMatrimony_ageDiff_', filterData, 'browseMatrimony.onCheckedAgeDiff(this.id)');
-	   content+='</div>';
+	   content+='<div class="row" style="padding-left:15px;padding-right:15px;">';
+	 
+	   content+='<div class="col-sm-6 pad0">';
+	   content+='<button align="center" class="btn btn-success form-control" style="border-radius:0px;"><b>Find Profiles</b></button>'; 
+	   content+='</div>';  	 
+	   
+	   content+='<div class="col-sm-6 pad0">';
+	   content+='<button align="center" class="btn btn-danger form-control" style="border-radius:0px;"><b>Reset</b></button>'; 
+	   content+='</div>';  	
+	   
+	   content+='</div>';  
+	   content+='</div>';  
+	   
 	   
 	   content+='</div>';
 	   content+='</div>';
-	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_martialStatus">';
-	   content+='<b>Martial Status</b>&nbsp;<i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>';
-	   content+='</div>';
-	   content+='<div id="filter_martialStatus" class="collapse ';
-	   if(filterData.martialStatus.length>0){ content+='in'; }
-	   content+='">';
-	   content+='<div class="list-group-item">';
 	   
-	   content+='<div class="btn-group pull-right">';
-	   content+='<button class="btn btn-default btn-xs"><b>Select All</b></button>';
-	   content+='<button class="btn btn-default btn-xs"><b>DeSelect All</b></button>';
-	   content+='</div>';
 	   
-	   content+='<div class="mtop15p">';
-	   content+=display_checkedList_martialStatus('browseMatrimony_martialStatus_', filterData, 'browseMatrimony.onCheckedMartialStatus(this.id)');
-	   content+='</div>';
-	   
-	   content+='</div>';
-	   content+='</div>';
-	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_occupationType">';
-	   content+='<b>Occupation</b>&nbsp; <i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>';
-	   content+='</div>';
-	   content+='<div id="filter_occupationType" class="collapse ';
-	   if(filterData.occupationType.length>0 || filterData.profession.length>0){ content+='in'; }
-	   content+='">';
-	   content+='<div class="list-group-item">';
-	   
-	   content+=display_checkedDropDown_occupationType('browseMatrimony_occupationType_', filterData, 'browseMatrimony.onCheckedOccupationType(this.id)');
-	   content+=display_checkedDropDown_profession('browseMatrimony_profession_',filterData, 'browseMatrimony.onCheckedProfession(this.id)');
-	   
-	   content+='</div>';
-	   content+='</div>';
-	   content+='<div class="list-group-item bg-purple" data-toggle="collapse" data-target="#filter_motherTongue">';
-	   content+='<b>Mother Tongue</b>&nbsp;<i class="fa fa-angle-double-down pull-right" aria-hidden="true"></i>';
-	   content+='</div>';
-	   content+='<div id="filter_motherTongue" class="collapse ';
-	   if(filterData.motherTongue.length>0){ content+='in'; }
-	   content+='">';
-	   content+='<div class="list-group-item">';
-	   content+=display_checkedDropDown_motherTongue('browseMatrimony_motherTongue_',filterData, 'browseMatrimony.onCheckedMotherTongue(this.id)');
-	   content+='</div>';
-	   content+='</div>';
-	   content+='</div>';
+
 	return content;
   }
   

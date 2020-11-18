@@ -13,6 +13,7 @@ include_once 'templates/api_params.php';
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="<?php echo $_SESSION["PROJECT_URL"];?>js/api/load-data-on-scroll.js"></script>
+  <script src="<?php echo $_SESSION["PROJECT_URL"];?>js/api/commons.js"></script>
   <script src="<?php echo $_SESSION["PROJECT_URL"];?>js/api/screen-display.js"></script>
   <?php include_once 'templates/api_js.php'; ?>
 <style>
@@ -27,7 +28,7 @@ $(document).ready(function(){
 // load_data_profile();
  // Session Storage 
  var filterData = {};
- if(sessionStorage.getItem("PAGE_BROWSEMATRIMONY").length>0){
+ if(sessionStorage.getItem("PAGE_BROWSEMATRIMONY")!==null && sessionStorage.getItem("PAGE_BROWSEMATRIMONY").length>0){
   filterData = JSON.parse(sessionStorage.getItem("PAGE_BROWSEMATRIMONY"));
   console.log(filterData);
  }

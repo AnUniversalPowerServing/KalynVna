@@ -10,20 +10,18 @@ include_once 'templates/api_params.php';
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/api/core-skeleton.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-  <script src="js/api/bootstrap-switch.js"></script>
-  <script src="js/api/bootstrap-advanced.js"></script>
-  <script src="js/api/screen-display.js"></script>
-  <link href="styles/api/bootstrap-switch.css" rel="stylesheet">
-  <link href="styles/api/bootstrap-advanced.css" rel="stylesheet">
+  <script src="<?php echo $_SESSION["PROJECT_URL"];?>js/api/load-data-on-scroll.js"></script>
+  <script src="<?php echo $_SESSION["PROJECT_URL"];?>js/api/commons.js"></script>
+  <script src="<?php echo $_SESSION["PROJECT_URL"];?>js/api/screen-display.js"></script>
   <?php include_once 'templates/api_js.php'; ?>
   <script type="text/javascript">
   $(document).ready(function(){
     kvHeaderMenu('kvHeaderMenu-Home');
-	document.getElementById("customerSeekingForm").innerHTML=customerSeekingForm.display();
+	browseMatrimony.setBasicDisplayList(["gender","ageDiff","martialStatus","occupationType","profession","motherTongue"]);
+	browseMatrimony.customerSeekingForm("customerSeekingForm");
   });
   </script>
 <style>
@@ -31,6 +29,7 @@ body { background-color:#fafafa; }
 @media only screen and (max-width:768px ) {
 #kvShortDesc { display:none; }
 }
+.dropdown-toggle.btn-default { text-align:left; }
 </style>
 </head>
 <body>
@@ -45,32 +44,9 @@ body { background-color:#fafafa; }
   <div class="row">
 	<div class="col-sm-12" style="width:100%;height:600px;background-image: url('images/martimony-wallpaper.jpg');background-position:center;">
 	   <div class="col-sm-1"></div>
-	   <div class="col-sm-6">
-		  <!--div id="kvShortDesc" class="list-group" style="margin-top:25%;opacity:0.9;">
-			<div class="list-group-item pad0">
-				<div align="center" class="container-fluid">
-				  <div class="col-xs-12">
-				  <h4 style="line-height:28px;">
-				    <span style="font-family:kvfont001;font-size:30px;">KalyanaVeena.com</span> 
-					<span style="font-family:kvfont002;font-size:22px;">is <span style="color:#f44336;">"an Open Matrimony Platform Where 
-					Brahmin Brides and Bridegrooms Profiles are open to each Other."</span></span><h4>
-				  </div>
-				</div>
-				<div class="container-fluid">
-				  <div align="center" class="col-xs-12">
-					<span style="line-height:34px;font-family:kvfont002;font-size:20px;">
-					It's the First Matrimony Platform where When a User uploads a profile, Astrology is calculated 
-					to the profile with other profiles and initimated to the User.</span>
-				  </div>
-				  <div align="right" class="col-xs-12 mbot15p">
-					<button class="btn btn-success"><b>SEE HOW IT WORKS?</b></button>
-				  </div>
-				</div>
-			</div>
-		  </div-->
-	   </div>
-	   <div class="col-sm-1"></div>
-	   <div id= "customerSeekingForm" class="col-sm-4" style="margin-top:25px;">
+	   <div class="col-sm-6"></div>
+	   <div class="col-sm-2"></div>
+	   <div id= "customerSeekingForm" class="col-sm-3" style="text-align:left;margin-top:10px;">
 		
 	   </div>
 	</div>
