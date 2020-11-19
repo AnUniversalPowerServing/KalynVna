@@ -741,13 +741,13 @@ class BrowseMatrimony { // All Filters of Application
 	   content+='<div class="row" style="padding-left:15px;padding-right:15px;">';
 	   content+='<div class="col-sm-6 pad0">';
 	   if(form_Id==='customerSeekingForm'){
-	   content+='<button align="center" class="btn btn-success form-control" style="border-radius:0px;"><b>Find Profiles</b></button>'; 
+	   content+='<button align="center" class="btn btn-success form-control" style="border-radius:0px;font-weight:600;">Find Profiles</button>'; 
 	   } else {
-	   content+='<button align="center" class="btn btn-success form-control" style="border-radius:0px;"><b>Search</b></button>'; 
+	   content+='<button align="center" class="btn btn-success form-control" style="border-radius:0px;font-weight:600;">Search</button>'; 
 	   }
 	   content+='</div>';  	  
 	   content+='<div class="col-sm-6 pad0">';
-	   content+='<button align="center" class="btn btn-danger form-control" style="border-radius:0px;"><b>Reset</b></button>'; 
+	   content+='<button align="center" class="btn btn-danger form-control" style="border-radius:0px;font-weight:600;">Reset</button>'; 
 	   content+='</div>';  	
 	   content+='</div>';  
 	   content+='</div>';
