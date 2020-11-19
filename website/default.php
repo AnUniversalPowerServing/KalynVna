@@ -26,9 +26,7 @@ include_once 'templates/api_params.php';
   </script>
 <style>
 body { background-color:#fafafa; }
-@media only screen and (max-width:768px ) {
-#kvShortDesc { display:none; }
-}
+@media only screen and (max-width:768px ) { #kvShortDesc { display:none; } }
 .dropdown-toggle.btn-default { text-align:left; }
 </style>
 </head>

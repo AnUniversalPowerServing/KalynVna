@@ -624,7 +624,7 @@ class BrowseMatrimony { // All Filters of Application
   }
   
   customerSeekingForm(id){
-	document.getElementById(id).innerHTML = browseMatrimony.displayFilter({});  
+	document.getElementById(id).innerHTML = browseMatrimony.displayFilter({},'customerSeekingForm');  
   }
   
   display(id,filterData){
@@ -637,12 +637,12 @@ class BrowseMatrimony { // All Filters of Application
 	this.profession = filterData.profession;
 	}
 	var content='<div><h5 style="border-bottom:2px solid #000;padding-bottom:10px;"><b>Filter Search</b></h5></div>';
-		content+=browseMatrimony.displayFilter(filterData);
+		content+=browseMatrimony.displayFilter(filterData,'browseMatrimony');
 	document.getElementById(id).innerHTML = content;
 	browseMatrimony.profileloader_display();
   }
   
-  displayFilter(filterData){ // BrowseMatrimony
+  displayFilter(filterData,form_Id){ // BrowseMatrimony
    var info_gender = { prefix_Id :'browseMatrimony_gender_', menu:infoMenu_gender, defaultMessage:'Select Gender', 
 					   filterData:filterData, filterWith:'gender', onChecked: 'browseMatrimony.onCheckedGender(this.id)' };
    var info_ageDiff = { prefix_Id :'browseMatrimony_ageDiff_', menu:infoMenu_ageDiff, defaultMessage:'Select Age Difference', 
@@ -672,7 +672,6 @@ class BrowseMatrimony { // All Filters of Application
    var display_profession = (this.basicDisplayList.length===0 || (this.basicDisplayList.length>0 && this.basicDisplayList.includes("profession")));
    
    var content='<div class="list-group">';
-
 	   content+='<div class="list-group-item">';
 	   
 	   if(display_profileTitle){
@@ -740,23 +739,20 @@ class BrowseMatrimony { // All Filters of Application
 	   
 	   content+='<div class="mtop15p">';
 	   content+='<div class="row" style="padding-left:15px;padding-right:15px;">';
-	 
 	   content+='<div class="col-sm-6 pad0">';
+	   if(form_Id==='customerSeekingForm'){
 	   content+='<button align="center" class="btn btn-success form-control" style="border-radius:0px;"><b>Find Profiles</b></button>'; 
-	   content+='</div>';  	 
-	   
+	   } else {
+	   content+='<button align="center" class="btn btn-success form-control" style="border-radius:0px;"><b>Search</b></button>'; 
+	   }
+	   content+='</div>';  	  
 	   content+='<div class="col-sm-6 pad0">';
 	   content+='<button align="center" class="btn btn-danger form-control" style="border-radius:0px;"><b>Reset</b></button>'; 
 	   content+='</div>';  	
-	   
 	   content+='</div>';  
-	   content+='</div>';  
-	   
-	   
 	   content+='</div>';
 	   content+='</div>';
-	   
-	   
+	   content+='</div>';
 
 	return content;
   }
