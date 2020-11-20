@@ -27,14 +27,13 @@ $(document).ready(function(){
  kvHeaderMenu('kvHeaderMenu-browseMatrimony');
 // load_data_profile();
  // Session Storage 
- var filterData = {};
+ var filterData;
  if(sessionStorage.getItem("PAGE_BROWSEMATRIMONY")!==null && sessionStorage.getItem("PAGE_BROWSEMATRIMONY").length>0){
   filterData = JSON.parse(sessionStorage.getItem("PAGE_BROWSEMATRIMONY"));
   console.log(filterData);
  }
  browseMatrimony.display('browseMatrimony_filterSearch', filterData);
- 
- 
+ defaultConfiguration(); // load this after content loaded 
 });
 var browseMatrimony_male;
 var browseMatrimony_female;

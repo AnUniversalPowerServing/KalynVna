@@ -19,9 +19,10 @@ include_once 'templates/api_params.php';
   <?php include_once 'templates/api_js.php'; ?>
   <script type="text/javascript">
   $(document).ready(function(){
-    kvHeaderMenu('kvHeaderMenu-Home');
+	kvHeaderMenu('kvHeaderMenu-Home');
 	browseMatrimony.setBasicDisplayList(["gender","ageDiff","martialStatus","occupationType","profession","motherTongue"]);
 	browseMatrimony.customerSeekingForm("customerSeekingForm");
+	defaultConfiguration(); // load this after content loaded
   });
   </script>
 <style>

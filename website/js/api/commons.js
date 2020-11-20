@@ -8,6 +8,10 @@ var infoMenu_profession = ["Accountant","Teacher","Physician","Engineer","Labore
 var infoMenu_occupationType = ["Private Company","Government / Public Sector","Defence / Civil Services","Business / Self Employeed"];
 var infoMenu_motherTongue = ["Hindi","Bengali","Marathi","Telugu","Tamil","Gujarati","Urdu","Kannada","Odia","Malayalam","Punjabi","Assamese","Maithili"];
 
+function defaultConfiguration(){
+  $('.dropdown-menu').click(function(event){  event.stopPropagation(); });  // Stops DropDown Menu default closing
+}
+
 function bootstrap_formField_alert(type, div_Id, message){
   var alertMessage = 'success'; if(type==='error'){ alertMessage = 'danger'; }
   var content='<div class="alert alert-'+alertMessage+' alert-dismissible" style="margin-bottom:0px;">';
@@ -22,6 +26,11 @@ function toSentenceCase(val){
 
 function toCamelCase(val){
  return val.charAt(0).toUpperCase() + val.substr(1);	
+}
+
+function checkBoxToggle(elem_Id){
+  if(document.getElementById(elem_Id).checked){ document.getElementById(elem_Id).checked = false; }
+  else { document.getElementById(elem_Id).checked = true; }
 }
 
 function validateGender(id){
@@ -150,7 +159,54 @@ function display_checkedList_menu(info){
  return content;
 }
 
-function display_checkedDropDown_menu(info){
+function checkAndPushIntoArray(element_Id, paramArray){
+	console.log(element_Id);
+  // Gets value from HTMLElement, checks whether it exists before and pushes into Array if it not exists
+	var param_Id = document.getElementById(element_Id);
+	var isExists = paramArray.includes(param_Id.value);
+	if(param_Id.checked){ // add
+	  if(!isExists){ paramArray.push(param_Id.value); } 
+	} else { // remove
+		if(isExists){ paramArray.splice(paramArray.indexOf(param_Id.value), 1); }
+	}
+}
+
+function display_checkedDropDown_onChecked(it,paramArray){
+  var elem = $(it).find('input');
+  var elem_Id = elem.attr('id');
+  var elem_val = elem.val();
+  checkBoxToggle(elem_Id);
+  checkAndPushIntoArray(elem_Id, paramArray);
+}
+
+function display_checkedDropDown_selectDeselect(it, type, prefix_Id, paramArray){
+  $(it).closest('ul').find('li').each(function(i){
+	var elem_Id = $(this).find('input').attr('id');
+	if(elem_Id!==undefined){
+	 console.log(paramArray);
+	 if(type==='deSelectAll'){ 
+	   document.getElementById(elem_Id).checked = false; 
+	 }
+     else if(type==='selectAll'){ 
+	   document.getElementById(elem_Id).checked = true;
+	 }
+	 checkAndPushIntoArray(elem_Id, paramArray); 
+	}
+  });
+}
+
+function display_checkedDropDown_menu(info, paramArray){ 
+/**
+ * info - Get the list of information required to display in the dropdown (Dynamically)
+ *        It consists of 
+ *			prefix_Id  -
+ *			menu -
+ *			filterData -
+ *			filterWith -
+ *			onChecked -
+ *			default Message -
+ * paramArray - Get the list of information select by User (Dynamically)
+ */
  var prefix_Id = info.prefix_Id;
  var menu = info.menu;
  var filterData = info.filterData;
@@ -163,21 +219,21 @@ function display_checkedDropDown_menu(info){
 	 else { content+=defaultMessage; }
 	 content+='</span>&nbsp;';
 	 content+='<span class="caret pull-right mtop8p"></span></button>';
-	 content+='<ul class="dropdown-menu">';
+	 content+='<ul class="dropdown-menu"  role="menu">';
 	 
 	 content+='<li><a href="#">';
 	 content+='<div class="btn-group pull-right">';
-	 content+='<button class="btn btn-default btn-xs"><b>Select All</b></button>';
-	 content+='<button class="btn btn-default btn-xs"><b>DeSelect All</b></button>';
+	 content+='<button class="btn btn-default btn-xs" onclick="display_checkedDropDown_selectDeselect(this,\'selectAll\',\''+prefix_Id+'\','+paramArray+');"><b>Select All</b></button>';
+	 content+='<button class="btn btn-default btn-xs" onclick="display_checkedDropDown_selectDeselect(this,\'deSelectAll\',\''+prefix_Id+'\','+paramArray+');"><b>DeSelect All</b></button>';
 	 content+='</div>';
 	 content+='</a></li>';
 	  
 	 for(var index=0;index<menu.length;index++){
 	   var data = menu[index];
-	   content+='<li><a href="#">';
-	   content+='<div><input id="'+prefix_Id+toCamelCase(data)+'" type="checkbox" value="'+data+'" ';
+	   content+='<li onclick="javascript:display_checkedDropDown_onChecked(this,'+paramArray+');"><a href="#">'; // onChecked
+	   content+='<div><input id="'+prefix_Id+toCamelCase(data)+'" type="checkbox" value="'+data+'" onclick="javascript:checkBoxToggle(this.id);" ';
 	   if(filterData!==undefined && filterData[filterWith]!==undefined && filterData[filterWith].includes(data)){ content+='checked '; }
-	   content+='onclick="javascript:'+onChecked+';"/>&nbsp;'+data+'</div>';
+	   content+='/>&nbsp;'+data+'</div>';
 	   content+='</a></li>';
 	 }
 	 content+='</ul>';
